@@ -1,0 +1,435 @@
+/* Control
+/* ----------------------------------------------- */
+$font-stack: 'Avenir', Helvetica, Arial, sans-serif
+
+$gray-darker:               #272a2b
+$gray-dark:                 #5f5f5f
+$gray:                      #989b9b
+$gray-light:                #d8dcde
+$gray-lighter:              #eeeeee
+
+$brand-primary:             #4497FA
+$brand-success:             #2eCC71
+$brand-warning:             #FFC107
+$brand-danger:              #FB6B5D
+
+$mobile-px: 400px
+$phablet-px: 550px
+$tablet-px: 750px
+$desktop-px: 1000px
+$desktophd-px: 1200px
+
+/* Typography
+/* ----------------------------------------------- */
+body
+  font-size: 16px
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+
+*
+  box-sizing: border-box
+  -webkit-font-smoothing: antialiased
+  font-family: $font-stack
+  color: $gray-darker
+
+h1, h2, h3, h4, h5, h6
+  text-transform: uppercase
+  font-family: $font-stack
+  font-weight: bold
+  letter-spacing: 1px
+  color: $gray-dark
+  position: relative
+  &.has-lines
+    display: inline-block
+    &:before
+      right: 100%
+      margin-right: 30px
+    &:after
+      left: 100%
+      margin-left: 30px
+    &:after, &:before
+      content: ""
+      position: absolute
+      height: 5px
+      border-top: 2px dotted $gray
+      top: 50%
+      width: 1200px
+
+h1
+  font-size: 2em
+h2
+  font-size: 1.5em
+h3
+  font-size: 1.17em
+h4
+  font-size: 1.12em
+h5
+  font-size: .83em
+h6
+  font-size: .75em
+
+p
+  line-height: 1.6
+  margin-top: 0
+
+hr
+  background-color: transparent
+  border: none
+  border-top: 1px solid $gray-light
+  margin-top: 30px
+  margin-bottom: 50px
+
+
+/* Grid
+/* ----------------------------------------------- */
+.fluid-container
+  position: relative
+  width: 100%
+  margin: 0 auto
+  &.with-padding
+    padding-left: 20px
+    padding-right: 20px
+.container
+  position: relative
+  width: 100%
+  max-width: 960px
+  margin: 0 auto
+  padding: 0 20px
+.column,
+.columns
+  width: 100%
+  float: left
+
+/* For devices larger than 400px */
+@media (min-width: 400px)
+  .container
+    width: 85%
+    padding: 0
+
+/* For devices larger than 550px */
+@media (min-width: 550px)
+  .container
+    width: 80%
+  .column,
+  .columns
+    margin-left: 4%
+  .column:first-child,
+  .columns:first-child
+    margin-left: 0
+
+  .one.column,
+  .one.columns
+    width: 4.66666666667%
+  .two.columns
+    width: 13.3333333333%
+  .three.columns
+    width: 22%
+  .four.columns
+    width: 30.6666666667%
+  .five.columns
+    width: 39.3333333333%
+  .six.columns
+    width: 48%
+  .seven.columns
+    width: 56.6666666667%
+  .eight.columns
+    width: 65.3333333333%
+  .nine.columns
+    width: 74.0%
+  .ten.columns
+    width: 82.6666666667%
+  .eleven.columns
+    width: 91.3333333333%
+  .twelve.columns
+    width: 100%
+    margin-left: 0
+
+  .one-third.column
+    width: 30.6666666667%
+  .two-thirds.column
+    width: 65.3333333333%
+
+  .one-half.column
+    width: 48%
+
+  /* Offsets */
+  .offset-by-one.column,
+  .offset-by-one.columns
+    margin-left: 8.66666666667%
+  .offset-by-two.column,
+  .offset-by-two.columns
+    margin-left: 17.3333333333%
+  .offset-by-three.column,
+  .offset-by-three.columns
+    margin-left: 26%
+  .offset-by-four.column,
+  .offset-by-four.columns
+    margin-left: 34.6666666667%
+  .offset-by-five.column,
+  .offset-by-five.columns
+    margin-left: 43.3333333333%
+  .offset-by-six.column,
+  .offset-by-six.columns
+    margin-left: 52%
+  .offset-by-seven.column,
+  .offset-by-seven.columns
+    margin-left: 60.6666666667%
+  .offset-by-eight.column,
+  .offset-by-eight.columns
+    margin-left: 69.3333333333%
+  .offset-by-nine.column,
+  .offset-by-nine.columns
+    margin-left: 78.0%
+  .offset-by-ten.column,
+  .offset-by-ten.columns
+    margin-left: 86.6666666667%
+  .offset-by-eleven.column,
+  .offset-by-eleven.columns
+    margin-left: 95.3333333333%
+
+  .offset-by-one-third.column,
+  .offset-by-one-third.columns
+    margin-left: 34.6666666667%
+  .offset-by-two-thirds.column,
+  .offset-by-two-thirds.columns
+    margin-left: 69.3333333333%
+
+  .offset-by-one-half.column,
+  .offset-by-one-half.columns
+    margin-left: 52%
+
+/* Links
+/* ----------------------------------------------- */
+a
+  color: $brand-primary
+a:hover
+  color: lighten($brand-primary, 10%)
+
+/* Lists
+/* ----------------------------------------------- */
+ul
+  list-style: circle inside
+ol
+  list-style: decimal inside
+ol, ul
+  padding-left: 0
+  margin-top: 0
+ul ul,
+ul ol,
+ol ol,
+ol ul
+  margin: 1.5rem 0 1.5rem 3rem
+  font-size: 90%
+li
+  margin-bottom: 1rem
+
+
+/* Code
+/* ----------------------------------------------- */
+code
+  padding: .2rem .5rem
+  margin: 0 .2rem
+  font-size: 90%
+  white-space: nowrap
+  background: #F1F1F1
+  border: 1px solid #E1E1E1
+  border-radius: 4px
+pre > code
+  display: block
+  padding: 1rem 1.5rem
+  white-space: pre
+
+/* Utilities
+/* ----------------------------------------------- */
+.u-full-width
+  width: 100%
+.u-max-full-width
+  max-width: 100%
+  box-sizing: border-box
+.u-pull-right
+  float: right
+.u-pull-left
+  float: left
+.overflow-hidden
+  overflow: hidden
+
+
+/* Misc
+/* ----------------------------------------------- */
+hr
+  margin-top: 3rem
+  margin-bottom: 3.5rem
+  border-width: 0
+  border-top: 1px solid #E1E1E1
+
+
+/* Clearing
+/* ----------------------------------------------- */
+
+/* Self Clearing Goodness */
+.container:after,
+.row:after,
+.u-cf
+  content: ""
+  display: table
+  clear: both
+
+/* Buttons
+/* ----------------------------------------------- */
+@mixin btn-base
+  outline: none
+  border: none
+  text-transform: uppercase
+  font-weight: bold
+  letter-spacing: 1px
+  transition: background-color 0.1s ease
+  text-decoration: none
+  font-size: 14px
+  &:hover, &:focus
+    text-decoration: none
+    cursor: pointer
+  &:focus
+    box-shadow: 0px 2px 4px rgba(158, 158, 158, 0.7)
+
+@mixin btn($btn-color)
+  +btn-base
+  background-color: $btn-color
+  color: #fff
+  padding: 14px 40px
+  &:hover
+    background-color: lighten($btn-color, 8%)
+
+@mixin btn-border($btn-color)
+  +btn-base
+  background-color: transparent
+  border: 2px solid $btn-color
+  color: $btn-color
+  padding: 12px 38px
+  &:hover
+    border-color: lighten($btn-color, 8%)
+    color: lighten($btn-color, 8%)
+
+.btn.fill
+  &.default
+    +btn($gray)
+  &.dark
+    +btn($gray-dark)
+  &.primary
+    +btn($brand-primary)
+  &.danger
+    +btn($brand-danger)
+  &.success
+    +btn($brand-success)
+
+.btn.border
+  &.default
+    +btn-border($gray)
+  &.dark
+    +btn-border($gray-dark)
+  &.primary
+    +btn-border($brand-primary)
+  &.danger
+    +btn-border($brand-danger)
+  &.success
+    +btn-border($brand-success)
+
+/* Forms and Input Fields
+/* ----------------------------------------------- */
+.input-group
+  margin-bottom: 15px
+label
+  margin-bottom: 6px
+  min-width: 120px
+  display: inline-block
+  color: $gray-dark
+  text-transform: uppercase
+  font-weight: bold
+  letter-spacing: 1px
+  font-size: 14px
+input[type="color"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+textarea,
+select
+  -webkit-appearance: initial
+  display: inline-block
+  width: 100%
+  border: none
+  outline: none
+  padding: 9px 18px
+  font-size: 16px
+  border: 1px solid $gray-lighter
+  background-color: #fff
+  transition: 0.1s all ease
+  &:focus
+    border: 1px solid lighten($brand-primary, 20%)
+    box-shadow: 0px 0px 1px 1px $brand-primary
+.sublabel
+  font-size: 13px
+  color: $gray
+  margin-top: 5px
+
+/* Tables
+/* ----------------------------------------------- */
+table
+  width: 100%
+  th
+    color: $gray
+    font-weight: normal
+  th, td
+    padding: 12px 15px
+    text-align: left
+    border-bottom: 1px solid #E1E1E1
+  th:first-child, td:first-child
+    padding-left: 0
+  th:last-child, td:last-child
+    padding-right: 0
+
+/* Media Queries
+/* ----------------------------------------------- */
+
+// Note: The best way to structure the use of media queries is to create the queries
+// near the relevant code. For example, if you wanted to change the styles for buttons
+// on small devices, paste the mobile query code up in the buttons section and style it
+// there.
+
+// Use the mixins inline with your other styles.
+//
+// Example:
+// .picture
+//   width: 100%
+//   +tablet
+//     width: 50%
+//   +desktop
+//     width: 25%
+
+@mixin mobile
+  @media (min-width: #{$mobile-px})
+    @content
+
+@mixin phablet
+  @media (min-width: #{$phablet-px})
+    @content
+
+@mixin tablet
+  @media (min-width: #{$tablet-px})
+    @content
+
+@mixin desktop
+  @media (min-width: #{$desktop-px})
+    @content
+
+@mixin desktophd
+  @media (min-width: #{$desktophd-px})
+    @content
