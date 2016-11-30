@@ -22,24 +22,25 @@ export default {
 }
 </script>
 
-<style lang="sass?indentedSyntax=true">
+<style lang="sass?indentedSyntax=true" scoped>
 .nav
   z-index: 999
   position: fixed
   top: 0
   width: 100%
-  min-height: 70px
+  height: 70px
   background-color: #fff
-  font-size: 1.1rem
+  font-size: 1em
   padding: 0 20px
+  overflow: hidden
 
 .nav__heading
-  margin-top: 23px
+  line-height: 70px
   float: left
   font-weight: bold
 
 .nav__menu
-  margin-top: 23px
+  line-height: 70px
   list-style-type: none
   float: right
   li

@@ -44,14 +44,13 @@ export default {
 footer
   z-index: 100
   background-color: #1b1b1b
-  font-size: 0.8rem
+  font-size: 1em
   padding: 60px 0
   color: #a2a2a2
 
 .footer__heading
   font-weight: bold
-  font-size: 1em
-  margin-bottom: 15px
+  margin-bottom: 1em
   color: #fff
 
 .footer__menu

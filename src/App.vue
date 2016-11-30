@@ -32,9 +32,19 @@ export default {
 
 <style lang="sass?indentedSyntax=true">
 @import 'sass/application.sass'
+
 #app
   margin: 70px 0 0 0
 
 .app__content
   margin: 80px 10px
+
+body
+  font-size: 13px
+  +mobile
+    font-size: 14px
+  +tablet
+    font-size: 15px
+  +desktop
+    font-size: 16px
 </style>

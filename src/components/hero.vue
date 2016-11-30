@@ -1,6 +1,6 @@
 <template lang="pug">
 .hero
-  .hero__content__container
+  .hero__content__container.container
     .hero__content
       .hero__heading Tokenly
       .hero__subheading Ownership Reinvented
@@ -26,13 +26,13 @@ export default {
 
 <style lang="sass?indentedSyntax=true">
 .hero
-  min-height: 510px
+  display: flex
   position: relative
   color: #fff
-  font-size: 1rem
+  font-size: 1em
   margin: 0 10px
 
-.hero__content__container, .hero__bg, .hero__bg__mask
+.hero__bg, .hero__bg__mask
   position: absolute
   width: 100%
   height: 100%
@@ -40,12 +40,12 @@ export default {
   left: 0
 
 .hero__content__container
+  position: relative
   z-index: 100
 
 .hero__content
-  margin: 95px auto 0
-  width: 740px
-  padding: 20px
+  margin-top: 60px
+  margin-bottom: 60px
 
 .hero__bg
   z-index: 1
@@ -58,16 +58,19 @@ export default {
   background-color: rgba(255, 255, 255, 0.2)
 
 .hero__heading
-  font-size: 3em
+  font-size: 2em
   font-weight: bold
 
 .hero__subheading
-  font-size: 1.7em
+  font-size: 1em
 
 .hero__tag
-  font-size: 2em
+  overflow: hidden
+  font-size: 1.3em
   text-transform: none
+  letter-spacing: 0
   color: inherit
+  white-space: break-word
 
 .hero__btn
   outline: none
@@ -83,5 +86,4 @@ export default {
   &:hover
     cursor: pointer
     box-shadow: 0 2px 1px -1px #625d5d
-
 </style>
