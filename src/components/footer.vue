@@ -5,31 +5,31 @@ footer
       .three.columns
         .footer__heading On The Web
         ul.footer__menu
-          li: a(href="#") hellop
-          li: a(href="#") oausjdoa
-          li: a(href="#") oausjdoa
-          li: a(href="#") oausjdoa
+          li: a(href="#") Let's Talk Bitcoin
+          li: a(href="#") TokenTalk
+          li: a(href="#") Github
+          li: a(href="#") Blog
       .three.columns
         .footer__heading Products
         ul.footer__menu
-          li: a(href="#") hellop
-          li: a(href="#") oausjdoa
-          li: a(href="#") oausjdoa
-          li: a(href="#") oausjdoa
+          li: a(href="#") Tokenpass
+          li: a(href="#") Pockets
+          li: a(href="#") Swapbot
+          li: a(href="#") Market
+          li: a(href="#") Tokenslot
+          li: a(href="#") Bitsplit
       .three.columns
         .footer__heading Social
         ul.footer__menu
-          li: a(href="#") hellop
-          li: a(href="#") oausjdoa
-          li: a(href="#") oausjdoa
-          li: a(href="#") oausjdoa
+          li: a(href="#") Youtube
+          li: a(href="#") LinkedIn
+          li: a(href="#") Twitter
+          li: a(href="#") Facebook
       .three.columns
         .footer__heading Company
         ul.footer__menu
-          li: a(href="#") hellop
-          li: a(href="#") oausjdoa
-          li: a(href="#") oausjdoa
-          li: a(href="#") oausjdoa
+          li: a(href="#") team@tokenly.com
+          li: a(href="#") &#169; 2016 Tokenly Inc.
 </template>
 
 <script>
@@ -44,21 +44,24 @@ export default {
 footer
   z-index: 100
   background-color: #1b1b1b
-  font-size: 1rem
+  font-size: 0.8rem
   padding: 60px 0
-  color: #dadada
+  color: #a2a2a2
 
 .footer__heading
+  font-weight: bold
   font-size: 1em
   margin-bottom: 15px
+  color: #fff
 
 .footer__menu
-  font-size: 0.8em
   list-style-type: none
   li
     margin: 0 0 4px 0
     a
       color: inherit
       text-decoration: none
+      &:hover
+        color: #fff
 
 </style>
