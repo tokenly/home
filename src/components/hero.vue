@@ -44,8 +44,8 @@ export default {
   z-index: 100
 
 .hero__content
-  margin-top: 60px
-  margin-bottom: 60px
+  margin-top: 100px
+  margin-bottom: 100px
 
 .hero__bg
   z-index: 1
