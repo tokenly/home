@@ -34,7 +34,7 @@ footer
       .row
         img.footnote__logo(src="../assets/logo/Tokenly_Icon_White.svg" width="30px")
         span.footnote__name Tokenly
-        span(style="margin-right: 1.5em") &middot;
+        span(style="margin-right: 1.5em") //
         a.footnote__contact(href="mailto:team@tokenly.com") Contact Us
 </template>
 
@@ -50,17 +50,15 @@ export default {
 footer
   z-index: 100
   font-size: 1em
-  color: #a2a2a2
   margin: 0 10px
 
 .footer__links
   padding: 60px 0
-  background-color: #1b1b1b
+  background-color: #fff
 
 .footer__heading
   font-weight: bold
   margin-bottom: 1em
-  color: #fff
 
 .footer__menu
   list-style-type: none
@@ -70,11 +68,12 @@ footer
       color: inherit
       text-decoration: none
       &:hover
-        color: #fff
+        color: #4170a0
 
 .footnote
   padding: 1.5em 0
-  background-color: #2c2c2f
+  background-color: #333335
+  color: #e6e7e8
   font-size: 1em
   font-weight: bold
 
@@ -91,7 +90,7 @@ footer
   color: inherit
   text-decoration: none
   &:hover
-    color: #e6e7e8
+    color: #fff
 
 .products__cont
   display: none
