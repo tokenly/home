@@ -73,7 +73,7 @@ export default {
 
 <style lang="sass?indentedSyntax=true" scoped>
 .app__content
-  margin: 80px 0
+  margin: 40px 0 80px
 
 .app__section
   &:not(:last-of-type)
@@ -86,14 +86,16 @@ $perk-spacing: 40
 .perks__wrapper
   padding-top: 1em
   overflow: hidden
+  margin-left: -10px
+  margin-right: -10px
 
 .perks
   display: flex
   justify-content: space-between
   flex-wrap: wrap
 
-$perk-color-1: #4170a0
-$perk-color-2: #ffed80
+$perk-color-1: lighten(#ff8080, 10%)
+$perk-color-2: #4170a0
 .perk
   display: flex
   align-items: center
@@ -106,16 +108,13 @@ $perk-color-2: #ffed80
   padding: 2em
   box-shadow: 0 2px 5px -2px #d6d2d2
   flex-grow: 1
-  /* Border gradient */
-  border-width: 0 0 0 3px
+  border-width: 3px
   border-style: solid
-  /*-webkit-border-image: -webkit-gradient(linear, 100% 0, 0 0, from($perk-color-1), to($perk-color-2)) 1 100%*/
-  /*-webkit-border-image: -webkit-linear-gradient(top, $perk-color-1, $perk-color-2) 1 100%*/
-  /*-moz-border-image: -moz-linear-gradient(top, $perk-color-1, $perk-color-2) 1 100%*/
-  /*-o-border-image: -o-linear-gradient(top, $perk-color-1, $perk-color-2) 1 100%*/
-  border-image: linear-gradient(to top, $perk-color-1, $perk-color-2) 1 100%
+  border-color: transparent
+  border-image: linear-gradient(to top right, #cecece, #9ecdfd)
+  border-image-slice: 1
   .perk__icon
-    color: lighten(#4170a0, 38%)
+    color: #c8d3da
 
 .perk__content
   max-width: 420px
