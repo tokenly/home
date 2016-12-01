@@ -93,7 +93,7 @@ $perk-spacing: 40
   flex-wrap: wrap
 
 $perk-color-1: #4170a0
-$perk-color-2: #FF463C
+$perk-color-2: #ffed80
 .perk
   display: flex
   align-items: center

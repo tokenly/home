@@ -64,7 +64,7 @@ $hero-btn-color: #4170a0
     transform: rotate(272deg)
     margin-top: -26%
     margin-left: 52%
-    
+
 .hero__bg__mask
   z-index: 5
   background-color: rgba(0, 0, 0, 0.1)
