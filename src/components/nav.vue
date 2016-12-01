@@ -6,7 +6,8 @@
         a(href="/"): img.nav__logo(src="../assets/logo/Tokenly_Icon.svg" width="35px")
       ul.nav__menu
         template(v-for="item in menuItems")
-          li: a(v-bind:href="item.url" target="_blank") {{ item.name }}
+          li: a(v-bind:href="item.url" target="_blank")
+            span {{ item.name }}
 </template>
 
 <script>

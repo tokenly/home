@@ -7,7 +7,7 @@
       .row
         .six.columns
           h3 Redeemables
-          p These gives holders the ability to trade-in their tokens for goods. Think ‘digital gift certificate'.
+          p These give holders the ability to trade-in their tokens for goods. Think ‘digital gift certificate'.
         .six.columns
           h3 Access tokens
           p This kind gives holders entry to features, services or accounts they wouldn’t have access to otherwise.

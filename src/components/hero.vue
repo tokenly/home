@@ -24,7 +24,7 @@ export default {
 }
 </script>
 
-<style lang="sass?indentedSyntax=true">
+<style lang="sass?indentedSyntax=true" scoped>
 $hero-spacing: 80px
 $hero-btn-color: #4170a0
 .hero
@@ -63,7 +63,7 @@ $hero-btn-color: #4170a0
 .hero__heading
   font-size: 2em
   font-weight: bold
-  margin-bottom: 2px
+  margin-bottom: 0.2em
 
 .hero__subheading
   font-size: 1em
@@ -77,6 +77,7 @@ $hero-btn-color: #4170a0
   color: inherit
   white-space: break-word
   margin-bottom: 1.5em
+  line-height: 1.5
 
 .hero__btn
   display: inline-block
