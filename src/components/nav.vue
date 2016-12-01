@@ -1,9 +1,12 @@
 <template lang="pug">
 .nav
-  .nav__heading Tokenly
-  ul.nav__menu
-    template(v-for="item in menuItems")
-      li: a(href="#") {{ item.name }}
+  .nav__content
+    .container
+      .nav__heading
+        a(href="/"): img.nav__logo(src="../assets/logo/Tokenly_Icon.svg" width="35px")
+      ul.nav__menu
+        template(v-for="item in menuItems")
+          li: a(v-bind:href="item.url" target="_blank") {{ item.name }}
 </template>
 
 <script>
@@ -11,11 +14,18 @@ export default {
   data () {
     return {
       menuItems: [
-        { name: 'Pockets' },
-        { name: 'Community' },
-        { name: 'Introduction' },
-        { name: 'Dashboard' },
-        { name: 'Blog' }
+        {
+          name: 'Pockets',
+          url: 'http://pockets.tokenly.com/'
+        },
+        {
+          name: 'Community',
+          url: 'https://www.facebook.com/tokenlyinc/'
+        },
+        {
+          name: 'Dashboard',
+          url: 'https://tokenpass.tokenly.com/auth/login'
+        }
       ]
     }
   }
@@ -24,14 +34,15 @@ export default {
 
 <style lang="sass?indentedSyntax=true" scoped>
 .nav
+  position: relative
   z-index: 999
-  position: fixed
-  top: 0
-  width: 100%
   height: 70px
-  background-color: #fff
   font-size: 1em
-  padding: 0 20px
+  overflow: hidden
+
+.nav__content
+  margin: 0 10px
+  background-color: #fff
   overflow: hidden
 
 .nav__heading
@@ -39,19 +50,25 @@ export default {
   float: left
   font-weight: bold
 
+.nav__logo
+  display: inline-block
+  margin-top: -4px
+  vertical-align: middle
+
 .nav__menu
+  font-weight: bold
   line-height: 70px
   list-style-type: none
   float: right
+  margin: 0
   li
     float: left
     margin: 0
-    font-size: 1em
     &:not(:last-child)
-      margin-right: 30px
+      margin-right: 1.5em
     a
       color: inherit
       text-decoration: none
       &:hover
-        color: cornflowerblue
+        color: #4170a0
 </style>
