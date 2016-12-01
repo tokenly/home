@@ -4,7 +4,7 @@
     h2 Contact Us
     p Questions? Drop us a line. We are always eager to hear new ideas and feedback from you!
     hr
-    form(action="https://formspree.io/team@tokenly.com" method="POST" @submit="validateBeforeSubmit")
+    form(action="https://formspree.io/early@tokenly.com" method="POST" @submit="validateBeforeSubmit")
       .row
         .input-group.six.columns
           label Name
