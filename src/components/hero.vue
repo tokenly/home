@@ -3,23 +3,20 @@
   .hero__content__container.container
     .hero__content
       .hero__heading Tokenly
+      br
       .hero__subheading Ownership Reinvented
+      br
       h1.hero__h1 Building bridges between business and the blockchain.
+      br
       a.hero__btn(href="http://apidocs.tokenly.com/") Get Started
   .hero__bg__mask
-  .hero__bg(v-bind:style="{backgroundImage: backgroundImage}")
+  .hero__bg: img(src="../assets/bg.svg")
 </template>
 
 <script>
 export default {
   data () {
     return {}
-  },
-  computed: {
-    backgroundImage () {
-      let url = 'https://images.unsplash.com/photo-1478147427282-58a87a120781?dpr=1&auto=format&fit=crop&w=1199&h=799&q=80&cs=tinysrgb&crop='
-      return `url(${url})`
-    }
   }
 }
 </script>
@@ -27,6 +24,12 @@ export default {
 <style lang="sass?indentedSyntax=true" scoped>
 $hero-spacing: 80px
 $hero-btn-color: #4170a0
+
+@mixin textbg
+  background-color: #454344
+  padding: 0.2em 0.5em
+  display: inline-block
+
 .hero
   display: flex
   position: relative
@@ -34,7 +37,7 @@ $hero-btn-color: #4170a0
   font-size: 1em
   margin: 0 10px
   overflow: hiddden
-  background-color: #1b1b1b
+  background-color: #ffed80
 
 .hero__bg, .hero__bg__mask
   position: absolute
@@ -55,21 +58,30 @@ $hero-btn-color: #4170a0
   z-index: 1
   background-size: cover
   background-position: center 75%
-
+  overflow: hidden
+  img
+    width: 60%
+    transform: rotate(272deg)
+    margin-top: -26%
+    margin-left: 52%
+    
 .hero__bg__mask
   z-index: 5
-  background-color: rgba(255, 255, 255, 0.1)
+  background-color: rgba(0, 0, 0, 0.1)
 
 .hero__heading
+  +textbg
   font-size: 2em
   font-weight: bold
   margin-bottom: 0.2em
 
 .hero__subheading
+  +textbg
   font-size: 1em
   margin-bottom: 1.5em
 
 .hero__h1
+  +textbg
   overflow: hidden
   font-size: 1.3em
   text-transform: none
@@ -93,9 +105,9 @@ $hero-btn-color: #4170a0
   transition: box-shadow 0.1s
   box-shadow: none
   text-decoration: none
+  box-shadow: 0 1px 8px -2px #242424
   &:hover
     color: inherit
     cursor: pointer
-    box-shadow: 0 1px 8px -2px #242424
     background-color: lighten($hero-btn-color, 5%)
 </style>

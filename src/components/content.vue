@@ -13,18 +13,25 @@
           p This kind gives holders entry to features, services or accounts they wouldn’t have access to otherwise.
   .app__section
     .container
+      h2 Why Tokenly?
       .perks__wrapper
         .perks
           .perk(v-for="perk in perks")
-            .perk__head
-              .perk__icon: i.material-icons {{ perk.icon }}
-            .perk__text
-              .perk__name {{ perk.name }}
-              .perk__info {{ perk.text }}
+            .perk__content
+              .perk__head
+                .perk__icon: i.material-icons {{ perk.icon }}
+              .perk__text
+                .perk__name {{ perk.name }}
+                .perk__info {{ perk.text }}
+  .app__section
+    contact
 </template>
 
 <script>
+import Contact from './contact.vue'
+
 export default {
+  components: { Contact },
   data () {
     return {
       perks: [
@@ -70,13 +77,14 @@ export default {
 
 .app__section
   &:not(:last-of-type)
-    margin-bottom: 60px
+    margin-bottom: 3em
 
 $perk-count: 6
 $perk-width: 600px
 $perk-spacing: 40
 
 .perks__wrapper
+  padding-top: 1em
   overflow: hidden
 
 .perks
@@ -84,8 +92,9 @@ $perk-spacing: 40
   justify-content: space-between
   flex-wrap: wrap
 
+$perk-color-1: #4170a0
+$perk-color-2: #FF463C
 .perk
-  float: left
   display: flex
   align-items: center
   justify-content: center
@@ -93,27 +102,27 @@ $perk-spacing: 40
   height: 140px
   border-radius: 5px
   background-color: #fff
-  border-top: 5px solid #fff
-  margin: 0 10px 20px
+  margin: 0 1em 2em
   padding: 2em
   box-shadow: 0 2px 5px -2px #d6d2d2
   flex-grow: 1
-  &:nth-of-type(4n+0)
-    border-color: #76E88E
-    .perk__icon
-      color: #76E88E
-  &:nth-of-type(4n+1)
-    border-color: lighten(#4170a0, 20%)
-    .perk__icon
-      color: lighten(#4170a0, 20%)
-  &:nth-of-type(4n+2)
-    border-color: #6c5cc7
-    .perk__icon
-      color: #6c5cc7
-  &:nth-of-type(4n+3)
-    border-color: #FF474C
-    .perk__icon
-      color: #FF474C
+  /* Border gradient */
+  border-width: 0 0 0 3px
+  border-style: solid
+  /*-webkit-border-image: -webkit-gradient(linear, 100% 0, 0 0, from($perk-color-1), to($perk-color-2)) 1 100%*/
+  /*-webkit-border-image: -webkit-linear-gradient(top, $perk-color-1, $perk-color-2) 1 100%*/
+  /*-moz-border-image: -moz-linear-gradient(top, $perk-color-1, $perk-color-2) 1 100%*/
+  /*-o-border-image: -o-linear-gradient(top, $perk-color-1, $perk-color-2) 1 100%*/
+  border-image: linear-gradient(to top, $perk-color-1, $perk-color-2) 1 100%
+  .perk__icon
+    color: lighten(#4170a0, 38%)
+
+.perk__content
+  max-width: 420px
+  display: flex
+  align-items: center
+  justify-content: center
+  margin: 0 auto
 
 .perk__head
   text-align: center
@@ -121,10 +130,10 @@ $perk-spacing: 40
 
 .perk__name
   font-weight: bold
-  margin-bottom: 6px
+  margin-bottom: 0.5em
 
 .perk__info
-  font-size: 0.9em
+  font-size: 0.85em
   line-height: 1.5
 
 .perk__icon
