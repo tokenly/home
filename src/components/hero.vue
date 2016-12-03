@@ -112,7 +112,6 @@ $hero-btn-color: #4170a0
   text-decoration: none
   box-shadow: 0 1px 8px -2px #242424
   &:hover
-    color: inherit
     cursor: pointer
     background-color: lighten($hero-btn-color, 5%)
 </style>

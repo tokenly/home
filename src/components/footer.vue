@@ -72,7 +72,7 @@ footer
 
 .footnote
   padding: 1.5em 0
-  background-color: #333335
+  background-color: #5f5f5f
   color: #e6e7e8
   font-size: 1em
   font-weight: bold

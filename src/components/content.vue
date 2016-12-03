@@ -110,7 +110,7 @@ $perk-color-2: #4170a0
   flex-grow: 1
   border-width: 3px
   border-style: solid
-  border-color: transparent
+  border-color: #cecece
   border-image: linear-gradient(to top right, #cecece, #9ecdfd)
   border-image-slice: 1
   .perk__icon
@@ -118,9 +118,9 @@ $perk-color-2: #4170a0
 
 .perk__content
   max-width: 420px
+  width: 100%
   display: flex
   align-items: center
-  justify-content: center
   margin: 0 auto
 
 .perk__head

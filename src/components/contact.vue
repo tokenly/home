@@ -20,7 +20,7 @@
         .sublabel.errors(v-show="errors.has('message')") {{ errors.first('message') }}
       //- honeypot, do not delete
       input(type="text" name="_gotcha" style="display:none")
-      input.btn.fill.default(type="submit" value="Send")
+      input.btn.fill.dark(type="submit" value="Send")
 </template>
 
 <script>
