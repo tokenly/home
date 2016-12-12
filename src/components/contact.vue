@@ -2,7 +2,7 @@
 .contact#contact
   .container
     h2 Contact Us
-    p Questions? Drop us a line. We are always eager to hear new ideas and feedback from you!
+    p Our tools are not obvious at first, contact us to have your 'a-ha' moment.
     hr
     form(action="https://formspree.io/early@tokenly.com" method="POST" @submit="validateBeforeSubmit")
       .row
