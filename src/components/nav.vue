@@ -21,7 +21,7 @@ export default {
         },
         {
           name: 'Community',
-          url: 'https://www.facebook.com/tokenlyinc/'
+          url: 'https://slack.tokenly.com'
         },
         {
           name: 'Dashboard',
