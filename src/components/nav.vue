@@ -4,6 +4,8 @@
     .container
       .nav__heading
         a(href="/"): img.nav__logo(src="../assets/logo/Tokenly_Icon.svg" width="35px")
+        a.title Tokenly
+
       ul.nav__menu
         template(v-for="item in menuItems")
           li: a(v-bind:href="item.url" target="_blank")
@@ -21,7 +23,7 @@ export default {
         },
         {
           name: 'Community',
-          url: 'https://slack.tokenly.com'
+          url: 'http://slack.tokenly.com'
         },
         {
           name: 'Dashboard',
@@ -50,6 +52,8 @@ export default {
   line-height: 70px
   float: left
   font-weight: bold
+  .title
+    padding: 15px
 
 .nav__logo
   display: inline-block
