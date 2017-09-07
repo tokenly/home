@@ -2,7 +2,7 @@
 .contact#contact
   .container
     h2 Contact Us
-    p Have a question or need some help getting started? We’re totally here to help.
+    p We want to hear from you! Have a question or need some help getting started? We’re here to help.
     hr
     form(action="https://formspree.io/early@tokenly.com" method="POST" @submit="validateBeforeSubmit")
       .row

@@ -50,6 +50,7 @@ export default {
 .nav__content
   background-color: #fff
   overflow: hidden
+  padding: 0px 10px
 
 .nav__heading
   line-height: 70px

@@ -22,41 +22,18 @@
             )
           div(v-else-if="!interestSubmitted")
             h3 I'm interest in:
-            a.follow-up-button(
-              @click="addInterest('merch')"
-              v-bind:style="{ background: getColorVal(1) }"
-            ) Tokenly for Selling Merchandise
-            a.follow-up-button(
-              @click="addInterest('fashion')"
-              v-bind:style="{ background: getColorVal(2) }"
-            ) Tokenly for my Fashion project
-            a.follow-up-button(
-              @click="addInterest('music')"
-              v-bind:style="{ background: getColorVal(3) }"
-            ) Tokenly for Music
-            a.follow-up-button(
-              @click="addInterest('vinyl')"
-              v-bind:style="{ background: getColorVal(4) }"
-            ) Tokenly for limited edition vinyls
-            a.follow-up-button(
-              @click="addInterest('chats')"
-              v-bind:style="{ background: getColorVal(5) }"
-            ) Tokenly for Chats
-            a.follow-up-button(
-              @click="addInterest('other')"
-              v-bind:style="{ background: getColorVal(6) }"
-            ) I'm interested in something else
+            div(v-for="item in this.interests")
+              a.follow-up-button(
+                @click="addInterest(item.name)",
+                v-bind:style="{ background: item.backgroundColor}"
+              ) {{ item.name }}
+
           div(v-else-if="!additionalInfoSubmitted")
-            h3 We want to get in touch with you.  Please provide some additional information so that we can ...
+            h3 We want to get in touch with you.  Please provide some additional information so that we can best serve you.
             input.form-container__text.full(
               placeholder="Your Name"
               type="text"
               v-model="contact.name"
-            )
-            input.form-container__text.full(
-              placeholder="Company Name"
-              type="text"
-              v-model="contact.companyName"
             )
             input.form-container__text.full(
               placeholder="Brand/Company"
@@ -94,14 +71,35 @@ export default {
 
       },
 
-      colors: [
-        { color: 'red', hex: '#f44336' },
-        { color: 'pink', hex: '#e91e63' },
-        { color: 'purple', hex: '#9c27b0' },
-        { color: 'deep-purple', hex: '#673ab7' },
-        { color: 'indigo', hex: '#3f51b5' },
-        { color: 'blue', hex: '#2196f3' },
-        { color: 'light-blue', hex: '#03a9f4' },
+      interests: [
+        {
+          name: 'Tokenly for Selling Merchandise',
+          backgroundColor: '#f44336'
+        },
+        {
+          name: 'Tokenly for Fashion Projects',
+          backgroundColor: '#e91e63'
+        },
+        {
+          name: 'Tokenly for Brands',
+          backgroundColor: '#9c27b0'
+        },
+        {
+          name: 'Tokenly for Music',
+          backgroundColor: '#673ab7'
+        },
+        {
+          name: 'Tokenly for Limited Edition Vinyls',
+          backgroundColor: '#3f51b5'
+        },
+        {
+          name: 'Tokenly for Chats',
+          backgroundColor: '#2196f3'
+        },
+        {
+          name: 'I am interest in something else',
+          backgroundColor: '#03a9f4'
+        },
       ],
     }
   },
@@ -138,15 +136,6 @@ export default {
 
       this.sendJSONToSheet()
       //submit additional information to backend
-    },
-
-    getColorVal (n) {
-      let index = n
-      if (n > this.colors.length - 1) {
-        index = n % this.colors.length
-      }
-      let hex = this.colors[index].hex
-      return hex
     },
 
     sendJSONToSheet () {

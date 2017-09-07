@@ -1,8 +1,8 @@
 <template lang="pug">
 .app__content
-  .app__section
+  section.app__section
     .container
-      h2 What are Tokens?
+      header What are Tokens?
       p Tokens are a digital representation of your good whether it’s a trading card, song, movie, game, loyalty point, membership, and more. You can buy, sell, trade, or rent tokens for any traditional currency, digital currency, or other tokens. Only token holders can use the goods tokens represent and only creators can issue more.
       .row
         .six.columns
@@ -11,9 +11,9 @@
         .six.columns
           h3 Access tokens
           p This kind gives holders entry to features, services or accounts they wouldn’t have access to otherwise.
-  .app__section
+  section.app__section.dark
     .container
-      h2 Why Tokenly?
+      header Why Tokenly?
       .perks__wrapper
         .perks
           .perk(v-for="perk in perks")
@@ -73,11 +73,13 @@ export default {
 
 <style lang="sass?indentedSyntax=true" scoped>
 .app__content
-  margin: 40px 0 80px
+  padding: 0px 0px
 
 .app__section
-  &:not(:last-of-type)
-    margin-bottom: 3em
+  padding: 80px 0px
+  &.dark
+    background: #284461
+    color: #fff
 
 $perk-count: 6
 $perk-width: 600px
@@ -93,6 +95,7 @@ $perk-spacing: 40
   display: flex
   justify-content: space-between
   flex-wrap: wrap
+  color: #666
 
 $perk-color-1: lighten(#ff8080, 10%)
 $perk-color-2: #4170a0
