@@ -7,24 +7,85 @@
         h2.hero__h2 Tokenly is the world's first turnkey solution anyone can use to create and manage token-based consumer products
       .form-container
         form
-          input.form-container__text(
-            placeholder="Enter your email address"
-            type="text"
-          )
-          input.form-container__submit(
-            type="submit"
-            value="Get Started"
-          )
+          div(v-if="!emailSubmitted")
+            input.form-container__text(
+              placeholder="Enter your email address"
+              type="text"
+              v-model="contact.email"
+            )
+            input.form-container__submit(
+              type="submit"
+              value="Get Started"
+              @click.prevent="submitForm"
+            )
+          div(v-else-if="!interestSubmitted")
+            h3 How can we help you?
+            a.follow-up-button(
+              @click="addInterest('merch')"
+              v-bind:style="{ background: getColorVal(1) }"
+            ) I want to Sell Merchandise
+            a.follow-up-button(
+              @click="addInterest('fashion')"
+              v-bind:style="{ background: getColorVal(2) }"
+            ) Fashion
+            a.follow-up-button(
+              @click="addInterest('music')"
+              v-bind:style="{ background: getColorVal(3) }"
+            ) Music
+            a.follow-up-button(
+              @click="addInterest('vinyl')"
+              v-bind:style="{ background: getColorVal(4) }"
+            ) Vinyl
+            a.follow-up-button(
+              @click="addInterest('chats')"
+              v-bind:style="{ background: getColorVal(5) }"
+            ) Chats
+            a.follow-up-button(
+              @click="addInterest('other')"
+              v-bind:style="{ background: getColorVal(6) }"
+            ) Other
+          div(v-else-if="!additionalInfoSubmitted")
+            h3 More Information
+            input.form-container__text.full(
+              placeholder="Full Name"
+              type="text"
+              v-model="contact.name"
+            )
+            a.follow-up-button(
+              @click="addAdditionalInfo"
+            ) Contact Me
+          div(v-if="additionalInfoSubmitted")
+            p Thanks!
+
       div.more-information
         a New to Tokens?
   .hero__bg__mask
-  .hero__bg(ref="bg"): img(src="../assets/dark_sharp_edges.png")
+  .hero__bg(ref="bg")
 </template>
 
 <script>
 export default {
   data () {
-    return {}
+    return {
+      emailSubmitted: false,
+      interestSubmitted: false,
+      additionalInfoSubmitted: false,
+      contact: {
+        email: '',
+        interest: '',
+        name: ''
+      },
+
+      colors: [
+        { color: 'red', hex: '#f44336' },
+        { color: 'pink', hex: '#e91e63' },
+        { color: 'purple', hex: '#9c27b0' },
+        { color: 'deep-purple', hex: '#673ab7' },
+        { color: 'indigo', hex: '#3f51b5' },
+        { color: 'blue', hex: '#2196f3' },
+        { color: 'light-blue', hex: '#03a9f4' },
+      ],
+    }
   },
   created () {
     let self = this
@@ -35,6 +96,34 @@ export default {
         self.$refs.bg.style.top = `${scroll / 4}px`
       })
     })
+  },
+
+  methods: {
+    submitForm: function () {
+      this.emailSubmitted = true
+      //submit email to backend
+    },
+
+    addInterest: function (interest) {
+      this.interestSubmitted = true
+      this.contact.interest = interest
+      //submit interest to backend
+    },
+
+    addAdditionalInfo: function () {
+      this.additionalInfoSubmitted = true
+      //submit additional information to backend
+    },
+
+    getColorVal (n) {
+      let index = n
+      if (n > this.colors.length - 1) {
+        index = n % this.colors.length
+      }
+      let hex = this.colors[index].hex
+      return hex
+    }
+
   }
 }
 </script>
@@ -63,7 +152,7 @@ $hero-btn-color: #4170a0
 
 .hero__content
   position: relative
-  padding-top: $hero-spacing
+  padding-top: $hero-spacing + 70
   padding-bottom: $hero-spacing
   text-align: center
   color: #fff
@@ -81,7 +170,7 @@ $hero-btn-color: #4170a0
   overflow: hidden
   text-transform: none
   color: inherit
-  margin-bottom: 30px
+  margin: 0px 0px 30px 0px
   line-height: 1.5
   letter-spacing: 0.05px
   font-size: 60px
@@ -93,7 +182,7 @@ $hero-btn-color: #4170a0
   letter-spacing: 0
   color: inherit
   line-height: 1.1
-  font-size: 24px
+  font-size: 22px
   font-weight: 500
   margin-bottom: 50px
 
@@ -120,6 +209,10 @@ $hero-btn-color: #4170a0
       border: none
       outline: none
       background: #fff
+    &.full
+      width: 400px
+      max-width: 100%
+      margin-bottom: 15px
   .form-container__submit
     height: 61px
     vertical-align: middle
@@ -138,6 +231,19 @@ $hero-btn-color: #4170a0
       background: #EB786E
       background-image: linear-gradient(#EB786E,#EB786E)
       background-color: #EB786E
+  h3
+    color: #fff
+    font-size: 24px
+  a.follow-up-button
+    width: 400px
+    max-width: 100%
+    padding: 15px
+    display: block
+    margin-bottom: 15px
+    background: #fff
+    cursor: pointer
+    color: #fff
+
 
 
 .more-information
@@ -174,11 +280,7 @@ $hero-btn-color: #4170a0
   background-position: center
   overflow: hidden
   -webkit-filter: blur(0px)
-  img
-    width: 100%
-    margin-top: 0
-    margin-left: 0
-    position: absolute
-    right: 0
+  background: url(../assets/dark_sharp_edges.png)
+
 
 </style>
