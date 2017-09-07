@@ -128,11 +128,15 @@ export default {
     addInterest: function (interest) {
       this.interestSubmitted = true
       this.contact.interest = interest
+
+      this.sendJSONToSheet()
       //submit interest to backend
     },
 
     addAdditionalInfo: function () {
       this.additionalInfoSubmitted = true
+
+      this.sendJSONToSheet()
       //submit additional information to backend
     },
 
@@ -147,14 +151,19 @@ export default {
 
     sendJSONToSheet () {
 
-      alert("json send initiated")
+      let self = this
 
-      alert(this.contactJSON)
       $.ajax({
         url: "https://script.google.com/macros/s/AKfycbzxPW1g-E33514VVOyuz6DwZfa71cYs3EnIeYYYX6L2hzk3liyL/exec",
-        type: "POST",
-        dataType: "JSON",
-        data: this.contactJSON
+        type: "post",
+        data: self.contact,
+        success: function(data) {
+          console.log(data)
+        },
+        error: function(data) {
+          console.log(data)
+        },
+
       })
 
     }
@@ -163,10 +172,6 @@ export default {
 
   computed: {
     //compute some form labels
-
-    contactJSON () {
-      return JSON.stringify(this.contact)
-    }
   }
 }
 </script>
