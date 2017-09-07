@@ -3,9 +3,11 @@
   .hero__content__container.container
     .hero__content(ref="content")
       .row
-        h1.hero__h1 Build and Launch Digital Tokens
-        h2.hero__h2 Tokenly is the world's first turnkey solution anyone can use to create and manage token-based consumer products
-      .form-container
+        h1.hero__h1 Launch Your Own Digital Token
+        h2.hero__h2 Tokenly is the world's easiest way to create, sell, and manage token-based consumer products without writing a single line of code.
+      .form-container(
+        v-bind:class="{ notice: emailSubmitted }"
+      )
         form
           div(v-if="!emailSubmitted")
             input.form-container__text(
@@ -19,43 +21,56 @@
               @click.prevent="submitForm"
             )
           div(v-else-if="!interestSubmitted")
-            h3 How can we help you?
+            h3 I'm interest in:
             a.follow-up-button(
               @click="addInterest('merch')"
               v-bind:style="{ background: getColorVal(1) }"
-            ) I want to Sell Merchandise
+            ) Tokenly for Selling Merchandise
             a.follow-up-button(
               @click="addInterest('fashion')"
               v-bind:style="{ background: getColorVal(2) }"
-            ) Fashion
+            ) Tokenly for my Fashion project
             a.follow-up-button(
               @click="addInterest('music')"
               v-bind:style="{ background: getColorVal(3) }"
-            ) Music
+            ) Tokenly for Music
             a.follow-up-button(
               @click="addInterest('vinyl')"
               v-bind:style="{ background: getColorVal(4) }"
-            ) Vinyl
+            ) Tokenly for limited edition vinyls
             a.follow-up-button(
               @click="addInterest('chats')"
               v-bind:style="{ background: getColorVal(5) }"
-            ) Chats
+            ) Tokenly for Chats
             a.follow-up-button(
               @click="addInterest('other')"
               v-bind:style="{ background: getColorVal(6) }"
-            ) Other
+            ) I'm interested in something else
           div(v-else-if="!additionalInfoSubmitted")
-            h3 More Information
+            h3 We want to get in touch with you.  Please provide some additional information so that we can ...
             input.form-container__text.full(
-              placeholder="Full Name"
+              placeholder="Your Name"
               type="text"
               v-model="contact.name"
             )
-            a.follow-up-button(
+            input.form-container__text.full(
+              placeholder="Company Name"
+              type="text"
+              v-model="contact.companyName"
+            )
+            input.form-container__text.full(
+              placeholder="Brand/Company"
+              type="text"
+              v-model="contact.brandCompany"
+            )
+            a.follow-up-button.final(
               @click="addAdditionalInfo"
             ) Contact Me
           div(v-if="additionalInfoSubmitted")
-            p Thanks!
+            p Thanks for getting in touch with us! We will contact you soon.
+            a.follow-up-button.final Join our Rocket Chat
+            a.follow-up-button.final Tweet about Us
+            a.follow-up-button.final Learn More About Tokenly
 
       div.more-information
         a New to Tokens?
@@ -73,7 +88,10 @@ export default {
       contact: {
         email: '',
         interest: '',
-        name: ''
+        name: '',
+        companyName: '',
+        brandCompany: ''
+
       },
 
       colors: [
@@ -101,6 +119,9 @@ export default {
   methods: {
     submitForm: function () {
       this.emailSubmitted = true
+
+      this.sendJSONToSheet()
+
       //submit email to backend
     },
 
@@ -122,8 +143,30 @@ export default {
       }
       let hex = this.colors[index].hex
       return hex
+    },
+
+    sendJSONToSheet () {
+
+      alert("json send initiated")
+
+      alert(this.contactJSON)
+      $.ajax({
+        url: "https://script.google.com/macros/s/AKfycbzxPW1g-E33514VVOyuz6DwZfa71cYs3EnIeYYYX6L2hzk3liyL/exec",
+        type: "POST",
+        dataType: "JSON",
+        data: this.contactJSON
+      })
+
     }
 
+  },
+
+  computed: {
+    //compute some form labels
+
+    contactJSON () {
+      return JSON.stringify(this.contact)
+    }
   }
 }
 </script>
@@ -193,6 +236,9 @@ $hero-btn-color: #4170a0
   background: rgba(0,0,0,0.3)
   display: inline-block
   margin-bottom: 30px
+  max-width: 550px
+  border: 1px solid rgba(0,0,0,0.2)
+  box-shadow: 0px 1px 1px rgba(0,0,0,0.2)
   .form-container__text
     width: 300px
     color: #666
@@ -213,6 +259,7 @@ $hero-btn-color: #4170a0
       width: 400px
       max-width: 100%
       margin-bottom: 15px
+      margin-right: 0px
   .form-container__submit
     height: 61px
     vertical-align: middle
@@ -231,18 +278,25 @@ $hero-btn-color: #4170a0
       background: #EB786E
       background-image: linear-gradient(#EB786E,#EB786E)
       background-color: #EB786E
+  &.notice
+    border: 2px solid #E4FA4D
   h3
     color: #fff
-    font-size: 24px
+    font-size: 18px
+    font-weight: 500
   a.follow-up-button
     width: 400px
     max-width: 100%
     padding: 15px
-    display: block
-    margin-bottom: 15px
+    display: inline-block
+    margin: 0 auto 15px auto
     background: #fff
     cursor: pointer
     color: #fff
+    &.final
+      background: #E4FA4D
+      color: #111
+      font-weight: 600
 
 
 
