@@ -45,6 +45,11 @@
               type="text"
               v-model="contact.brandCompany"
             )
+            textarea.form-container__text.full(
+              placeholder="Tell Us About Your Project"
+              type="text"
+              v-model="contact.aboutProject"
+            )
             a.follow-up-button.final(
               @click="addAdditionalInfo"
             ) Contact Me
@@ -73,7 +78,8 @@ export default {
         interest: '',
         name: '',
         companyName: '',
-        brandCompany: ''
+        brandCompany: '',
+        aboutProject: ''
 
       },
 
@@ -303,6 +309,7 @@ $hero-btn-color: #4170a0
     background: #fff
     cursor: pointer
     color: #fff
+    border-radius: 3px
     &.final
       background: #E4FA4D
       color: #111
