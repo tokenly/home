@@ -17,11 +17,11 @@ export default {
       menuItems: [
         {
           name: 'Pockets',
-          url: 'http://pockets.tokenly.com/'
+          url: 'https://tokenpockets.com/'
         },
         {
           name: 'Community',
-          url: 'https://slack.tokenly.com'
+          url: 'http://slack.tokenly.com'
         },
         {
           name: 'Dashboard',
