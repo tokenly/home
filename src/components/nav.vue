@@ -4,6 +4,8 @@
     .container
       .nav__heading
         a(href="/"): img.nav__logo(src="../assets/logo/Tokenly_Icon.svg" width="35px")
+        a.title Tokenly
+
       ul.nav__menu
         template(v-for="item in menuItems")
           li: a(v-bind:href="item.url" target="_blank")
@@ -35,21 +37,27 @@ export default {
 
 <style lang="sass?indentedSyntax=true" scoped>
 .nav
-  position: relative
+  position: fixed
+  left: 0px
+  right: 0px
   z-index: 999
   height: 70px
   font-size: 1em
   overflow: hidden
+  border-bottom: 1px solid rgba(0,0,0,0.1)
+  box-shadow: 0px 1px 1px rgba(0,0,0,0.2)
 
 .nav__content
-  margin: 0 10px
   background-color: #fff
   overflow: hidden
+  padding: 0px 10px
 
 .nav__heading
   line-height: 70px
   float: left
   font-weight: bold
+  .title
+    padding: 15px
 
 .nav__logo
   display: inline-block

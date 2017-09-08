@@ -6,10 +6,10 @@ footer
         .three.columns
           .footer__heading On The Web
           ul.footer__menu
-            li: a(href="https://letstalkbitcoin.com/blog/category/episodes" target="_blank") Let's Talk Bitcoin
+            li: a(href="http://letstalkbitcoin.com/blog/category/episodes" target="_blank") Let's Talk Bitcoin
             li: a(href="http://tokentalk.org/" target="_blank") TokenTalk
             li: a(href="https://github.com/tokenly" target="_blank") Github
-            li: a(href="https://letstalkbitcoin.com/blog/tokenly" target="_blank") Blog
+            li: a(href="http://letstalkbitcoin.com/blog/tokenly" target="_blank") Blog
         .three.columns
           .footer__heading Social
           ul.footer__menu
@@ -20,15 +20,15 @@ footer
         .three.columns
           .footer__heading Products
           ul.footer__menu
-            li: a(href="http://tokenpass.tokenly.com" target="_blank") Tokenpass
+            li: a(href="https://tokenpass.tokenly.com" target="_blank") Tokenpass
             li: a(href="http://pockets.tokenly.com" target="_blank") Pockets
-            li: a(href="http://swapbot.tokenly.com" target="_blank") Swapbot
+            li: a(href="https://swapbot.tokenly.com" target="_blank") Swapbot
         .three.columns
           .footer__heading.products__cont &nbsp;
           ul.footer__menu
-            li: a(href="http://redeem.tokenly.com" target="_blank") Market
-            li: a(href="http://slots.tokenly.com" target="_blank") Tokenslot
-            li: a(href="http://bitsplit.tokenly.com" target="_blank") Bitsplit
+            li: a(href="https://redeem.tokenly.com" target="_blank") Market
+            li: a(href="https://slots.tokenly.com" target="_blank") Tokenslot
+            li: a(href="https://bitsplit.tokenly.com" target="_blank") Bitsplit
   .footnote
     .container
       .row
@@ -50,11 +50,11 @@ export default {
 footer
   z-index: 100
   font-size: 1em
-  margin: 0 10px
 
 .footer__links
   padding: 60px 0
-  background-color: #fff
+  background-color: #222
+  color: #fff
 
 .footer__heading
   font-weight: bold
@@ -72,8 +72,8 @@ footer
 
 .footnote
   padding: 1.5em 0
-  background-color: #5f5f5f
-  color: #e6e7e8
+  background-color: #111
+  color: rgba(255,255,255,0.8)
   font-size: 1em
   font-weight: bold
 

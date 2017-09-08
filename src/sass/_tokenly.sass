@@ -8,7 +8,7 @@ $gray:                      #989b9b
 $gray-light:                #d8dcde
 $gray-lighter:              #eeeeee
 
-$brand-primary:             #4497FA
+$brand-primary:             #4270a1
 $brand-success:             #2eCC71
 $brand-warning:             #FFC107
 $brand-danger:              #FB6B5D
@@ -66,6 +66,11 @@ h5
 h6
   font-size: .75em
 
+header
+  font-size: 2.5em
+  text-align: center
+  margin-bottom: 1.5em
+
 p
   line-height: 1.6
   margin-top: 0
@@ -106,7 +111,9 @@ hr
 /* For devices larger than 550px */
 @media (min-width: 550px)
   .container
-    width: 80%
+    max-width: 1200px
+    width: 100%
+    padding: 0px 10px
   .column,
   .columns
     margin-left: 4%
