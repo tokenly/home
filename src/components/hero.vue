@@ -3,7 +3,7 @@
   .hero__content__container.container
     .hero__content(ref="content")
       .row
-        h1.hero__h1 Launch Your Own Digital Token
+        h1.hero__h1 Launch Your Own Product Token
         h2.hero__h2 Tokenly is the world's easiest way to create, sell, and manage token-based consumer products without writing a single line of code.
       .form-container(
         v-bind:class="{ notice: emailSubmitted }"
@@ -13,13 +13,18 @@
             input.form-container__text(
               placeholder="Enter your email address"
               type="text"
+              name="email"
               v-model="contact.email"
+              v-validate="'required|email'"
             )
             input.form-container__submit(
               type="submit"
               value="Get Started"
               @click.prevent="submitForm"
             )
+            p.errors(
+              v-if="this.emailSubmissionError && !this.validEmail"
+            ) {{ this.errors.first('email') }}
           div(v-else-if="!interestSubmitted")
             h3 I'm interest in:
             div(v-for="item in this.interests")
@@ -60,6 +65,7 @@ export default {
   data () {
     return {
       emailSubmitted: false,
+      emailSubmissionError: false,
       interestSubmitted: false,
       additionalInfoSubmitted: false,
       contact: {
@@ -116,29 +122,31 @@ export default {
 
   methods: {
     submitForm: function () {
-      this.emailSubmitted = true
 
-      this.sendJSONToSheet()
-
-      //submit email to backend
+      if (this.validEmail) {
+        this.emailSubmitted = true
+        this.sendDataToSheet()
+      } else {
+          this.emailSubmissionError = true
+      }
     },
 
     addInterest: function (interest) {
       this.interestSubmitted = true
       this.contact.interest = interest
 
-      this.sendJSONToSheet()
+      this.sendDataToSheet()
       //submit interest to backend
     },
 
     addAdditionalInfo: function () {
       this.additionalInfoSubmitted = true
 
-      this.sendJSONToSheet()
+      this.sendDataToSheet()
       //submit additional information to backend
     },
 
-    sendJSONToSheet () {
+    sendDataToSheet () {
 
       let self = this
 
@@ -161,6 +169,14 @@ export default {
 
   computed: {
     //compute some form labels
+
+    validEmail () {
+      if (this.contact.email.length > 0 & !this.errors.has('email')) {
+        return true
+      } else {
+        return false
+      }
+    }
   }
 }
 </script>
@@ -291,6 +307,8 @@ $hero-btn-color: #4170a0
       background: #E4FA4D
       color: #111
       font-weight: 600
+  p.errors
+    margin: 20px 0px 0px 0px
 
 
 
