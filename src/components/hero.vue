@@ -22,6 +22,7 @@
               value="Get Started"
               @click.prevent="submitForm"
             )
+            input(type="text" name="_gotcha" v-model="gotcha" style="display:none")
             p.errors(
               v-if="this.emailSubmissionError && !this.validEmail"
             ) {{ this.errors.first('email') }}
@@ -85,6 +86,7 @@ export default {
       emailSubmissionError: false,
       interestSubmitted: false,
       additionalInfoSubmitted: false,
+      gotcha: '',
       contact: {
         email: '',
         interest: '',
@@ -140,12 +142,13 @@ export default {
 
   methods: {
     submitForm: function () {
-
-      if (this.validEmail) {
-        this.emailSubmitted = true
-        this.sendDataToSheet()
-      } else {
-          this.emailSubmissionError = true
+      if (!this.spamDetected) {
+        if (this.validEmail) {
+          this.emailSubmitted = true
+          this.sendDataToSheet()
+        } else {
+            this.emailSubmissionError = true
+        }
       }
     },
 
@@ -156,8 +159,10 @@ export default {
     },
 
     addAdditionalInfo: function () {
-      this.additionalInfoSubmitted = true
-      this.sendDataToSheet()
+      if (!this.spamDetected) {
+        this.additionalInfoSubmitted = true
+        this.sendDataToSheet()
+      }
     },
 
     sendDataToSheet () {
@@ -190,6 +195,11 @@ export default {
       } else {
         return false
       }
+    },
+
+    spamDetected () {
+      //see if a pesky bot filled in the hidden input
+      return (this.gotcha.length > 0)
     }
   }
 }
