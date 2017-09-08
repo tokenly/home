@@ -1,5 +1,5 @@
 <template lang="pug">
-.app__content
+.app__content(id="content")
   section.app__section
     .container
       header What are Tokens?

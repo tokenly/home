@@ -50,17 +50,29 @@
               type="text"
               v-model="contact.aboutProject"
             )
-            a.follow-up-button.final(
-              @click="addAdditionalInfo"
-            ) Contact Me
+            div
+              a.follow-up-button.final(
+                v-on:click.stop="addAdditionalInfo"
+              ) Contact Me
           div(v-if="additionalInfoSubmitted")
             p Thanks for getting in touch with us! We will contact you soon.
-            a.follow-up-button.final Join our Rocket Chat
-            a.follow-up-button.final Tweet about Us
-            a.follow-up-button.final Learn More About Tokenly
+            a.follow-up-button.next(
+              href="#content"
+            ) Learn More About Tokenly
+            a.follow-up-button.next(
+              href="https://chat.tokenly.com"
+              target="_blank"
+            ) Join our Rocket Chat
+            a.follow-up-button.next(
+               href="https://twitter.com/intent/tweet?text=I'm%20talking%20to%20@tokenly%20about%20my%20secret%20project."
+               target="_blank"
+            ) Tweet about Us
+
 
       div.more-information
-        a New to Tokens?
+        a(
+          href="#content"
+        ) New to Tokens?
   .hero__bg__mask
   .hero__bg(ref="bg")
 </template>
@@ -140,16 +152,12 @@ export default {
     addInterest: function (interest) {
       this.interestSubmitted = true
       this.contact.interest = interest
-
       this.sendDataToSheet()
-      //submit interest to backend
     },
 
     addAdditionalInfo: function () {
       this.additionalInfoSubmitted = true
-
       this.sendDataToSheet()
-      //submit additional information to backend
     },
 
     sendDataToSheet () {
@@ -276,6 +284,7 @@ $hero-btn-color: #4170a0
       max-width: 100%
       margin-bottom: 15px
       margin-right: 0px
+
   .form-container__submit
     height: 61px
     vertical-align: middle
@@ -310,10 +319,16 @@ $hero-btn-color: #4170a0
     cursor: pointer
     color: #fff
     border-radius: 3px
+    text-decoration: none
+    border: 1px solid rgba(0,0,0,0.2)
+    box-shadow: inset 0px 1px 1px rgba(255,255,255,0.1), 0px 1px 1px rgba(0,0,0,0.2)
     &.final
       background: #E4FA4D
       color: #111
       font-weight: 600
+    &.next
+      background: #59AE7D
+      box-shadow: inset 0px 1px 1px rgba(255,255,255,0.1)
   p.errors
     margin: 20px 0px 0px 0px
 
