@@ -270,10 +270,11 @@ $hero-btn-color: #4170a0
   background: rgba(0,0,0,0.3)
   display: inline-block
   margin-bottom: 30px
-  max-width: 550px
+  width: 550px
+  max-width: 100%
   border: 1px solid rgba(0,0,0,0.2)
   box-shadow: 0px 1px 1px rgba(0,0,0,0.2)
-  .form-container__text
+  &__text
     width: 300px
     color: #666
     background: #eee
@@ -295,7 +296,7 @@ $hero-btn-color: #4170a0
       margin-bottom: 15px
       margin-right: 0px
 
-  .form-container__submit
+  &__submit
     height: 61px
     vertical-align: middle
     padding: 10px 30px
@@ -380,5 +381,16 @@ $hero-btn-color: #4170a0
   -webkit-filter: blur(0px)
   background: url(../assets/dark_sharp_edges.png)
 
+@media(max-width: 767px)
+  .hero__h1
+    font-size: 36px
+  .hero__h2
+    font-size: 18px
+  .form-container
+    &__text
+      margin: 0px 0px 20px 0px
+      width: 100%
+    &__submit
+      width: 100%
 
 </style>

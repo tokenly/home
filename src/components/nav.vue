@@ -3,7 +3,8 @@
   .nav__content
     .container
       .nav__heading
-        a(href="/"): img.nav__logo(src="../assets/logo/Tokenly_Icon.svg" width="35px")
+        a(href="/")
+          img.nav__logo(src="../assets/logo/Tokenly_Icon.svg" width="35px")
         a.title Tokenly
 
       ul.nav__menu
@@ -80,4 +81,9 @@ export default {
       text-decoration: none
       &:hover
         color: #4170a0
+
+@media(max-width: 767px)
+  .nav__heading
+    .title
+      display: none
 </style>
