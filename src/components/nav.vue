@@ -9,7 +9,7 @@
 
       ul.nav__menu
         template(v-for="item in menuItems")
-          li: a(v-bind:href="item.url" target="_blank")
+          li: a(v-bind:href="item.url" target="_blank" v-bind:class="{ alert: item.alert }")
             span {{ item.name }}
 </template>
 
@@ -29,6 +29,11 @@ export default {
         {
           name: 'Dashboard',
           url: 'https://tokenpass.tokenly.com/auth/login'
+        },
+        {
+          name: 'Token Sale',
+          url: 'https://tekk.tokenly.com',
+          alert: true
         }
       ]
     }
@@ -81,6 +86,10 @@ export default {
       text-decoration: none
       &:hover
         color: #4170a0
+  a.alert
+    color: #2D25D4
+    &:hover
+      color: #2D25D4
 
 @media(max-width: 767px)
   .nav__heading

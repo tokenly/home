@@ -61,7 +61,7 @@
               href="#content"
             ) Learn More About Tokenly
             a.follow-up-button.next(
-              href="https://chat.tokenly.com"
+              href="https://tokenly.rocket.chat"
               target="_blank"
             ) Join our Rocket Chat
             a.follow-up-button.next(
@@ -207,6 +207,7 @@ export default {
 
 <style lang="sass?indentedSyntax=true" scoped>
 $hero-spacing: 110px
+$hero-spacing-mobile: 50px
 $hero-btn-color: #4170a0
 
 .hero
@@ -226,10 +227,11 @@ $hero-btn-color: #4170a0
 .hero__content__container
   position: relative
   z-index: 100
+  margin-top: 70px
 
 .hero__content
   position: relative
-  padding-top: $hero-spacing + 70
+  padding-top: $hero-spacing
   padding-bottom: $hero-spacing
   text-align: center
   color: #fff
@@ -382,6 +384,9 @@ $hero-btn-color: #4170a0
   background: url(../assets/dark_sharp_edges.png)
 
 @media(max-width: 767px)
+  .hero__content
+    padding-top: $hero-spacing-mobile
+    padding-bottom: $hero-spacing-mobile
   .hero__h1
     font-size: 36px
   .hero__h2
