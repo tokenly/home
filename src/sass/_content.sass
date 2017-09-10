@@ -1,0 +1,47 @@
+
+.card
+  box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22)
+  background: #fff
+  display: inline-block
+  max-width: 100%
+  border: 1px solid rgba(0,0,0,0.1)
+  border-radius: 2px
+  width: 500px
+  &__content
+    padding: 10px
+  &__header
+    padding: 10px
+    text-align: center
+    margin: 0px
+  &__cta
+    padding: 10px
+    display: inline-block
+    margin: 0 auto
+
+.grid
+  display: flex
+  margin-bottom: 30px
+  .grid-entry
+    margin-bottom: 20px
+    &.two-columns
+      width: 50%
+    &.no-columns
+      margin: 0 auto
+    &.four-columns
+      width: 25%
+    &.padded
+      padding: 15px
+  &:last-child
+    margin-bottom: 0px
+
+@media(max-width: 767px)
+  .grid
+    display: block
+    .grid-entry
+      margin-bottom: 20px
+      &.two-columns
+        width: 100%
+      &.padded
+        padding: 10px
+      &.four-columns
+        width: 50%

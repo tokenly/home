@@ -29,6 +29,10 @@ export default {
         {
           name: 'Dashboard',
           url: 'https://tokenpass.tokenly.com/auth/login'
+        },
+        {
+          name: 'Token Sale',
+          url: 'https://tekk.tokenly.com'
         }
       ]
     }
