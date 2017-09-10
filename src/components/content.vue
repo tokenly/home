@@ -33,6 +33,7 @@
             p Username-based token inventory and management platform.
             a.product-description__cta(
               href="https://tokenpass.tokenly.com/"
+              target="_blank"
             ) Create Your Tokenpass Account
         .grid-entry.two-columns.padded
           div.product-logo
@@ -42,6 +43,7 @@
             p Create and multi-sig wallets.  Issue your own tokens.
             a.product-description__cta(
               href="https://wallet.tokenpockets.com/"
+              target="_blank"
             ) Try the TokenPockets Demo
       .grid
         .grid-entry.no-columns.padded
@@ -51,7 +53,8 @@
           .product-description
             p Turnkey eCommerce and crowdsale solution.
             a.product-description__cta(
-              href="https://wallet.tokenpockets.com/"
+              href="https://tokenmarkets.com/catalog/browse"
+              target="_blank"
             ) Signup for Token Markets Beta
 
   section.app__section.grey
