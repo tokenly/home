@@ -7,9 +7,9 @@
         .grid-entry.two-columns.padded
           div.product-logo
             img.product-logo__img(src="../assets/tekk-logo.png")
-          h3.product-title Tekk Token Sale
+          h3.product-title TEKK Sidechain Ecosystem
           .product-description
-            p Buy into the future of ownership. Token Sale Sep 22, 2017.
+            p Purchase TEKK tokens Sep 22, 2017.
             a.product-description__cta(
               href="https://tekk.tokenly.com"
               target="_blank"
@@ -19,7 +19,7 @@
             img.product-logo__img(src="../assets/tokenfm-logo.png")
           h3.product-title TokenFM
           .product-description
-            p The world's first blockchain-based media streaming platform.
+            p iTunes plus Patreon, on the blockchain.
             a.product-description__cta(
               href="https://token.fm"
               target="_blank"
