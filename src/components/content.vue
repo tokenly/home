@@ -1,5 +1,5 @@
 <template lang="pug">
-.app__content(id="content")
+.app__content
   section.app__section
     .container
       header Our Products
@@ -57,7 +57,7 @@
               target="_blank"
             ) Signup for Token Markets Beta
 
-  section.app__section.grey
+  section.app__section.grey(id="content")
     .container
       header What are Tokens?
       p Tokens are a digital representation of your good whether it’s a trading card, song, movie, game, loyalty point, membership, and more. You can buy, sell, trade, or rent tokens for any traditional currency, digital currency, or other tokens. Only token holders can use the goods tokens represent and only creators can issue more.
