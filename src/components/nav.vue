@@ -32,7 +32,7 @@ export default {
         },
         {
           name: 'Token Sale',
-          url: 'https://tekk.tokenly.com',
+          url: 'https://token.fm/',
           alert: true
         }
       ]
