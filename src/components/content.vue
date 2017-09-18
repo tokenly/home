@@ -11,7 +11,7 @@
           .product-description
             p Purchase TEKK tokens Sep 22, 2017.
             a.product-description__cta(
-              href="https://tekk.tokenly.com"
+              href="https://token.fm/"
               target="_blank"
             ) Join the Token Sale
         .grid-entry.two-columns.padded
