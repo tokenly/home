@@ -9,7 +9,7 @@
             img.product-logo__img(src="../assets/tekk-logo.png")
           h3.product-title TEKK Sidechain Ecosystem
           .product-description
-            p Purchase TEKK tokens Sep 22, 2017.
+            p Purchase TEKK tokens (coming soon).
             a.product-description__cta(
               href="https://token.fm/"
               target="_blank"
@@ -30,7 +30,7 @@
             i.material-icons vpn_key
           h3.product-title Tokenpass
           .product-description
-            p Username-based token inventory and management platform.
+            p Global accounts system featuring Token Controlled Access
             a.product-description__cta(
               href="https://tokenpass.tokenly.com/"
               target="_blank"
@@ -38,13 +38,13 @@
         .grid-entry.two-columns.padded
           div.product-logo
             img.product-logo__img(src="../assets/tokenpockets-logo.svg")
-          h3.product-title TokenPockets
+          h3.product-title Token Pockets
           .product-description
-            p Create and multi-sig wallets.  Issue your own tokens.
+            p Token enabled Bitcoin wallet with support for multi-sig.
             a.product-description__cta(
-              href="https://wallet.tokenpockets.com/"
+              href="https://tokenpockets.com/"
               target="_blank"
-            ) Try the TokenPockets Demo
+            ) Try the Token Pockets Demo
       .grid
         .grid-entry.no-columns.padded
           div.product-logo
@@ -53,7 +53,7 @@
           .product-description
             p Turnkey eCommerce and crowdsale solution.
             a.product-description__cta(
-              href="https://tokenmarkets.com/catalog/browse"
+              href="https://tokenmarkets.com"
               target="_blank"
             ) Signup for Token Markets Beta
 
@@ -105,17 +105,17 @@ export default {
         {
           icon: 'battery_charging_full',
           name: 'Efficient',
-          text: 'Users can get Instant gratification upon purchase- using token controlled access.'
+          text: 'Users can get instant gratification upon purchase - using Token Controlled Access.'
         },
         {
           icon: 'attach_money',
           name: 'Rewards Systems',
-          text: 'Track interaction and reward your audience with a digital gift certificate- otherwise known as a token.'
+          text: 'Track interaction and reward your audience with a digital gift certificate - otherwise known as a token.'
         },
         {
           icon: 'shopping_basket',
           name: 'Token eCommerce',
-          text: 'We give you tools to easily create and embed a store on your website. We take no fees.'
+          text: 'We give you tools to easily create and embed a token-enabled store on your website.'
         },
         {
           icon: 'trending_up',

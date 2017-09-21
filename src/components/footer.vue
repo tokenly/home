@@ -6,10 +6,9 @@ footer
         .three.columns
           .footer__heading On The Web
           ul.footer__menu
-            li: a(href="http://letstalkbitcoin.com/blog/category/episodes" target="_blank") Let's Talk Bitcoin
-            li: a(href="http://tokentalk.org/" target="_blank") TokenTalk
+            li: a(href="https://tokenly.com") Tokenly Inc.
+            li: a(href="https://letstalkbitcoin.com" target="_blank") Let's Talk Bitcoin
             li: a(href="https://github.com/tokenly" target="_blank") Github
-            li: a(href="http://letstalkbitcoin.com/blog/tokenly" target="_blank") Blog
         .three.columns
           .footer__heading Social
           ul.footer__menu
@@ -20,15 +19,16 @@ footer
         .three.columns
           .footer__heading Products
           ul.footer__menu
-            li: a(href="https://tokenpass.tokenly.com" target="_blank") Tokenpass
-            li: a(href="http://pockets.tokenly.com" target="_blank") Pockets
-            li: a(href="https://swapbot.tokenly.com" target="_blank") Swapbot
+            li: a(href="https://tokenmarkets.com" target="_blank") Token Markets
+            li: a(href="https://swapbot.tokenly.com" target="_blank") Swapbot            
+            li: a(href="https://bitsplit.tokenly.com" target="_blank") Bitsplit
+
         .three.columns
           .footer__heading.products__cont &nbsp;
           ul.footer__menu
-            li: a(href="https://redeem.tokenly.com" target="_blank") Market
-            li: a(href="https://slots.tokenly.com" target="_blank") Tokenslot
-            li: a(href="https://bitsplit.tokenly.com" target="_blank") Bitsplit
+            li: a(href="https://tokenpass.tokenly.com" target="_blank") Tokenpass
+            li: a(href="https://tokenpockets.com" target="_blank") Token Pockets          
+
   .footnote
     .container
       .row
