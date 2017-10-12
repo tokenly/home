@@ -29,11 +29,6 @@ export default {
         {
           name: 'Dashboard',
           url: 'https://tokenpass.tokenly.com/auth/login'
-        },
-        {
-          name: 'Token Sale',
-          url: 'https://token.fm/',
-          alert: true
         }
       ]
     }
