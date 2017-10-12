@@ -10,10 +10,6 @@
           h3.product-title TEKK Sidechain Ecosystem
           .product-description
             p Purchase TEKK tokens (coming soon).
-            a.product-description__cta(
-              href="https://token.fm/"
-              target="_blank"
-            ) Join the Token Sale
         .grid-entry.two-columns.padded
           div.product-logo
             img.product-logo__img(src="../assets/tokenfm-logo.png")
