@@ -1,79 +1,23 @@
 <template lang="pug">
-.hero
-  .hero__content__container.container
+section.hero
+  .hero__content__container
     .hero__content(ref="content")
       .row
-        h1.hero__h1 Launch Your Own Product Token
-        h2.hero__h2 Tokenly is the world's easiest way to create, sell, and manage token-based consumer products without writing a single line of code.
-      .form-container(
-        v-bind:class="{ notice: emailSubmitted }"
-      )
-        form
-          div(v-if="!emailSubmitted")
-            input.form-container__text(
-              placeholder="Enter your email address"
-              type="text"
-              name="email"
-              v-model="contact.email"
-              v-validate="'required|email'"
-            )
-            input.form-container__submit(
-              type="submit"
-              value="Get Started"
-              @click.prevent="submitForm"
-            )
-            input(type="text" name="_gotcha" v-model="gotcha" style="display:none")
-            p.errors(
-              v-if="this.emailSubmissionError && !this.validEmail"
-            ) {{ this.errors.first('email') }}
-          div(v-else-if="!interestSubmitted")
-            h3 I'm interest in:
-            div(v-for="item in this.interests")
-              a.follow-up-button(
-                @click="addInterest(item.name)",
-                v-bind:style="{ background: item.backgroundColor}"
-              ) {{ item.name }}
-
-          div(v-else-if="!additionalInfoSubmitted")
-            h3 We want to get in touch with you.  Please provide some additional information so that we can best serve you.
-            input.form-container__text.full(
-              placeholder="Your Name"
-              type="text"
-              v-model="contact.name"
-            )
-            input.form-container__text.full(
-              placeholder="Brand/Company"
-              type="text"
-              v-model="contact.brandCompany"
-            )
-            textarea.form-container__text.full(
-              placeholder="Tell Us About Your Project"
-              type="text"
-              v-model="contact.aboutProject"
-            )
-            div
-              a.follow-up-button.final(
-                v-on:click.stop="addAdditionalInfo"
-              ) Contact Me
-          div(v-if="additionalInfoSubmitted")
-            p Thanks for getting in touch with us! We will contact you soon.
-            a.follow-up-button.next(
-              href="#content"
-            ) Learn More About Tokenly
-            a.follow-up-button.next(
-              href="https://tokenly.rocket.chat"
-              target="_blank"
-            ) Join our Rocket Chat
-            a.follow-up-button.next(
-               href="https://twitter.com/intent/tweet?text=I'm%20talking%20to%20@tokenly%20about%20my%20secret%20project."
-               target="_blank"
-            ) Tweet about Us
-
-
-      div.more-information
-        a(
-          href="#content"
-        ) New to Tokens?
+        h1.hero__h1
+          span Blockchain Tokens for the Real World
+        h2.hero__h2
+          span Intuitive. Turnkey. Scalable.
+        a.hero__cta
+          span Continue
+          br
+          span
+            i.material-icons keyboard_arrow_down
+  .hero__continue
+    a.hero__cta
+      span Continue
+      br
+      span
+        i.material-icons keyboard_arrow_down
   .hero__bg__mask
   .hero__bg(ref="bg")
 </template>
@@ -206,8 +150,8 @@ export default {
 </script>
 
 <style lang="sass?indentedSyntax=true" scoped>
-$hero-spacing: 110px
-$hero-spacing-mobile: 50px
+$hero-spacing: 150px
+$hero-spacing-mobile: 100px
 $hero-btn-color: #4170a0
 
 .hero
@@ -215,6 +159,8 @@ $hero-btn-color: #4170a0
   position: relative
   font-size: 1em
   overflow: hidden
+  min-height: 100vh
+  z-index: -9
 
 .hero__bg, .hero__bg__mask
   position: absolute
@@ -225,16 +171,33 @@ $hero-btn-color: #4170a0
 
 
 .hero__content__container
-  position: relative
+  position: fixed
   z-index: 100
-  margin-top: 70px
+  top: 0px
+  bottom: 0px
+  right: 0px
+  left: 0px
+  display: table
+  width: 100%
+  height: 100%
 
 .hero__content
   position: relative
-  padding-top: $hero-spacing
-  padding-bottom: $hero-spacing
   text-align: center
   color: #fff
+  max-width: 800px
+  margin: 0 auto
+  display: table-cell
+  vertical-align: middle
+  padding: 20px
+
+.hero__continue
+  position: fixed
+  text-align: center
+  bottom: 0px
+  z-index: 9
+  width: 100%
+  padding: 20px
 
 .hero__heading
   font-size: 2em
@@ -251,9 +214,11 @@ $hero-btn-color: #4170a0
   color: inherit
   margin: 0px 0px 30px 0px
   line-height: 1.5
-  letter-spacing: 0.05px
-  font-size: 60px
+  letter-spacing: 0.5px
+  font-size: 32px
+  font-weight: 700
   text-shadow: 0px 1px 1px rgba(0,0,0,0.3)
+  text-transform: uppercase
 
 .hero__h2
   overflow: hidden
@@ -264,6 +229,15 @@ $hero-btn-color: #4170a0
   font-size: 22px
   font-weight: 500
   margin-bottom: 50px
+
+.hero__cta
+  padding: 10px 50px
+  border: 2px solid #fff
+  color: #fff
+  border-radius: 30px
+  cursor: pointer
+  display: inline-block
+
 
 .form-container
   margin: 0 auto
@@ -371,8 +345,8 @@ $hero-btn-color: #4170a0
     background-color: lighten($hero-btn-color, 5%)
 
 .hero__bg__mask
-  background: linear-gradient(to bottom, #4270a1 0%, #284461 100%)
-  opacity: 0.6
+  opacity: 1
+  background: linear-gradient(to top,#35a7ff 0%, #0063c6 100%)
   z-index: 5
 
 .hero__bg
@@ -381,14 +355,12 @@ $hero-btn-color: #4170a0
   background-position: center
   overflow: hidden
   -webkit-filter: blur(0px)
-  background: url(../assets/dark_sharp_edges.png)
 
 @media(max-width: 767px)
   .hero__content
-    padding-top: $hero-spacing-mobile
-    padding-bottom: $hero-spacing-mobile
+    text-align: center
   .hero__h1
-    font-size: 36px
+    font-size: 24px
   .hero__h2
     font-size: 18px
   .form-container

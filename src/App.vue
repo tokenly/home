@@ -1,7 +1,9 @@
 <template lang="pug">
-#app
+#app()
   navigation
   hero
+  about
+  return-to-top
   tokenly-content
   tokenly-footer
 </template>
@@ -9,16 +11,21 @@
 <script>
 import Navigation from './components/nav.vue'
 import Hero from './components/hero.vue'
+import About from './components/about.vue'
+import ReturnToTop from './components/return-to-top.vue'
 import TokenlyContent from './components/content.vue'
 import TokenlyFooter from './components/footer.vue'
 
 export default {
   name: 'app',
-  components: { Navigation, Hero, TokenlyContent, TokenlyFooter },
+  components: { Navigation, Hero, About, ReturnToTop, TokenlyContent, TokenlyFooter },
   data () {
     return {}
+  },
+  methods: {
   }
 }
+
 </script>
 
 <style lang="sass?indentedSyntax=true">

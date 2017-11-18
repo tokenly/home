@@ -127,6 +127,7 @@ export default {
 <style lang="sass?indentedSyntax=true" scoped>
 .app__content
   padding: 0px 0px
+  background: #fff
 
 .app__section
   padding: 80px 0px
