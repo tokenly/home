@@ -4,9 +4,8 @@
     .nav__heading
       a(href="/")
         img.nav__logo(
-          src="../assets/logo/Tokenly_Icon.svg"
+          src="../assets/logo/Tokenly_Icon_White.svg"
           width="35px"
-          style="display: none;"
         )
       a.title Tokenly
 
