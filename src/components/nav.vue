@@ -1,5 +1,5 @@
 <template lang="pug">
-.nav()
+.nav(v-bind:class="{ active: scrollPositioned }")
   .nav__content
     .nav__heading
       a(href="/")
@@ -20,6 +20,7 @@
 export default {
   data () {
     return {
+      scrollPositioned: false,
       menuItems: [
         {
           name: 'Whitepaper',
@@ -36,7 +37,13 @@ export default {
       ]
     }
   },
+  created () {
+    window.addEventListener('scroll', this.handleScroll)
+  },
   methods: {
+    handleScroll: function () {
+      this.scrollPositioned = true
+    }
   }
 }
 
@@ -51,6 +58,9 @@ export default {
   height: 70px
   font-size: 1em
   overflow: hidden
+  transition: 1s
+  &.active
+    background: #111
 
 .nav__content
   background-color: transparent
@@ -65,6 +75,7 @@ export default {
   .title
     padding: 15px
     color: #fff
+    font-size: 20px
 
 .nav__logo
   display: inline-block

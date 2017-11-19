@@ -4,16 +4,12 @@ section.hero
     .hero__content(ref="content")
       .row
         h1.hero__h1
-          span Blockchain Tokens for the Real World
+          span Blockchain Tokens
+          span.emphasized &nbsp; for the Real World
         h2.hero__h2
           span Intuitive. Turnkey. Scalable.
-        a.hero__cta
-          span Continue
-          br
-          span
-            i.material-icons keyboard_arrow_down
   .hero__continue
-    a.hero__cta
+    a.hero__cta.animated
       span Continue
       br
       span
@@ -84,6 +80,7 @@ export default {
     })
   },
 
+
   methods: {
     submitForm: function () {
       if (!this.spamDetected) {
@@ -147,6 +144,7 @@ export default {
     }
   }
 }
+
 </script>
 
 <style lang="sass?indentedSyntax=true" scoped>
@@ -197,7 +195,8 @@ $hero-btn-color: #4170a0
   bottom: 0px
   z-index: 9
   width: 100%
-  padding: 20px
+  padding: 30px
+  z-index: 9999
 
 .hero__heading
   font-size: 2em
@@ -217,8 +216,47 @@ $hero-btn-color: #4170a0
   letter-spacing: 0.5px
   font-size: 32px
   font-weight: 700
-  text-shadow: 0px 1px 1px rgba(0,0,0,0.3)
+  text-shadow: 0px 1px 2px rgba(0,0,0,0.1)
   text-transform: uppercase
+  transition: 0.5s
+  .emphasized
+    color: #E6FF0D
+    -webkit-animation: fadein 2s
+    -moz-animation: fadein 2s
+    -ms-animation: fadein 2s
+    -o-animation: fadein 2s
+    animation: fadein 2s
+
+@-webkit-keyframes fadein
+  from
+    opacity: 0
+    margin-left: 50px
+    display: none
+  to
+    opacity: 1
+    margin-left: 0px
+    display: inline-block
+
+@-moz-keyframes fadein
+  from
+    opacity: 0
+    margin-left: 50px
+    display: none
+  to
+    opacity: 1
+    margin-left: 0px
+    display: inline-block
+
+@keyframes fadein
+  from
+    opacity: 0
+    margin-left: 50px
+    display: none
+  to
+    opacity: 1
+    margin-left: 0px
+    display: inline-block
+
 
 .hero__h2
   overflow: hidden
@@ -232,11 +270,42 @@ $hero-btn-color: #4170a0
 
 .hero__cta
   padding: 10px 50px
-  border: 2px solid #fff
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1)
   color: #fff
+  background: #111
   border-radius: 30px
   cursor: pointer
   display: inline-block
+  &.animated
+    -webkit-animation: pulsate 5s linear infinite
+    -moz-animation: pulsate 5s linear infinite
+    animation: pulsate 5s linear infinite
+    -webkit-animation-delay: 3s
+    animation-delay: 3s
+
+@-webkit-keyframes pulsate
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.2)
+  100%
+    transform: scale(1)
+
+@-moz-keyframes pulsate
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.2)
+  100%
+    transform: scale(1)
+
+@keyframes pulsate
+  0%
+    transform: scale(1)
+  50%
+    transform: scale(1.2)
+  100%
+    transform: scale(1)
 
 
 .form-container
@@ -346,7 +415,7 @@ $hero-btn-color: #4170a0
 
 .hero__bg__mask
   opacity: 1
-  background: linear-gradient(to top,#35a7ff 0%, #0063c6 100%)
+  background: linear-gradient(to bottom, #002346 0%, #0063c6 100%)
   z-index: 5
 
 .hero__bg

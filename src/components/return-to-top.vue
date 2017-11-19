@@ -38,9 +38,10 @@ export default {
   cursor: pointer
   z-index: 999
   font-size: 30px
-  background: red
+  background: #DE2316
   color: #fff
   text-align: center
   width: 50px
   height: 50px
+  border-radius: 50%
 </style>
