@@ -128,6 +128,7 @@ export default {
           height: 100%
           display: table
           width: 100%
+          border-radius: 50%
           &__text
             display: table-cell
             vertical-align: middle

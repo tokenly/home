@@ -5,31 +5,25 @@ section.products(ref="products")
       header
         span The Token Suite
       ul.products__header__content__menu
-        li
-          a
-            span Tokenpass
-        li
-          a
-            span Token Pockets
-        li
-          a.active
-            span Token Markets
-        li
-          a
-            span TokenFM
-        li
-          a
-            span Tokenchats
-        li
-          a
-            span Tokenpass
-  div.products__content(v-for="productEntry in this.productData")
+        li(v-for="(productEntry, index) in this.productData")
+          a.product-option(
+            @click="activateProduct"
+            v-bind:data-target-el="productEntry.elID"
+            v-bind:data-product-index="index"
+            :class="{ 'active': index === activeProductIndex }"
+          )
+            span {{productEntry.name}}
+  div.products__content
     Product(
-      :headline = "productEntry.headline"
-      :summary = "productEntry.summary"
-      :imgURL = "productEntry.imgURL"
-
+      :elID = "this.activeProduct.elID"
+      :headline = "this.activeProduct.headline"
+      :summary = "this.activeProduct.summary"
+      :imgURL = "this.activeProduct.imgURL"
     )
+  span()
+    i.material-icons keyboard_arrow_left
+  span
+    i.material-icons keyboard_arrow_right
 </template>
 
 <script>
@@ -39,18 +33,49 @@ export default {
   components: {Product},
   data () {
     return {
+      activeProductIndex: 0,
       productData: [
         {
           name: 'TokenMarkets',
+          elID: 'tokenmarkets',
+          headline: 'Shopify for the Blockchain',
+          summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
+          imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
+        },
+        {
+          name: 'TokenPockets',
+          elID: 'tokenpockets',
+          headline: 'Multisig Wallet with Token Creation',
+          summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
+          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/vault-wireframe_900-225x225.png'
+        },
+        {
+          name: 'TokenChats',
+          elID: 'tokenchats',
+          headline: "World's First Token-Gated Chat",
+          summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
+          imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
+        },
+        {
+          name: 'tokenFM',
+          elID: 'tokenFM',
+          headline: 'Token-Powered Media Streaming Platform',
+          summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
+          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/microphone-wireframe-recovered-900-900x900.png'
+        },
+        {
+          name: 'TokenMarkets',
+          elID: 'tokenmarkets1',
           headline: 'Shopify for the Blockchain',
           summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
           imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
         },
         {
           name: 'TokenPass',
+          elID: 'tokenpass',
           headline: 'Token Controlled Access',
           summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
-          imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
+          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/card-wireframe-900-900x900.png'
         }
       ]
     }
@@ -59,11 +84,34 @@ export default {
   },
 
   methods: {
+    activateProduct: function (event) {
+      let targetIndex = $(event.currentTarget).data('product-index')
+      this.activeProductIndex = targetIndex
+    },
 
+    slideHideProducts: function () {
+      $('.product__row').animate({
+        opacity: '0',
+      }, 500, function() {
+        $('.product__row').hide()
+      });
+    },
+
+    slideShowProduct: function (targetName) {
+      $(targetName).animate({
+        opacity: '1',
+      }, 200, function() {
+        $(targetName).show()
+      });
+    }
   },
 
   computed: {
     //compute some form labels
+    activeProduct () {
+      let i = this.activeProductIndex
+      return this.productData[i]
+    }
   }
 }
 </script>
@@ -95,10 +143,11 @@ export default {
           margin: 0px
           a
             padding: 10px 20px
-            color: #fff
-            font-weight: 500
+            color: rgba(255,255,255,0.8)
+            font-weight: 700
             letter-spacing: 0.5px
             display: inline-block
+            cursor: pointer
           a.active
             color: #E6FF0D
             font-weight: 700

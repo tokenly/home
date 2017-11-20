@@ -1,5 +1,5 @@
 <template lang="pug">
-div.product__row
+div.product__row(v-bind:id="this.elID")
   div.product__row__image
     div(
       v-bind:style="imageBackground"
@@ -12,10 +12,6 @@ div.product__row
     p
       span Status: &nbsp;
       span.live LIVE
-    span
-      i.material-icons keyboard_arrow_left
-    span
-      i.material-icons keyboard_arrow_right
 </template>
 
 <script>
@@ -25,6 +21,9 @@ export default {
     }
   },
   props: {
+    elID: {
+      'type': String
+    },
     headline: {
       'type': String
     },
@@ -79,6 +78,7 @@ export default {
     width: 30%
     div
       max-width: 100%
+      height: 100%
       background-size: cover
       background-repeat: no-repeat
       background-position: 50% 50%
