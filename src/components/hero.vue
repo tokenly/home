@@ -9,13 +9,15 @@ section.hero
         h2.hero__h2
           span Intuitive. Turnkey. Scalable.
   .hero__continue
-    a.hero__cta.animated
-      span Continue
+    a.hero__cta.animated(@click="scrollToAbout")
+      span Explore Tokenly
       br
       span
         i.material-icons keyboard_arrow_down
   .hero__bg__mask
-  .hero__bg(ref="bg")
+  .hero__bg(
+    ref="bg"
+  )
 </template>
 
 <script>
@@ -82,6 +84,14 @@ export default {
 
 
   methods: {
+
+    scrollToAbout: function () {
+      var aboutTopOffset = this.$el.offsetHeight - 70
+      $('html, body').animate({
+        scrollTop: aboutTopOffset
+      }, 500);
+    },
+
     submitForm: function () {
       if (!this.spamDetected) {
         if (this.validEmail) {
@@ -158,7 +168,7 @@ $hero-btn-color: #4170a0
   font-size: 1em
   overflow: hidden
   min-height: 100vh
-  z-index: -9
+  z-index: 0
 
 .hero__bg, .hero__bg__mask
   position: absolute
@@ -414,7 +424,7 @@ $hero-btn-color: #4170a0
     background-color: lighten($hero-btn-color, 5%)
 
 .hero__bg__mask
-  opacity: 1
+  opacity: 0.9
   background: linear-gradient(to bottom, #002346 0%, #0063c6 100%)
   z-index: 5
 
@@ -423,7 +433,14 @@ $hero-btn-color: #4170a0
   background-size: cover
   background-position: center
   overflow: hidden
-  -webkit-filter: blur(0px)
+  -webkit-filter: blur(1px)
+  filter: blur(1px)
+  background-image: url(https://images.pexels.com/photos/355770/pexels-photo-355770.jpeg)
+  position: fixed
+  top: 0px
+  bottom: 0px
+  left: 0px
+  right: 0px
 
 @media(max-width: 767px)
   .hero__content

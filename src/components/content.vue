@@ -128,6 +128,7 @@ export default {
 .app__content
   padding: 0px 0px
   background: #fff
+  position: relative
 
 .app__section
   padding: 80px 0px

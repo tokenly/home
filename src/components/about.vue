@@ -1,14 +1,31 @@
 <template lang="pug">
-section.about
+section.about(id="about")
   div.about__container
     div.about__container__content
       header
-        span About &nbsp;
-        span.name Tokenly
-      p Tokenly develops applications that make . Our integrate suite of applications comprises a full solution ...
-      p Tokenly provides users, developers, and startups with innovative blockchain technologies. We aim to create an entire ecosystem of linked chains and a virtual spiderweb of endless use-cases that make ARK highly flexible, adaptable, and scalable. ARK is a secure platform designed for mass adoption and will deliver the services that consumers want and developers need.
-      div.about__container__content__continue(style="display: none;")
-        a
+        span Tokenly Makes Blockchain Easy
+      p Tokenly's integrated suite of applications brings the power of blockchain technology ...
+      div
+        div.about__container__content__feature
+          i.material-icons account_balance_wallet
+          p Secure Multisig Wallet
+        div.about__container__content__feature
+          i.material-icons shopping_cart
+          p Turnkey eCommerce Solution
+        div.about__container__content__feature
+          i.material-icons vpn_key
+          p Universal ID & Token Access
+        div.about__container__content__feature
+          i.material-icons attach_money
+          p Token Creation and ICO platform
+        div.about__container__content__feature
+          i.material-icons chat
+          p Token Chats
+        div.about__container__content__feature
+          i.material-icons library_music
+          p TokenFM
+      div.about__container__content__continue
+        a(@click="scrollToProducts")
           span Our Applications
           br
           span
@@ -34,7 +51,13 @@ export default {
   },
 
   methods: {
-
+    scrollToProducts: function () {
+      var productTopOffset = this.$el.offsetHeight - 70
+      productTopOffset = window.pageYOffset + productTopOffset
+      $('html, body').animate({
+        scrollTop: productTopOffset
+      }, 500);
+    },
   },
 
   computed: {
@@ -53,24 +76,41 @@ export default {
   min-height: calc(100vh - 70px)
   display: table
   width: 100%
+  z-index: 99
+  position: relative
   &__container
     padding: 60px 30px
     display: table-cell
     vertical-align: middle
     &__content
-      max-width: 600px
+      max-width: 800px
       margin: 0 auto
       header
+        font-size: 32px
+        font-weight: 700
         margin: 0px
         margin-bottom: 50px
         letter-spacing: 3px
+        text-shadow: 0px 1px 3px rgba(0,0,0,0.3);
         span.name
           font-weight: 700
       p
         line-height: 2
-        text-align: justify
-        font-size: 18px
-        margin-bottom: 24px
+        text-align: center
+        font-size: 22px
+        margin-bottom: 40px
+      &__feature
+        display: inline-block
+        padding: 10px
+        width: 33.3%
+        text-align: center
+        vertical-align: top
+        p
+          text-align: center
+          font-size: 16px
+          font-weight: 700
+        i
+          font-size: 40px
       &__continue
         padding: 30px
         text-align: center

@@ -1,5 +1,5 @@
 <template lang="pug">
-section.products
+section.products(ref="products")
   div.products__header
     div.products__header__content
       header
@@ -57,6 +57,8 @@ export default {
 
 .products
   background: #fff
+  position: relative
+  z-index: 99
   &__header
     background: #001933
     padding: 30px

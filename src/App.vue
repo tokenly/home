@@ -5,7 +5,6 @@
   about
   products
   return-to-top
-  tokenly-content
   tokenly-footer
 </template>
 
