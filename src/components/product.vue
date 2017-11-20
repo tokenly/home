@@ -66,6 +66,7 @@ export default {
     vertical-align: middle
     p
       line-height: 2
+      font-size: 16px
     p.header
       font-weight: 700
       font-size: 24px

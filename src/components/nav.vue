@@ -41,9 +41,9 @@ export default {
   },
   methods: {
     handleScroll: function () {
-      if(this.scrollPositioned == false && window.pageYOffset > 0) {
+      if(this.scrollPositioned == false && window.pageYOffset > 70) {
         this.scrollPositioned = true;
-      } else if(this.scrollPositioned == true && window.pageYOffset < 40) {
+      } else if(this.scrollPositioned == true && window.pageYOffset < 70) {
         this.scrollPositioned = false;
       }
     }

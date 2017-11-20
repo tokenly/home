@@ -1,8 +1,9 @@
 <template lang="pug">
 section.team
-  div.team__content
-    span XXYTTD
-
+  div.team__container
+    div.team__container__content
+      header
+        span Our Team
 
 </template>
 
@@ -30,8 +31,12 @@ export default {
 .team
   background: #fff
   position: relative
-  &__content
-    max-width: 800px
-    margin: 0 auto
+  &__container
+    padding: 60px 30px;
+    &__content
+      max-width: 800px
+      margin: 0 auto
+      header
+        margin: 0px
 
 </style>

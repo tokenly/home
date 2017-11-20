@@ -161,6 +161,8 @@ export default {
   .products__header
     padding: 30px 10px
     padding-bottom: 0px
+    header
+      font-size: 24px
   .products__content
     padding: 50px 10px
   .products__header__content__menu

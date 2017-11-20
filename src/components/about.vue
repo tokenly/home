@@ -4,7 +4,7 @@ section.about(id="about")
     div.about__container__content
       header
         span Tokenly Makes Blockchain Easy
-      p Tokenly's suite of applications provides turnkey access to powerful blockchain tools:
+      p Tokenly's user-friendly suite of applications provides turnkey access to powerful blockchain tools:
       div.centered
         div.about__container__content__feature
           div.about__container__content__feature__content
@@ -152,4 +152,10 @@ export default {
           font-size: 20px
           i
             vertical-align: middle
+
+@media(max-width: 767px)
+  .about__container__content
+    header
+      font-size: 24px
+
 </style>
