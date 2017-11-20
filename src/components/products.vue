@@ -157,28 +157,21 @@ export default {
     margin: 0 auto
     max-width: 800px
 
-.product__row
-  display: flex
-  &__image, &__content
-    padding: 10px
-    vertical-align: middle
-  &__content
-    width: 70%
-    padding: 10px
-    vertical-align: middle
-    p
-      line-height: 2
-    p.header
-      font-weight: 700
-      font-size: 24px
-      letter-spacing: 0.5px
-    span.live
-      font-weight: 700
-      color: #E6FF0D
-
-  &__image
-    width: 30%
-    img
-      max-width: 100%
+@media(max-width: 767px)
+  .products__header
+    padding: 30px 10px
+    padding-bottom: 0px
+  .products__content
+    padding: 50px 10px
+  .products__header__content__menu
+    border-bottom: none
+    li
+      a
+        background: rgba(0,0,0,0.3)
+        border-radius: 30px
+        margin: 5px
+      a.active
+        background: #E6FF0D
+        color: #111
 
 </style>

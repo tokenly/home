@@ -83,4 +83,11 @@ export default {
       background-repeat: no-repeat
       background-position: 50% 50%
 
+@media(max-width: 767px)
+  .product__row
+    &__image
+      display: none
+    &__content
+      width: 100%
+
 </style>
