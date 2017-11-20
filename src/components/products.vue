@@ -23,20 +23,36 @@ section.products(ref="products")
         li
           a
             span Tokenpass
-  div.products__content
-    div.product__row
-      div.product__row__image
-        img(src="http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png")
-      div.product__row__content
-        p Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.
+  div.products__content(v-for="productEntry in this.productData")
+    Product(
+      :headline = "productEntry.headline"
+      :summary = "productEntry.summary"
+      :imgURL = "productEntry.imgURL"
 
-
+    )
 </template>
 
 <script>
+import Product from './product.vue'
+
 export default {
+  components: {Product},
   data () {
     return {
+      productData: [
+        {
+          name: 'TokenMarkets',
+          headline: 'Shopify for the Blockchain',
+          summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
+          imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
+        },
+        {
+          name: 'TokenPass',
+          headline: 'Token Controlled Access',
+          summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
+          imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
+        }
+      ]
     }
   },
   created () {
@@ -101,7 +117,16 @@ export default {
     width: 70%
     padding: 10px
     vertical-align: middle
-    line-height: 2
+    p
+      line-height: 2
+    p.header
+      font-weight: 700
+      font-size: 24px
+      letter-spacing: 0.5px
+    span.live
+      font-weight: 700
+      color: #E6FF0D
+
   &__image
     width: 30%
     img
