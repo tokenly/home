@@ -4,27 +4,39 @@ section.about(id="about")
     div.about__container__content
       header
         span Tokenly Makes Blockchain Easy
-      p Tokenly's integrated suite of applications brings the power of blockchain technology ...
-      div
+      p Tokenly's suite of applications provides turnkey access to powerful blockchain tools:
+      div.centered
         div.about__container__content__feature
-          i.material-icons account_balance_wallet
-          p Secure Multisig Wallet
+          div.about__container__content__feature__content
+            div.about__container__content__feature__content__text
+              i.material-icons account_balance_wallet
+              p Secure Multisig Wallet
         div.about__container__content__feature
-          i.material-icons shopping_cart
-          p Turnkey eCommerce Solution
+          div.about__container__content__feature__content
+            div.about__container__content__feature__content__text
+              i.material-icons shopping_cart
+              p Turnkey eCommerce Solution
         div.about__container__content__feature
-          i.material-icons vpn_key
-          p Universal ID & Token Access
+          div.about__container__content__feature__content
+            div.about__container__content__feature__content__text
+              i.material-icons vpn_key
+              p Universal ID & Token Access
         div.about__container__content__feature
-          i.material-icons attach_money
-          p Token Creation and ICO platform
+          div.about__container__content__feature__content
+            div.about__container__content__feature__content__text
+              i.material-icons attach_money
+              p Token Creation and ICO platform
         div.about__container__content__feature
-          i.material-icons chat
-          p Token Chats
+          div.about__container__content__feature__content
+            div.about__container__content__feature__content__text
+              i.material-icons chat
+              p Token Chats
         div.about__container__content__feature
-          i.material-icons library_music
-          p TokenFM
-      div.about__container__content__continue
+          div.about__container__content__feature__content
+            div.about__container__content__feature__content__text
+              i.material-icons library_music
+              p TokenFM
+      div.about__container__content__continue(style="display: none;")
         a(@click="scrollToProducts")
           span Our Applications
           br
@@ -97,18 +109,33 @@ export default {
       p
         line-height: 2
         text-align: center
-        font-size: 22px
+        font-size: 20px
         margin-bottom: 40px
       &__feature
         display: inline-block
         padding: 10px
-        width: 33.3%
+        width: 250px
+        height: 250px
         text-align: center
         vertical-align: top
+        &__content
+          background: #fff
+          color: #001933
+          border: 1px solid rgba(0,0,0,0.1)
+          box-shadow: 0px 1px 3px rgba(0,0,0,0.3)
+          padding: 15px
+          border-radius: 2px
+          height: 100%
+          display: table
+          width: 100%
+          &__text
+            display: table-cell
+            vertical-align: middle
         p
           text-align: center
-          font-size: 16px
+          font-size: 18px
           font-weight: 700
+          margin-bottom: 0px
         i
           font-size: 40px
       &__continue
@@ -122,4 +149,6 @@ export default {
           color: #111
           font-weight: 700
           font-size: 20px
+          i
+            vertical-align: middle
 </style>

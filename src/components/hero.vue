@@ -207,6 +207,8 @@ $hero-btn-color: #4170a0
   width: 100%
   padding: 30px
   z-index: 9999
+  i
+    vertical-align: middle
 
 .hero__heading
   font-size: 2em

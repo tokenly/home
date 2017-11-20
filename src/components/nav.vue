@@ -41,7 +41,11 @@ export default {
   },
   methods: {
     handleScroll: function () {
-      this.scrollPositioned = true
+      if(this.scrollPositioned == false && window.pageYOffset > 0) {
+        this.scrollPositioned = true;
+      } else if(this.scrollPositioned == true && window.pageYOffset < 40) {
+        this.scrollPositioned = false;
+      }
     }
   }
 }
@@ -51,15 +55,20 @@ export default {
 <style lang="sass?indentedSyntax=true" scoped>
 .nav
   position: fixed
-  left: 0px
-  right: 0px
+  left: 20px
+  right: 20px
+  top: 20px
   z-index: 999
   height: 70px
   font-size: 1em
   overflow: hidden
   transition: 1s
+  border-bottom: 1px solid rgba(255,255,255,0.1)
   &.active
     background: #111
+    left: 0px
+    right: 0px
+    top: 0px
 
 .nav__content
   background-color: transparent

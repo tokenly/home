@@ -3,7 +3,7 @@ section.products(ref="products")
   div.products__header
     div.products__header__content
       header
-        span Our Products
+        span The Token Suite
       ul.products__header__content__menu
         li
           a
@@ -12,7 +12,7 @@ section.products(ref="products")
           a
             span Token Pockets
         li
-          a
+          a.active
             span Token Markets
         li
           a
@@ -24,12 +24,11 @@ section.products(ref="products")
           a
             span Tokenpass
   div.products__content
-    p Lorem ipsum
     div.product__row
       div.product__row__image
-        span PPERR
-      div.prodcut__row__content
-        span PPERR
+        img(src="http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png")
+      div.product__row__content
+        p Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.
 
 
 </template>
@@ -56,26 +55,38 @@ export default {
 <style lang="sass?indentedSyntax=true" scoped>
 
 .products
-  background: #fff
+  background: #001933
+  color: #fff
   position: relative
   z-index: 99
   &__header
-    background: #001933
     padding: 30px
     padding-bottom: 0px
     &__content
       max-width: 800px
       margin: 0 auto
+      header
+        font-size: 32px
+        font-weight: 700
+        letter-spacing: 3px
       &__menu
+        text-align: center
         padding: 0px
         margin: 0px
+        border-bottom: 1px solid rgba(255,255,255,0.1)
         li
           display: inline-block
+          margin: 0px
           a
             padding: 10px 20px
             color: #fff
+            font-weight: 500
+            letter-spacing: 0.5px
+            display: inline-block
+          a.active
+            color: #E6FF0D
             font-weight: 700
-            text-transform: uppercase
+            border-bottom: 3px solid #E6FF0D
   &__content
     padding: 50px 20px
     margin: 0 auto
@@ -84,7 +95,16 @@ export default {
 .product__row
   display: flex
   &__image, &__content
-    width: 50%
     padding: 10px
+    vertical-align: middle
+  &__content
+    width: 70%
+    padding: 10px
+    vertical-align: middle
+    line-height: 2
+  &__image
+    width: 30%
+    img
+      max-width: 100%
 
 </style>
