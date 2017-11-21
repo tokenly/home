@@ -3,9 +3,29 @@ section.about(id="about")
   div.about__container
     div.about__container__content
       header
-        span Tokenly Makes Blockchain Easy
-      p Tokenly's user-friendly suite of applications provides turnkey access to powerful blockchain tools:
-      div.centered
+        span About &nbsp;
+        span.name Tokenly
+      p Tokenly is a leading developer of turnkey blockchain and token solutions.  Our vision is to create a user-friendly platform that enables anyone to create, share, and use scalable blockchain-based consumer products.
+      div.about__container__content__sub
+        div.about__container__content__sub__section
+          div.about__container__content__sub__section__content
+            p.about__container__content__sub-header
+              span We're &nbsp;
+              span Live
+            p.about__container__content__sub-text
+              span Tokenly's ecosystem of consumer-ready blockchain solutions, Token Suite&trade;, includes 5 LIVE products with thousands of active users.
+            div
+              a
+                span Learn More About Token Suite&trade;
+        div.about__container__content__sub__section
+          div.about__container__content__sub__section__content
+            p.about__container__content__sub-header
+              span We're Building the Future
+            p.about__container__content__sub-text
+              span To date, Tokenly has 5 live products with thousands of active users.
+            div
+              a Learn More About Token Layer&trade;
+      div.centered(style="display: none;")
         div.about__container__content__feature
           div.about__container__content__feature__content
             div.about__container__content__feature__content__text
@@ -98,19 +118,63 @@ export default {
       max-width: 800px
       margin: 0 auto
       header
-        font-size: 32px
-        font-weight: 700
+        font-size: 40px
+        font-weight: 500
         margin: 0px
-        margin-bottom: 50px
+        margin-bottom: 40px
         letter-spacing: 3px
-        text-shadow: 0px 1px 3px rgba(0,0,0,0.3);
+        text-shadow: 0px 1px 3px rgba(0,0,0,0.3)
+        text-align: left
         span.name
           font-weight: 700
+      &__sub
+        text-align: center
+        &__section
+          text-align: center
+          display: inline-block
+          width: 50%
+          padding: 20px
+          vertical-align: top
+          &__content
+            background: rgba(0,0,0,0.1)
+            border: 1px solid rgba(0,0,0,0.1)
+            padding: 30px 20px
+            box-shadow: 0px 1px 5px rgba(0,0,0,0.2)
+          p
+            font-size: 18px
+            text-align: center
+          a
+            padding: 20px
+            width: 100%
+            max-width: 300px
+            display: inline-block
+            border: 2px solid #fff
+            border-radius: 2px
+            color: #fff
+            cursor: pointer
+            &:hover
+              background: #fff
+              color: #111
+
       p
         line-height: 2
-        text-align: center
-        font-size: 20px
-        margin-bottom: 40px
+        text-align: left
+        font-size: 18px
+        margin-bottom: 60px
+        &.about__container__content__sub-header
+          font-size: 24px
+          color: yellow
+          text-align: center
+          margin-bottom: 15px
+        &.about__container__content__sub-text
+          max-width: 600px
+          display: inline-block
+          margin: 0 auto
+          font-size: 16px
+          line-height: 1.5
+          margin-bottom: 30px
+          text-align: justify
+          height: 100px
       &__feature
         display: inline-block
         padding: 10px
@@ -157,5 +221,7 @@ export default {
   .about__container__content
     header
       font-size: 24px
+    div.about__container__content__sub__section
+      width: 100%
 
 </style>

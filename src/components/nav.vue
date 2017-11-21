@@ -65,10 +65,15 @@ export default {
   transition: 1s
   border-bottom: 1px solid rgba(255,255,255,0.1)
   &.active
-    background: #111
+    background: #fff
     left: 0px
     right: 0px
     top: 0px
+    a
+      color: #111
+      font-weight: 700
+      &:hover
+        color: inherit
 
 .nav__content
   background-color: transparent

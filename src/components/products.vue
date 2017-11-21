@@ -3,7 +3,9 @@ section.products(ref="products")
   div.products__header
     div.products__header__content
       header
-        span The Token Suite
+        span Token Suite&trade;
+      p.sub-header
+        span Our consumer-ready turnkey solutions for the entire token life cycle: from creation and sale to use and redemption.
       ul.products__header__content__menu
         li(v-for="(productEntry, index) in this.productData")
           a.product-option(
@@ -20,10 +22,6 @@ section.products(ref="products")
       :summary = "this.activeProduct.summary"
       :imgURL = "this.activeProduct.imgURL"
     )
-  span()
-    i.material-icons keyboard_arrow_left
-  span
-    i.material-icons keyboard_arrow_right
 </template>
 
 <script>
@@ -119,10 +117,12 @@ export default {
 <style lang="sass?indentedSyntax=true" scoped>
 
 .products
-  background: #001933
+  background: #111
   color: #fff
   position: relative
   z-index: 99
+  min-height: 100vh
+  padding: 60px 0px
   &__header
     padding: 30px
     padding-bottom: 0px
@@ -130,9 +130,15 @@ export default {
       max-width: 800px
       margin: 0 auto
       header
-        font-size: 32px
+        font-size: 40px
         font-weight: 700
         letter-spacing: 3px
+        margin-bottom: 20px
+      p.sub-header
+        font-size: 18px
+        text-align: center
+        opacity: 0.7
+        margin-bottom: 40px
       &__menu
         text-align: center
         padding: 0px

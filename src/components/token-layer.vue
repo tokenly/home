@@ -36,6 +36,7 @@ export default {
 .token-layer
   background: #333
   color: #fff
+  min-height: 100vh
   position: relative
   &__container
     padding: 60px 30px
