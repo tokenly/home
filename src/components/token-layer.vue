@@ -3,9 +3,9 @@ section.token-layer
   div.token-layer__container
     div.token-layer__container__content
       header
-        span Token Layer
-      p
-        span The first sidechain protocol intended to ...
+        span Token Layer&trade;
+      p.sub-header
+        span Our flexible sidechain protocol built to support secure, high volume transactions with low fees.
       p
         span dodmdom
 </template>
@@ -45,10 +45,15 @@ export default {
       margin: 0 auto
   header
     margin: 0px
-    font-size: 32px
+    font-size: 40px
     font-weight: 700
     margin: 0px
-    margin-bottom: 50px
+    margin-bottom: 20px
     letter-spacing: 3px
+  p.sub-header
+    font-size: 18px
+    text-align: center
+    opacity: 0.7
+    margin-bottom: 40px
 
 </style>

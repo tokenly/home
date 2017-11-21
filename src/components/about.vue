@@ -5,7 +5,7 @@ section.about(id="about")
       header
         span About &nbsp;
         span.name Tokenly
-      p Tokenly is a leading developer of turnkey blockchain and token solutions.  Our vision is to create a user-friendly platform that enables anyone to create, share, and use scalable blockchain-based consumer products.
+      p Tokenly is a leading developer of turnkey blockchain and token solutions.  Our vision is to create a turnkey platform that enables anyone to create, share, and use scalable blockchain-based consumer products.
       div.about__container__content__sub
         div.about__container__content__sub__section
           div.about__container__content__sub__section__content
@@ -102,6 +102,7 @@ export default {
 
 .about
   background: #001933
+  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/zwartevilt.png")
   color: #fff
   border-top: 1px solid rgba(0,0,0,0.3)
   box-shadow: 0px -1px 3px rgba(100,100,100,0.2)
@@ -114,6 +115,7 @@ export default {
     padding: 60px 30px
     display: table-cell
     vertical-align: middle
+    background: rgba(0, 25, 51, 0.7)
     &__content
       max-width: 800px
       margin: 0 auto
@@ -136,7 +138,7 @@ export default {
           padding: 20px
           vertical-align: top
           &__content
-            background: rgba(0,0,0,0.1)
+            background: rgba(0,0,0,0.5)
             border: 1px solid rgba(0,0,0,0.1)
             padding: 30px 20px
             box-shadow: 0px 1px 5px rgba(0,0,0,0.2)
@@ -152,6 +154,7 @@ export default {
             border-radius: 2px
             color: #fff
             cursor: pointer
+            transition: 0.5s
             &:hover
               background: #fff
               color: #111
