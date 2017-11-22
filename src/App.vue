@@ -23,7 +23,7 @@ import TokenlyFooter from './components/footer.vue'
 
 export default {
   name: 'app',
-  components: { Navigation, Hero, About, ReturnToTop, TokenlyContent, TokenlyFooter, Products, TokenLayer, Team },
+  components: {Navigation, Hero, About, ReturnToTop, TokenlyContent, TokenlyFooter, Products, TokenLayer, Team },
   data () {
     return {}
   },

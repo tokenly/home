@@ -62,6 +62,7 @@ section.about(id="about")
           br
           span
             i.material-icons keyboard_arrow_down
+  div.about__mask
 
 </template>
 
@@ -111,11 +112,23 @@ export default {
   width: 100%
   z-index: 99
   position: relative
+  &__mask
+    position: absolute
+    top: 0px
+    bottom: 0px
+    left: 0px
+    right: 0px
+    z-index: -1
+    background: rgba(0, 25, 51, 1)
+    background-image: url(https://tokenpockets.com/images/bg1.658fcf29.png)
+    background-size: cover;
+    background-position: center;
+
   &__container
-    padding: 60px 30px
+    padding: 80px 30px
     display: table-cell
     vertical-align: middle
-    background: rgba(0, 25, 51, 0.7)
+    background: rgba(0, 25, 51, 0.5)
     &__content
       max-width: 800px
       margin: 0 auto
@@ -138,13 +151,16 @@ export default {
           padding: 20px
           vertical-align: top
           &__content
-            background: rgba(0,0,0,0.5)
+            background: rgba(255,255,255,0.9)
             border: 1px solid rgba(0,0,0,0.1)
             padding: 30px 20px
             box-shadow: 0px 1px 5px rgba(0,0,0,0.2)
+            border-radius: 2px
           p
             font-size: 18px
             text-align: center
+            color: rgba(0, 25, 51, 0.9)
+            font-weight: 600
           a
             padding: 20px
             width: 100%

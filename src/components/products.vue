@@ -22,6 +22,8 @@ section.products(ref="products")
       :summary = "this.activeProduct.summary"
       :imgURL = "this.activeProduct.imgURL"
     )
+  .products__bg
+  .products__mask
 </template>
 
 <script>
@@ -118,11 +120,28 @@ export default {
 
 .products
   background: #111
+  background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/zwartevilt.png)
   color: #fff
   position: relative
   z-index: 99
   min-height: 100vh
-  padding: 60px 0px
+  padding: 80px 0px
+  &__mask
+    background: url(https://tokenpockets.com/images/bg2.c37d81d0.png) top right no-repeat
+    position: absolute
+    top: 0px
+    bottom: 0px
+    left: 0px
+    right: 0px
+    z-index: -2
+  &__bg
+    background: rgba(20,20,20,0.5)
+    position: absolute
+    top: 0px
+    bottom: 0px
+    left: 0px
+    right: 0px
+    z-index: -1
   &__header
     padding: 30px
     padding-bottom: 0px
@@ -133,7 +152,7 @@ export default {
         font-size: 40px
         font-weight: 700
         letter-spacing: 3px
-        margin-bottom: 20px
+        margin-bottom: 40px
       p.sub-header
         font-size: 18px
         text-align: center

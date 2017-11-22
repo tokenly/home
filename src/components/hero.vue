@@ -72,16 +72,7 @@ export default {
     }
   },
   created () {
-    let self = this
-    window.addEventListener('scroll', e => {
-      _.debounce(() => {
-        console.log('derl')
-        let scroll = document.body.scrollTop
-        self.$refs.bg.style.top = `${scroll / 4}px`
-      })
-    })
   },
-
 
   methods: {
 
