@@ -5,26 +5,36 @@ section.token-layer(id="token-layer")
       header
         span Token Layer&trade;
       p.sub-header
-        span Our flexible sidechain protocol built to support secure, high volume transactions with low fees.
+        span Our scalable sidechain protocol built to support stable transactions fees and interoperability.
       ul.token-layer__container__content__menu
         li(v-for="(featureEntry, index) in this.featureData")
           a.product-option(
+            @click="activateFeature"
             v-bind:data-target-el="featureEntry.elID"
-            v-bind:data-product-index="index"
+            v-bind:data-feature-index="index"
+            :class="{ 'active': index === activeFeatureIndex }"
           )
             span {{ featureEntry.name }}
-      div.token-layer__content
-
+      div.token-layer-feature__content
+        TokenLayerFeature(
+          :elID = "this.activeFeature.elID"
+          :headline = "this.activeFeature.headline"
+          :summary = "this.activeFeature.summary"
+          :imgURL = "this.activeFeature.imgURL"
+        )
   div.token-layer__mask
   div.token-layer__bg
 </template>
 
 <script>
 
+import TokenLayerFeature from './token-layer-feature.vue'
+
 export default {
-  components: {},
+  components: { TokenLayerFeature },
   data () {
     return {
+      activeFeatureIndex: 0,
       featureData: [
         {
           name: 'Secure',
@@ -62,11 +72,17 @@ export default {
   },
 
   methods: {
-
+    activateFeature: function (event) {
+      let targetIndex = $(event.currentTarget).data('feature-index')
+      this.activeFeatureIndex = targetIndex
+    },
   },
 
   computed: {
-    //compute some form labels
+    activeFeature () {
+      let i = this.activeFeatureIndex
+      return this.featureData[i]
+    }
   }
 }
 </script>
@@ -134,5 +150,8 @@ export default {
     text-align: center
     opacity: 0.7
     margin-bottom: 40px
+
+.token-layer-feature__content
+  padding: 50px 20px
 
 </style>
