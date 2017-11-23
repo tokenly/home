@@ -105,6 +105,6 @@ export default {
   text-align: left
 .team-member-content__entry
   display: inline-block
-  width: 33.3%
+  width: 50.0%
   vertical-align: top
 </style>
