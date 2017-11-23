@@ -1,5 +1,8 @@
 <template lang="pug">
-section.products(ref="products")
+section.products(
+  ref="products"
+  id="products"
+)
   div.products__header
     div.products__header__content
       header
@@ -62,13 +65,6 @@ export default {
           headline: 'Token-Powered Media Streaming Platform',
           summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
           imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/microphone-wireframe-recovered-900-900x900.png'
-        },
-        {
-          name: 'TokenMarkets',
-          elID: 'tokenmarkets1',
-          headline: 'Shopify for the Blockchain',
-          summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
-          imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
         },
         {
           name: 'TokenPass',

@@ -1,5 +1,5 @@
 <template lang="pug">
-section.about(id="about")
+section.about(ref="about" id="about")
   div.about__container
     div.about__container__content
       header
@@ -14,12 +14,15 @@ section.about(id="about")
               span We're &nbsp;
               span Live
             p.about__container__content__sub-header__details
-              span 5 Live Applications
-              span and counting
+              span 5 Live Applications &nbsp;
+              b and counting
+            div.about__container__content__sub-header__divider
             p.about__container__content__sub-text
-              span Tokenly's ecosystem of consumer-ready blockchain solutions, Token Suite&trade;, includes 5 LIVE products with thousands of active users.
+              span Tokenly's ecosystem of consumer-ready blockchain solutions,
+              b Token Suite&trade;
+              span , includes 5 LIVE products with thousands of active users.
             div
-              a
+              a(v-scroll-to="'#products'")
                 span Learn More About Token Suite&trade;
         div.about__container__content__sub__section
           div.about__container__content__sub__section__content
@@ -27,12 +30,14 @@ section.about(id="about")
             p.about__container__content__sub-header
               span We're Building the Future
             p.about__container__content__sub-header__details
-              span 5 Live Applications
-              span and counting
+              span Fast, flexible, secure payment layer
+            div.about__container__content__sub-header__divider
             p.about__container__content__sub-text
-              span To date, Tokenly has 5 live products with thousands of active users.
+              span To meet the unique challenges of consumer products, we are developing
+              b Token Layer&trade;
+              span , a sidechain protocol engineered to support unlimited scalable blockchain token products.
             div
-              a Learn More About Token Layer&trade;
+              a(v-scroll-to="'#token-layer'") Learn More About Token Layer&trade;
       div.centered(style="display: none;")
         div.about__container__content__feature
           div.about__container__content__feature__content
@@ -83,18 +88,13 @@ export default {
   created () {
     let self = this
     window.addEventListener('scroll', e => {
-      _.debounce(() => {
-        console.log('derl')
-        let scroll = document.body.scrollTop
-        self.$refs.bg.style.top = `${scroll / 4}px`
-      })
     })
   },
 
   methods: {
     scrollToProducts: function () {
-      var productTopOffset = this.$el.offsetHeight - 70
-      productTopOffset = window.pageYOffset + productTopOffset
+      var productEl = this.$el.querySelector("#about")
+      alert(productEl)
       $('html, body').animate({
         scrollTop: productTopOffset
       }, 500);
@@ -198,21 +198,17 @@ export default {
           letter-spacing: 1px
           color: #001933
           text-align: center
-          margin-bottom: 0px
+          margin-bottom: 10px
           &__details
             color: #888
             letter-spacing: 0.5px
-            margin-bottom: 20px
+            margin-bottom: 0px
             font-size: 16px
             text-align: center
             font-weight: 400
-          &__details:after
-            content: ""
-            height: 3px
-            width: 4rem
-            background: #DEDFE1
-            position: absolute
-            bottom: -1rem
+            b
+              font-style: italic
+              color: #555
         &.about__container__content__sub-text
           max-width: 600px
           display: inline-block
@@ -221,10 +217,13 @@ export default {
           line-height: 1.5
           margin-bottom: 30px
           text-align: center
-          height: 100px
+          height: 130px
           color: #666
           letter-spacing: 0.5px
           font-weight: 400
+          b
+            color: #111
+            margin-left: 6px
       &__feature
         display: inline-block
         padding: 10px
@@ -266,6 +265,13 @@ export default {
           font-size: 20px
           i
             vertical-align: middle
+
+.about__container__content__sub-header__divider
+  border-bottom: 2px solid #bbb
+  width: 50%
+  display: inline-block
+  margin-bottom: 20px
+  padding-top: 20px
 
 @media(max-width: 767px)
   .about__container__content

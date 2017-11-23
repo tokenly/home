@@ -1,5 +1,5 @@
 <template lang="pug">
-section.token-layer
+section.token-layer(id="token-layer")
   div.token-layer__container
     div.token-layer__container__content
       header
@@ -13,8 +13,8 @@ section.token-layer
             v-bind:data-product-index="index"
           )
             span {{ featureEntry.name }}
-      p
-        span add nav similar to token suites section, except for features (fast, secure, agnostic, )
+      div.token-layer__content
+
   div.token-layer__mask
   div.token-layer__bg
 </template>
@@ -27,46 +27,32 @@ export default {
     return {
       featureData: [
         {
-          name: 'TokenMarkets',
-          elID: 'tokenmarkets',
+          name: 'Secure',
+          elID: 'secure',
           headline: 'Shopify for the Blockchain',
           summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
           imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
         },
         {
-          name: 'TokenPockets',
-          elID: 'tokenpockets',
+          name: 'Scalable',
+          elID: 'scalable',
           headline: 'Multisig Wallet with Token Creation',
           summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
           imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/vault-wireframe_900-225x225.png'
         },
         {
-          name: 'TokenChats',
-          elID: 'tokenchats',
+          name: 'Flexible',
+          elID: 'flexible',
           headline: "World's First Token-Gated Chat",
           summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
           imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
         },
         {
-          name: 'tokenFM',
-          elID: 'tokenFM',
+          name: 'Limitless',
+          elID: 'limitless',
           headline: 'Token-Powered Media Streaming Platform',
           summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
           imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/microphone-wireframe-recovered-900-900x900.png'
-        },
-        {
-          name: 'TokenMarkets',
-          elID: 'tokenmarkets1',
-          headline: 'Shopify for the Blockchain',
-          summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
-          imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
-        },
-        {
-          name: 'TokenPass',
-          elID: 'tokenpass',
-          headline: 'Token Controlled Access',
-          summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
-          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/card-wireframe-900-900x900.png'
         }
       ]
 
@@ -88,7 +74,7 @@ export default {
 <style lang="sass?indentedSyntax=true" scoped>
 
 .token-layer
-  background: rgba(0,94,191, 1)
+  background: #333
   background: url("https://www.toptal.com/designers/subtlepatterns/patterns/zwartevilt.png")
   background-size: cover
   background-position: center

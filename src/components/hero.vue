@@ -7,7 +7,7 @@ section.hero
           span Blockchain Tokens
           span.emphasized &nbsp; for the Real World
         h2.hero__h2
-          span Intuitive. Turnkey. Scalable.
+          span Turnkey Solutions for Scalable Consumer Products
   .hero__continue
     a.hero__cta.animated(@click="scrollToAbout")
       span Explore Tokenly
