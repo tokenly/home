@@ -9,9 +9,13 @@ section.about(id="about")
       div.about__container__content__sub
         div.about__container__content__sub__section
           div.about__container__content__sub__section__content
+            i.material-icons flash_on
             p.about__container__content__sub-header
               span We're &nbsp;
               span Live
+            p.about__container__content__sub-header__details
+              span 5 Live Applications
+              span and counting
             p.about__container__content__sub-text
               span Tokenly's ecosystem of consumer-ready blockchain solutions, Token Suite&trade;, includes 5 LIVE products with thousands of active users.
             div
@@ -19,8 +23,12 @@ section.about(id="about")
                 span Learn More About Token Suite&trade;
         div.about__container__content__sub__section
           div.about__container__content__sub__section__content
+            i.material-icons whatshot
             p.about__container__content__sub-header
               span We're Building the Future
+            p.about__container__content__sub-header__details
+              span 5 Live Applications
+              span and counting
             p.about__container__content__sub-text
               span To date, Tokenly has 5 live products with thousands of active users.
             div
@@ -123,7 +131,6 @@ export default {
     background-image: url(https://tokenpockets.com/images/bg1.658fcf29.png)
     background-size: cover;
     background-position: center;
-
   &__container
     padding: 80px 30px
     display: table-cell
@@ -151,11 +158,15 @@ export default {
           padding: 20px
           vertical-align: top
           &__content
-            background: rgba(255,255,255,0.9)
+            background: rgba(255,255,255, 1)
             border: 1px solid rgba(0,0,0,0.1)
             padding: 30px 20px
             box-shadow: 0px 1px 5px rgba(0,0,0,0.2)
             border-radius: 2px
+            i
+              font-size: 70px
+              color: rgba(0, 25, 51, 0.9)
+              padding-bottom: 20px
           p
             font-size: 18px
             text-align: center
@@ -169,22 +180,39 @@ export default {
             border: 2px solid #fff
             border-radius: 2px
             color: #fff
+            background: #FFA100
             cursor: pointer
             transition: 0.5s
-            &:hover
-              background: #fff
-              color: #111
-
+            font-weight: 600
+            border-radius: 3px
+            border: 1px solid rgba(0,0,0,0.1)
+            box-shadow: 0px 1px 4px rgba(0,0,0,0.2)
       p
         line-height: 2
         text-align: left
         font-size: 18px
         margin-bottom: 60px
         &.about__container__content__sub-header
-          font-size: 24px
-          color: yellow
+          font-size: 20px
+          text-transform: uppercase
+          letter-spacing: 1px
+          color: #001933
           text-align: center
-          margin-bottom: 15px
+          margin-bottom: 0px
+          &__details
+            color: #888
+            letter-spacing: 0.5px
+            margin-bottom: 20px
+            font-size: 16px
+            text-align: center
+            font-weight: 400
+          &__details:after
+            content: ""
+            height: 3px
+            width: 4rem
+            background: #DEDFE1
+            position: absolute
+            bottom: -1rem
         &.about__container__content__sub-text
           max-width: 600px
           display: inline-block
@@ -192,8 +220,11 @@ export default {
           font-size: 16px
           line-height: 1.5
           margin-bottom: 30px
-          text-align: justify
+          text-align: center
           height: 100px
+          color: #666
+          letter-spacing: 0.5px
+          font-weight: 400
       &__feature
         display: inline-block
         padding: 10px
