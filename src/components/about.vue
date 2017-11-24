@@ -26,7 +26,7 @@ section.about(ref="about" id="about")
                 span Learn More About Token Suite&trade;
         div.about__container__content__sub__section
           div.about__container__content__sub__section__content
-            i.material-icons whatshot
+            i.material-icons.build build
             p.about__container__content__sub-header
               span We're Building the Future
             p.about__container__content__sub-header__details
@@ -165,7 +165,6 @@ export default {
             border-radius: 2px
             i
               font-size: 70px
-              color: rgba(0, 25, 51, 0.9)
               padding-bottom: 20px
           p
             font-size: 18px
@@ -295,6 +294,21 @@ export default {
     box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #1B5E20 0 -1px 9px, #1B5E20 0 2px 0
   to
     background-color: #4CAF50
+
+.build
+  -webkit-animation: spin 8s linear infinite
+  -moz-animation: spin 8s linear infinite
+  animation: spin 8s linear infinite
+  transform: rotate(90deg)
+  color: #111
+
+@keyframes spin
+  from
+    transform: rotate(90deg)
+  50%
+    transform: rotate(120deg)
+  to
+    transform: rotate(90deg)
 
 @media(max-width: 767px)
   .about__container__content
