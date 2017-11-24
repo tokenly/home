@@ -22,12 +22,8 @@ export default {
       scrollPositioned: false,
       menuItems: [
         {
-          name: 'Whitepaper',
+          name: 'Pre-ICO Form & KYC/AML',
           url: 'https://tokenpockets.com/'
-        },
-        {
-          name: 'Applications',
-          url: 'http://slack.tokenly.com'
         },
         {
           name: 'Dashboard',

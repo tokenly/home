@@ -98,7 +98,6 @@ export default {
         text-align: left
         color: #888
         font-size: 20px
-        max-width: 600px
         margin-bottom: 30px
 
 .team-member-content

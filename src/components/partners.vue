@@ -5,7 +5,7 @@ section.partners(
 )
   div.partners__container
     div.partners__container__content
-      header Partners
+      header Community
       p.sub-header Our turnkey token solutions have already enabled us to partner with some of the most innovative projects in the blockchain space.
       div.partners__container__content__partners
         div(v-for="partner in partnersData")

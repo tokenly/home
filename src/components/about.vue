@@ -162,7 +162,7 @@ export default {
             border: 1px solid rgba(0,0,0,0.1)
             padding: 30px 20px
             box-shadow: 0px 1px 5px rgba(0,0,0,0.2)
-            border-radius: 2px
+            border-radius: 5px
             i
               font-size: 70px
               padding-bottom: 20px
@@ -174,7 +174,6 @@ export default {
           a
             padding: 20px
             width: 100%
-            max-width: 300px
             display: inline-block
             border: 2px solid #fff
             border-radius: 2px
@@ -269,7 +268,7 @@ export default {
   border-bottom: 2px solid #bbb
   width: 50%
   display: inline-block
-  margin-bottom: 20px
+  margin-bottom: 30px
   padding-top: 20px
 
 .led-green
@@ -316,5 +315,7 @@ export default {
       font-size: 24px
     div.about__container__content__sub__section
       width: 100%
+  p.about__container__content__sub-text
+    height: auto !important
 
 </style>

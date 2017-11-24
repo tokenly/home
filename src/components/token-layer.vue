@@ -5,7 +5,7 @@ section.token-layer(id="token-layer")
       header
         span Token Layer&trade;
       p.sub-header
-        span Our scalable sidechain protocol built to support stable transactions fees and interoperability.
+        span Tokenly's scalable sidechain protocol built to support interoperability and low cost transactions.
       ul.token-layer__container__content__menu
         li(v-for="(featureEntry, index) in this.featureData")
           a.product-option(
@@ -37,6 +37,13 @@ export default {
       activeFeatureIndex: 0,
       featureData: [
         {
+          name: 'Low Cost',
+          elID: 'low-cost',
+          headline: 'Stable, predicatable, low cost transaction fees are critical to widespread consumer use of blockchain technology.',
+          summary: 'TokenLayer ',
+          imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
+        },
+        {
           name: 'Secure',
           elID: 'secure',
           headline: 'Shopify for the Blockchain',
@@ -46,15 +53,15 @@ export default {
         {
           name: 'Scalable',
           elID: 'scalable',
-          headline: 'Multisig Wallet with Token Creation',
-          summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
+          headline: '...high volume transactions.',
+          summary: 'Token Layer is engineered to handle 1,000s transactions per second. ... with low, stable transaction fees will make this the best ....',
           imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/vault-wireframe_900-225x225.png'
         },
         {
           name: 'Flexible',
           elID: 'flexible',
-          headline: "World's First Token-Gated Chat",
-          summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
+          headline: "Token Layer plays nice with most blockchains and ... systems",
+          summary: 'Token Layer is built to be blockchain and platform agnostic so .... That means .... and blockchains still to come.',
           imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
         },
         {
@@ -91,7 +98,7 @@ export default {
 
 .token-layer
   background: #333
-  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/zwartevilt.png")
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/zwartevilt.png")
   background-size: cover
   background-position: center
   color: #fff
@@ -156,5 +163,6 @@ export default {
 .token-layer-feature__content
   padding: 50px 20px
   text-align: center
+  padding-bottom: 0px
 
 </style>

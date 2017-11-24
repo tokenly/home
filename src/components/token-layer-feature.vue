@@ -1,6 +1,6 @@
 <template lang="pug">
 div.product__row(v-bind:id="this.elID")
-  div.product__row__content
+  div.product__row__content.token-layer-feature
     p.header
       span {{ this.headline }}
     p
@@ -51,10 +51,7 @@ export default {
 
 .product__row
   display: flex
-  &__content
-    padding: 10px
-    vertical-align: middle
-  &__content
+  &__content.token-layer-feature
     padding: 10px
     vertical-align: middle
     p
@@ -62,7 +59,7 @@ export default {
       font-size: 16px
     p.header
       font-weight: 700
-      font-size: 24px
+      font-size: 20px
       letter-spacing: 0.5px
     span.live
       font-weight: 700
