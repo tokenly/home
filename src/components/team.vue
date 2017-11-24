@@ -102,8 +102,19 @@ export default {
 
 .team-member-content
   text-align: left
+
 .team-member-content__entry
   display: inline-block
   width: 50.0%
   vertical-align: top
+
+@media(max-width: 787px)
+  body
+    .team__container__content
+      header
+        font-size: 24px
+      p
+        font-size: 16px
+    .team-member-content__entry
+      width: 100.0%
 </style>

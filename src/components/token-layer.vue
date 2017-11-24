@@ -165,4 +165,19 @@ export default {
   text-align: center
   padding-bottom: 0px
 
+@media(max-width: 787px)
+  body
+    .token-layer__container__content
+      header
+        font-size: 24px
+      p.sub-header
+        font-size: 16px
+      .product__row__content.token-layer-feature
+        p.header
+          font-size: 18px !important
+      ul.token-layer__container__content__menu
+        li
+          a
+            font-size: 14px
+
 </style>

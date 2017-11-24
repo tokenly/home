@@ -193,24 +193,31 @@ export default {
     max-width: 800px
 
 @media(max-width: 767px)
-  .products__header
-    padding: 30px 10px
-    padding-bottom: 0px
-    header
-      font-size: 24px
-  .products__content
-    padding: 50px 10px
-  .products__header__content__menu
-    border-bottom: none
-    li
-      a
-        background: rgba(0,0,0,0.3)
-        border-radius: 30px
-        margin: 5px
+  body
+    .products__header
+      padding: 30px 10px
+      padding-bottom: 0px
+      header
+        font-size: 24px
+      p.sub-header
         font-size: 16px
-        padding: 10px 20px
-      a.active
-        background: #E6FF0D
-        color: #111
+    .products__content
+      padding: 50px 10px
+      text-align: center
+      p
+        color: #eee
+    .products__header__content__menu
+      border-bottom: none
+      li
+        a
+          background: rgba(0,0,0,0.3)
+          border-radius: 30px
+          margin: 5px
+          font-size: 16px
+          padding: 10px 20px
+          border-bottom: none
+        a.active
+          background: #E6FF0D
+          color: #111
 
 </style>

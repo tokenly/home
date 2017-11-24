@@ -6,7 +6,7 @@ section.more-details(
   .more-details__container
     .more-details__container__content
       header Want More Details?
-      p Read our whitepaper or join or Slack
+      p.sub-header Read our whitepaper or join or Slack
       div
         a.more-details__container__content__button
           span Read the
@@ -46,10 +46,11 @@ export default {
       header
         font-size: 40px
         font-weight: 700
-        margin-bottom: 20px
+        margin-bottom: 40px
       p
         color: #666
         font-size: 20px
+        margin-bottom: 40px
       a
         padding: 20px 50px
         background: #D50000
@@ -59,4 +60,13 @@ export default {
         max-width: 300px
         border-radius: 3px
         border: 1px solid rgba(0,0,0,0.2)
+
+@media(max-width: 787px)
+  body
+    .more-details__container__content
+      header
+        font-size: 24px
+        margin-bottom: 20px
+      p
+        font-size: 16px
 </style>

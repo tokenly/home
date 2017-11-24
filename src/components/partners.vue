@@ -72,4 +72,12 @@ export default {
       p.sub-header
         font-size: 20px
         color: #888
+
+@media(max-width: 787px)
+  body
+    .partners__container__content
+      header
+        font-size: 24px
+      p.sub-header
+        font-size: 16px
 </style>

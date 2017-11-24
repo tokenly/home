@@ -13,6 +13,8 @@
       template(v-for="item in menuItems")
         li: a(v-bind:href="item.url" target="_blank" v-bind:class="{ alert: item.alert }")
           span {{ item.name }}
+        li: a(v-scroll-to="'#about'")
+          span About
 </template>
 
 <script>
@@ -104,6 +106,7 @@ export default {
     a
       color: #fff
       text-decoration: none
+      cursor: pointer
       &:hover
         color: #fff
 

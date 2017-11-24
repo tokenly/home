@@ -278,7 +278,7 @@ export default {
   background-color: #4CAF50
   margin: 0px auto 20px auto
   border-radius: 50%
-  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset rgba(5,5,5,0.1) 0 -1px 9px, rgba(5,5,5,0.1) 0 2px 12px
   -webkit-animation: blinkGreen 3s infinite;
   -moz-animation: blinkGreen 3s infinite;
   -ms-animation: blinkGreen 3s infinite;
@@ -287,17 +287,17 @@ export default {
 
 @keyframes blinkGreen
   from
-    background-color: #4CAF50
+    background-color: #36AD00
   50%
-    background-color: #76FF03
-    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #1B5E20 0 -1px 9px, #1B5E20 0 2px 0
+    background-color: #1BFF00
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset rgba(27,255,0,0.7) 0 -1px 9px, rgba(27,255,0,0.7) 0 2px 0
   to
-    background-color: #4CAF50
+    background-color: #36AD00
 
 .build
-  -webkit-animation: spin 8s linear infinite
-  -moz-animation: spin 8s linear infinite
-  animation: spin 8s linear infinite
+  -webkit-animation: spin 4s linear infinite
+  -moz-animation: spin 4s linear infinite
+  animation: spin 4s linear infinite
   transform: rotate(90deg)
   color: #fff
 
@@ -310,12 +310,18 @@ export default {
     transform: rotate(90deg)
 
 @media(max-width: 767px)
-  .about__container__content
-    header
-      font-size: 24px
-    div.about__container__content__sub__section
-      width: 100%
-  p.about__container__content__sub-text
-    height: auto !important
+  body
+    .about__container__content
+      header
+        font-size: 24px
+        margin-bottom: 20px
+      p
+        font-size: 16px
+        color: #eee
+        margin-bottom: 20px
+      div.about__container__content__sub__section
+        width: 100%
+    p.about__container__content__sub-text
+      height: auto !important
 
 </style>

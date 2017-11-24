@@ -79,6 +79,7 @@ export default {
     p.summary
       color: #111
       line-height: 1.5
+      margin-bottom: 0px
 
 .team-member__image
   width: 100px
@@ -92,10 +93,14 @@ export default {
     background-position: 50% 50%
 
 @media(max-width: 767px)
-  .product__row
-    &__image
-      display: none
-    &__content
-      width: 100%
+  body
+    .product__row
+      &__image
+        display: none
+      &__content
+        width: 100%
+    .team-member__content
+      p.summary
+        font-size: 16px
 
 </style>
