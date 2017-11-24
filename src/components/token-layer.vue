@@ -152,7 +152,7 @@ export default {
     font-size: 40px
     font-weight: 700
     margin: 0px
-    margin-bottom: 20px
+    margin-bottom: 40px
     letter-spacing: 3px
   p.sub-header
     font-size: 18px

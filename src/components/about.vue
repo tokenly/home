@@ -158,10 +158,10 @@ export default {
           padding: 20px
           vertical-align: top
           &__content
-            background: rgba(255,255,255, 1)
+            background: rgba(5,5,5, 0.5)
             border: 1px solid rgba(0,0,0,0.1)
             padding: 30px 20px
-            box-shadow: 0px 1px 5px rgba(0,0,0,0.2)
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.5)
             border-radius: 5px
             i
               font-size: 70px
@@ -169,7 +169,7 @@ export default {
           p
             font-size: 18px
             text-align: center
-            color: rgba(0, 25, 51, 0.9)
+            color: #fff
             font-weight: 600
           a
             padding: 20px
@@ -178,7 +178,7 @@ export default {
             border: 2px solid #fff
             border-radius: 2px
             color: #fff
-            background: #FFA100
+            background: #D50000
             cursor: pointer
             transition: 0.5s
             font-weight: 600
@@ -194,11 +194,11 @@ export default {
           font-size: 20px
           text-transform: uppercase
           letter-spacing: 1px
-          color: #001933
+          color: #E6FF0D
           text-align: center
           margin-bottom: 10px
           &__details
-            color: #888
+            color: #eee
             letter-spacing: 0.5px
             margin-bottom: 0px
             font-size: 16px
@@ -206,7 +206,7 @@ export default {
             font-weight: 400
             b
               font-style: italic
-              color: #555
+              color: #fff
         &.about__container__content__sub-text
           max-width: 600px
           display: inline-block
@@ -216,11 +216,11 @@ export default {
           margin-bottom: 30px
           text-align: center
           height: 130px
-          color: #666
+          color: #eee
           letter-spacing: 0.5px
           font-weight: 400
           b
-            color: #111
+            color: #fff
             margin-left: 6px
       &__feature
         display: inline-block
@@ -299,7 +299,7 @@ export default {
   -moz-animation: spin 8s linear infinite
   animation: spin 8s linear infinite
   transform: rotate(90deg)
-  color: #111
+  color: #fff
 
 @keyframes spin
   from

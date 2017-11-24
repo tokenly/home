@@ -24,10 +24,6 @@ export default {
         {
           name: 'Pre-ICO Form & KYC/AML',
           url: 'https://tokenpockets.com/'
-        },
-        {
-          name: 'Dashboard',
-          url: 'https://tokenpass.tokenly.com/auth/login'
         }
       ]
     }
@@ -65,6 +61,8 @@ export default {
     left: 0px
     right: 0px
     top: 0px
+    border-bottom: 1px solid rgba(5,5,5,0.2)
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.3)
     a
       color: #111
       font-weight: 700

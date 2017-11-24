@@ -1,9 +1,7 @@
 <template lang="pug">
 div.product__row(v-bind:id="this.elID")
   div.product__row__image
-    div(
-      v-bind:style="imageBackground"
-    )
+    img(v-bind:src="this.imgURL")
   div.product__row__content
     p.header
       span {{ this.headline }}
@@ -95,6 +93,8 @@ export default {
 
   &__image
     width: 30%
+    img
+      width: 100%
     div
       max-width: 100%
       height: 100%
