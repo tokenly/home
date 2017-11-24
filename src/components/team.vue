@@ -52,7 +52,7 @@ export default {
           name: 'Steven Levine',
           elID: 'steven-levine',
           title: 'Founder, CFO',
-          summary: 'Founder of the "Lets Talk Bitcoin" network (LTBN),. Experienced innovator and entrepreneur. Grew prior startup to $12.9MM annual revenue.',
+          summary: 'Founder of the "Lets Talk Bitcoin" network (LTBN). Experienced innovator and entrepreneur. Grew prior startup to $12.9MM annual revenue.',
           imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/02/steve-levine-e1494026781173-500x500.jpg'
         },
         {

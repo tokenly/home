@@ -108,17 +108,19 @@ export default {
         text-align: center
         padding: 0px
         margin: 0px
-        border-bottom: 1px solid rgba(255,255,255,0.1)
         li
           display: inline-block
           margin: 0px
           a
-            padding: 10px 20px
+            padding: 20px
             color: rgba(255,255,255,0.8)
             font-weight: 700
-            letter-spacing: 0.5px
+            letter-spacing: 1px
+            font-size: 18px
             display: inline-block
             cursor: pointer
+            border-bottom: 1px solid rgba(255,255,255,0.1)
+            text-transform: uppercase
           a.active
             color: #E6FF0D
             font-weight: 700
@@ -153,5 +155,6 @@ export default {
 
 .token-layer-feature__content
   padding: 50px 20px
+  text-align: center
 
 </style>

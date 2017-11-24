@@ -9,7 +9,7 @@ section.about(ref="about" id="about")
       div.about__container__content__sub
         div.about__container__content__sub__section
           div.about__container__content__sub__section__content
-            i.material-icons flash_on
+            div.led-green
             p.about__container__content__sub-header
               span We're &nbsp;
               span Live
@@ -272,6 +272,29 @@ export default {
   display: inline-block
   margin-bottom: 20px
   padding-top: 20px
+
+.led-green
+  margin: 0 auto
+  width: 70px
+  height: 70px
+  background-color: #4CAF50
+  margin: 0px auto 20px auto
+  border-radius: 50%
+  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #304701 0 -1px 9px, #89FF00 0 2px 12px
+  -webkit-animation: blinkGreen 3s infinite;
+  -moz-animation: blinkGreen 3s infinite;
+  -ms-animation: blinkGreen 3s infinite;
+  -o-animation: blinkGreen 3s infinite;
+  animation: blinkGreen 3s infinite;
+
+@keyframes blinkGreen
+  from
+    background-color: #4CAF50
+  50%
+    background-color: #76FF03
+    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset #1B5E20 0 -1px 9px, #1B5E20 0 2px 0
+  to
+    background-color: #4CAF50
 
 @media(max-width: 767px)
   .about__container__content

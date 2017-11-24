@@ -6,6 +6,7 @@
   products
   token-layer
   team
+  partners
   return-to-top
   tokenly-footer
 </template>
@@ -17,13 +18,14 @@ import About from './components/about.vue'
 import Products from './components/products.vue'
 import TokenLayer from './components/token-layer.vue'
 import Team from './components/team.vue'
+import Partners from './components/partners.vue'
 import ReturnToTop from './components/return-to-top.vue'
 import TokenlyContent from './components/content.vue'
 import TokenlyFooter from './components/footer.vue'
 
 export default {
   name: 'app',
-  components: {Navigation, Hero, About, ReturnToTop, TokenlyContent, TokenlyFooter, Products, TokenLayer, Team },
+  components: {Navigation, Hero, About, ReturnToTop, TokenlyContent, TokenlyFooter, Products, TokenLayer, Team, Partners },
   data () {
     return {}
   },
