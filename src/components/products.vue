@@ -159,7 +159,7 @@ export default {
       header
         font-size: 40px
         font-weight: 700
-        letter-spacing: 3px
+        letter-spacing: 2px
         margin-bottom: 40px
       p.sub-header
         font-size: 18px
@@ -213,11 +213,13 @@ export default {
           background: rgba(0,0,0,0.3)
           border-radius: 30px
           margin: 5px
-          font-size: 16px
+          font-size: 14px
           padding: 10px 20px
           border-bottom: none
         a.active
           background: #E6FF0D
           color: #111
+  .product__row__content p
+    font-size: 18px
 
 </style>

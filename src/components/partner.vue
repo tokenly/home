@@ -1,9 +1,11 @@
 <template lang="pug">
-div.product__row
+div.product__row.partner
+  div.product__row__image
+    img(v-bind:src="this.imgURL")
   div.product__row__content
     p.header
       span {{ this.name }}
-    p
+    p.sub-header
       span {{ this.summary }}
 
 </template>
@@ -46,5 +48,20 @@ export default {
 
 <style lang="sass?indentedSyntax=true" scoped>
 
+.product__row.partner
+  .product__row__image
+    height: 100px
+    text-align: center
+    margin-bottom: 20px
+    img
+      filter: grayscale(100%)
+      max-width: 100%
+      max-height: 100%
+      vertical-align: middle
+  p.header
+    font-size: 18px
+    font-weight: 600
+  p.sub-header
+    color: #666
 
 </style>

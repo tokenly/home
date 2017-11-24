@@ -7,8 +7,12 @@ section.partners(
     div.partners__container__content
       header Community
       p.sub-header Our turnkey token solutions have already enabled us to partner with some of the most innovative projects in the blockchain space.
-      div.partners__container__content__partners
-        div(v-for="partner in partnersData")
+      div.partners__container__content__partners(v-for="partner in partnersData")
+        Partner(
+          :name="partner.name"
+          :summary="partner.summary"
+          :imgURL="partner.imgURL"
+        )
 </template>
 
 <script>
@@ -25,19 +29,14 @@ export default {
         imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/08/augmentors-logo.png'
       },
       {
-        name: 'TokenMarkets',
-        summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
-        imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
+        name: 'SohoMuse',
+        summary: 'Tokenly helped SohoMuse issue the worlds first collectible blockchain token for a high fashion designer.',
+        imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/08/sohomuse-logo-1.png'
       },
       {
-        name: 'TokenMarkets',
-        summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
-        imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
-      },
-      {
-        name: 'TokenMarkets',
-        summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
-        imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
+        name: 'RocketChat',
+        summary: 'Tokenly worked with Rocket Chat to develop the worlds first blockchain token-controlled access protocol for live chats.',
+        imgURL: 'http://jps.layershift.com/rocketchat/images/rocketchatlogo.png'
       }
     ]
     }
@@ -72,6 +71,15 @@ export default {
       p.sub-header
         font-size: 20px
         color: #888
+        margin-bottom: 40px
+
+.partners__container__content__partners
+  width: 33.3%
+  vertical-align: top
+  display: inline-block
+  vertical-align: top
+  .product__row
+    padding: 20px
 
 @media(max-width: 787px)
   body
@@ -80,4 +88,8 @@ export default {
         font-size: 24px
       p.sub-header
         font-size: 16px
+    .partners__container__content__partners
+      width: 100%
+      text-align: center
+      margin-bottom: 20px
 </style>

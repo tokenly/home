@@ -144,7 +144,7 @@ export default {
         font-weight: 500
         margin: 0px
         margin-bottom: 40px
-        letter-spacing: 3px
+        letter-spacing: 2px
         text-shadow: 0px 1px 3px rgba(0,0,0,0.3)
         text-align: left
         span.name
@@ -319,6 +319,7 @@ export default {
         font-size: 16px
         color: #eee
         margin-bottom: 20px
+        line-height: 1.5
       div.about__container__content__sub__section
         width: 100%
     p.about__container__content__sub-text
