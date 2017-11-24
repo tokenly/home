@@ -68,6 +68,9 @@ export default {
 
 .product__row
   display: flex
+  background: rgba(0,0,0,0.5)
+  padding: 30px
+  border-radius: 5px
   &__image, &__content
     padding: 10px
     vertical-align: middle

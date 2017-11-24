@@ -69,7 +69,7 @@ export default {
       color: #111
       font-weight: 700
       &:hover
-        color: inherit
+        color: #111
 
 .nav__content
   background-color: transparent

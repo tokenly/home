@@ -119,19 +119,21 @@ export default {
           display: inline-block
           margin: 0px
           a
-            padding: 20px
+            padding: 10px 30px
             color: rgba(255,255,255,0.8)
             font-weight: 700
             letter-spacing: 1px
             font-size: 18px
             display: inline-block
             cursor: pointer
-            border-bottom: 1px solid rgba(255,255,255,0.1)
+            background: rgba(0,0,0,0.5)
+            border-radius: 30px
+            margin: 0px 10px 10px 0px
             text-transform: uppercase
           a.active
-            color: #E6FF0D
+            background: #E6FF0D
             font-weight: 700
-            border-bottom: 3px solid #E6FF0D
+            color: #111
   &__mask
     background: url(https://tokenpockets.com/images/bg2.c37d81d0.png) top right no-repeat
     transform: scaleX(-1)
@@ -179,5 +181,14 @@ export default {
         li
           a
             font-size: 14px
+            border-bottom: none
+            border-radius: 30px
+            background: rgba(0,0,0,0.5)
+            padding: 10px 30px
+            margin: 0px 10px 10px 0px
+          a.active
+            background: #E6FF0D
+            color: #111
+            font-weight: 700
 
 </style>

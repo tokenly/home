@@ -143,7 +143,7 @@ export default {
     right: 0px
     z-index: -2
   &__bg
-    background: rgba(20,20,20,0.5)
+    background: rgba(20,20,20,0.7)
     position: absolute
     top: 0px
     bottom: 0px

@@ -5,7 +5,7 @@ section.about(ref="about" id="about")
       header
         span About &nbsp;
         span.name Tokenly
-      p Tokenly is a leading developer of turnkey blockchain and token solutions.  Our vision is to create a turnkey platform that enables anyone to create, share, and use scalable blockchain-based consumer products.
+      p Tokenly is a leading developer of turnkey blockchain and token solutions.  Our vision is to create a user-friendly platform that enables anyone to create, share, and use scalable blockchain-based consumer products.
       div.about__container__content__sub
         div.about__container__content__sub__section
           div.about__container__content__sub__section__content
@@ -19,7 +19,7 @@ section.about(ref="about" id="about")
             div.about__container__content__sub-header__divider
             p.about__container__content__sub-text
               span Tokenly's ecosystem of consumer-ready blockchain solutions,
-              b Token Suite&trade;
+              b(v-scroll-to="'#products'") Token Suite&trade;
               span , includes 5 LIVE products with thousands of active users.
             div
               a(v-scroll-to="'#products'")
@@ -34,47 +34,10 @@ section.about(ref="about" id="about")
             div.about__container__content__sub-header__divider
             p.about__container__content__sub-text
               span To meet the unique challenges of consumer products, we are developing
-              b Token Layer&trade;
+              b(v-scroll-to="'#token-layer'") Token Layer&trade;
               span , a sidechain protocol engineered to support unlimited scalable blockchain token products.
             div
               a(v-scroll-to="'#token-layer'") Learn More About Token Layer&trade;
-      div.centered(style="display: none;")
-        div.about__container__content__feature
-          div.about__container__content__feature__content
-            div.about__container__content__feature__content__text
-              i.material-icons account_balance_wallet
-              p Secure Multisig Wallet
-        div.about__container__content__feature
-          div.about__container__content__feature__content
-            div.about__container__content__feature__content__text
-              i.material-icons shopping_cart
-              p Turnkey eCommerce Solution
-        div.about__container__content__feature
-          div.about__container__content__feature__content
-            div.about__container__content__feature__content__text
-              i.material-icons vpn_key
-              p Universal ID & Token Access
-        div.about__container__content__feature
-          div.about__container__content__feature__content
-            div.about__container__content__feature__content__text
-              i.material-icons attach_money
-              p Token Creation and ICO platform
-        div.about__container__content__feature
-          div.about__container__content__feature__content
-            div.about__container__content__feature__content__text
-              i.material-icons chat
-              p Token Chats
-        div.about__container__content__feature
-          div.about__container__content__feature__content
-            div.about__container__content__feature__content__text
-              i.material-icons library_music
-              p TokenFM
-      div.about__container__content__continue(style="display: none;")
-        a(@click="scrollToProducts")
-          span Our Applications
-          br
-          span
-            i.material-icons keyboard_arrow_down
   div.about__mask
 
 </template>
@@ -130,7 +93,6 @@ export default {
     background: rgba(0, 25, 51, 1)
     background-image: url(https://tokenpockets.com/images/bg1.658fcf29.png)
     background-size: cover;
-    background-position: center;
   &__container
     padding: 80px 30px
     display: table-cell
@@ -222,6 +184,7 @@ export default {
           b
             color: #fff
             margin-left: 6px
+            cursor: pointer
       &__feature
         display: inline-block
         padding: 10px
