@@ -20,14 +20,14 @@ footer
           .footer__heading Products
           ul.footer__menu
             li: a(href="https://tokenmarkets.com" target="_blank") Token Markets
-            li: a(href="https://swapbot.tokenly.com" target="_blank") Swapbot            
+            li: a(href="https://swapbot.tokenly.com" target="_blank") Swapbot
             li: a(href="https://bitsplit.tokenly.com" target="_blank") Bitsplit
 
         .three.columns
           .footer__heading.products__cont &nbsp;
           ul.footer__menu
             li: a(href="https://tokenpass.tokenly.com" target="_blank") Tokenpass
-            li: a(href="https://tokenpockets.com" target="_blank") Token Pockets          
+            li: a(href="https://tokenpockets.com" target="_blank") Token Pockets
 
   .footnote
     .container
@@ -50,6 +50,7 @@ export default {
 footer
   z-index: 100
   font-size: 1em
+  position: relative
 
 .footer__links
   padding: 60px 0
