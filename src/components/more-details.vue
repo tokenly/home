@@ -6,10 +6,10 @@ section.more-details(
   .more-details__container
     .more-details__container__content
       header Want More Details?
-      p.sub-header Read our whitepaper or join or Slack
+      p.sub-header Call to action
       div
         a.more-details__container__content__button
-          span Read the
+          span CTA Text
 </template>
 
 <script>

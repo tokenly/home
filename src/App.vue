@@ -1,13 +1,7 @@
 <template lang="pug">
 #app()
   navigation
-  hero
-  about
-  products
-  token-layer
-  team
-  partners
-  more-details
+  router-view
   return-to-top
   tokenly-footer
 </template>

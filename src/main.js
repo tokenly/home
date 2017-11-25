@@ -1,8 +1,12 @@
 import Vue from 'vue'
 import VeeValidate from 'vee-validate'
+import VueRouter from 'vue-router'
+import router from './router'
+
 import App from './App.vue'
 import _ from 'lodash'
 
+Vue.use(VueRouter)
 Vue.use(VeeValidate)
 
 var VueScrollTo = require('vue-scrollto');
@@ -25,5 +29,6 @@ Vue.use(VueScrollTo, {
 
 new Vue({
   el: '#app',
+  router,
   render: h => h(App)
 })
