@@ -3,8 +3,12 @@
   .nav__content
     .nav__heading
       a(href="/")
-        img.nav__logo(
+        img.nav__logo.inactive(
           src="../assets/logo/Tokenly_Icon_White.svg"
+          width="35px"
+        )
+        img.nav__logo.active(
+          src="../assets/logo/Tokenly_Icon.svg"
           width="35px"
         )
       a.title Tokenly
@@ -70,6 +74,10 @@ export default {
       font-weight: 700
       &:hover
         color: #111
+    .nav__logo.active
+      display: inline-block
+    .nav__logo.inactive
+      display: none
 
 .nav__content
   background-color: transparent
@@ -78,7 +86,7 @@ export default {
   padding: 0px 10px
 
 .nav__heading
-  line-height: 70px
+  line-height: 68px
   float: left
   font-weight: bold
   .title
@@ -90,7 +98,8 @@ export default {
   display: inline-block
   margin-top: -4px
   vertical-align: middle
-
+  &.active
+    display: none
 
 .nav__menu
   line-height: 70px
