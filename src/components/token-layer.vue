@@ -123,7 +123,7 @@ export default {
             color: rgba(255,255,255,0.8)
             font-weight: 700
             letter-spacing: 1px
-            font-size: 18px
+            font-size: 16px
             display: inline-block
             cursor: pointer
             background: rgba(0,0,0,0.5)
@@ -156,9 +156,10 @@ export default {
     margin: 0px
     margin-bottom: 40px
     letter-spacing: 2px
+    text-align: left
   p.sub-header
-    font-size: 18px
-    text-align: center
+    font-size: 20px
+    text-align: left
     opacity: 0.7
     margin-bottom: 40px
 

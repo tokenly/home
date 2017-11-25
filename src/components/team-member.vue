@@ -74,10 +74,10 @@ export default {
       font-weight: 600
       margin-bottom: 5px
     p.title
-      color: #999
+      color: #888
       margin-bottom: 25px
     p.summary
-      color: #111
+      color: #333
       line-height: 1.5
       margin-bottom: 0px
 
