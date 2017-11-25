@@ -96,7 +96,7 @@ export default {
         font-weight: 700
       p
         text-align: left
-        color: #888
+        color: #666
         font-size: 20px
         margin-bottom: 30px
 

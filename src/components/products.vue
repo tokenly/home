@@ -161,9 +161,10 @@ export default {
         font-weight: 700
         letter-spacing: 2px
         margin-bottom: 40px
+        text-align: left
       p.sub-header
-        font-size: 18px
-        text-align: center
+        font-size: 20px
+        text-align: left
         opacity: 0.7
         margin-bottom: 40px
       &__menu

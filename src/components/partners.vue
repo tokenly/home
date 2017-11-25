@@ -70,7 +70,7 @@ export default {
         margin-bottom: 20px
       p.sub-header
         font-size: 20px
-        color: #888
+        color: #666
         margin-bottom: 40px
 
 .partners__container__content__partners
