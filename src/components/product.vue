@@ -95,6 +95,8 @@ export default {
     span.live
       font-weight: 700
       color: #E6FF0D
+    p:last-of-type
+      margin: 0px
 
   &__image
     width: 30%

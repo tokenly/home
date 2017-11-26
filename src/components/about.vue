@@ -5,7 +5,7 @@ section.about(ref="about" id="about")
       header
         span About &nbsp;
         span.name Tokenly
-      p Tokenly is a leading developer of turnkey blockchain and token solutions.  Our vision is to create a user-friendly platform that enables anyone to create, share, and use scalable blockchain-based consumer products.
+      p Tokenly is a leading developer of turnkey blockchain and token solutions.  Tokenly makes it easy for anyone to create, share, and use scalable blockchain-based consumer products, all without writing a single line of code.
       div.about__container__content__sub
         div.about__container__content__sub__section
           div.about__container__content__sub__section__content
@@ -18,9 +18,9 @@ section.about(ref="about" id="about")
               b and counting
             div.about__container__content__sub-header__divider
             p.about__container__content__sub-text
-              span Tokenly's ecosystem of consumer-ready blockchain solutions,
+              span We're more than just an idea.  Tokenly's ecosystem of consumer-ready blockchain solutions,
               b(v-scroll-to="'#products'") Token Suite&trade;
-              span , includes 5 LIVE products with thousands of active users.
+              span , currently includes 5 LIVE products with thousands of active users.
             div
               a(v-scroll-to="'#products'")
                 span Learn More About Token Suite&trade;
@@ -120,7 +120,7 @@ export default {
           padding: 20px
           vertical-align: top
           &__content
-            background: rgba(5,5,5, 0.5)
+            background: rgba(5,5,5, 0.7)
             border: 1px solid rgba(0,0,0,0.1)
             padding: 30px 20px
             box-shadow: 0px 2px 5px rgba(0,0,0,0.5)
@@ -148,10 +148,10 @@ export default {
             border: 1px solid rgba(0,0,0,0.1)
             box-shadow: 0px 1px 4px rgba(0,0,0,0.2)
       p
-        line-height: 2
         text-align: left
-        font-size: 18px
+        font-size: 20px
         margin-bottom: 60px
+        color: rgba(255,255,255,0.9);
         &.about__container__content__sub-header
           font-size: 20px
           text-transform: uppercase

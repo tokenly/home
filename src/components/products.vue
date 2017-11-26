@@ -43,8 +43,8 @@ export default {
         {
           name: 'TokenMarkets',
           elID: 'tokenmarkets',
-          headline: 'Shopify for the Blockchain',
-          summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
+          headline: 'Shopify with Blockchain Tokens',
+          summary: 'TokenMarkets get setup in minutes to buy or sell physical goods, services, or token assets. Accept tokens, digital currency, or credit cards as payment.',
           linkText: 'TokenMarkets.com',
           linkURL: 'https://tokenmarkets.com',
           imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
@@ -52,26 +52,26 @@ export default {
         {
           name: 'TokenPockets',
           elID: 'tokenpockets',
-          headline: 'Multisig Wallet with Token Creation',
-          summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
+          headline: 'Create Your Own Token',
+          summary: 'TokenPockets is a comprehensive token wallet. Signup and create shared, multi-signature wallets or issue your own blockchain token.',
           linkText: 'TokenPockets.com',
           linkURL: 'https://tokenpockets.com',
           imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/vault-wireframe_900-225x225.png'
         },
         {
-          name: 'TokenChats',
-          elID: 'tokenchats',
-          headline: "World's First Token-Gated Chat",
-          summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
+          name: 'Token Launch',
+          elID: 'token-launch',
+          headline: 'Launch Your Own Token Crowdsale',
+          summary: 'Token Launch is a turnkey solution for managing your own token crowdsale to fund your next project. Set volume limits and more.',
           linkText: '',
           linkURL: '',
-          imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
+          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/microphone-wireframe-recovered-900-900x900.png'
         },
         {
-          name: 'tokenFM',
+          name: 'TokenFM',
           elID: 'tokenFM',
-          headline: 'Token-Powered Media Streaming Platform',
-          summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
+          headline: 'Tokenize Media',
+          summary: 'TokenFM is a token launch pad and community streaming platform for creators, curators, and fans. Media player, artist engagement tools, media and merchandize market, and more.',
           linkText: 'Token.FM',
           linkURL: 'https://tokenfm.com',
           imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/microphone-wireframe-recovered-900-900x900.png'
@@ -80,7 +80,7 @@ export default {
           name: 'TokenPass',
           elID: 'tokenpass',
           headline: 'Token Controlled Access',
-          summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
+          summary: 'Tokenpass is a digital access pass hub for universal, platform agnostic user management. API connectivity, token lending and rentals, token controlled chats, and more.',
           linkText: 'TokenPass.Tokenly.com',
           linkURL: 'https://tokenpass.tokenly.com/',
           imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/card-wireframe-900-900x900.png'
