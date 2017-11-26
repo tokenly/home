@@ -46,29 +46,29 @@ export default {
         {
           name: 'Secure',
           elID: 'secure',
-          headline: 'Shopify for the Blockchain',
-          summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
+          headline: 'World-Class Security',
+          summary: '[Placeholder]',
           imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
         },
         {
           name: 'Scalable',
           elID: 'scalable',
-          headline: '...high volume transactions.',
-          summary: 'Token Layer is engineered to handle 1,000s transactions per second. ... with low, stable transaction fees will make this the best ....',
+          headline: 'Built for Worldwide ..',
+          summary: 'Token Layer is engineered to handle 1,000s transactions per second.',
           imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/vault-wireframe_900-225x225.png'
         },
         {
           name: 'Flexible',
           elID: 'flexible',
-          headline: "Token Layer plays nice with most blockchains and ... systems",
+          headline: "Token Layer plays nice with most blockchains",
           summary: 'Token Layer is built to be blockchain and platform agnostic so .... That means .... and blockchains still to come.',
           imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
         },
         {
-          name: 'Limitless',
-          elID: 'limitless',
-          headline: 'Token-Powered Media Streaming Platform',
-          summary: 'Tokenpass is a username-based token inventory and management platform. Instant token delivery, token-controlled access, token lending/rental, and more.',
+          name: 'Innovative',
+          elID: 'innovative',
+          headline: 'Open and ready for anything',
+          summary: 'Token Layer is the the first middleware for Bitcoin Counterparty & ERC20 Tokens.',
           imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/microphone-wireframe-recovered-900-900x900.png'
         }
       ]
@@ -170,6 +170,8 @@ export default {
 
 @media(max-width: 787px)
   body
+    .token-layer__container
+      padding: 40px 20px
     .token-layer__container__content
       header
         font-size: 24px

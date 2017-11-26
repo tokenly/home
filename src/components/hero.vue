@@ -158,7 +158,8 @@ $hero-btn-color: #4170a0
   position: relative
   font-size: 1em
   overflow: hidden
-  min-height: 100vh
+  min-height: 400px
+  height: 100vh
   z-index: 0
 
 .hero__bg, .hero__bg__mask
@@ -179,6 +180,7 @@ $hero-btn-color: #4170a0
   display: table
   width: 100%
   height: 100%
+  min-height: 400px
 
 .hero__content
   position: relative
@@ -448,5 +450,7 @@ $hero-btn-color: #4170a0
       width: 100%
     &__submit
       width: 100%
+  .hero__continue
+    position: absolute
 
 </style>

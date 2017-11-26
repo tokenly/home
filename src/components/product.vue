@@ -115,5 +115,9 @@ export default {
       display: none
     &__content
       width: 100%
+      p.header
+        font-size: 18px
+      p
+        line-height: 1.5
 
 </style>

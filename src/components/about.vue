@@ -274,6 +274,8 @@ export default {
 
 @media(max-width: 767px)
   body
+    .about__container
+      padding: 40px 20px
     .about__container__content
       header
         font-size: 24px

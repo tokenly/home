@@ -65,12 +65,12 @@ export default {
           summary: 'Token Launch is a turnkey solution for managing your own token crowdsale to fund your next project. Set volume limits and more.',
           linkText: '',
           linkURL: '',
-          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/microphone-wireframe-recovered-900-900x900.png'
+          imgURL: 'https://tekk.wpengine.com/wp-content/uploads/2017/06/launch-wireframe-recovered-900.png'
         },
         {
           name: 'TokenFM',
           elID: 'tokenFM',
-          headline: 'Tokenize Media',
+          headline: 'Media Tokenized',
           summary: 'TokenFM is a token launch pad and community streaming platform for creators, curators, and fans. Media player, artist engagement tools, media and merchandize market, and more.',
           linkText: 'Token.FM',
           linkURL: 'https://tokenfm.com',
@@ -195,15 +195,17 @@ export default {
 
 @media(max-width: 767px)
   body
+    .products
+      padding: 10px
     .products__header
-      padding: 30px 10px
+      padding: 40px 20px
       padding-bottom: 0px
       header
         font-size: 24px
       p.sub-header
         font-size: 16px
     .products__content
-      padding: 50px 10px
+      padding: 50px 20px
       text-align: center
       p
         color: #eee
@@ -217,10 +219,16 @@ export default {
           font-size: 14px
           padding: 10px 20px
           border-bottom: none
+          font-weight: 400
         a.active
           background: #E6FF0D
           color: #111
-  .product__row__content p
-    font-size: 18px
+    .product__row
+      padding: 15px
+    .product__row__content
+      p.header
+        font-size: 18px
+      p
+        font-size: 18px
 
 </style>

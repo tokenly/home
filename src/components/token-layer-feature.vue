@@ -58,9 +58,10 @@ export default {
   &__content.token-layer-feature
     padding: 10px
     vertical-align: middle
+    width: 100%
     p
       line-height: 2
-      font-size: 16px
+      font-size: 18px
     p.header
       font-weight: 700
       font-size: 20px

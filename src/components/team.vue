@@ -110,6 +110,8 @@ export default {
 
 @media(max-width: 787px)
   body
+    .team__container
+      padding: 40px 20px
     .team__container__content
       header
         font-size: 24px

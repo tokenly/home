@@ -44,4 +44,6 @@ export default {
   width: 50px
   height: 50px
   border-radius: 50%
+  border: 1px solid rgba(0,0,0,0.1)
+  box-shadow: 0px 1px 3px rgba(0,0,0,0.1)
 </style>
