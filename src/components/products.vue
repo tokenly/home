@@ -95,22 +95,6 @@ export default {
     activateProduct: function (event) {
       let targetIndex = $(event.currentTarget).data('product-index')
       this.activeProductIndex = targetIndex
-    },
-
-    slideHideProducts: function () {
-      $('.product__row').animate({
-        opacity: '0',
-      }, 500, function() {
-        $('.product__row').hide()
-      });
-    },
-
-    slideShowProduct: function (targetName) {
-      $(targetName).animate({
-        opacity: '1',
-      }, 200, function() {
-        $(targetName).show()
-      });
     }
   },
 
@@ -160,7 +144,7 @@ export default {
         font-size: 40px
         font-weight: 700
         letter-spacing: 2px
-        margin-bottom: 40px
+        margin-bottom: 20px
         text-align: left
       p.sub-header
         font-size: 20px

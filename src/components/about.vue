@@ -5,7 +5,7 @@ section.about(ref="about" id="about")
       header
         span About &nbsp;
         span.name Tokenly
-      p Tokenly is a leading developer of turnkey blockchain and token solutions.  Tokenly makes it easy for anyone to create, share, and use scalable blockchain-based consumer products, all without writing a single line of code.
+      p Tokenly is a leading innovator and developer of turnkey blockchain and token solutions.  Tokenly makes it easy for anyone to create, share, and use scalable blockchain token-based consumer products, all without writing a single line of code.
       div.about__container__content__sub
         div.about__container__content__sub__section
           div.about__container__content__sub__section__content

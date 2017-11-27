@@ -64,9 +64,9 @@ export default {
   border-bottom: 1px solid rgba(255,255,255,0.1)
   &.active
     background: #fff
-    left: 0px
-    right: 0px
-    top: 0px
+    left: 10px
+    right: 10px
+    top: 10px
     border-bottom: 1px solid rgba(5,5,5,0.2)
     box-shadow: 0px 1px 3px rgba(0,0,0,0.3)
     a

@@ -72,5 +72,9 @@ export default {
 
 @media(max-width: 767px)
   .product__row
+    padding: 15px
+    .token-layer-feature
+      p.header
+        font-size: 18px
 
 </style>

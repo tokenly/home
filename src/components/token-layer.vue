@@ -39,7 +39,7 @@ export default {
         {
           name: 'Low Cost',
           elID: 'low-cost',
-          headline: 'Stable, predicatable, low cost transaction fees are critical to widespread consumer use of blockchain technology.',
+          headline: 'Stable, predicatable, low cost transactions.',
           summary: 'TokenLayer ',
           imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
         },
@@ -154,7 +154,7 @@ export default {
     font-size: 40px
     font-weight: 700
     margin: 0px
-    margin-bottom: 40px
+    margin-bottom: 20px
     letter-spacing: 2px
     text-align: left
   p.sub-header
