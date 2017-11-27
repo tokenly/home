@@ -29,7 +29,7 @@ export default {
       menuItems: [
         {
           name: 'Pre-ICO Form & KYC/AML',
-          url: 'https://tokenpockets.com/'
+          url: '#'
         }
       ]
     }
