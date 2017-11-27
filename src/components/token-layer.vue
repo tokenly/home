@@ -114,6 +114,7 @@ export default {
     z-index: 8
     margin: 0 auto
     width: 1100px
+    max-width: 100%
     &__content, &__image
       display: inline-block
       vertical-align: top
@@ -185,6 +186,12 @@ export default {
   body
     .token-layer__container
       padding: 40px 20px
+      &__content, &__image
+        width: 100%
+      &__image
+        text-align: center
+        img
+          width: 50%
     .token-layer__container__content
       header
         font-size: 24px

@@ -209,6 +209,13 @@ export default {
   body
     .products
       padding: 10px
+      &__container
+        &__image, &__content
+          width: 100%
+        &__image
+          text-align: center
+          img
+            width: 50%
     .products__header
       padding: 40px 20px
       padding-bottom: 0px
@@ -217,7 +224,7 @@ export default {
       p.sub-header
         font-size: 16px
     .products__content
-      padding: 50px 20px
+      padding: 20px
       text-align: center
       p
         color: #eee
