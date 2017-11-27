@@ -4,10 +4,10 @@ section.hero
     .hero__content(ref="content")
       .row
         h1.hero__h1
-          span Blockchain Tokens
+          span Turnkey Token Solutions
           span.emphasized &nbsp; for the Real World
         h2.hero__h2
-          span Turnkey Solutions for Scalable Consumer Products
+          span Create, share, and use blockchain tokens without writing a single line of code.
   .hero__continue
     a.hero__cta.animated(@click="scrollToAbout")
       span Explore Tokenly
@@ -419,7 +419,7 @@ $hero-btn-color: #4170a0
     background-color: lighten($hero-btn-color, 5%)
 
 .hero__bg__mask
-  opacity: 0.9
+  opacity: 0.8
   background: linear-gradient(to bottom, #002346 0%, #0063c6 100%)
   z-index: 5
 
@@ -429,8 +429,8 @@ $hero-btn-color: #4170a0
   background-position: center
   overflow: hidden
   -webkit-filter: blur(1px)
-  filter: blur(1px)
-  background-image: url(https://images.pexels.com/photos/355770/pexels-photo-355770.jpeg)
+  filter: blur(0px)
+  background-image: url(../assets/images/city-clearbg.png)
   position: fixed
   top: 0px
   bottom: 0px

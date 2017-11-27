@@ -51,10 +51,6 @@ export default {
 
 .product__row
   display: flex
-  background: rgba(0,0,0,0.5)
-  border: 1px solid rgba(0,0,0,0.2)
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.5)
-  padding: 30px
   &__content.token-layer-feature
     padding: 10px
     vertical-align: middle

@@ -3,7 +3,9 @@ section.token-layer(id="token-layer")
   div.token-layer__container
     div.token-layer__container__content
       header
-        span Token Layer&trade;
+        img(
+          src="../assets/images/token-layer.png"
+        )
       p.sub-header
         span Tokenly's scalable sidechain protocol built to support interoperability and low cost transactions.
       ul.token-layer__container__content__menu
@@ -22,6 +24,10 @@ section.token-layer(id="token-layer")
           :summary = "this.activeFeature.summary"
           :imgURL = "this.activeFeature.imgURL"
         )
+    div.token-layer__container__image
+      img(
+        src="../assets/images/token-layer-white.jpg"
+      )
   div.token-layer__mask
   div.token-layer__bg
 </template>
@@ -97,43 +103,51 @@ export default {
 <style lang="sass?indentedSyntax=true" scoped>
 
 .token-layer
-  background: #333
-  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/zwartevilt.png")
+  background: #f9f9f9
   background-size: cover
   background-position: center
-  color: #fff
   min-height: 100vh
   position: relative
   &__container
     padding: 80px 30px
     position: relative
     z-index: 8
+    margin: 0 auto
+    width: 1100px
+    &__content, &__image
+      display: inline-block
+      vertical-align: top
     &__content
-      max-width: 800px
-      margin: 0 auto
+      width: 60%
       &__menu
-        text-align: center
         padding: 0px
         margin: 0px
+        margin-bottom: 20px
         li
           display: inline-block
           margin: 0px
           a
             padding: 10px 30px
-            color: rgba(255,255,255,0.8)
+            color: #333
             font-weight: 700
             letter-spacing: 1px
             font-size: 16px
             display: inline-block
             cursor: pointer
-            background: rgba(0,0,0,0.5)
+            background: rgba(200,200,200,0.5)
             border-radius: 30px
             margin: 0px 10px 10px 0px
             text-transform: uppercase
+            border: 1px solid rgba(0,0,0,0.1)
           a.active
             background: #E6FF0D
             font-weight: 700
             color: #111
+    &__image
+      padding: 10px 30px
+      width: 40%
+      img
+        width: 100%
   &__mask
     background: url(https://tokenpockets.com/images/bg2.c37d81d0.png) top right no-repeat
     transform: scaleX(-1)
@@ -143,7 +157,7 @@ export default {
     top: 0px
     bottom: 0px
   &__bg
-    background: rgba(5,3,64,0.6)
+    background: rgba(255,255,255,0.7)
     position: absolute
     left: 0px
     right: 0px
@@ -157,6 +171,8 @@ export default {
     margin-bottom: 20px
     letter-spacing: 2px
     text-align: left
+    img
+      width: 50%
   p.sub-header
     font-size: 20px
     text-align: left
@@ -164,9 +180,6 @@ export default {
     margin-bottom: 40px
 
 .token-layer-feature__content
-  padding: 50px 20px
-  text-align: center
-  padding-bottom: 0px
 
 @media(max-width: 787px)
   body

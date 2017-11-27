@@ -3,30 +3,39 @@ section.products(
   ref="products"
   id="products"
 )
-  div.products__header
-    div.products__header__content
-      header
-        span Token Suite&trade;
-      p.sub-header
-        span Our consumer-ready turnkey solutions for the entire token life cycle: from creation and sale to use and redemption.
-      ul.products__header__content__menu
-        li(v-for="(productEntry, index) in this.productData")
-          a.product-option(
-            @click="activateProduct"
-            v-bind:data-target-el="productEntry.elID"
-            v-bind:data-product-index="index"
-            :class="{ 'active': index === activeProductIndex }"
-          )
-            span {{productEntry.name}}
-  div.products__content
-    Product(
-      :elID = "this.activeProduct.elID"
-      :headline = "this.activeProduct.headline"
-      :summary = "this.activeProduct.summary"
-      :linkURL = "this.activeProduct.linkURL"
-      :linkText = "this.activeProduct.linkText"
-      :imgURL = "this.activeProduct.imgURL"
-    )
+  div.products__container
+    div.products__container__content
+      div.products__header
+        div.products__header__content
+          header
+            img(
+              src="../assets/images/token-suite.png"
+            )
+          p.sub-header
+            span Our consumer-ready turnkey solutions for the entire token life cycle: from creation and sale to use and redemption.
+          ul.products__header__content__menu
+            li(v-for="(productEntry, index) in this.productData")
+              a.product-option(
+                @click="activateProduct"
+                v-bind:data-target-el="productEntry.elID"
+                v-bind:data-product-index="index"
+                :class="{ 'active': index === activeProductIndex }"
+              )
+                span {{productEntry.name}}
+          div.products__content
+            Product(
+              :elID = "this.activeProduct.elID"
+              :headline = "this.activeProduct.headline"
+              :summary = "this.activeProduct.summary"
+              :linkURL = "this.activeProduct.linkURL"
+              :linkText = "this.activeProduct.linkText"
+              :imgURL = "this.activeProduct.imgURL"
+            )
+    div.products__container__image
+      div.products__content
+        img(
+          v-bind:src="imageBackgroundSrc"
+        )
   .products__bg
   .products__mask
 </template>
@@ -103,6 +112,10 @@ export default {
     activeProduct () {
       let i = this.activeProductIndex
       return this.productData[i]
+    },
+    imageBackgroundSrc () {
+
+      return this.activeProduct.imgURL
     }
   }
 }
@@ -111,9 +124,8 @@ export default {
 <style lang="sass?indentedSyntax=true" scoped>
 
 .products
-  background: #111
-  background-image: url(https://www.toptal.com/designers/subtlepatterns/patterns/zwartevilt.png)
-  color: #fff
+  background: #fff
+  color: #111
   position: relative
   z-index: 99
   min-height: 100vh
@@ -127,13 +139,25 @@ export default {
     right: 0px
     z-index: -2
   &__bg
-    background: rgba(20,20,20,0.7)
+    background: rgba(245,245,245,0.8)
     position: absolute
     top: 0px
     bottom: 0px
     left: 0px
     right: 0px
     z-index: -1
+  &__container
+    max-width: 1100px
+    margin: 0 auto
+    &__content, &__image
+      display: inline-block
+      vertical-align: top
+    &__content
+      width: 60%
+    &__image
+      width: 40%
+      img
+        width: 100%
   &__header
     padding: 30px
     padding-bottom: 0px
@@ -146,34 +170,38 @@ export default {
         letter-spacing: 2px
         margin-bottom: 20px
         text-align: left
+        img
+          width: 50%
       p.sub-header
         font-size: 20px
         text-align: left
         opacity: 0.7
         margin-bottom: 40px
       &__menu
-        text-align: center
         padding: 0px
         margin: 0px
+        margin-bottom: 20px
         li
           display: inline-block
           margin: 0px
           a
-            padding: 20px
-            color: rgba(255,255,255,0.8)
+            padding: 10px 30px
+            color: #333
             font-weight: 700
-            letter-spacing: 0.5px
+            letter-spacing: 1px
+            font-size: 16px
             display: inline-block
             cursor: pointer
-            border-bottom: 1px solid rgba(255,255,255,0.1)
-            font-size: 18px
+            background: rgba(200,200,200,0.5)
+            border-radius: 30px
+            margin: 0px 10px 10px 0px
+            text-transform: uppercase
+            border: 1px solid rgba(0,0,0,0.1)
           a.active
-            color: #E6FF0D
+            color: #fff
             font-weight: 700
-            border-bottom: 3px solid #E6FF0D
+            background: #0064CC
   &__content
-    padding: 50px 20px
-    padding-bottom: 0px
     margin: 0 auto
     max-width: 800px
 

@@ -1,7 +1,5 @@
 <template lang="pug">
 div.product__row(v-bind:id="this.elID")
-  div.product__row__image
-    img(v-bind:src="this.imgURL")
   div.product__row__content
     p.header
       span {{ this.headline }}
@@ -68,25 +66,20 @@ export default {
 
 .product__row
   display: flex
-  background: rgba(0,0,0,0.5)
-  border: 1px solid rgba(0,0,0,0.2);
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.5);
-  padding: 30px
   border-radius: 5px
   &__image, &__content
     padding: 10px
     vertical-align: middle
   &__content
-    width: 70%
+    width: 100%
     padding: 10px
     vertical-align: middle
     p
       line-height: 2
       font-size: 16px
       a
-        color: #fff
         text-decoration: none
-        color: rgba(255,255,255,0.9)
+        color: #111
         font-weight: 700
     p.header
       font-weight: 700

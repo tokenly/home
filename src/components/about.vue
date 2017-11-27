@@ -3,9 +3,11 @@ section.about(ref="about" id="about")
   div.about__container
     div.about__container__content
       header
-        span About &nbsp;
-        span.name Tokenly
-      p Tokenly is a leading innovator and developer of turnkey blockchain and token solutions.  Tokenly makes it easy for anyone to create, share, and use scalable blockchain token-based consumer products, all without writing a single line of code.
+        span About
+        img(
+          src="../assets/images/tokenly-banner-words.png"
+        )
+      p Tokenly is a leading innovator and developer of turnkey blockchain and token solutions.
       div.about__container__content__sub
         div.about__container__content__sub__section
           div.about__container__content__sub__section__content
@@ -73,10 +75,9 @@ export default {
 <style lang="sass?indentedSyntax=true" scoped>
 
 .about
-  background: #001933
+  background: #f6f6f6
   background: url("https://www.toptal.com/designers/subtlepatterns/patterns/zwartevilt.png")
-  color: #fff
-  border-top: 1px solid rgba(0,0,0,0.3)
+  color: #222
   box-shadow: 0px -1px 3px rgba(100,100,100,0.2)
   min-height: calc(100vh - 70px)
   display: table
@@ -90,14 +91,14 @@ export default {
     left: 0px
     right: 0px
     z-index: -1
-    background: rgba(0, 25, 51, 1)
+    background: #f8f8f8
     background-image: url(https://tokenpockets.com/images/bg1.658fcf29.png)
     background-size: cover;
   &__container
     padding: 80px 30px
     display: table-cell
     vertical-align: middle
-    background: rgba(0, 25, 51, 0.5)
+    background: rgba(255,255,255,0.85)
     &__content
       max-width: 800px
       margin: 0 auto
@@ -105,12 +106,16 @@ export default {
         font-size: 40px
         font-weight: 500
         margin: 0px
-        margin-bottom: 40px
-        letter-spacing: 2px
-        text-shadow: 0px 1px 3px rgba(0,0,0,0.3)
+        margin-bottom: 20px
+        letter-spacing: 0.5px
         text-align: left
+        span
+          vertical-align: top
         span.name
           font-weight: 700
+        img
+          height: 48px
+          vertical-align: top
       &__sub
         text-align: center
         &__section
@@ -120,10 +125,10 @@ export default {
           padding: 20px
           vertical-align: top
           &__content
-            background: rgba(5,5,5, 0.7)
+            background: #fff
             border: 1px solid rgba(0,0,0,0.1)
             padding: 30px 20px
-            box-shadow: 0px 2px 5px rgba(0,0,0,0.5)
+            box-shadow: 0px 2px 5px rgba(0,0,0,0.1)
             border-radius: 5px
             i
               font-size: 70px
@@ -131,7 +136,7 @@ export default {
           p
             font-size: 18px
             text-align: center
-            color: #fff
+            color: #111
             font-weight: 600
           a
             padding: 20px
@@ -140,27 +145,27 @@ export default {
             border: 2px solid #fff
             border-radius: 2px
             color: #fff
-            background: #D50000
+            background: #0064CC
             cursor: pointer
             transition: 0.5s
             font-weight: 600
-            border-radius: 3px
+            border-radius: 40px
             border: 1px solid rgba(0,0,0,0.1)
             box-shadow: 0px 1px 4px rgba(0,0,0,0.2)
       p
         text-align: left
         font-size: 20px
         margin-bottom: 60px
-        color: rgba(255,255,255,0.9);
+        color: #666
         &.about__container__content__sub-header
           font-size: 20px
           text-transform: uppercase
           letter-spacing: 1px
-          color: #E6FF0D
+          color: #001933
           text-align: center
           margin-bottom: 10px
           &__details
-            color: #eee
+            color: #666
             letter-spacing: 0.5px
             margin-bottom: 0px
             font-size: 16px
@@ -168,7 +173,7 @@ export default {
             font-weight: 400
             b
               font-style: italic
-              color: #fff
+              color: #555
         &.about__container__content__sub-text
           max-width: 600px
           display: inline-block
@@ -178,11 +183,11 @@ export default {
           margin-bottom: 30px
           text-align: center
           height: 130px
-          color: #eee
+          color: #222
           letter-spacing: 0.5px
           font-weight: 400
           b
-            color: #fff
+            color: #111
             margin-left: 6px
             cursor: pointer
       &__feature
@@ -262,7 +267,7 @@ export default {
   -moz-animation: spin 4s linear infinite
   animation: spin 4s linear infinite
   transform: rotate(90deg)
-  color: #fff
+  color: #001933
 
 @keyframes spin
   from

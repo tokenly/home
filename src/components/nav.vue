@@ -8,8 +8,8 @@
           width="35px"
         )
         img.nav__logo.active(
-          src="../assets/logo/Tokenly_Icon.svg"
-          width="35px"
+          src="../assets/logo/tokenly-icon-horiz.png"
+          height="40px"
         )
       a.title Tokenly
 
@@ -17,8 +17,8 @@
       template(v-for="item in menuItems")
         li: a(v-bind:href="item.url" target="_blank" v-bind:class="{ alert: item.alert }")
           span {{ item.name }}
-        li: a(v-scroll-to="'#about'")
-          span About
+      li: a(v-scroll-to="'#about'")
+        span About
 </template>
 
 <script>
@@ -28,7 +28,19 @@ export default {
       scrollPositioned: false,
       menuItems: [
         {
-          name: 'Pre-ICO Form & KYC/AML',
+          name: 'Register',
+          url: '#'
+        },
+        {
+          name: 'Whitepaper',
+          url: '#'
+        },
+        {
+          name: 'Deck',
+          url: '#'
+        },
+        {
+          name: 'FAQ',
           url: '#'
         }
       ]
@@ -68,12 +80,17 @@ export default {
     right: 10px
     top: 10px
     border-bottom: 1px solid rgba(5,5,5,0.2)
-    box-shadow: 0px 1px 3px rgba(0,0,0,0.3)
+    box-shadow: 0px 1px 3px rgba(0,0,0,0.2)
+    border-radius: 2px
+    .title
+      display: none
     a
-      color: #111
-      font-weight: 700
+      color: #666
+      border-radius: 0px
+      line-height: 40px
       &:hover
         color: #111
+        background: #f9f9f9
     .nav__logo.active
       display: inline-block
     .nav__logo.inactive
@@ -81,12 +98,11 @@ export default {
 
 .nav__content
   background-color: transparent
-  color: #fff
   overflow: hidden
-  padding: 0px 10px
 
 .nav__heading
-  line-height: 68px
+  line-height: 70px
+  padding: 0px 20px
   float: left
   font-weight: bold
   .title
@@ -110,13 +126,20 @@ export default {
   li
     float: left
     margin: 0
-    &:not(:last-child)
-      margin-right: 1.5em
     a
-      color: #fff
+      color: rgba(255,255,255,0.8)
       text-decoration: none
       cursor: pointer
+      line-height: 40px
+      padding: 10px 20px
+      line-height: 20px
+      transition: 0.5s
+      border-radius: 30px
+      text-transform: uppercase
+      letter-spacing: 0.5px
+      display: inline-block
       &:hover
         color: #fff
+        background: rgba(255,255,255,0.1)
 
 </style>
