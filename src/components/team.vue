@@ -106,6 +106,7 @@ export default {
 .team-member-content__entry
   display: inline-block
   width: 50.0%
+  margin-bottom: 10px
   vertical-align: top
 
 @media(max-width: 787px)
