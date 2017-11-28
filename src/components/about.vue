@@ -9,33 +9,11 @@ section.about(ref="about" id="about")
       div.about__container__content__sub
         div.about__container__content__sub__section
           div.about__container__content__sub__section__content
-            div.led-green
-            p.about__container__content__sub-header
-              span We're &nbsp;
-              span Live
-            p.about__container__content__sub-header__details
-              span 5 Live Applications &nbsp;
-              b and counting
-            div.about__container__content__sub-header__divider
-            p.about__container__content__sub-text
-              span We're more than just an idea.  Tokenly's ecosystem of consumer-ready blockchain solutions,
-              b(v-scroll-to="'#products'") Token Suite&trade;
-              span , currently includes 5 LIVE products with thousands of active users.
             div
               a(v-scroll-to="'#products'")
                 span Learn More About Token Suite&trade;
         div.about__container__content__sub__section
           div.about__container__content__sub__section__content
-            i.material-icons.build build
-            p.about__container__content__sub-header
-              span We're Building the Future
-            p.about__container__content__sub-header__details
-              span Fast, flexible, secure payment layer
-            div.about__container__content__sub-header__divider
-            p.about__container__content__sub-text
-              span To meet the unique challenges of consumer products, we are developing
-              b(v-scroll-to="'#token-layer'") Token Layer&trade;
-              span , a sidechain protocol engineered to support unlimited scalable blockchain token products.
             div
               a(v-scroll-to="'#token-layer'") Learn More About Token Layer&trade;
   div.about__mask
@@ -73,8 +51,7 @@ export default {
 <style lang="sass?indentedSyntax=true" scoped>
 
 .about
-  background: #f6f6f6
-  background: url("https://www.toptal.com/designers/subtlepatterns/patterns/zwartevilt.png")
+  background: #fff
   color: #222
   box-shadow: 0px -1px 3px rgba(100,100,100,0.2)
   min-height: calc(100vh - 70px)
@@ -82,7 +59,7 @@ export default {
   width: 100%
   z-index: 99
   position: relative
-  text-align: center
+  text-align: left
   &__mask
     position: absolute
     top: 0px
@@ -90,9 +67,7 @@ export default {
     left: 0px
     right: 0px
     z-index: -1
-    background: #f8f8f8
-    background-image: url(https://tokenpockets.com/images/bg1.658fcf29.png)
-    background-size: cover;
+    background-size: cover
   &__container
     padding: 80px 30px
     display: table-cell
@@ -102,20 +77,31 @@ export default {
       max-width: 1000px
       margin: 0 auto
       header
-        font-size: 48px
+        font-size: 28px
+        color: #666
         line-height: 60px
-        font-weight: 500
+        font-weight: 400
         margin: 0px
-        margin-bottom: 20px
-        letter-spacing: 0.5px
+        margin-bottom: 100px
+        letter-spacing: 1px
+        position: relative
         span
           vertical-align: top
         span.name
-          font-weight: 700
+          font-weight: 400
           margin-left: 0.3em
         img
           height: 48px
           vertical-align: top
+      header:before
+        content: ''
+        background-color: #00254C
+        height: 2px
+        width: 70px
+        border-radius: 1px
+        position: absolute
+        top: 70px
+        left: 0
       &__sub
         text-align: center
         &__section
@@ -150,7 +136,7 @@ export default {
             box-shadow: 0px 1px 4px rgba(0,0,0,0.2)
       p
         font-size: 20px
-        margin-bottom: 60px
+        margin-bottom: 20px
         color: #666
         &.about__container__content__sub-header
           font-size: 20px
@@ -234,29 +220,6 @@ export default {
   margin-bottom: 30px
   padding-top: 20px
 
-.led-green
-  margin: 0 auto
-  width: 70px
-  height: 70px
-  background-color: #4CAF50
-  margin: 0px auto 20px auto
-  border-radius: 50%
-  box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset rgba(5,5,5,0.1) 0 -1px 9px, rgba(5,5,5,0.1) 0 2px 12px
-  -webkit-animation: blinkGreen 3s infinite;
-  -moz-animation: blinkGreen 3s infinite;
-  -ms-animation: blinkGreen 3s infinite;
-  -o-animation: blinkGreen 3s infinite;
-  animation: blinkGreen 3s infinite;
-
-@keyframes blinkGreen
-  from
-    background-color: #36AD00
-  50%
-    background-color: #1BFF00
-    box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset rgba(27,255,0,0.7) 0 -1px 9px, rgba(27,255,0,0.7) 0 2px 0
-  to
-    background-color: #36AD00
-
 .build
   -webkit-animation: spin 4s linear infinite
   -moz-animation: spin 4s linear infinite
@@ -272,7 +235,7 @@ export default {
   to
     transform: rotate(90deg)
 
-@media(max-width: 767px)
+@media(max-width: 900px)
   body
     .about__container
       padding: 40px 20px

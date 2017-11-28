@@ -2,18 +2,15 @@
 section.hero
   .hero__content__container
     .hero__content(ref="content")
-      .row
-        h1.hero__h1
-          span Turnkey Token Solutions
-          span.emphasized &nbsp; for the Real World
-        h2.hero__h2
-          span Create, share, and use blockchain tokens without writing a single line of code.
-  .hero__continue
-    a.hero__cta.animated(@click="scrollToAbout")
-      span Explore Tokenly
-      br
-      span
-        i.material-icons keyboard_arrow_down
+      .hero__content__inner
+        .hero__content__inner__text
+          h1.hero__h1
+            span Turnkey Token Solutions
+          h2.hero__h2
+            span Create, share, and use blockchain tokens without writing a single line of code.
+          a.hero__cta.animated(v-scroll-to="'#about'")
+            span Learn More
+        .hero__content__inner__image
   .hero__bg__mask
   .hero__bg(
     ref="bg"
@@ -185,12 +182,22 @@ $hero-btn-color: #4170a0
 .hero__content
   position: relative
   text-align: center
-  color: #fff
+  color: #333
   max-width: 800px
   margin: 0 auto
   display: table-cell
   vertical-align: middle
   padding: 20px
+  &__inner
+    max-width: 1100px
+    margin: 0 auto
+    &__text, &__image
+      width: 50%
+      display: inline-block
+      vertical-align: top
+      padding: 30px
+    &__text
+      text-align: left
 
 .hero__continue
   position: absolute
@@ -219,11 +226,10 @@ $hero-btn-color: #4170a0
   margin: 0px 0px 30px 0px
   line-height: 1.5
   letter-spacing: 0.5px
-  font-size: 32px
+  font-size: 36px
   font-weight: 700
-  text-shadow: 0px 1px 2px rgba(0,0,0,0.1)
-  text-transform: uppercase
   transition: 0.5s
+  color: #444
   .emphasized
     color: #E6FF0D
     -webkit-animation: fadein 2s
@@ -268,25 +274,38 @@ $hero-btn-color: #4170a0
   text-transform: none
   letter-spacing: 0
   color: inherit
-  line-height: 1.1
+  line-height: 1.5
   font-size: 22px
   font-weight: 500
   margin-bottom: 50px
+  color: #888
 
 .hero__cta
-  padding: 10px 50px
-  box-shadow: 0px 2px 5px rgba(0,0,0,0.1)
+  padding: 15px 50px
   color: #fff
-  background: #111
+  background: #0063c6
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.4), inset 0px 1px 3px rgba(255,255,255,0.2)
+  background-size: 200% auto
+  background-image: linear-gradient(to right, #0064CC 0%, #0057B2 51%, #00254C 100%)
+  transition: 0.5s
   border-radius: 30px
   cursor: pointer
   display: inline-block
+  font-size: 20px
+  border: 1px solid rgba(0,0,0,0.1)
+  text-align: center
+  width: 100%
+  max-width: 300px
   &.animated
-    -webkit-animation: pulsate 5s linear infinite
-    -moz-animation: pulsate 5s linear infinite
-    animation: pulsate 5s linear infinite
+    -webkit-animation: pulsate 5s linear
+    -moz-animation: pulsate 5s linear
+    animation: pulsate 5s linear
     -webkit-animation-delay: 3s
     animation-delay: 3s
+  &:hover
+    color: #fff
+    background-position: right center
+
 
 @-webkit-keyframes pulsate
   0%
@@ -401,8 +420,10 @@ $hero-btn-color: #4170a0
     background-color: lighten($hero-btn-color, 5%)
 
 .hero__bg__mask
-  opacity: 0.8
+  opacity: 0.85
   background: linear-gradient(to bottom, #002346 0%, #0063c6 100%)
+  opacity: 0.5
+  background: #fff
   z-index: 5
 
 .hero__bg
@@ -412,20 +433,27 @@ $hero-btn-color: #4170a0
   overflow: hidden
   -webkit-filter: blur(1px)
   filter: blur(0px)
-  background-image: url(../assets/images/city-clearbg.png)
+  background-image: none
   position: absolute
+  background: url(https://tokenpockets.com/images/bg2.c37d81d0.png) top right no-repeat
   top: 0px
   bottom: 0px
   left: 0px
   right: 0px
 
-@media(max-width: 767px)
-  .hero__bg
-    background-image: none
+@media(max-width: 900px)
+  .hero
+    margin-top: 70px
+  .hero__content__inner__text
+    width: 100%
+    text-align: center
+    padding: 10px
+  .hero__bg__mask
+    opacity: 0.6
   .hero__content
     text-align: center
   .hero__h1
-    font-size: 24px
+    font-size: 30px
   .hero__h2
     font-size: 18px
   .form-container

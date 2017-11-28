@@ -120,7 +120,6 @@ export default {
   color: #111
   position: relative
   z-index: 99
-  min-height: 100vh
   &__mask
     background: url(https://tokenpockets.com/images/bg2.c37d81d0.png) top right no-repeat
     position: absolute
@@ -176,7 +175,7 @@ export default {
           a
             padding: 10px 20px
             color: #333
-            font-weight: 700
+            font-weight: 500
             letter-spacing: 1px
             font-size: 16px
             display: inline-block
@@ -186,10 +185,12 @@ export default {
             margin: 0px 10px 10px 0px
             text-transform: uppercase
             border: 1px solid rgba(0,0,0,0.1)
+            box-shadow: 0px 1px 3px rgba(0,0,0,0.05)
           a.active
             color: #fff
             font-weight: 700
             background: #0064CC
+            box-shadow: none
 
 @media(max-width: 767px)
   body

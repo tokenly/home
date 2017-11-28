@@ -108,7 +108,6 @@ export default {
   background: #f9f9f9
   background-size: cover
   background-position: center
-  min-height: 100vh
   position: relative
   &__container
     padding: 80px 30px
@@ -134,28 +133,28 @@ export default {
           a
             padding: 10px 20px
             color: #333
-            font-weight: 700
+            font-weight: 500
             letter-spacing: 1px
             font-size: 16px
             display: inline-block
             cursor: pointer
-            background: rgba(200,200,200,0.5)
+            background: #eee
             border-radius: 30px
             margin: 0px 10px 10px 0px
             text-transform: uppercase
             border: 1px solid rgba(0,0,0,0.1)
+            box-shadow: 0px 1px 3px rgba(0,0,0,0.05)
           a.active
             background: #E6FF0D
             font-weight: 700
             color: #111
+            box-shadow: none
     &__image
       padding: 10px 30px
       width: 40%
       img
         width: 100%
   &__mask
-    background: url(https://tokenpockets.com/images/bg2.c37d81d0.png) top right no-repeat
-    transform: scaleX(-1)
     position: absolute
     left: 0px
     right: 0px

@@ -1,6 +1,7 @@
 <template lang="pug">
 div.home
   hero
+  sub-hero
   about
   products
   token-layer
@@ -13,6 +14,7 @@ div.home
 <script>
 
 import Hero from './hero.vue'
+import SubHero from './sub_hero.vue'
 import About from './about.vue'
 import Products from './products.vue'
 import TokenLayer from './token-layer.vue'
@@ -21,7 +23,7 @@ import Partners from './partners.vue'
 import MoreDetails from './more-details.vue'
 
 export default {
-  components: {Hero, About, Products, TokenLayer, Team, Partners, MoreDetails},
+  components: {Hero, SubHero, About, Products, TokenLayer, Team, Partners, MoreDetails},
   data () {
     return {
     }
