@@ -13,28 +13,24 @@ section.products(
             )
           p.sub-header
             span Our consumer-ready turnkey solutions for the entire token life cycle: from creation and sale to use and redemption.
-          ul.products__header__content__menu
-            li(v-for="(productEntry, index) in this.productData")
-              a.product-option(
-                @click="activateProduct"
-                v-bind:data-target-el="productEntry.elID"
-                v-bind:data-product-index="index"
-                :class="{ 'active': index === activeProductIndex }"
-              )
-                span {{productEntry.name}}
-          div.products__content
-            Product(
-              :elID = "this.activeProduct.elID"
-              :headline = "this.activeProduct.headline"
-              :summary = "this.activeProduct.summary"
-              :linkURL = "this.activeProduct.linkURL"
-              :linkText = "this.activeProduct.linkText"
-              :imgURL = "this.activeProduct.imgURL"
-            )
-    div.products__container__image
+    div
+      ul.products__header__content__menu
+        li(v-for="(productEntry, index) in this.productData")
+          a.product-option(
+            @click="activateProduct"
+            v-bind:data-target-el="productEntry.elID"
+            v-bind:data-product-index="index"
+            :class="{ 'active': index === activeProductIndex }"
+          )
+            span {{productEntry.name}}
       div.products__content
-        img(
-          v-bind:src="imageBackgroundSrc"
+        Product(
+          :elID = "this.activeProduct.elID"
+          :headline = "this.activeProduct.headline"
+          :summary = "this.activeProduct.summary"
+          :linkURL = "this.activeProduct.linkURL"
+          :linkText = "this.activeProduct.linkText"
+          :imgURL = "this.activeProduct.imgURL"
         )
   .products__bg
   .products__mask
@@ -112,10 +108,6 @@ export default {
     activeProduct () {
       let i = this.activeProductIndex
       return this.productData[i]
-    },
-    imageBackgroundSrc () {
-
-      return this.activeProduct.imgURL
     }
   }
 }
@@ -129,7 +121,6 @@ export default {
   position: relative
   z-index: 99
   min-height: 100vh
-  padding: 80px 0px
   &__mask
     background: url(https://tokenpockets.com/images/bg2.c37d81d0.png) top right no-repeat
     position: absolute
@@ -147,23 +138,20 @@ export default {
     right: 0px
     z-index: -1
   &__container
-    max-width: 1100px
+    max-width: 1000px
     margin: 0 auto
+    padding: 80px 30px
     &__content, &__image
       display: inline-block
       vertical-align: top
     &__content
-      width: 60%
+      width: 100%
     &__image
       width: 40%
       img
         width: 100%
   &__header
-    padding: 30px
-    padding-bottom: 0px
     &__content
-      max-width: 800px
-      margin: 0 auto
       header
         font-size: 40px
         font-weight: 700
@@ -171,7 +159,8 @@ export default {
         margin-bottom: 20px
         text-align: left
         img
-          width: 50%
+          width: auto
+          height: 60px
       p.sub-header
         font-size: 20px
         text-align: left
@@ -181,18 +170,19 @@ export default {
         padding: 0px
         margin: 0px
         margin-bottom: 20px
+        text-align: center
         li
           display: inline-block
           margin: 0px
           a
-            padding: 10px 30px
+            padding: 10px 20px
             color: #333
             font-weight: 700
             letter-spacing: 1px
             font-size: 16px
             display: inline-block
             cursor: pointer
-            background: rgba(200,200,200,0.5)
+            background: #eee
             border-radius: 30px
             margin: 0px 10px 10px 0px
             text-transform: uppercase
@@ -201,9 +191,6 @@ export default {
             color: #fff
             font-weight: 700
             background: #0064CC
-  &__content
-    margin: 0 auto
-    max-width: 800px
 
 @media(max-width: 767px)
   body
@@ -221,6 +208,9 @@ export default {
       padding-bottom: 0px
       header
         font-size: 24px
+        img
+          width: auto
+          height: 40px
       p.sub-header
         font-size: 16px
     .products__content
@@ -236,7 +226,7 @@ export default {
           border-radius: 30px
           margin: 5px
           font-size: 14px
-          padding: 10px 20px
+          padding: 10px 5px
           border-bottom: none
           font-weight: 400
         a.active

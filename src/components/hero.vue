@@ -171,7 +171,7 @@ $hero-btn-color: #4170a0
 
 
 .hero__content__container
-  position: fixed
+  position: absolute
   z-index: 100
   top: 0px
   bottom: 0px
@@ -193,7 +193,7 @@ $hero-btn-color: #4170a0
   padding: 20px
 
 .hero__continue
-  position: fixed
+  position: absolute
   text-align: center
   bottom: 0px
   z-index: 9
@@ -346,24 +346,6 @@ $hero-btn-color: #4170a0
       margin-bottom: 15px
       margin-right: 0px
 
-  &__submit
-    height: 61px
-    vertical-align: middle
-    padding: 10px 30px
-    cursor: pointer
-    background: #FF8B82
-    background-image: linear-gradient(#FF8B82,#C96E67)
-    background-color: #FF8B82
-    border: 1px solid rgba(0,0,0,0.1)
-    text-shadow: 0px 1px 1px rgba(0,0,0,0.2)
-    font-weight: 600
-    color: #fff
-    border-radius: 3px
-    box-shadow: 0px 1px 1px rgba(0,0,0,0.3)
-    &:hover
-      background: #EB786E
-      background-image: linear-gradient(#EB786E,#EB786E)
-      background-color: #EB786E
   &.notice
     border: 2px solid #E4FA4D
   h3
@@ -431,13 +413,15 @@ $hero-btn-color: #4170a0
   -webkit-filter: blur(1px)
   filter: blur(0px)
   background-image: url(../assets/images/city-clearbg.png)
-  position: fixed
+  position: absolute
   top: 0px
   bottom: 0px
   left: 0px
   right: 0px
 
 @media(max-width: 767px)
+  .hero__bg
+    background-image: none
   .hero__content
     text-align: center
   .hero__h1

@@ -1,5 +1,9 @@
 <template lang="pug">
 div.product__row(v-bind:id="this.elID")
+  div.product__row__image
+    img(
+      v-bind:src="imageBackgroundSrc"
+    )
   div.product__row__content
     p.header
       span {{ this.headline }}
@@ -57,6 +61,11 @@ export default {
         backgroundImage: 'url(' + this.imgURL + ')'
       }
       return style
+    },
+
+    imageBackgroundSrc () {
+
+      return this.imgURL
     }
   }
 }
@@ -71,12 +80,13 @@ export default {
     padding: 10px
     vertical-align: middle
   &__content
-    width: 100%
+    width: 70%
     padding: 10px
     vertical-align: middle
     p
       line-height: 2
-      font-size: 16px
+      font-size: 18px
+      color: #555
       a
         text-decoration: none
         color: #111
@@ -85,6 +95,7 @@ export default {
       font-weight: 700
       font-size: 24px
       letter-spacing: 0.5px
+      color: #222
     span.live
       font-weight: 700
       color: #E6FF0D

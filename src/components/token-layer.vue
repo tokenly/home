@@ -8,6 +8,7 @@ section.token-layer(id="token-layer")
         )
       p.sub-header
         span Tokenly's scalable sidechain protocol built to support interoperability and low cost transactions.
+    div
       ul.token-layer__container__content__menu
         li(v-for="(featureEntry, index) in this.featureData")
           a.product-option(
@@ -17,6 +18,10 @@ section.token-layer(id="token-layer")
             :class="{ 'active': index === activeFeatureIndex }"
           )
             span {{ featureEntry.name }}
+      div.token-layer-feature__image
+        img(
+          src="../assets/images/token-layer-white.jpg"
+        )
       div.token-layer-feature__content
         TokenLayerFeature(
           :elID = "this.activeFeature.elID"
@@ -24,10 +29,7 @@ section.token-layer(id="token-layer")
           :summary = "this.activeFeature.summary"
           :imgURL = "this.activeFeature.imgURL"
         )
-    div.token-layer__container__image
-      img(
-        src="../assets/images/token-layer-white.jpg"
-      )
+
   div.token-layer__mask
   div.token-layer__bg
 </template>
@@ -113,22 +115,23 @@ export default {
     position: relative
     z-index: 8
     margin: 0 auto
-    width: 1100px
+    width: 1000px
     max-width: 100%
     &__content, &__image
       display: inline-block
       vertical-align: top
     &__content
-      width: 60%
+      width: 100%
       &__menu
         padding: 0px
         margin: 0px
         margin-bottom: 20px
+        text-align: center
         li
           display: inline-block
           margin: 0px
           a
-            padding: 10px 30px
+            padding: 10px 20px
             color: #333
             font-weight: 700
             letter-spacing: 1px
@@ -173,14 +176,26 @@ export default {
     letter-spacing: 2px
     text-align: left
     img
-      width: 50%
+      width: auto
+      height: 60px
   p.sub-header
     font-size: 20px
     text-align: left
     opacity: 0.7
     margin-bottom: 40px
 
+.token-layer-feature__content, .token-layer-feature__image
+  display: inline-block
+  vertical-align: top
+  padding: 10px
+
 .token-layer-feature__content
+  width: 70%
+
+.token-layer-feature__image
+  width: 30%
+  img
+    max-width: 100%
 
 @media(max-width: 787px)
   body
@@ -195,6 +210,9 @@ export default {
     .token-layer__container__content
       header
         font-size: 24px
+        img
+          width: auto
+          height: 40px
       p.sub-header
         font-size: 16px
       .product__row__content.token-layer-feature

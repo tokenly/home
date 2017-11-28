@@ -4,9 +4,7 @@ section.about(ref="about" id="about")
     div.about__container__content
       header
         span About
-        img(
-          src="../assets/images/tokenly-banner-words.png"
-        )
+        span.name Tokenly
       p Tokenly is a leading innovator and developer of turnkey blockchain and token solutions.
       div.about__container__content__sub
         div.about__container__content__sub__section
@@ -113,6 +111,7 @@ export default {
           vertical-align: top
         span.name
           font-weight: 700
+          margin-left: 0.3em
         img
           height: 48px
           vertical-align: top
@@ -287,7 +286,6 @@ export default {
         margin-bottom: 20px
       p
         font-size: 16px
-        color: #eee
         margin-bottom: 20px
         line-height: 1.5
       div.about__container__content__sub__section
