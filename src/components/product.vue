@@ -15,17 +15,17 @@ div.product__row(v-bind:id="this.elID")
         v-if="this.linkURL.length > 0"
         v-bind:href="this.linkURL"
         target="__blank"
-      ) LIVE
+      ) Live
       span.live(
         v-else
       ) Live
     p(v-if="this.linkURL.length > 0")
-      a(
+      a.link(
         v-bind:href="this.linkURL"
         target="__blank"
       )
-        span URL: &nbsp;
-        span {{ this.linkText }}
+        span Go to {{ this.linkText }}
+        i.material-icons forward
 </template>
 
 <script>
@@ -94,21 +94,36 @@ export default {
       line-height: 2
       font-size: 18px
       color: #555
-      a
+      a.link
         text-decoration: none
-        color: #111
-        font-weight: 700
+        padding: 5px 20px
+        display: inline-block
+        font-weight: 500
+        background: #eee
+        border-radius: 30px
+        color: #333
+        border: 1px solid rgba(0,0,0,0.1)
+        span
+          line-height: 22px
+          vertical-align: middle
+        i
+          line-height: 22px
+          vertical-align: middle
+          margin-left: 5px
+          font-size: 22px
     p.header
       font-weight: 700
-      font-size: 24px
+      font-size: 20px
       letter-spacing: 0.5px
-      color: #222
+      color: #444
+      font-style: italic
     .live
       font-weight: 700
       background: #00D93A
       padding: 3px 20px
       border-radius: 20px
       color: #fff
+      text-decoration: none
     p:last-of-type
       margin: 0px
 

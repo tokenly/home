@@ -60,9 +60,10 @@ export default {
       font-size: 18px
       color: #555
     p.header
-      color: #222
+      color: #444
+      font-style: italic
       font-weight: 700
-      font-size: 24px
+      font-size: 20px
       letter-spacing: 0.5px
     span.live
       font-weight: 700

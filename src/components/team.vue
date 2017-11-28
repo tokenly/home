@@ -137,7 +137,7 @@ export default {
   margin-bottom: 10px
   vertical-align: top
 
-@media(max-width: 787px)
+@media(max-width: 900px)
   body
     .team__container
       padding: 40px 20px
@@ -146,6 +146,11 @@ export default {
         font-size: 24px
       p
         font-size: 16px
+    .team-member-content__entry
+      width: 50.0%
+
+@media(max-width: 600px)
+  body
     .team-member-content__entry
       width: 100.0%
 </style>

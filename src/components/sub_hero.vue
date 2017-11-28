@@ -27,7 +27,7 @@ section.sub_hero
         div.divider
         br
         p.sub-header Tokenly's turnkey solutions have been choice of many of the most innovative projects in the blockchain space.
-        a.cta(v-scroll-to="'#token-layer'")
+        a.cta(v-scroll-to="'#partners'")
           span Learn More About Tokenly's Partnerships
 </template>
 
@@ -67,7 +67,7 @@ export default {
       text-align: center
       color: #fff
       &__entry
-        padding: 10px
+        padding: 20px
         width: 33.3%
         display: inline-block
         vertical-align: top
@@ -79,7 +79,7 @@ export default {
           font-size: 50px
           margin-bottom: 20px
         p.header
-          font-size: 28px
+          font-size: 24px
           font-weight: 700
           text-shadow: 0px 1px 3px rgba(0,0,0,0.5)
           letter-spacing: 0.5px
