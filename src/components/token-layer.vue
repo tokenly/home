@@ -122,6 +122,7 @@ export default {
       vertical-align: top
     &__content
       width: 100%
+      text-align: center
       &__menu
         padding: 0px
         margin: 0px
@@ -174,13 +175,11 @@ export default {
     margin: 0px
     margin-bottom: 20px
     letter-spacing: 2px
-    text-align: left
     img
       width: auto
       height: 60px
   p.sub-header
     font-size: 20px
-    text-align: left
     opacity: 0.7
     margin-bottom: 40px
 
@@ -200,7 +199,7 @@ export default {
 @media(max-width: 787px)
   body
     .token-layer__container
-      padding: 40px 20px
+      padding: 40px 10px
       &__content, &__image
         width: 100%
       &__image
@@ -218,18 +217,22 @@ export default {
       .product__row__content.token-layer-feature
         p.header
           font-size: 18px !important
-      ul.token-layer__container__content__menu
-        li
-          a
-            font-size: 14px
-            border-bottom: none
-            border-radius: 30px
-            background: rgba(0,0,0,0.5)
-            padding: 10px 30px
-            margin: 0px 10px 10px 0px
-          a.active
-            background: #E6FF0D
-            color: #111
-            font-weight: 700
+    ul.token-layer__container__content__menu
+      li
+        a
+          font-size: 14px
+          border-bottom: none
+          border-radius: 30px
+          padding: 10px
+          margin: 0px 10px 10px 0px
+        a.active
+          background: #E6FF0D
+          color: #111
+          font-weight: 700
+  .token-layer-feature__content
+    width: 100%
+    text-align: center
+  .token-layer-feature__image
+    display: none
 
 </style>

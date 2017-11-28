@@ -11,7 +11,14 @@ div.product__row(v-bind:id="this.elID")
       span {{ this.summary }}
     p
       span Status: &nbsp;
-      span.live LIVE
+      a.live(
+        v-if="this.linkURL.length > 0"
+        v-bind:href="this.linkURL"
+        target="__blank"
+      ) LIVE
+      span.live(
+        v-else
+      ) Live
     p(v-if="this.linkURL.length > 0")
       a(
         v-bind:href="this.linkURL"
@@ -96,9 +103,12 @@ export default {
       font-size: 24px
       letter-spacing: 0.5px
       color: #222
-    span.live
+    .live
       font-weight: 700
-      color: #E6FF0D
+      background: #00D93A
+      padding: 3px 20px
+      border-radius: 20px
+      color: #fff
     p:last-of-type
       margin: 0px
 

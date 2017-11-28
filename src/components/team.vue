@@ -5,7 +5,7 @@ section.team
       header
         span Our Team
       p
-        span Our 9 person team includes blockchain and finance experts together with veteran software engineers. Here are five key team members:
+        span Our 9 person team includes blockchain and finance experts together with veteran software engineers.
       div.team-member-content
         div.team-member-content__entry(v-for="(teamMember, index) in this.teamData")
           TeamMember(
@@ -61,6 +61,34 @@ export default {
           title: 'Founder, Senior Developer',
           summary: 'Experienced backend developer with expertise in blockchain and Counterparty protocol.',
           imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/02/2-e1493910666963-500x500.jpg'
+        },
+        {
+          name: 'Tatiana Moroz',
+          elID: 'tatiana-moroz',
+          title: 'Ambassador',
+          summary: '',
+          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/02/2-e1493910666963-500x500.jpg'
+        },
+        {
+          name: 'Shane Randolph',
+          elID: 'shane-randolph',
+          title: 'Front-end Developer, UI',
+          summary: '',
+          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/02/2-e1493910666963-500x500.jpg'
+        },
+        {
+          name: 'Michael Jonsson',
+          elID: 'michael-jonsson',
+          title: 'Marketing & Design',
+          summary: '',
+          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/02/2-e1493910666963-500x500.jpg'
+        },
+        {
+          name: 'Ruben Meseguer',
+          elID: 'ruben-meseguer',
+          title: 'Front/Back-end Developer',
+          summary: '.',
+          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/02/2-e1493910666963-500x500.jpg'
         }
       ]
     }
@@ -86,7 +114,7 @@ export default {
   &__container
     padding: 80px 30px
     &__content
-      max-width: 800px
+      max-width: 1000px
       margin: 0 auto
       header
         margin: 0px
@@ -105,7 +133,7 @@ export default {
 
 .team-member-content__entry
   display: inline-block
-  width: 50.0%
+  width: 33.3%
   margin-bottom: 10px
   vertical-align: top
 

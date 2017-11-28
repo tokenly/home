@@ -59,7 +59,7 @@ export default {
 
 .team-member
   padding: 10px
-  text-align: center
+  text-align: left
   &__image, &__content
     padding: 10px
     vertical-align: middle
@@ -77,7 +77,7 @@ export default {
       color: #888
       margin-bottom: 25px
     p.summary
-      color: #333
+      color: #555
       line-height: 1.5
       margin-bottom: 0px
 
@@ -89,8 +89,8 @@ export default {
     background-size: cover
     background-repeat: no-repeat
     background-position: 50% 50%
-    width: 200px
-    height: 200px
+    width: 80px
+    height: 80px
     display: inline-block
 
 @media(max-width: 767px)

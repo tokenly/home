@@ -82,6 +82,7 @@ export default {
   width: 100%
   z-index: 99
   position: relative
+  text-align: center
   &__mask
     position: absolute
     top: 0px
@@ -98,15 +99,15 @@ export default {
     vertical-align: middle
     background: rgba(255,255,255,0.85)
     &__content
-      max-width: 800px
+      max-width: 1000px
       margin: 0 auto
       header
-        font-size: 40px
+        font-size: 48px
+        line-height: 60px
         font-weight: 500
         margin: 0px
         margin-bottom: 20px
         letter-spacing: 0.5px
-        text-align: left
         span
           vertical-align: top
         span.name
@@ -124,11 +125,7 @@ export default {
           padding: 20px
           vertical-align: top
           &__content
-            background: #fff
-            border: 1px solid rgba(0,0,0,0.1)
             padding: 30px 20px
-            box-shadow: 0px 2px 5px rgba(0,0,0,0.1)
-            border-radius: 5px
             i
               font-size: 70px
               padding-bottom: 20px
@@ -152,7 +149,6 @@ export default {
             border: 1px solid rgba(0,0,0,0.1)
             box-shadow: 0px 1px 4px rgba(0,0,0,0.2)
       p
-        text-align: left
         font-size: 20px
         margin-bottom: 60px
         color: #666

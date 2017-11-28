@@ -57,7 +57,7 @@ export default {
 
 .partners
   position: relative
-  background: #eee
+  background: #f9f9f9
   &__container
     padding: 60px 20px
     &__content

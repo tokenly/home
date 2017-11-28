@@ -130,7 +130,7 @@ export default {
     right: 0px
     z-index: -2
   &__bg
-    background: rgba(245,245,245,0.8)
+    background: rgba(250,250,250,0.9)
     position: absolute
     top: 0px
     bottom: 0px
@@ -152,18 +152,17 @@ export default {
         width: 100%
   &__header
     &__content
+      text-align: center
       header
         font-size: 40px
         font-weight: 700
         letter-spacing: 2px
         margin-bottom: 20px
-        text-align: left
         img
           width: auto
           height: 60px
       p.sub-header
         font-size: 20px
-        text-align: left
         opacity: 0.7
         margin-bottom: 40px
       &__menu
@@ -195,8 +194,8 @@ export default {
 @media(max-width: 767px)
   body
     .products
-      padding: 10px
       &__container
+        padding: 40px 10px
         &__image, &__content
           width: 100%
         &__image
@@ -204,8 +203,7 @@ export default {
           img
             width: 50%
     .products__header
-      padding: 40px 20px
-      padding-bottom: 0px
+      padding: 0px
       header
         font-size: 24px
         img
@@ -214,7 +212,7 @@ export default {
       p.sub-header
         font-size: 16px
     .products__content
-      padding: 20px
+      padding: 0px
       text-align: center
       p
         color: #eee
@@ -222,11 +220,10 @@ export default {
       border-bottom: none
       li
         a
-          background: rgba(0,0,0,0.3)
           border-radius: 30px
           margin: 5px
           font-size: 14px
-          padding: 10px 5px
+          padding: 10px
           border-bottom: none
           font-weight: 400
         a.active
