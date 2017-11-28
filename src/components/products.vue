@@ -196,7 +196,7 @@ export default {
   body
     .products
       &__container
-        padding: 40px 10px
+        padding: 60px 10px
         &__image, &__content
           width: 100%
         &__image
@@ -225,7 +225,6 @@ export default {
           margin: 5px
           font-size: 14px
           padding: 10px
-          border-bottom: none
           font-weight: 400
         a.active
           background: #E6FF0D

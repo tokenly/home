@@ -6,17 +6,29 @@ section.sub_hero
         div.sub_hero__container__content__entry__icon
           span.led-green
         p.header We're Live
-        p.sub-header More than an idea. We have 5 live blockchain token solutions and counting.
+        div.divider
+        br
+        p.sub-header More than just an idea. Tokenly has 5 live blockchain token solutions and thousands of active users.
+        a.cta(v-scroll-to="'#products'")
+          span Learn More About Token Suite&trade;
       div.sub_hero__container__content__entry
         div.sub_hero__container__content__entry__icon
           i.material-icons.build build
         p.header We're Building the Future
-        p.sub-header To meet the unique challenges of creating scalable consumer products, we are developing Token Layer, a sidechain protocol engineered to support ...
+        div.divider
+        br
+        p.sub-header We are developing a sidechain protocol from the ground up with flexibility, scalability, and stable transaction fees in its DNA.
+        a.cta(v-scroll-to="'#token-layer'")
+          span Learn More About Token Layer&trade;
       div.sub_hero__container__content__entry
         div.sub_hero__container__content__entry__icon
           i.material-icons.build build
-        p.header We're Live
-        p.sub-header 5 Live Solutions and Counting
+        p.header We're Collaborating
+        div.divider
+        br
+        p.sub-header Tokenly's turnkey solutions have been choice of many of the most innovative projects in the blockchain space.
+        a.cta(v-scroll-to="'#token-layer'")
+          span Learn More About Tokenly's Partnerships
 </template>
 
 <script>
@@ -45,7 +57,8 @@ export default {
 .sub_hero
   border-top: 2px solid #00254C
   border-bottom: 2px solid #00254C
-  background: #00458C
+  background: #0D47A1
+  background-image: linear-gradient(to bottom, #1565C0 0%, #0D47A1 100%);
   &__container
     padding: 80px 20px
     &__content
@@ -66,11 +79,30 @@ export default {
           font-size: 50px
           margin-bottom: 20px
         p.header
-          font-size: 24px
+          font-size: 28px
           font-weight: 700
+          text-shadow: 0px 1px 3px rgba(0,0,0,0.5)
+          letter-spacing: 0.5px
+          margin-bottom: 20px
         p.sub-header
           color: rgba(255,255,255, 0.8)
           font-size: 18px
+          height: 140px
+        a.cta
+          border: 2px solid #fff
+          padding: 15px
+          border-radius: 30px
+          color: #fff
+          background: rgba(5,5,5,0.1)
+          max-width: 400px
+          width: 100%
+          cursor: pointer
+          display: inline-block
+        div.divider
+          border-bottom: 2px solid rgba(255,255,255,0.5)
+          width: 50%
+          display: inline-block
+          margin-bottom: 20px
 
 .led-green
   margin: 0 auto
@@ -102,7 +134,17 @@ export default {
     &__container
       &__content
         &__entry
-          width: 50%
+          width: 100%
+          margin-bottom: 60px
+          p.sub-header
+            height: auto
+            margin-bottom: 40px
+            max-width: 500px
+            display: inline-block
+          div.divider
+            width: 70px
+        &__entry:last-of-type
+          margin-bottom: 0px
 
 
 </style>

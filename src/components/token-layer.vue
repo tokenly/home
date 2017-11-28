@@ -198,7 +198,7 @@ export default {
 @media(max-width: 787px)
   body
     .token-layer__container
-      padding: 40px 10px
+      padding: 60px 10px
       &__content, &__image
         width: 100%
       &__image
@@ -220,7 +220,6 @@ export default {
       li
         a
           font-size: 14px
-          border-bottom: none
           border-radius: 30px
           padding: 10px
           margin: 0px 10px 10px 0px

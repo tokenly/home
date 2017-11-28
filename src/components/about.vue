@@ -6,16 +6,7 @@ section.about(ref="about" id="about")
         span About
         span.name Tokenly
       p Tokenly is a leading innovator and developer of turnkey blockchain and token solutions.
-      div.about__container__content__sub
-        div.about__container__content__sub__section
-          div.about__container__content__sub__section__content
-            div
-              a(v-scroll-to="'#products'")
-                span Learn More About Token Suite&trade;
-        div.about__container__content__sub__section
-          div.about__container__content__sub__section__content
-            div
-              a(v-scroll-to="'#token-layer'") Learn More About Token Layer&trade;
+
   div.about__mask
 
 </template>
@@ -54,7 +45,6 @@ export default {
   background: #fff
   color: #222
   box-shadow: 0px -1px 3px rgba(100,100,100,0.2)
-  min-height: calc(100vh - 70px)
   display: table
   width: 100%
   z-index: 99
@@ -242,7 +232,7 @@ export default {
     .about__container__content
       header
         font-size: 24px
-        margin-bottom: 20px
+        margin-bottom: 60px
       p
         font-size: 16px
         margin-bottom: 20px

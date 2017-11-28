@@ -118,7 +118,7 @@ export default {
     float: left
     margin: 0
     a
-      color: #333
+      color: #666
       text-decoration: none
       cursor: pointer
       line-height: 40px
