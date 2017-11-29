@@ -112,7 +112,7 @@ export default {
           padding: 15px
           border-radius: 30px
           color: #fff
-          background: rgba(5,5,5,0.1)
+          background: rgba(20,20,20,0.5)
           max-width: 400px
           width: 100%
           cursor: pointer
