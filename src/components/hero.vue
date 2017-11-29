@@ -442,12 +442,12 @@ $hero-btn-color: #4170a0
   right: 0px
 
 @media(max-width: 900px)
-  .hero
-    margin-top: 70px
   .hero__content__inner__text
     width: 100%
     text-align: center
     padding: 10px
+  .hero__content__inner__image
+    display: none
   .hero__bg__mask
     opacity: 0.6
   .hero__content
