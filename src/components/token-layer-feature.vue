@@ -56,7 +56,7 @@ export default {
     vertical-align: middle
     width: 100%
     p
-      line-height: 2
+      line-height: 1.25
       font-size: 18px
       color: #555
     p.header

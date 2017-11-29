@@ -238,8 +238,8 @@ export default {
 @media(max-width: 767px)
   body
     .products
+      padding: 60px 10px
       &__container
-        padding: 60px 10px
         &__image, &__content
           width: 100%
         &__image
@@ -279,5 +279,13 @@ export default {
         font-size: 18px
       p
         font-size: 18px
+
+.products__content__increment
+  span
+    font-size: 20px
+    i
+      line-height: 30px
+      width: 30px
+      height: 30px
 
 </style>

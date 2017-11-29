@@ -240,40 +240,49 @@ export default {
 
 @media(max-width: 787px)
   body
-    .token-layer__container
+    .token-layer
       padding: 60px 10px
-      &__content, &__image
-        width: 100%
-      &__image
-        text-align: center
-        img
-          width: 50%
-    .token-layer__container__content
-      header
-        font-size: 24px
-        img
-          width: auto
-          height: 40px
-      p.sub-header
-        font-size: 16px
-      .product__row__content.token-layer-feature
-        p.header
-          font-size: 18px !important
-    ul.token-layer__container__content__menu
-      li
-        a
-          font-size: 14px
-          border-radius: 30px
-          padding: 10px
-          margin: 0px 10px 10px 0px
-        a.active
-          background: #E6FF0D
-          color: #111
-          font-weight: 700
+      &__container
+        &__content, &__image
+          width: 100%
+        &__image
+          text-align: center
+          img
+            width: 50%
+      .token-layer__container__content
+        header
+          font-size: 24px
+          img
+            width: auto
+            height: 40px
+        p.sub-header
+          font-size: 16px
+        .product__row__content.token-layer-feature
+          p.header
+            font-size: 18px !important
+      ul.token-layer__container__content__menu
+        li
+          a
+            font-size: 14px
+            border-radius: 30px
+            padding: 10px
+            margin: 0px 10px 10px 0px
+          a.active
+            background: #E6FF0D
+            color: #111
+            font-weight: 700
   .token-layer-feature__content
     width: 100%
     text-align: center
   .token-layer-feature__image
     display: none
+
+  .token-layer-feature__increment
+    span
+      font-size: 20px
+      i
+        line-height: 30px
+        width: 30px
+        height: 30px
 
 </style>

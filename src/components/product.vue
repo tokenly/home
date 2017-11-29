@@ -25,7 +25,6 @@ div.product__row(v-bind:id="this.elID")
         target="__blank"
       )
         span Go to {{ this.linkText }}
-        i.material-icons forward
 </template>
 
 <script>
@@ -105,11 +104,6 @@ export default {
         span
           line-height: 22px
           vertical-align: middle
-        i
-          line-height: 22px
-          vertical-align: middle
-          margin-left: 5px
-          font-size: 22px
     p.header
       font-weight: 700
       font-size: 20px
