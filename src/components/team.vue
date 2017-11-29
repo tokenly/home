@@ -120,8 +120,8 @@ export default {
         margin: 0px
         text-align: left
         margin-bottom: 20px
-        font-size: 40px
-        font-weight: 700
+        font-size: 24px
+        font-weight: 400
       p
         text-align: left
         color: #666
