@@ -237,10 +237,10 @@ export default {
             background: #0064CC
             box-shadow: none
 
-@media(max-width: 767px)
+@media(max-width: 900px)
   body
     .products
-      padding: 60px 10px
+      padding: 40px 10px
       &__container
         &__image, &__content
           width: 100%
@@ -283,8 +283,8 @@ export default {
     span
       font-size: 20px
       i
-        line-height: 30px
+        line-height: 45px
         width: 30px
-        height: 30px
+        height: 45px
 
 </style>

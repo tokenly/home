@@ -161,6 +161,8 @@ export default {
 
 @media(max-width: 900px)
   body
+    .partners__container
+      padding: 40px 20px
     .partners__container__content
       header
         font-size: 24px
@@ -174,7 +176,7 @@ export default {
         span
           font-size: 20px
           i
-            line-height: 30px
+            line-height: 45px
             width: 30px
-            height: 30px
+            height: 45px
 </style>

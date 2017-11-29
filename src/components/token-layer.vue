@@ -9,9 +9,6 @@ section.token-layer(id="token-layer")
       p.sub-header
         span Tokenly's scalable sidechain protocol built to support interoperability and low cost transactions.
     div.centered
-      img.token-layer__image(
-        src="../assets/images/token-layer-white.jpg"
-      )
       ul.token-layer__container__content__menu
         li(v-for="(featureEntry, index) in this.featureData")
           a.product-option(
@@ -242,7 +239,7 @@ export default {
 @media(max-width: 900px)
   body
     .token-layer
-      padding: 60px 10px
+      padding: 40px 10px
       &__container
         &__content, &__image
           width: 100%
@@ -279,8 +276,8 @@ export default {
     span
       font-size: 20px
       i
-        line-height: 30px
+        line-height: 45px
         width: 30px
-        height: 30px
+        height: 45px
 
 </style>

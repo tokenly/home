@@ -95,20 +95,6 @@ section.team
           div.team-member
             div.team-member__image
               img(
-                src = '../assets/team/shane.png'
-              )
-            div.team-member__content
-              p.name
-                span Shane Randolph
-              p.title
-                span Front-end Developer, UI
-              p.summary
-                span Experienced frontend developer and entrepreneur. Former economist.
-
-        div.team-member-content__entry
-          div.team-member
-            div.team-member__image
-              img(
                 src = '../assets/team/michael.png'
               )
             div.team-member__content
@@ -118,7 +104,19 @@ section.team
                 span Marketing, Design
               p.summary
                 span Experienced content marketer, graphic designer, photographer, and video producer.
-
+        div.team-member-content__entry
+          div.team-member
+            div.team-member__image
+              img(
+                src = '../assets/team/shane.png'
+              )
+            div.team-member__content
+              p.name
+                span Shane Randolph
+              p.title
+                span Front-end Developer, UI
+              p.summary
+                span Experienced frontend developer and entrepreneur. Former economist.
         div.team-member-content__entry
           div.team-member
             div.team-member__image

@@ -6,11 +6,35 @@ section.about(ref="about" id="about")
         header
           span About
           span.name Tokenly
-        p Tokenly is a leading innovator and developer of turnkey blockchain and token solutions. Our vision is to make blockchain technology easy enough for anyone to use ... Provide a scalable infrastructure that supports ... from small pet projects to entreprise-level ...
+        p
+          span Tokenly is a leading innovator and developer of turnkey blockchain and token solutions.
+        p
+          span To date, we have launched 5 blockchain applications, comprising our
+          span.bold Token Suite&trade;
+          span , which includes solutions for blockchain eCommerce, auctions, secure multisig wallets, token creation, token crowdsales, and more.
+        div
+          a.cta(v-scroll-to="'#products'")
+            span Read More About Token Suite&trade;
+      div.about__container__content__image
+        img.token-layer__image(
+          src="../assets/images/fresco-wireframe-connect.jpg"
+        )
+      div.about__container__content__image
+        img.token-layer__image(
+          src="../assets/images/token-layer-white.jpg"
+        )
       div.about__container__content__text
         header
           span Our Vision
-        p Our vision is to make blockchain technology easy enough for anyone to use ... Provide a scalable infrastructure that supports ... from small pet projects to entreprise-level ...
+        p
+          span Our vision is to make blockchain technology easy enough for anyone to use.
+        p
+          span We believe blockchain technology is revolutionary; but we also realize working with blockchain technology is still too complex for widespread adoption.  To that end, Tokenly is developing
+          span.bold Token Layer&trade;
+          span , a scalable, flexible, sidechain protocol engineered to support
+        div
+          a.cta(v-scroll-to="'#token-layer'")
+            span Read More About Token Layer&trade;
   div.about__mask
 
 </template>
@@ -96,11 +120,36 @@ export default {
         position: absolute
         top: 70px
         left: 0
-      &__text
+      &__image
         width: 50%
         display: inline-block
-        padding: 10px
+        text-align: center
+        margin-bottom: 30px
         vertical-align: top
+        padding: 20px
+        img
+          width: 100%
+      &__text
+        width: 50%
+        margin-bottom: 30px
+        display: inline-block
+        padding: 20px
+        vertical-align: top
+        a
+          text-align: center
+          padding: 10px 20px
+          display: inline-block
+          border: 2px solid #fff
+          border-radius: 2px
+          color: #fff
+          background: #0064CC
+          cursor: pointer
+          transition: 0.5s
+          font-weight: 600
+          border-radius: 40px
+          border: 1px solid rgba(0,0,0,0.1)
+          box-shadow: 0px 1px 4px rgba(0,0,0,0.2)
+
       &__sub
         text-align: center
         &__section
@@ -120,8 +169,8 @@ export default {
             color: #111
             font-weight: 600
           a
-            padding: 20px
-            width: 100%
+            padding: 10px 20px
+            max-width: 100%
             display: inline-block
             border: 2px solid #fff
             border-radius: 2px
@@ -135,8 +184,12 @@ export default {
             box-shadow: 0px 1px 4px rgba(0,0,0,0.2)
       p
         font-size: 20px
-        margin-bottom: 20px
+        margin-bottom: 30px
         color: #666
+        .bold
+          font-weight: 700
+          color: #333
+          margin-left: 5px
         &.about__container__content__sub-header
           font-size: 20px
           text-transform: uppercase
