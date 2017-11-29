@@ -50,7 +50,6 @@ export default {
 
 .product__row.partner
   .product__row__image
-    height: 100px
     text-align: center
     margin-bottom: 20px
     img

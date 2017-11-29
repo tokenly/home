@@ -235,6 +235,7 @@ export default {
       &:hover
         background: #ddd
         box-shadow: none
+        transform: scale(1.1)
     i.backwards
       transform: rotateZ(180deg)
 
