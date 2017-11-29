@@ -95,7 +95,7 @@ section.team
           div.team-member
             div.team-member__image
               img(
-                src = '../assets/team/michael.png'
+                src = '../assets/team/michael.jpg'
               )
             div.team-member__content
               p.name
@@ -108,7 +108,7 @@ section.team
           div.team-member
             div.team-member__image
               img(
-                src = '../assets/team/shane.png'
+                src = '../assets/team/shane.jpg'
               )
             div.team-member__content
               p.name
@@ -121,7 +121,7 @@ section.team
           div.team-member
             div.team-member__image
               img(
-                src = '../assets/team/ruben.png'
+                src = '../assets/team/ruben.jpg'
               )
             div.team-member__content
               p.name
