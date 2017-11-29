@@ -154,7 +154,7 @@ export default {
     left: 0px
     right: 0px
     z-index: -1
-    background: rgba(250,250,250,0.9)
+    background: rgba(250,250,255,0.9)
   &__content
     display: table
     &__increment

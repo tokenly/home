@@ -8,7 +8,10 @@ section.token-layer(id="token-layer")
         )
       p.sub-header
         span Tokenly's scalable sidechain protocol built to support interoperability and low cost transactions.
-    div
+    div.centered
+      img.token-layer__image(
+        src="../assets/images/token-layer-white.jpg"
+      )
       ul.token-layer__container__content__menu
         li(v-for="(featureEntry, index) in this.featureData")
           a.product-option(
@@ -22,10 +25,6 @@ section.token-layer(id="token-layer")
         div.token-layer-feature__increment
           span(@click="incrementFeature(-1)")
             i.material-icons keyboard_arrow_left
-        div.token-layer-feature__image
-          img(
-            src="../assets/images/token-layer-white.jpg"
-          )
         div.token-layer-feature__content
           TokenLayerFeature(
             :elID = "this.activeFeature.elID"
@@ -200,7 +199,7 @@ export default {
   p.sub-header
     font-size: 20px
     opacity: 0.7
-    margin-bottom: 40px
+    margin-bottom: 20px
     color: #333
 
 .token-layer-feature__content, .token-layer-feature__image, .token-layer-feature__increment
@@ -212,12 +211,12 @@ export default {
   display: table
 
 .token-layer-feature__content
-  width: 70%
+  width: 100%
 
-.token-layer-feature__image
-  width: 30%
-  img
-    max-width: 100%
+.token-layer__image
+  width: 300px
+  max-width: 50%
+  margin-bottom: 40px
 
 .token-layer-feature__increment
   vertical-align: middle
