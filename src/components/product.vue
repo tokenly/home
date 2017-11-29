@@ -97,13 +97,11 @@ export default {
       margin-bottom: 25px
       a.link
         text-decoration: none
-        padding: 5px 20px
+        padding: 5px 0px
         display: inline-block
         font-weight: 500
-        background: #eee
         border-radius: 30px
         color: #333
-        border: 1px solid rgba(0,0,0,0.1)
         span
           line-height: 22px
           vertical-align: middle

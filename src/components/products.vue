@@ -24,6 +24,9 @@ section.products(
           )
             span {{productEntry.name}}
       div.products__content
+        div.products__content__increment
+          span(@click="incrementProduct(-1)")
+            i.material-icons.backwards play_arrow
         Product(
           :elID = "this.activeProduct.elID"
           :headline = "this.activeProduct.headline"
@@ -32,6 +35,9 @@ section.products(
           :linkText = "this.activeProduct.linkText"
           :imgURL = "this.activeProduct.imgURL"
         )
+        div.products__content__increment
+          span(@click="incrementProduct(1)")
+            i.material-icons play_arrow
   .products__bg
   .products__mask
 </template>
@@ -100,6 +106,17 @@ export default {
     activateProduct: function (event) {
       let targetIndex = $(event.currentTarget).data('product-index')
       this.activeProductIndex = targetIndex
+    },
+
+    incrementProduct: function(value) {
+      let newIndex = this.activeProductIndex + value
+      if (this.productData.length < newIndex + 1) {
+        this.activeProductIndex = 0
+      } else if (newIndex < 0) {
+        this.activeProductIndex = this.productData.length - 1
+      } else {
+        this.activeProductIndex = newIndex
+      }
     }
   },
 
@@ -137,6 +154,31 @@ export default {
     left: 0px
     right: 0px
     z-index: -1
+  &__content
+    display: table
+    &__increment
+      display: table-cell
+      vertical-align: middle
+      padding: 10px
+      span
+        font-size: 40px
+        text-align: center
+        i
+          line-height: 60px
+          display: inline-block
+          width: 60px
+          height: 60px
+          background: #eee
+          border: 1px solid rgba(0,0,0,0.1)
+          box-shadow: 0px 1px 3px rgba(0,0,0,0.05)
+          border-radius: 50%
+          cursor: pointer
+          transition: 0.5s
+          &:hover
+            background: #ddd
+            box-shadow: none
+        i.backwards
+          transform: rotateZ(180deg)
   &__container
     max-width: 1000px
     margin: 0 auto
@@ -164,6 +206,7 @@ export default {
         font-size: 20px
         opacity: 0.7
         margin-bottom: 40px
+        color: #333
       &__menu
         padding: 0px
         margin: 0px

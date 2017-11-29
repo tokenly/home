@@ -6,7 +6,8 @@ section.about(ref="about" id="about")
         span About
         span.name Tokenly
       p Tokenly is a leading innovator and developer of turnkey blockchain and token solutions. Our integrated ... , Token Suite, represents ... In order to meet the uni
-
+      p Token Suite
+      p Token Layer
   div.about__mask
 
 </template>

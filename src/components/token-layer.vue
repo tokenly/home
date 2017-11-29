@@ -181,6 +181,7 @@ export default {
     font-size: 20px
     opacity: 0.7
     margin-bottom: 40px
+    color: #333
 
 .token-layer-feature__content, .token-layer-feature__image
   display: inline-block
