@@ -165,22 +165,20 @@ export default {
         font-size: 40px
         text-align: center
         i
-          line-height: 60px
+          line-height: 90px
           display: inline-block
           width: 60px
-          height: 60px
-          background: #eee
-          border: 1px solid rgba(0,0,0,0.1)
-          box-shadow: 0px 1px 3px rgba(0,0,0,0.05)
-          border-radius: 50%
+          height: 90px
+          border: 1px solid #0064CC
+          color: #0064CC
+          border-radius: 5px
           cursor: pointer
           transition: 0.5s
           &:hover
-            background: #ddd
-            box-shadow: none
+            background: #fff
+            color: #0064CC
+            border: 2px solid #0064CC
             transform: scale(1.1)
-        i.backwards
-          transform: rotateZ(180deg)
   &__container
     max-width: 1000px
     margin: 0 auto
@@ -220,7 +218,7 @@ export default {
           margin: 0px
           a
             padding: 10px 20px
-            color: #333
+            color: #666
             font-weight: 500
             letter-spacing: 1px
             font-size: 16px
@@ -264,7 +262,7 @@ export default {
       p
         color: #eee
     .products__header__content__menu
-      border-bottom: none
+      margin-bottom: 10px
       li
         a
           border-radius: 30px

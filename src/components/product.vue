@@ -112,6 +112,7 @@ export default {
       font-style: italic
     p.detail
       margin-bottom: 30px
+      color: #888
     .live
       font-weight: 700
       background: #00D93A
@@ -142,6 +143,7 @@ export default {
       width: 100%
       p.header
         font-size: 18px
+        margin-bottom: 10px
       p
         font-size: 14px
 

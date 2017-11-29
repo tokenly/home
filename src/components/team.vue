@@ -234,9 +234,22 @@ export default {
       header
         margin: 0px
         text-align: left
-        margin-bottom: 20px
-        font-size: 40px
-        font-weight: 700
+        margin-bottom: 50px
+        font-size: 30px
+        line-height: 60px
+        font-weight: 500
+        color: #444
+        position: relative
+      header:before
+        content: ''
+        background-color: #1565C0
+        opacity: 0.7
+        height: 2px
+        width: 70px
+        border-radius: 1px
+        position: absolute
+        top: 70px
+        left: 0
       p
         text-align: left
         color: #666
@@ -286,11 +299,11 @@ export default {
       font-weight: 600
       margin-bottom: 5px
     p.title
-      color: #888
+      color: #999
       margin-bottom: 25px
       font-size: 16px
     p.summary
-      color: #666
+      color: #888
       line-height: 1.5
       margin-bottom: 0px
       font-size: 16px

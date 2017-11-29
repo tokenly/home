@@ -56,6 +56,7 @@ export default {
         padding: 20px 50px
         background: #D50000
         display: inline-block
+        font-size: 18px
         color: #fff
         width: 100%
         max-width: 300px

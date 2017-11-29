@@ -90,10 +90,24 @@ export default {
       max-width: 1000px
       margin: 0 auto
       header
+        margin: 0px
         text-align: left
-        font-size: 40px
-        font-weight: 600
-        margin-bottom: 20px
+        margin-bottom: 50px
+        font-size: 30px
+        line-height: 60px
+        font-weight: 500
+        color: #444
+        position: relative
+      header:before
+        content: ''
+        background-color: #1565C0
+        opacity: 0.7
+        height: 2px
+        width: 70px
+        border-radius: 1px
+        position: absolute
+        top: 70px
+        left: 0
       p.sub-header
         font-size: 20px
         color: #666
@@ -112,22 +126,20 @@ export default {
       font-size: 40px
       text-align: center
       i
-        line-height: 60px
+        line-height: 90px
         display: inline-block
         width: 60px
-        height: 60px
-        background: #eee
-        border: 1px solid rgba(0,0,0,0.1)
-        box-shadow: 0px 1px 3px rgba(0,0,0,0.05)
-        border-radius: 50%
+        height: 90px
+        border: 1px solid #0064CC
+        color: #0064CC
+        border-radius: 5px
         cursor: pointer
         transition: 0.5s
         &:hover
-          background: #ddd
-          box-shadow: none
+          background: #fff
+          color: #0064CC
+          border: 2px solid #0064CC
           transform: scale(1.1)
-      i.backwards
-        transform: rotateZ(180deg)
   .product__row
     padding: 20px
     display: table-cell

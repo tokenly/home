@@ -3,7 +3,7 @@ div.product__row(v-bind:id="this.elID")
   div.product__row__content.token-layer-feature
     p.header
       span {{ this.headline }}
-    p
+    p.detail
       span {{ this.summary }}
 
 </template>
@@ -51,7 +51,7 @@ export default {
 
 .product__row
   display: flex
-  width: 500px
+  max-width: 500px
   margin: 0 auto
   &__content.token-layer-feature
     padding: 10px
@@ -67,6 +67,8 @@ export default {
       font-weight: 700
       font-size: 20px
       letter-spacing: 0.5px
+    p.detail
+      color: #888
     span.live
       font-weight: 700
       color: #E6FF0D

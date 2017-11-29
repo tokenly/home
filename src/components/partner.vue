@@ -68,5 +68,9 @@ export default {
     color: #666
     font-size: 18px
 
+@media(max-width: 900px)
+  .product__row.partner
+    p.sub-header
+      font-size: 16px
 
 </style>

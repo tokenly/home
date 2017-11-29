@@ -10,7 +10,7 @@ section.about(ref="about" id="about")
       div.about__container__content__text
         header
           span Our Vision
-        p Tokenly is a leading innovator and developer of turnkey blockchain and token solutions. Our vision is to make blockchain technology easy enough for anyone to use ... Provide a scalable infrastructure that supports ... from small pet projects to entreprise-level ...
+        p Our vision is to make blockchain technology easy enough for anyone to use ... Provide a scalable infrastructure that supports ... from small pet projects to entreprise-level ...
   div.about__mask
 
 </template>
@@ -100,6 +100,7 @@ export default {
         width: 50%
         display: inline-block
         padding: 10px
+        vertical-align: top
       &__sub
         text-align: center
         &__section
