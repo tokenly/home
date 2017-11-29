@@ -18,17 +18,24 @@ section.token-layer(id="token-layer")
             :class="{ 'active': index === activeFeatureIndex }"
           )
             span {{ featureEntry.name }}
-      div.token-layer-feature__image
-        img(
-          src="../assets/images/token-layer-white.jpg"
-        )
-      div.token-layer-feature__content
-        TokenLayerFeature(
-          :elID = "this.activeFeature.elID"
-          :headline = "this.activeFeature.headline"
-          :summary = "this.activeFeature.summary"
-          :imgURL = "this.activeFeature.imgURL"
-        )
+      div.token-layer-feature
+        div.token-layer-feature__increment
+          span(@click="incrementFeature(-1)")
+            i.material-icons.backwards play_arrow
+        div.token-layer-feature__image
+          img(
+            src="../assets/images/token-layer-white.jpg"
+          )
+        div.token-layer-feature__content
+          TokenLayerFeature(
+            :elID = "this.activeFeature.elID"
+            :headline = "this.activeFeature.headline"
+            :summary = "this.activeFeature.summary"
+            :imgURL = "this.activeFeature.imgURL"
+          )
+        div.token-layer-feature__increment
+          span(@click="incrementFeature(1)")
+            i.material-icons play_arrow
 
   div.token-layer__mask
   div.token-layer__bg
@@ -91,6 +98,16 @@ export default {
       let targetIndex = $(event.currentTarget).data('feature-index')
       this.activeFeatureIndex = targetIndex
     },
+    incrementFeature: function(value) {
+      let newIndex = this.activeFeatureIndex + value
+      if (this.featureData.length < newIndex + 1) {
+        this.activeFeatureIndex = 0
+      } else if (newIndex < 0) {
+        this.activeFeatureIndex = this.featureData.length - 1
+      } else {
+        this.activeFeatureIndex = newIndex
+      }
+    }
   },
 
   computed: {
@@ -183,10 +200,13 @@ export default {
     margin-bottom: 40px
     color: #333
 
-.token-layer-feature__content, .token-layer-feature__image
-  display: inline-block
+.token-layer-feature__content, .token-layer-feature__image, .token-layer-feature__increment
+  display: table-cell
   vertical-align: top
   padding: 10px
+
+.token-layer-feature
+  display: table
 
 .token-layer-feature__content
   width: 70%
@@ -195,6 +215,28 @@ export default {
   width: 30%
   img
     max-width: 100%
+
+.token-layer-feature__increment
+  vertical-align: middle
+  span
+    font-size: 40px
+    text-align: center
+    i
+      line-height: 60px
+      display: inline-block
+      width: 60px
+      height: 60px
+      background: #eee
+      border: 1px solid rgba(0,0,0,0.1)
+      box-shadow: 0px 1px 3px rgba(0,0,0,0.05)
+      border-radius: 50%
+      cursor: pointer
+      transition: 0.5s
+      &:hover
+        background: #ddd
+        box-shadow: none
+    i.backwards
+      transform: rotateZ(180deg)
 
 @media(max-width: 787px)
   body
