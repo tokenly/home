@@ -257,7 +257,6 @@ export default {
         font-size: 16px
     .products__content
       padding: 0px
-      text-align: center
       p
         color: #eee
     .products__header__content__menu
@@ -278,12 +277,12 @@ export default {
       p
         font-size: 18px
 
-.products__content__increment
-  span
-    font-size: 20px
-    i
-      line-height: 30px
-      width: 30px
-      height: 30px
+  .products__content__increment
+    span
+      font-size: 20px
+      i
+        line-height: 30px
+        width: 30px
+        height: 30px
 
 </style>

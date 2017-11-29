@@ -7,23 +7,138 @@ section.team
       p
         span Our 9 person team includes blockchain and finance experts together with veteran software engineers.
       div.team-member-content
-        div.team-member-content__entry(v-for="(teamMember, index) in this.teamData")
-          TeamMember(
-            :elID = "teamMember.elID"
-            :name = "teamMember.name"
-            :title = "teamMember.title"
-            :summary = "teamMember.summary"
-            :imgURL = "teamMember.imgURL"
-          )
+        div.team-member-content__entry
+          div.team-member
+            div.team-member__image
+              img(
+                src = '../assets/team/adam.jpg'
+              )
+            div.team-member__content
+              p.name
+                span Adam Levine
+              p.title
+                span Founder, CEO
+              p.summary
+                span Founder of the "Lets Talk Bitcoin" network (LTBN), veteran project advisor in blockchain and token technology.
+
+        div.team-member-content__entry
+          div.team-member
+            div.team-member__image
+              img(
+                src = '../assets/team/devon.jpg'
+              )
+            div.team-member__content
+              p.name
+                span Devon Weller
+              p.title
+                span Founder, CTO
+              p.summary
+                span 18-year vetern internet software application developer for companies such as Price Waterhouse Coopers and Booz Allen Hamilton. Counterparty protocol developer.
+
+        div.team-member-content__entry
+          div.team-member
+            div.team-member__image
+              img(
+                src = '../assets/team/martin.jpg'
+              )
+            div.team-member__content
+              p.name
+                span Martin Rerak
+              p.title
+                span CSO
+              p.summary
+                span Experienced finance and strategic planning professional. Early blockchain evangelist.
+
+        div.team-member-content__entry
+          div.team-member
+            div.team-member__image
+              img(
+                src = '../assets/team/steven.jpg'
+              )
+            div.team-member__content
+              p.name
+                span Steven Levine
+              p.title
+                span Founder, CFO
+              p.summary
+                span Founder of the "Lets Talk Bitcoin" network (LTBN). Experienced innovator and entrepreneur. Grew prior startup to $12.9MM annual revenue.
+
+        div.team-member-content__entry
+          div.team-member
+            div.team-member__image
+              img(
+                src = '../assets/team/nick.jpg'
+              )
+            div.team-member__content
+              p.name
+                span Nick Rathman
+              p.title
+                span Founder, Senior Developer
+              p.summary
+                span Experienced backend developer with expertise in blockchain and Counterparty protocol.
+
+        div.team-member-content__entry
+          div.team-member
+            div.team-member__image
+              img(
+                src = '../assets/team/tatiana.jpg'
+              )
+            div.team-member__content
+              p.name
+                span Tatiana Moroz
+              p.title
+                span Ambassador
+              p.summary
+                span Singer, Songwriter. Pioneer and advocate for the transformative power of blockchain technology for the music industy. The first musical artist ever to issue a blockchain token, TATIANACOIN.
+
+        div.team-member-content__entry
+          div.team-member
+            div.team-member__image
+              img(
+                src = '../assets/team/shane.png'
+              )
+            div.team-member__content
+              p.name
+                span Shane Randolph
+              p.title
+                span Front-end Developer, UI
+              p.summary
+                span Experienced frontend developer and entrepreneur. Former economist.
+
+        div.team-member-content__entry
+          div.team-member
+            div.team-member__image
+              img(
+                src = '../assets/team/michael.png'
+              )
+            div.team-member__content
+              p.name
+                span Michael Jonsson
+              p.title
+                span Marketing, Design
+              p.summary
+                span Experienced content marketer, graphic designer, photographer, and video producer.
+
+        div.team-member-content__entry
+          div.team-member
+            div.team-member__image
+              img(
+                src = '../assets/team/ruben.png'
+              )
+            div.team-member__content
+              p.name
+                span Ruben Meseguer
+              p.title
+                span Front- & Back-end Developer
+              p.summary
+                span Backend developer and open source software contributor.
 
 </template>
 
 <script>
 
-import TeamMember from './team-member.vue'
-
 export default {
-  components: {TeamMember},
+  components: {},
   data () {
     return {
       teamData: [
@@ -31,8 +146,7 @@ export default {
           name: 'Adam Levine',
           elID: 'adam-levine',
           title: 'Founder, CEO',
-          summary: 'Founder of the "Lets Talk Bitcoin" network (LTBN), veteran project advisor in blockchain and token technology.',
-          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/02/100kbbio-e1493910044698-500x500.jpg'
+          summary: 'Founder of the "Lets Talk Bitcoin" network (LTBN), veteran project advisor in blockchain and token technology.'
         },
         {
           name: 'Devon Weller',
@@ -153,4 +267,53 @@ export default {
   body
     .team-member-content__entry
       width: 100.0%
+
+.team-member
+  padding: 10px
+  text-align: left
+  &__image, &__content
+    padding: 5px
+    vertical-align: middle
+  &__content
+    padding: 10px
+    vertical-align: middle
+    p
+      line-height: 1
+    p.name
+      font-size: 18px
+      color: #333
+      font-weight: 600
+      margin-bottom: 5px
+    p.title
+      color: #888
+      margin-bottom: 25px
+      font-size: 16px
+    p.summary
+      color: #666
+      line-height: 1.5
+      margin-bottom: 0px
+      font-size: 16px
+
+.team-member__image
+  img
+    border-radius: 50%
+    max-width: 100%
+    height: 100%
+    background-size: cover
+    background-repeat: no-repeat
+    background-position: 50% 50%
+    width: 80px
+    height: 80px
+    display: inline-block
+
+@media(max-width: 767px)
+  body
+    .product__row
+      &__image
+        display: none
+      &__content
+        width: 100%
+    .team-member__content
+      p.summary
+        font-size: 16px
 </style>

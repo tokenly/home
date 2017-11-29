@@ -162,9 +162,9 @@ export default {
             border: 1px solid rgba(0,0,0,0.1)
             box-shadow: 0px 1px 3px rgba(0,0,0,0.05)
           a.active
-            background: #E6FF0D
+            background: #0064CC
             font-weight: 700
-            color: #111
+            color: #fff
             box-shadow: none
     &__image
       padding: 10px 30px
@@ -270,7 +270,6 @@ export default {
             letter-spacing: 0px
   .token-layer-feature__content
     width: 100%
-    text-align: center
   .token-layer-feature__image
     display: none
 

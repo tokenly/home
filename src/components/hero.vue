@@ -21,51 +21,6 @@ section.hero
 export default {
   data () {
     return {
-      emailSubmitted: false,
-      emailSubmissionError: false,
-      interestSubmitted: false,
-      additionalInfoSubmitted: false,
-      gotcha: '',
-      contact: {
-        email: '',
-        interest: '',
-        name: '',
-        companyName: '',
-        brandCompany: '',
-        aboutProject: ''
-
-      },
-
-      interests: [
-        {
-          name: 'Tokenly for Selling Merchandise',
-          backgroundColor: '#f44336'
-        },
-        {
-          name: 'Tokenly for Fashion Projects',
-          backgroundColor: '#e91e63'
-        },
-        {
-          name: 'Tokenly for Brands',
-          backgroundColor: '#9c27b0'
-        },
-        {
-          name: 'Tokenly for Music',
-          backgroundColor: '#673ab7'
-        },
-        {
-          name: 'Tokenly for Limited Edition Vinyls',
-          backgroundColor: '#3f51b5'
-        },
-        {
-          name: 'Tokenly for Chats',
-          backgroundColor: '#2196f3'
-        },
-        {
-          name: 'I am interest in something else',
-          backgroundColor: '#03a9f4'
-        },
-      ],
     }
   },
   created () {

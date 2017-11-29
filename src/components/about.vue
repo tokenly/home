@@ -72,7 +72,7 @@ export default {
         line-height: 60px
         font-weight: 700
         margin: 0px
-        margin-bottom: 100px
+        margin-bottom: 50px
         position: relative
         color: #444
         span
@@ -231,7 +231,7 @@ export default {
     .about__container__content
       header
         font-size: 24px
-        margin-bottom: 60px
+        margin-bottom: 40px
       p
         font-size: 16px
         margin-bottom: 20px
