@@ -7,7 +7,7 @@ div.product__row(v-bind:id="this.elID")
   div.product__row__content
     p.header
       span {{ this.headline }}
-    p
+    p.detail
       span {{ this.summary }}
     p
       span Status: &nbsp;
@@ -94,6 +94,7 @@ export default {
       line-height: 2
       font-size: 18px
       color: #555
+      margin-bottom: 25px
       a.link
         text-decoration: none
         padding: 5px 20px
@@ -117,6 +118,8 @@ export default {
       letter-spacing: 0.5px
       color: #444
       font-style: italic
+    p.detail
+      margin-bottom: 30px
     .live
       font-weight: 700
       background: #00D93A

@@ -22,13 +22,15 @@ section.sub_hero
           span Learn More About Token Layer&trade;
       div.sub_hero__container__content__entry
         div.sub_hero__container__content__entry__icon
-          i.material-icons.build build
+          i.material-icons.lightbulb lightbulb_outline
         p.header We're Collaborating
         div.divider
         br
         p.sub-header Tokenly's turnkey solutions have been choice of many of the most innovative projects in the blockchain space.
         a.cta(v-scroll-to="'#partners'")
           span Learn More About Tokenly's Partnerships
+  .sub_hero__bg
+  .sub_hero__texture
 </template>
 
 <script>
@@ -57,8 +59,25 @@ export default {
 .sub_hero
   border-top: 2px solid #00254C
   border-bottom: 2px solid #00254C
-  background: #0D47A1
-  background-image: linear-gradient(to bottom, #1565C0 0%, #0D47A1 100%);
+  position: relative
+  &__bg
+    position: absolute
+    top: 0px
+    bottom: 0px
+    left: 0px
+    right: 0px
+    background: #0D47A1
+    background-image: linear-gradient(to bottom, #1565C0 0%, #0D47A1 100%)
+    opacity: 0.75
+    z-index: -2
+  &__texture
+    background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/dark_mosaic.png")
+    position: absolute
+    top: 0px
+    bottom: 0px
+    left: 0px
+    right: 0px
+    z-index: -3
   &__container
     padding: 80px 20px
     &__content
@@ -81,7 +100,7 @@ export default {
         p.header
           font-size: 24px
           font-weight: 700
-          text-shadow: 0px 1px 3px rgba(0,0,0,0.5)
+          text-shadow: 0px 1px 3px rgba(0,0,0,0.3)
           letter-spacing: 0.5px
           margin-bottom: 20px
         p.sub-header
@@ -127,6 +146,24 @@ export default {
     box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset rgba(27,255,0,0.7) 0 -1px 9px, rgba(27,255,0,0.7) 0 2px 0
   to
     background-color: #36AD00
+
+.lightbulb
+  -webkit-animation: glowYellow 3s infinite
+  -moz-animation: glowYellow 3s infinite
+  -ms-animation: glowYellow 3s infinite
+  -o-animation: glowYellow 3s infinite
+  animation: glowYellow 3s infinite
+
+@keyframes glowYellow
+  from
+    text-shadow: none
+    color: #fff
+  50%
+    text-shadow: 0px 1px 3px yellow
+    color: #eee
+  to
+    text-shadow: none
+    color: #fff
 
 @media(max-width: 900px)
   body

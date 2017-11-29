@@ -59,9 +59,9 @@ export default {
   position: relative
   background: #f9f9f9
   &__container
-    padding: 60px 20px
+    padding: 80px 20px
     &__content
-      max-width: 800px
+      max-width: 1000px
       margin: 0 auto
       header
         text-align: left

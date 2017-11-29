@@ -109,8 +109,8 @@ export default {
   background-size: cover
   background-position: center
   position: relative
+  padding: 80px 30px
   &__container
-    padding: 80px 30px
     position: relative
     z-index: 8
     margin: 0 auto
@@ -125,7 +125,7 @@ export default {
       &__menu
         padding: 0px
         margin: 0px
-        margin-bottom: 20px
+        margin-bottom: 40px
         text-align: center
         li
           display: inline-block

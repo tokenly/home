@@ -67,7 +67,7 @@ export default {
   font-size: 1em
   overflow: hidden
   transition: 1s
-  border-bottom: 1px solid rgba(205,205,205,0.4)
+  border: 1px solid rgba(205,205,205,0.4)
   background: rgba(255,255,255,0.8)
   &.active
     background: #fff

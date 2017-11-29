@@ -5,7 +5,7 @@ section.about(ref="about" id="about")
       header
         span About
         span.name Tokenly
-      p Tokenly is a leading innovator and developer of turnkey blockchain and token solutions.
+      p Tokenly is a leading innovator and developer of turnkey blockchain and token solutions. Our integrated ... , Token Suite, represents ... In order to meet the uni
 
   div.about__mask
 
@@ -67,25 +67,23 @@ export default {
       max-width: 1000px
       margin: 0 auto
       header
-        font-size: 28px
-        color: #666
+        font-size: 40px
         line-height: 60px
-        font-weight: 400
+        font-weight: 700
         margin: 0px
         margin-bottom: 100px
-        letter-spacing: 1px
         position: relative
+        color: #444
         span
           vertical-align: top
         span.name
-          font-weight: 400
           margin-left: 0.3em
         img
           height: 48px
           vertical-align: top
       header:before
         content: ''
-        background-color: #00254C
+        background-color: #1565C0
         height: 2px
         width: 70px
         border-radius: 1px

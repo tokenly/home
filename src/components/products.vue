@@ -120,6 +120,7 @@ export default {
   color: #111
   position: relative
   z-index: 99
+  padding: 80px 30px
   &__mask
     background: url(https://tokenpockets.com/images/bg2.c37d81d0.png) top right no-repeat
     position: absolute
@@ -139,7 +140,6 @@ export default {
   &__container
     max-width: 1000px
     margin: 0 auto
-    padding: 80px 30px
     &__content, &__image
       display: inline-block
       vertical-align: top
@@ -167,7 +167,7 @@ export default {
       &__menu
         padding: 0px
         margin: 0px
-        margin-bottom: 20px
+        margin-bottom: 40px
         text-align: center
         li
           display: inline-block
