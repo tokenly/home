@@ -269,9 +269,7 @@ export default {
           font-size: 14px
           padding: 10px
           font-weight: 400
-        a.active
-          background: #E6FF0D
-          color: #111
+          letter-spacing: 0px
     .product__row
       padding: 15px
     .product__row__content

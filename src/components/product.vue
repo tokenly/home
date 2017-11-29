@@ -24,7 +24,7 @@ div.product__row(v-bind:id="this.elID")
         v-bind:href="this.linkURL"
         target="__blank"
       )
-        span Go to {{ this.linkText }}
+        span {{ this.linkText }}
 </template>
 
 <script>
@@ -90,7 +90,7 @@ export default {
     padding: 10px
     vertical-align: middle
     p
-      line-height: 2
+      line-height: 1.5
       font-size: 18px
       color: #555
       margin-bottom: 25px
@@ -135,6 +135,7 @@ export default {
 
 @media(max-width: 767px)
   .product__row
+    padding: 5px
     &__image
       display: none
     &__content
@@ -142,6 +143,6 @@ export default {
       p.header
         font-size: 18px
       p
-        line-height: 1.5
+        font-size: 14px
 
 </style>

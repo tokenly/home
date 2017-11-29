@@ -267,10 +267,7 @@ export default {
             border-radius: 30px
             padding: 10px
             margin: 0px 10px 10px 0px
-          a.active
-            background: #E6FF0D
-            color: #111
-            font-weight: 700
+            letter-spacing: 0px
   .token-layer-feature__content
     width: 100%
     text-align: center

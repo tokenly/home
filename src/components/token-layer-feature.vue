@@ -56,7 +56,7 @@ export default {
     vertical-align: middle
     width: 100%
     p
-      line-height: 1.25
+      line-height: 1.5
       font-size: 18px
       color: #555
     p.header
@@ -71,9 +71,11 @@ export default {
 
 @media(max-width: 767px)
   .product__row
-    padding: 15px
+    padding: 5px
     .token-layer-feature
       p.header
         font-size: 18px
+      p
+        font-size: 14px
 
 </style>
