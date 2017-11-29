@@ -122,17 +122,20 @@ export default {
 <style lang="sass?indentedSyntax=true" scoped>
 
 .token-layer
-  background: #f9f9f9
+  background: #fff
   background-size: cover
   background-position: center
   position: relative
   padding: 80px 30px
+  border-top: none
   &__container
     position: relative
     z-index: 8
     margin: 0 auto
     width: 1000px
     max-width: 100%
+    padding: 5px
+    border-radius: 5px
     &__content, &__image
       display: inline-block
       vertical-align: top
@@ -178,12 +181,12 @@ export default {
     top: 0px
     bottom: 0px
   &__bg
-    background: rgba(255,255,255,0.7)
+    border-radius: 5px
     position: absolute
-    left: 0px
-    right: 0px
-    top: 0px
-    bottom: 0px
+    left: 20px
+    right: 20px
+    top: 00px
+    bottom: 20px
   header
     margin: 0px
     font-size: 40px

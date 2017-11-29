@@ -15,6 +15,7 @@ section.partners(
           :name="this.activePartner.name"
           :summary="this.activePartner.summary"
           :imgURL="this.activePartner.imgURL"
+          transition="someEffect"
         )
         div.partners__container__content__partner__increment
           span(@click="incrementPartner(1)")
@@ -54,6 +55,7 @@ export default {
   methods: {
 
     incrementPartner: function(value) {
+      //$('.product__row.partner').addClass('transition')
       let newIndex = this.activePartnerIndex + value
       if (this.partnerData.length < newIndex + 1) {
         this.activePartnerIndex = 0
@@ -62,6 +64,7 @@ export default {
       } else {
         this.activePartnerIndex = newIndex
       }
+      //$('.product__row.partner').removeClass('transition')
     }
   },
 
@@ -127,16 +130,38 @@ export default {
   .product__row
     padding: 20px
     display: table-cell
+    vertical-align: middle
+    height: 400px
 
-@media(max-width: 787px)
+.someEffect-transition
+  transition: all .3s ease
+  background-color: #eee
+  overflow: hidden
+
+/* .*-enter defines the starting state for entering */
+/* .*-leave defines the ending state for leaving */
+
+.someEffect-enter, .someEffect-leave
+  height: 0
+  padding: 0 10px
+  opacity: 0
+
+@media(max-width: 900px)
   body
     .partners__container__content
       header
         font-size: 24px
       p.sub-header
         font-size: 16px
-    .partners__container__content__partners
+    .partners__container__content__partner
       width: 100%
       text-align: center
       margin-bottom: 20px
+      &__increment
+        span
+          font-size: 20px
+          i
+            line-height: 30px
+            width: 30px
+            height: 30px
 </style>

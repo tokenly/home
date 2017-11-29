@@ -147,13 +147,13 @@ export default {
     right: 0px
     z-index: -2
   &__bg
-    background: rgba(250,250,250,0.9)
     position: absolute
     top: 0px
     bottom: 0px
     left: 0px
     right: 0px
     z-index: -1
+    background: rgba(250,250,250,0.9)
   &__content
     display: table
     &__increment
@@ -183,6 +183,7 @@ export default {
   &__container
     max-width: 1000px
     margin: 0 auto
+    padding: 5px
     &__content, &__image
       display: inline-block
       vertical-align: top
