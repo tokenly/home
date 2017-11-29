@@ -26,7 +26,7 @@ section.products(
       div.products__content
         div.products__content__increment
           span(@click="incrementProduct(-1)")
-            i.material-icons.backwards play_arrow
+            i.material-icons keyboard_arrow_left
         Product(
           :elID = "this.activeProduct.elID"
           :headline = "this.activeProduct.headline"
@@ -37,7 +37,7 @@ section.products(
         )
         div.products__content__increment
           span(@click="incrementProduct(1)")
-            i.material-icons play_arrow
+            i.material-icons keyboard_arrow_right
   .products__bg
   .products__mask
 </template>
@@ -138,6 +138,7 @@ export default {
   position: relative
   z-index: 99
   padding: 80px 30px
+  border-bottom: 2px rgba(0,0,0,0.2) solid
   &__mask
     background: url(https://tokenpockets.com/images/bg2.c37d81d0.png) top right no-repeat
     position: absolute
@@ -231,6 +232,7 @@ export default {
             text-transform: uppercase
             border: 1px solid rgba(0,0,0,0.1)
             box-shadow: 0px 1px 3px rgba(0,0,0,0.05)
+            transition: 0.2s
           a.active
             color: #fff
             font-weight: 700

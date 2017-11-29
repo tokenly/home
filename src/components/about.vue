@@ -2,12 +2,15 @@
 section.about(ref="about" id="about")
   div.about__container
     div.about__container__content
-      header
-        span About
-        span.name Tokenly
-      p Tokenly is a leading innovator and developer of turnkey blockchain and token solutions. Our vision is to make blockchain technology easy enough for anyone to use ... Provide a scalable infrastructure that supports ... from small pet projects to entreprise-level ...
-      p Token Suite
-      p Token Layer
+      div.about__container__content__text
+        header
+          span About
+          span.name Tokenly
+        p Tokenly is a leading innovator and developer of turnkey blockchain and token solutions. Our vision is to make blockchain technology easy enough for anyone to use ... Provide a scalable infrastructure that supports ... from small pet projects to entreprise-level ...
+      div.about__container__content__text
+        header
+          span Our Vision
+        p Tokenly is a leading innovator and developer of turnkey blockchain and token solutions. Our vision is to make blockchain technology easy enough for anyone to use ... Provide a scalable infrastructure that supports ... from small pet projects to entreprise-level ...
   div.about__mask
 
 </template>
@@ -51,6 +54,7 @@ export default {
   z-index: 99
   position: relative
   text-align: left
+  border-bottom: 2px rgba(0,0,0,0.2) solid
   &__mask
     position: absolute
     top: 0px
@@ -68,9 +72,9 @@ export default {
       max-width: 1000px
       margin: 0 auto
       header
-        font-size: 40px
+        font-size: 30px
         line-height: 60px
-        font-weight: 700
+        font-weight: 400
         margin: 0px
         margin-bottom: 50px
         position: relative
@@ -85,12 +89,17 @@ export default {
       header:before
         content: ''
         background-color: #1565C0
+        opacity: 0.7
         height: 2px
         width: 70px
         border-radius: 1px
         position: absolute
         top: 70px
         left: 0
+      &__text
+        width: 50%
+        display: inline-block
+        padding: 10px
       &__sub
         text-align: center
         &__section
@@ -236,6 +245,8 @@ export default {
         font-size: 16px
         margin-bottom: 20px
         line-height: 1.5
+      &__text
+        width: 100%
       div.about__container__content__sub__section
         width: 100%
     p.about__container__content__sub-text

@@ -10,7 +10,7 @@ section.partners(
       div.partners__container__content__partner
         div.partners__container__content__partner__increment
           span(@click="incrementPartner(-1)")
-            i.material-icons.backwards play_arrow
+            i.material-icons keyboard_arrow_left
         Partner(
           :name="this.activePartner.name"
           :summary="this.activePartner.summary"
@@ -19,7 +19,7 @@ section.partners(
         )
         div.partners__container__content__partner__increment
           span(@click="incrementPartner(1)")
-            i.material-icons play_arrow
+            i.material-icons keyboard_arrow_right
 </template>
 
 <script>
@@ -83,6 +83,7 @@ export default {
 .partners
   position: relative
   background: #f9f9f9
+  border-bottom: 2px rgba(0,0,0,0.2) solid
   &__container
     padding: 80px 20px
     &__content

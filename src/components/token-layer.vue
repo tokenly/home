@@ -21,7 +21,7 @@ section.token-layer(id="token-layer")
       div.token-layer-feature
         div.token-layer-feature__increment
           span(@click="incrementFeature(-1)")
-            i.material-icons.backwards play_arrow
+            i.material-icons keyboard_arrow_left
         div.token-layer-feature__image
           img(
             src="../assets/images/token-layer-white.jpg"
@@ -35,7 +35,7 @@ section.token-layer(id="token-layer")
           )
         div.token-layer-feature__increment
           span(@click="incrementFeature(1)")
-            i.material-icons play_arrow
+            i.material-icons keyboard_arrow_right
 
   div.token-layer__mask
   div.token-layer__bg
@@ -127,7 +127,7 @@ export default {
   background-position: center
   position: relative
   padding: 80px 30px
-  border-top: none
+  border-bottom: 2px rgba(0,0,0,0.2) solid
   &__container
     position: relative
     z-index: 8
