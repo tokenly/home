@@ -114,9 +114,10 @@ export default {
       margin-bottom: 30px
       color: #888
     .live
-      font-weight: 700
+      font-weight: 500
       background: #00D93A
-      padding: 3px 20px
+      padding: 3px 40px
+      border: 1px solid rgba(0,0,0,0.1)
       border-radius: 20px
       color: #fff
       text-decoration: none

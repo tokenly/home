@@ -276,8 +276,8 @@ export default {
     span
       font-size: 20px
       i
-        line-height: 45px
+        line-height: 60px
         width: 30px
-        height: 45px
+        height: 60px
 
 </style>

@@ -10,7 +10,7 @@ section.sub_hero
         br
         p.sub-header More than just an idea. Tokenly has 5 live blockchain token solutions and thousands of users.
         a.cta(v-scroll-to="'#products'")
-          span Learn More About Token Suite&trade;
+          span Learn More About Tokenly Solutions
       div.sub_hero__container__content__entry
         div.sub_hero__container__content__entry__icon
           i.material-icons.build build

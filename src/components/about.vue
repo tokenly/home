@@ -10,8 +10,8 @@ section.about(ref="about" id="about")
           span Tokenly is a leading innovator and developer of turnkey blockchain and token solutions.
         p
           span To date, we have launched 5 blockchain applications, comprising our
-          span.bold Token Suite&trade;
-          span , which includes solutions for blockchain eCommerce, auctions, secure multisig wallets, token creation, token crowdsales, and more.
+          span.bold(v-scroll-to="'#products'") Token Suite&trade;
+          span , which includes turnkey solutions for blockchain eCommerce, auctions, secure multisig wallets, token creation, token crowdsales, and more.
         div
           a.cta(v-scroll-to="'#products'")
             span Read More About Token Suite&trade;
@@ -30,8 +30,8 @@ section.about(ref="about" id="about")
           span Our vision is to make blockchain technology easy enough for anyone to use.
         p
           span We believe blockchain technology is revolutionary; but we also realize working with blockchain technology is still too complex for widespread adoption.  To that end, Tokenly is developing
-          span.bold Token Layer&trade;
-          span , a scalable, flexible, sidechain protocol engineered to support
+          span.bold(v-scroll-to="'#token-layer'") Token Layer&trade;
+          span , a scalable, flexible, sidechain protocol engineered to support scalable consumer products.
         div
           a.cta(v-scroll-to="'#token-layer'")
             span Read More About Token Layer&trade;
@@ -146,7 +146,7 @@ export default {
           cursor: pointer
           transition: 0.5s
           font-weight: 600
-          border-radius: 40px
+          border-radius: 5px
           border: 1px solid rgba(0,0,0,0.1)
           box-shadow: 0px 1px 4px rgba(0,0,0,0.2)
 
@@ -185,11 +185,12 @@ export default {
       p
         font-size: 20px
         margin-bottom: 30px
-        color: #666
+        color: #888
         .bold
           font-weight: 700
           color: #333
           margin-left: 5px
+          cursor: pointer
         &.about__container__content__sub-header
           font-size: 20px
           text-transform: uppercase
@@ -301,6 +302,8 @@ export default {
         line-height: 1.5
       &__text
         width: 100%
+      &__image
+        display: none
       div.about__container__content__sub__section
         width: 100%
     p.about__container__content__sub-text
