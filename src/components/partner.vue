@@ -49,19 +49,24 @@ export default {
 <style lang="sass?indentedSyntax=true" scoped>
 
 .product__row.partner
+  opacity: 1
+  transition: 0.5s
+  text-align: center
+  &.transition
+    opacity: 0
   .product__row__image
-    height: 100px
     text-align: center
     margin-bottom: 20px
     img
-      filter: grayscale(100%)
       max-width: 100%
       max-height: 100%
       vertical-align: middle
   p.header
-    font-size: 18px
+    font-size: 24px
     font-weight: 600
   p.sub-header
     color: #666
+    font-size: 18px
+
 
 </style>

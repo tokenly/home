@@ -18,17 +18,24 @@ section.token-layer(id="token-layer")
             :class="{ 'active': index === activeFeatureIndex }"
           )
             span {{ featureEntry.name }}
-      div.token-layer-feature__image
-        img(
-          src="../assets/images/token-layer-white.jpg"
-        )
-      div.token-layer-feature__content
-        TokenLayerFeature(
-          :elID = "this.activeFeature.elID"
-          :headline = "this.activeFeature.headline"
-          :summary = "this.activeFeature.summary"
-          :imgURL = "this.activeFeature.imgURL"
-        )
+      div.token-layer-feature
+        div.token-layer-feature__increment
+          span(@click="incrementFeature(-1)")
+            i.material-icons.backwards play_arrow
+        div.token-layer-feature__image
+          img(
+            src="../assets/images/token-layer-white.jpg"
+          )
+        div.token-layer-feature__content
+          TokenLayerFeature(
+            :elID = "this.activeFeature.elID"
+            :headline = "this.activeFeature.headline"
+            :summary = "this.activeFeature.summary"
+            :imgURL = "this.activeFeature.imgURL"
+          )
+        div.token-layer-feature__increment
+          span(@click="incrementFeature(1)")
+            i.material-icons play_arrow
 
   div.token-layer__mask
   div.token-layer__bg
@@ -91,6 +98,16 @@ export default {
       let targetIndex = $(event.currentTarget).data('feature-index')
       this.activeFeatureIndex = targetIndex
     },
+    incrementFeature: function(value) {
+      let newIndex = this.activeFeatureIndex + value
+      if (this.featureData.length < newIndex + 1) {
+        this.activeFeatureIndex = 0
+      } else if (newIndex < 0) {
+        this.activeFeatureIndex = this.featureData.length - 1
+      } else {
+        this.activeFeatureIndex = newIndex
+      }
+    }
   },
 
   computed: {
@@ -105,18 +122,20 @@ export default {
 <style lang="sass?indentedSyntax=true" scoped>
 
 .token-layer
-  background: #f9f9f9
+  background: #fff
   background-size: cover
   background-position: center
-  min-height: 100vh
   position: relative
+  padding: 80px 30px
+  border-top: none
   &__container
-    padding: 80px 30px
     position: relative
     z-index: 8
     margin: 0 auto
     width: 1000px
     max-width: 100%
+    padding: 5px
+    border-radius: 5px
     &__content, &__image
       display: inline-block
       vertical-align: top
@@ -126,7 +145,7 @@ export default {
       &__menu
         padding: 0px
         margin: 0px
-        margin-bottom: 20px
+        margin-bottom: 40px
         text-align: center
         li
           display: inline-block
@@ -134,40 +153,40 @@ export default {
           a
             padding: 10px 20px
             color: #333
-            font-weight: 700
+            font-weight: 500
             letter-spacing: 1px
             font-size: 16px
             display: inline-block
             cursor: pointer
-            background: rgba(200,200,200,0.5)
+            background: #eee
             border-radius: 30px
             margin: 0px 10px 10px 0px
             text-transform: uppercase
             border: 1px solid rgba(0,0,0,0.1)
+            box-shadow: 0px 1px 3px rgba(0,0,0,0.05)
           a.active
-            background: #E6FF0D
+            background: #0064CC
             font-weight: 700
-            color: #111
+            color: #fff
+            box-shadow: none
     &__image
       padding: 10px 30px
       width: 40%
       img
         width: 100%
   &__mask
-    background: url(https://tokenpockets.com/images/bg2.c37d81d0.png) top right no-repeat
-    transform: scaleX(-1)
     position: absolute
     left: 0px
     right: 0px
     top: 0px
     bottom: 0px
   &__bg
-    background: rgba(255,255,255,0.7)
+    border-radius: 5px
     position: absolute
-    left: 0px
-    right: 0px
-    top: 0px
-    bottom: 0px
+    left: 20px
+    right: 20px
+    top: 00px
+    bottom: 20px
   header
     margin: 0px
     font-size: 40px
@@ -182,11 +201,15 @@ export default {
     font-size: 20px
     opacity: 0.7
     margin-bottom: 40px
+    color: #333
 
-.token-layer-feature__content, .token-layer-feature__image
-  display: inline-block
+.token-layer-feature__content, .token-layer-feature__image, .token-layer-feature__increment
+  display: table-cell
   vertical-align: top
   padding: 10px
+
+.token-layer-feature
+  display: table
 
 .token-layer-feature__content
   width: 70%
@@ -196,43 +219,70 @@ export default {
   img
     max-width: 100%
 
+.token-layer-feature__increment
+  vertical-align: middle
+  span
+    font-size: 40px
+    text-align: center
+    i
+      line-height: 60px
+      display: inline-block
+      width: 60px
+      height: 60px
+      background: #eee
+      border: 1px solid rgba(0,0,0,0.1)
+      box-shadow: 0px 1px 3px rgba(0,0,0,0.05)
+      border-radius: 50%
+      cursor: pointer
+      transition: 0.5s
+      &:hover
+        background: #ddd
+        box-shadow: none
+        transform: scale(1.1)
+    i.backwards
+      transform: rotateZ(180deg)
+
 @media(max-width: 787px)
   body
-    .token-layer__container
-      padding: 40px 10px
-      &__content, &__image
-        width: 100%
-      &__image
-        text-align: center
-        img
-          width: 50%
-    .token-layer__container__content
-      header
-        font-size: 24px
-        img
-          width: auto
-          height: 40px
-      p.sub-header
-        font-size: 16px
-      .product__row__content.token-layer-feature
-        p.header
-          font-size: 18px !important
-    ul.token-layer__container__content__menu
-      li
-        a
-          font-size: 14px
-          border-bottom: none
-          border-radius: 30px
-          padding: 10px
-          margin: 0px 10px 10px 0px
-        a.active
-          background: #E6FF0D
-          color: #111
-          font-weight: 700
+    .token-layer
+      padding: 60px 10px
+      &__container
+        &__content, &__image
+          width: 100%
+        &__image
+          text-align: center
+          img
+            width: 50%
+      .token-layer__container__content
+        header
+          font-size: 24px
+          img
+            width: auto
+            height: 40px
+        p.sub-header
+          font-size: 16px
+        .product__row__content.token-layer-feature
+          p.header
+            font-size: 18px !important
+      ul.token-layer__container__content__menu
+        li
+          a
+            font-size: 14px
+            border-radius: 30px
+            padding: 10px
+            margin: 0px 10px 10px 0px
+            letter-spacing: 0px
   .token-layer-feature__content
     width: 100%
-    text-align: center
   .token-layer-feature__image
     display: none
+
+  .token-layer-feature__increment
+    span
+      font-size: 20px
+      i
+        line-height: 30px
+        width: 30px
+        height: 30px
 
 </style>

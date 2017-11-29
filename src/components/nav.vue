@@ -3,16 +3,10 @@
   .nav__content
     .nav__heading
       a(href="/")
-        img.nav__logo.inactive(
-          src="../assets/logo/Tokenly_Icon_White.svg"
-          width="35px"
-        )
-        img.nav__logo.active(
+        img.nav__logo(
           src="../assets/logo/tokenly-icon-horiz.png"
           height="40px"
         )
-      a.title Tokenly
-
     ul.nav__menu
       template(v-for="item in menuItems")
         li: a(v-bind:href="item.url" target="_blank" v-bind:class="{ alert: item.alert }")
@@ -73,12 +67,13 @@ export default {
   font-size: 1em
   overflow: hidden
   transition: 1s
-  border-bottom: 1px solid rgba(255,255,255,0.1)
+  border: 1px solid rgba(205,205,205,0.4)
+  background: rgba(255,255,255,0.8)
   &.active
     background: #fff
-    left: 10px
-    right: 10px
-    top: 10px
+    left: 0px
+    right: 0px
+    top: 0px
     border-bottom: 1px solid rgba(5,5,5,0.2)
     box-shadow: 0px 1px 3px rgba(0,0,0,0.2)
     border-radius: 2px
@@ -105,10 +100,6 @@ export default {
   padding: 0px 20px
   float: left
   font-weight: bold
-  .title
-    padding: 15px
-    color: #fff
-    font-size: 20px
 
 .nav__logo
   display: inline-block
@@ -127,7 +118,7 @@ export default {
     float: left
     margin: 0
     a
-      color: rgba(255,255,255,0.8)
+      color: #666
       text-decoration: none
       cursor: pointer
       line-height: 40px
@@ -139,7 +130,7 @@ export default {
       letter-spacing: 0.5px
       display: inline-block
       &:hover
-        color: #fff
-        background: rgba(255,255,255,0.1)
+        color: #111
+        background: rgba(235,235,235,0.5)
 
 </style>

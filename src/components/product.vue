@@ -7,7 +7,7 @@ div.product__row(v-bind:id="this.elID")
   div.product__row__content
     p.header
       span {{ this.headline }}
-    p
+    p.detail
       span {{ this.summary }}
     p
       span Status: &nbsp;
@@ -15,16 +15,15 @@ div.product__row(v-bind:id="this.elID")
         v-if="this.linkURL.length > 0"
         v-bind:href="this.linkURL"
         target="__blank"
-      ) LIVE
+      ) Live
       span.live(
         v-else
       ) Live
     p(v-if="this.linkURL.length > 0")
-      a(
+      a.link(
         v-bind:href="this.linkURL"
         target="__blank"
       )
-        span URL: &nbsp;
         span {{ this.linkText }}
 </template>
 
@@ -91,24 +90,35 @@ export default {
     padding: 10px
     vertical-align: middle
     p
-      line-height: 2
+      line-height: 1.5
       font-size: 18px
       color: #555
-      a
+      margin-bottom: 25px
+      a.link
         text-decoration: none
-        color: #111
-        font-weight: 700
+        padding: 5px 0px
+        display: inline-block
+        font-weight: 500
+        border-radius: 30px
+        color: #333
+        span
+          line-height: 22px
+          vertical-align: middle
     p.header
       font-weight: 700
-      font-size: 24px
+      font-size: 20px
       letter-spacing: 0.5px
-      color: #222
+      color: #444
+      font-style: italic
+    p.detail
+      margin-bottom: 30px
     .live
       font-weight: 700
       background: #00D93A
       padding: 3px 20px
       border-radius: 20px
       color: #fff
+      text-decoration: none
     p:last-of-type
       margin: 0px
 
@@ -125,6 +135,7 @@ export default {
 
 @media(max-width: 767px)
   .product__row
+    padding: 5px
     &__image
       display: none
     &__content
@@ -132,6 +143,6 @@ export default {
       p.header
         font-size: 18px
       p
-        line-height: 1.5
+        font-size: 14px
 
 </style>

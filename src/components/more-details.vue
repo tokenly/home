@@ -6,10 +6,11 @@ section.more-details(
   .more-details__container
     .more-details__container__content
       header Want More Details?
-      p.sub-header Call to action
+      p.sub-header
+        span Our whitepaper elaborates on Tokenly's roadmap for future development,technical details of Token Suite and Token Layer, and more.
       div
         a.more-details__container__content__button
-          span CTA Text
+          span Read Our Whitepaper
 </template>
 
 <script>
