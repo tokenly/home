@@ -13,15 +13,33 @@
           span {{ item.name }}
       li.full: a(v-scroll-to="'#about'")
         span About
-      li.menu-button: a
+      li.menu-button: a(@click="this.toggleMenu")
         span
+  .nav__overlay-menu(
+    v-bind:class="{ active: this.activeMenu }"
+    @click="toggleMenu"
+  )
+    .nav__overlay-menu__content(@click.stop="")
+      ul
+        li: a(v-scroll-to="'#about'")
+          span About
+        li: a(v-scroll-to="'#products'")
+          span Our Products
+        li: a(v-scroll-to="'#token-layer'")
+          span Our Protocol
+        li(v-for="item in menuItems")
+          a
+            span {{ item.name }}
 </template>
 
 <script>
+
 export default {
+  components: {},
   data () {
     return {
       scrollPositioned: false,
+      activeMenu: false,
       menuItems: [
         {
           name: 'Register',
@@ -52,8 +70,11 @@ export default {
       } else if(this.scrollPositioned == true && window.pageYOffset < 70) {
         this.scrollPositioned = false;
       }
+    },
+    toggleMenu: function () {
+      this.activeMenu = !(this.activeMenu)
     }
-  }
+  },
 }
 
 </script>
@@ -127,7 +148,6 @@ export default {
       padding: 10px 20px
       line-height: 20px
       transition: 0.5s
-      border-radius: 30px
       text-transform: uppercase
       letter-spacing: 0.5px
       display: inline-block
@@ -156,6 +176,41 @@ export default {
           left: 0px
           width: 100%
           border-top: 2px solid #666
+
+.nav__overlay-menu
+  display: none
+  &.active
+    position: fixed
+    display: block
+    top: 0px
+    left: 0px
+    right: 0px
+    bottom: 0px
+    background: rgba(0,0,0,0.3)
+    .nav__overlay-menu__content
+      -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,.2)
+      box-shadow: 0 8px 17px 0 rgba(0,0,0,.2)
+      position: absolute
+      background: #00254C
+      right: 0px
+      width: 300px
+      top: 0px
+      bottom: 0px
+      border-left: 1px solid rgba(0,0,0,0.1)
+      ul
+        list-style: none
+        li
+          margin: 0px
+          a
+            padding: 20px 40px
+            display: block
+            line-height: 20px
+            color: #fff
+            &:hover
+              cursor: pointer
+              background: rgba(250,250,250,0.1)
+              color: #eee
+
 
 @media(max-width: 900px)
   body
