@@ -169,6 +169,7 @@ export default {
       .product__row
         padding: 5px
       &__increment
+        padding: 5px
         span
           font-size: 20px
           i

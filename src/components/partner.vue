@@ -72,5 +72,8 @@ export default {
   .product__row.partner
     p.sub-header
       font-size: 16px
+    .product__row__image
+      img
+        width: 50%
 
 </style>

@@ -194,6 +194,7 @@ export default {
       background: #00254C
       right: -1px
       width: 300px
+      max-width: 90%
       top: 0px
       bottom: 0px
       border-left: 1px solid rgba(0,0,0,0.1)

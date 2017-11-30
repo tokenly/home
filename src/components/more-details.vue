@@ -53,7 +53,7 @@ export default {
         font-size: 20px
         margin-bottom: 40px
       a
-        padding: 20px 50px
+        padding: 20px
         background: #D50000
         display: inline-block
         font-size: 18px
