@@ -284,7 +284,7 @@ export default {
             border-radius: 30px
             padding: 8px 10px
             margin: 0px 10px 10px 0px
-            letter-spacing: 0px
+            text-transform: none
   .token-layer-feature__content
     width: 100%
   .token-layer-feature__image

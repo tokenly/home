@@ -266,10 +266,10 @@ export default {
           &__left, &__right
             width: 100%
           &__left
-            padding: 0px
             img
               height: 60px
               width: auto
+              max-width: 100%
             p
               font-size: 16px
       &__container
@@ -324,6 +324,7 @@ export default {
       &__header
         &__content
           &__left
+            padding: 0px
             text-align: center
             img
               height: 40px

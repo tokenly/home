@@ -290,7 +290,7 @@ export default {
 @media(max-width: 900px)
   body
     .about__container
-      padding: 40px 10px
+      padding: 40px 20px
     .about__container__content
       header
         font-size: 24px
@@ -301,6 +301,7 @@ export default {
         line-height: 1.5
       &__text
         width: 100%
+        padding: 0px
       &__image
         display: none
       div.about__container__content__sub__section

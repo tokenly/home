@@ -174,7 +174,7 @@ export default {
       &__content
         &__entry
           width: 100%
-          margin-bottom: 60px
+          margin-bottom: 40px
           p.sub-header
             height: auto
             margin-bottom: 40px
