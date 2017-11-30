@@ -73,7 +73,7 @@ export default {
     left: 0px
     right: 0px
     background: #0D47A1
-    background-image: linear-gradient(to bottom, #1565C0 0%, #0D47A1 100%)
+    background-image: linear-gradient(to bottom, #29B6F6, #039BE5, #01579B)
     opacity: 0.75
     z-index: -2
   &__texture

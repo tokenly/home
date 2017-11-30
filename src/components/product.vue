@@ -86,7 +86,7 @@ export default {
     padding: 10px
     vertical-align: middle
   &__content
-    width: 60%
+    width: 70%
     padding: 10px
     vertical-align: middle
     p
@@ -125,7 +125,7 @@ export default {
       margin: 0px
 
   &__image
-    width: 40%
+    width: 30%
     img
       width: 100%
     div
@@ -135,7 +135,7 @@ export default {
       background-repeat: no-repeat
       background-position: 50% 50%
 
-@media(max-width: 767px)
+@media(max-width: 900px)
   .product__row
     padding: 5px
     &__image

@@ -83,7 +83,6 @@ export default {
 .partners
   position: relative
   background: #f9f9f9
-  border-bottom: 2px rgba(0,0,0,0.2) solid
   &__container
     padding: 80px 20px
     &__content

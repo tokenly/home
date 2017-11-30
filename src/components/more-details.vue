@@ -39,7 +39,7 @@ export default {
   background: #fff
   position: relative
   &__container
-    padding: 60px 20px
+    padding: 80px 20px
     &__content
       max-width: 800px
       margin: 0 auto

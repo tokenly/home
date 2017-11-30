@@ -3,10 +3,15 @@ div.home
   hero
   sub-hero
   about
+  div.brand-section-divider
   products
+  div.brand-section-divider
   token-layer
+  div.brand-section-divider
   team
+  div.brand-section-divider
   partners
+  div.brand-section-divider
   more-details
 
 </template>
@@ -44,5 +49,9 @@ export default {
 
 <style lang="sass?indentedSyntax=true" scoped>
 
+.brand-section-divider
+  padding: 5px
+  background: #039BE5;
+  background: linear-gradient(to right, #29B6F6, #039BE5, #01579B);
 
 </style>

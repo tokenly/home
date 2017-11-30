@@ -25,7 +25,7 @@ section.token-layer(id="token-layer")
         )
       div.token-layer__header__content__right
         img.token-layer__image(
-          src="../assets/images/token-layer-white.jpg"
+          src="https://tekk.tokenly.com/wp-content/uploads/2017/07/asset-3-900x900.png"
         )
   div.token-layer__bg
 </template>
@@ -111,9 +111,7 @@ export default {
 <style lang="sass?indentedSyntax=true" scoped>
 
 .token-layer
-  background: #039BE5 /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #29B6F6, #039BE5, #01579B) /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #29B6F6, #039BE5, #01579B)
+  background: #fff
   position: relative
   z-index: 99
   &__header
@@ -135,7 +133,7 @@ export default {
           margin-bottom: 20px
         p
           padding: 5px 15px
-          font-size: 18px
+          font-size: 20px
           opacity: 0.9
           margin-bottom: 20px
       &__right
@@ -155,9 +153,9 @@ export default {
       width: 100%
       text-align: center
       &__menu
-        padding: 0px
+        padding: 5px
         margin: 0px
-        margin-bottom: 40px
+        margin-bottom: 30px
         li
           display: inline-block
           margin: 0px
@@ -186,12 +184,13 @@ export default {
       img
         width: 100%
   &__bg
-    background: #222
+    background: #222;
+    background-image: linear-gradient(to bottom, #111, #191919, #222);
     position: absolute
     left: 0px
     right: 0px
-    top: 00px
-    bottom: 10px
+    top: 0px
+    bottom: 0px
     z-index: -8
   header
     margin: 0px
@@ -250,10 +249,12 @@ export default {
           padding: 0px
           &__left
             width: 100%
+            p
+              padding: 5px
+              font-size: 16px
             img
               height: 60px
           &__right
-            width: 30%
             display: none
       &__container
         &__content, &__image
@@ -277,7 +278,7 @@ export default {
         margin-bottom: 10px
         li
           a
-            font-size: 16px
+            font-size: 14px
             border-radius: 30px
             padding: 10px
             margin: 0px 10px 10px 0px

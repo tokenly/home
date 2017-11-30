@@ -3,26 +3,24 @@ section.products(
   ref="products"
   id="products"
 )
-  div.products__container
-    div.products__container__content
-      div.products__header
-        div.products__header__content
-          header
-            img(
-              src="../assets/images/token-suite.png"
+  div.products__header
+    div.products__header__content
+      div.products__header__content__left
+        img(
+          src="../assets/images/token-suite.png"
+        )
+        p
+          span Our consumer-ready turnkey solutions for the entire token life cycle: from creation and sale to use and redemption.
+        ul.products__header__content__menu
+          li(v-for="(productEntry, index) in this.productData")
+            a.product-option(
+              @click="activateProduct"
+              v-bind:data-target-el="productEntry.elID"
+              v-bind:data-product-index="index"
+              :class="{ 'active': index === activeProductIndex }"
             )
-          p.sub-header
-            span Our consumer-ready turnkey solutions for the entire token life cycle: from creation and sale to use and redemption.
-    div
-      ul.products__header__content__menu
-        li(v-for="(productEntry, index) in this.productData")
-          a.product-option(
-            @click="activateProduct"
-            v-bind:data-target-el="productEntry.elID"
-            v-bind:data-product-index="index"
-            :class="{ 'active': index === activeProductIndex }"
-          )
-            span {{productEntry.name}}
+              span {{productEntry.name}}
+      div.products__header__content__right
       div.products__content
         Product(
           :elID = "this.activeProduct.elID"
@@ -52,7 +50,7 @@ export default {
           summary: 'TokenMarkets get setup in minutes to buy or sell physical goods, services, or token assets. Accept tokens, digital currency, or credit cards as payment.',
           linkText: 'TokenMarkets.com',
           linkURL: 'https://tokenmarkets.com',
-          imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
+          imgURL: 'https://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
         },
         {
           name: 'TokenPockets',
@@ -136,13 +134,32 @@ export default {
 <style lang="sass?indentedSyntax=true" scoped>
 
 .products
-  background: #039BE5 /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #29B6F6, #039BE5, #01579B) /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #29B6F6, #039BE5, #01579B)
+  background: #fff
   color: #111
   position: relative
   z-index: 99
-  padding: 80px 30px
+  &__header
+    padding: 80px 20px
+    &__content
+      max-width: 1000px
+      margin: 0 auto
+      img
+        max-width: 100%
+      &__left, &__right
+        display: inline-block
+        vertical-align: top
+        padding: 0px 20px
+      &__left
+        width: 100%
+        img
+          width: 50%
+          margin-bottom: 20px
+        p
+          font-size: 20px
+          color: #666
+          padding: 5px 15px
+      &__right
+        width: 50%
   &__mask
     background: url(https://tokenpockets.com/images/bg2.c37d81d0.png) top right no-repeat
     position: absolute
@@ -154,7 +171,7 @@ export default {
   &__bg
     position: absolute
     top: 10px
-    bottom: 10px
+    bottom: 0px
     left: 0px
     right: 0px
     z-index: -1
@@ -198,7 +215,6 @@ export default {
         width: 100%
   &__header
     &__content
-      text-align: center
       header
         font-size: 40px
         font-weight: 700
@@ -215,8 +231,7 @@ export default {
       &__menu
         padding: 0px
         margin: 0px
-        margin-bottom: 40px
-        text-align: center
+        margin-bottom: 20px
         li
           display: inline-block
           margin: 0px
@@ -245,6 +260,15 @@ export default {
   body
     .products
       padding: 40px 10px
+      &__header
+        &__content
+          &__left, &__right
+            width: 100%
+          &__left
+            img
+              height: 60px
+            p
+              font-size: 16px
       &__container
         &__image, &__content
           width: 100%
