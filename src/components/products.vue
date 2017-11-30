@@ -265,8 +265,11 @@ export default {
           &__left, &__right
             width: 100%
           &__left
+            text-align: center
+            padding: 0px
             img
               height: 60px
+              width: auto
             p
               font-size: 16px
       &__container
@@ -296,11 +299,11 @@ export default {
           border-radius: 30px
           margin: 5px
           font-size: 14px
-          padding: 10px
+          padding: 8px 10px
           font-weight: 400
           letter-spacing: 0px
     .product__row
-      padding: 15px
+      padding: 5px
     .product__row__content
       p.header
         font-size: 18px

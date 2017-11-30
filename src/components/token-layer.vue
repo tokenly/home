@@ -280,7 +280,7 @@ export default {
           a
             font-size: 14px
             border-radius: 30px
-            padding: 10px
+            padding: 8px 10px
             margin: 0px 10px 10px 0px
             letter-spacing: 0px
   .token-layer-feature__content

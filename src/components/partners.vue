@@ -161,7 +161,7 @@ export default {
 @media(max-width: 900px)
   body
     .partners__container
-      padding: 40px 20px
+      padding: 40px 10px
     .partners__container__content
       header
         font-size: 24px
@@ -171,6 +171,8 @@ export default {
       width: 100%
       text-align: center
       margin-bottom: 20px
+      .product__row
+        padding: 5px
       &__increment
         span
           font-size: 20px

@@ -9,10 +9,12 @@
         )
     ul.nav__menu
       template(v-for="item in menuItems")
-        li: a(v-bind:href="item.url" target="_blank" v-bind:class="{ alert: item.alert }")
+        li.full: a(v-bind:href="item.url" target="_blank" v-bind:class="{ alert: item.alert }")
           span {{ item.name }}
-      li: a(v-scroll-to="'#about'")
+      li.full: a(v-scroll-to="'#about'")
         span About
+      li.menu-button: a
+        span
 </template>
 
 <script>
@@ -132,5 +134,34 @@ export default {
       &:hover
         color: #111
         background: rgba(235,235,235,0.5)
+  li.menu-button
+    display: none
+    a
+      padding: 27px
+      line-height: 16px
+      span
+        font-weight: 800
+        font-size: 20px
+        position: relative
+        display: inline-block
+        width: 24px
+        height: 16px
+        border-top: 2px solid #666
+        border-bottom: 2px solid #666
+        cursor: pointer
+        &:before
+          content: ""
+          position: absolute
+          top: 5px
+          left: 0px
+          width: 100%
+          border-top: 2px solid #666
 
+@media(max-width: 900px)
+  body
+    .nav__menu
+      li.full
+        display: none
+      li.menu-button
+        display: inline-block
 </style>
