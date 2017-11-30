@@ -4,7 +4,9 @@ section.sub_hero
     div.sub_hero__container__content
       div.sub_hero__container__content__entry
         div.sub_hero__container__content__entry__icon
-          span.led-green
+          img(
+            src="https://png.icons8.com/rocket/office/90/ffffff"
+          )
         p.header We're Live
         div.divider
         br
@@ -13,7 +15,9 @@ section.sub_hero
           span Learn More About Tokenly Solutions
       div.sub_hero__container__content__entry
         div.sub_hero__container__content__entry__icon
-          i.material-icons.build build
+          img(
+            src="https://png.icons8.com/support/ultraviolet/90/ffffff"
+          )
         p.header We're Building the Future
         div.divider
         br
@@ -22,7 +26,9 @@ section.sub_hero
           span Learn More About Token Layer&trade;
       div.sub_hero__container__content__entry
         div.sub_hero__container__content__entry__icon
-          i.material-icons.lightbulb lightbulb_outline
+          img(
+            src="https://png.icons8.com/light-on/color/90/ffffff"
+          )
         p.header We're Collaborating
         div.divider
         br
@@ -91,7 +97,7 @@ export default {
         display: inline-block
         vertical-align: top
         &__icon
-          height: 70px
+          height: 100px
         i
           width: 50px
           height: 50px
@@ -124,12 +130,11 @@ export default {
           margin-bottom: 20px
 
 .led-green
-  margin: 0 auto
   display: inline-block
-  width: 50px
-  height: 50px
+  width: 70px
+  height: 70px
   background-color: #4CAF50
-  margin: 0px auto 20px auto
+  margin: 10px auto
   border-radius: 50%
   box-shadow: rgba(0, 0, 0, 0.2) 0 -1px 7px 1px, inset rgba(5,5,5,0.1) 0 -1px 9px, rgba(5,5,5,0.1) 0 2px 12px
   -webkit-animation: blinkGreen 3s infinite;
