@@ -86,7 +86,7 @@ export default {
     padding: 10px
     vertical-align: middle
   &__content
-    width: 70%
+    width: 60%
     padding: 10px
     vertical-align: middle
     p
@@ -125,7 +125,7 @@ export default {
       margin: 0px
 
   &__image
-    width: 30%
+    width: 40%
     img
       width: 100%
     div

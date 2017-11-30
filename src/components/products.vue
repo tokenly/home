@@ -24,9 +24,6 @@ section.products(
           )
             span {{productEntry.name}}
       div.products__content
-        div.products__content__increment
-          span(@click="incrementProduct(-1)")
-            i.material-icons keyboard_arrow_left
         Product(
           :elID = "this.activeProduct.elID"
           :headline = "this.activeProduct.headline"
@@ -35,9 +32,6 @@ section.products(
           :linkText = "this.activeProduct.linkText"
           :imgURL = "this.activeProduct.imgURL"
         )
-        div.products__content__increment
-          span(@click="incrementProduct(1)")
-            i.material-icons keyboard_arrow_right
   .products__bg
   .products__mask
 </template>
@@ -95,6 +89,15 @@ export default {
           linkText: 'TokenPass.Tokenly.com',
           linkURL: 'https://tokenpass.tokenly.com/',
           imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/card-wireframe-900-900x900.png'
+        },
+        {
+          name: 'In Development',
+          elID: 'development',
+          headline: 'Solutions Under Development',
+          summary: "We're developing solutions to extend ... including ..., ..., and ...",
+          linkText: '',
+          linkURL: '',
+          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/card-wireframe-900-900x900.png'
         }
       ]
     }
@@ -133,12 +136,13 @@ export default {
 <style lang="sass?indentedSyntax=true" scoped>
 
 .products
-  background: #fff
+  background: #039BE5 /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #29B6F6, #039BE5, #01579B) /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #29B6F6, #039BE5, #01579B)
   color: #111
   position: relative
   z-index: 99
   padding: 80px 30px
-  border-bottom: 2px rgba(0,0,0,0.2) solid
   &__mask
     background: url(https://tokenpockets.com/images/bg2.c37d81d0.png) top right no-repeat
     position: absolute
@@ -149,12 +153,12 @@ export default {
     z-index: -2
   &__bg
     position: absolute
-    top: 0px
-    bottom: 0px
+    top: 10px
+    bottom: 10px
     left: 0px
     right: 0px
     z-index: -1
-    background: rgba(250,250,255,0.9)
+    background: rgba(255,255,255,1)
   &__content
     display: table
     &__increment
@@ -254,7 +258,7 @@ export default {
         font-size: 24px
         img
           width: auto
-          height: 40px
+          height: 60px
       p.sub-header
         font-size: 16px
     .products__content

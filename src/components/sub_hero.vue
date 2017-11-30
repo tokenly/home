@@ -98,11 +98,7 @@ export default {
         vertical-align: top
         &__icon
           height: 100px
-        i
-          width: 50px
-          height: 50px
-          font-size: 50px
-          margin-bottom: 20px
+          margin-bottom: 10px
         p.header
           font-size: 24px
           font-weight: 700

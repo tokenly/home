@@ -51,8 +51,6 @@ export default {
 
 .product__row
   display: flex
-  max-width: 500px
-  margin: 0 auto
   &__content.token-layer-feature
     padding: 10px
     vertical-align: middle
@@ -60,26 +58,24 @@ export default {
     p
       line-height: 1.5
       font-size: 18px
-      color: #555
+      color: #f9f9f9
     p.header
-      color: #444
+      color: #fff
       font-style: italic
       font-weight: 700
       font-size: 20px
       letter-spacing: 0.5px
-    p.detail
-      color: #888
     span.live
       font-weight: 700
       color: #E6FF0D
 
-@media(max-width: 767px)
+@media(max-width: 900px)
   .product__row
     padding: 5px
     .token-layer-feature
       p.header
         font-size: 18px
       p
-        font-size: 14px
+        font-size: 16px
 
 </style>

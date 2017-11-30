@@ -1,39 +1,32 @@
 <template lang="pug">
 section.token-layer(id="token-layer")
-  div.token-layer__container
-    div.token-layer__container__content
-      header
+  div.token-layer__header
+    div.token-layer__header__content
+      div.token-layer__header__content__left
         img(
           src="../assets/images/token-layer.png"
         )
-      p.sub-header
-        span Tokenly's scalable sidechain protocol built to support interoperability and low cost transactions.
-    div.centered
-      ul.token-layer__container__content__menu
-        li(v-for="(featureEntry, index) in this.featureData")
-          a.product-option(
-            @click="activateFeature"
-            v-bind:data-target-el="featureEntry.elID"
-            v-bind:data-feature-index="index"
-            :class="{ 'active': index === activeFeatureIndex }"
-          )
-            span {{ featureEntry.name }}
-      div.token-layer-feature
-        div.token-layer-feature__increment
-          span(@click="incrementFeature(-1)")
-            i.material-icons keyboard_arrow_left
-        div.token-layer-feature__content
-          TokenLayerFeature(
-            :elID = "this.activeFeature.elID"
-            :headline = "this.activeFeature.headline"
-            :summary = "this.activeFeature.summary"
-            :imgURL = "this.activeFeature.imgURL"
-          )
-        div.token-layer-feature__increment
-          span(@click="incrementFeature(1)")
-            i.material-icons keyboard_arrow_right
-
-  div.token-layer__mask
+        p
+          span Tokenly's scalable sidechain protocol built to support interoperability and low cost transactions.
+        ul.token-layer__container__content__menu
+          li(v-for="(featureEntry, index) in this.featureData")
+            a.product-option(
+              @click="activateFeature"
+              v-bind:data-target-el="featureEntry.elID"
+              v-bind:data-feature-index="index"
+              :class="{ 'active': index === activeFeatureIndex }"
+            )
+              span {{ featureEntry.name }}
+        TokenLayerFeature(
+          :elID = "this.activeFeature.elID"
+          :headline = "this.activeFeature.headline"
+          :summary = "this.activeFeature.summary"
+          :imgURL = "this.activeFeature.imgURL"
+        )
+      div.token-layer__header__content__right
+        img.token-layer__image(
+          src="../assets/images/token-layer-white.jpg"
+        )
   div.token-layer__bg
 </template>
 
@@ -118,12 +111,35 @@ export default {
 <style lang="sass?indentedSyntax=true" scoped>
 
 .token-layer
-  background: #fff
-  background-size: cover
-  background-position: center
+  background: #039BE5 /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #29B6F6, #039BE5, #01579B) /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #29B6F6, #039BE5, #01579B)
   position: relative
-  padding: 80px 30px
-  border-bottom: 2px rgba(0,0,0,0.2) solid
+  z-index: 99
+  &__header
+    &__content
+      max-width: 1000px
+      padding: 80px 20px
+      margin: 0 auto
+      img
+        max-width: 100%
+      p
+        color: #fff
+      &__left, &__right
+        width: 50%
+        display: inline-block
+        vertical-align: top
+        padding: 0px 20px
+      &__left
+        img
+          margin-bottom: 20px
+        p
+          padding: 5px 15px
+          font-size: 18px
+          opacity: 0.9
+          margin-bottom: 20px
+      &__right
+        text-align: center
   &__container
     position: relative
     z-index: 8
@@ -142,7 +158,6 @@ export default {
         padding: 0px
         margin: 0px
         margin-bottom: 40px
-        text-align: center
         li
           display: inline-block
           margin: 0px
@@ -154,7 +169,7 @@ export default {
             font-size: 16px
             display: inline-block
             cursor: pointer
-            background: #eee
+            background: #f9f9f9
             border-radius: 30px
             margin: 0px 10px 10px 0px
             text-transform: uppercase
@@ -170,19 +185,14 @@ export default {
       width: 40%
       img
         width: 100%
-  &__mask
+  &__bg
+    background: #222
     position: absolute
     left: 0px
     right: 0px
-    top: 0px
-    bottom: 0px
-  &__bg
-    border-radius: 5px
-    position: absolute
-    left: 20px
-    right: 20px
     top: 00px
-    bottom: 20px
+    bottom: 10px
+    z-index: -8
   header
     margin: 0px
     font-size: 40px
@@ -210,11 +220,6 @@ export default {
 .token-layer-feature__content
   width: 100%
 
-.token-layer__image
-  width: 300px
-  max-width: 50%
-  margin-bottom: 40px
-
 .token-layer-feature__increment
   vertical-align: middle
   span
@@ -239,7 +244,17 @@ export default {
 @media(max-width: 900px)
   body
     .token-layer
-      padding: 40px 10px
+      &__header
+        padding: 40px 10px
+        &__content
+          padding: 0px
+          &__left
+            width: 100%
+            img
+              height: 60px
+          &__right
+            width: 30%
+            display: none
       &__container
         &__content, &__image
           width: 100%
@@ -262,7 +277,7 @@ export default {
         margin-bottom: 10px
         li
           a
-            font-size: 14px
+            font-size: 16px
             border-radius: 30px
             padding: 10px
             margin: 0px 10px 10px 0px
@@ -279,5 +294,20 @@ export default {
         line-height: 60px
         width: 30px
         height: 60px
+
+@media(max-width: 600px)
+  body
+    .token-layer
+      &__header
+        text-align: center
+        &__content
+          padding: 0px
+          &__left
+            width: 100%
+            padding: 0px
+            img
+              height: 60px
+          &__right
+            display: none
 
 </style>
