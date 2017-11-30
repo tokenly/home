@@ -7,6 +7,10 @@ section.partners(
     div.partners__container__content
       header Community
       p.sub-header Our turnkey token solutions have already enabled us to partner with some of the most innovative projects in the blockchain space.
+      div.centered
+        img.token-layer__image(
+          src="../assets/images/token-partnerships.png"
+        )
       div.partners__container__content__partner
         div.partners__container__content__partner__increment
           span(@click="incrementPartner(-1)")
@@ -82,12 +86,16 @@ export default {
 
 .partners
   position: relative
-  background: #f9f9f9
+  background: #fff
   &__container
     padding: 80px 20px
     &__content
       max-width: 1000px
       margin: 0 auto
+      img
+        max-width: 70%
+        display: inline-block
+        margin: 0 auto
       header
         margin: 0px
         text-align: left
