@@ -111,7 +111,7 @@ export default {
           vertical-align: top
       header:before
         content: ''
-        background-color: #1565C0
+        background-color: #29B6F6
         opacity: 0.7
         height: 2px
         width: 70px
@@ -123,16 +123,16 @@ export default {
         width: 50%
         display: inline-block
         text-align: center
-        margin-bottom: 30px
+        margin-bottom: 40px
         vertical-align: top
-        padding: 20px
+        padding: 0px 20px
         img
           width: 100%
       &__text
         width: 50%
-        margin-bottom: 30px
+        margin-bottom: 40px
         display: inline-block
-        padding: 20px
+        padding: 0px 20px
         vertical-align: top
         a
           text-align: center
@@ -290,7 +290,7 @@ export default {
 @media(max-width: 900px)
   body
     .about__container
-      padding: 40px 20px
+      padding: 40px 10px
     .about__container__content
       header
         font-size: 24px

@@ -13,7 +13,6 @@ div.home
   partners
   div.brand-section-divider
   more-details
-
 </template>
 
 <script>

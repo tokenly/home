@@ -170,6 +170,7 @@ export default {
   body
   .sub_hero
     &__container
+      padding: 40px 10px
       &__content
         &__entry
           width: 100%

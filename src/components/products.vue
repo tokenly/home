@@ -152,7 +152,8 @@ export default {
       &__left
         width: 100%
         img
-          width: 50%
+          max-width: 50%
+          height: 85px
           margin-bottom: 20px
         p
           font-size: 20px
@@ -265,7 +266,6 @@ export default {
           &__left, &__right
             width: 100%
           &__left
-            text-align: center
             padding: 0px
             img
               height: 60px
@@ -318,4 +318,16 @@ export default {
         width: 30px
         height: 60px
 
+@media(max-width: 600px)
+  body
+    .products
+      &__header
+        &__content
+          &__left
+            text-align: center
+            img
+              height: 40px
+              width: auto
+      &__content
+        text-align: center
 </style>

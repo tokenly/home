@@ -124,13 +124,14 @@ export default {
       p
         color: #fff
       &__left, &__right
-        width: 50%
         display: inline-block
         vertical-align: top
         padding: 0px 20px
       &__left
+        width: 60%
         img
           margin-bottom: 20px
+          height: 85px
         p
           padding: 5px 15px
           font-size: 20px
@@ -138,6 +139,7 @@ export default {
           margin-bottom: 20px
       &__right
         text-align: center
+        width: 40%
   &__container
     position: relative
     z-index: 8
@@ -307,7 +309,7 @@ export default {
             width: 100%
             padding: 0px
             img
-              height: 60px
+              height: 40px
           &__right
             display: none
 

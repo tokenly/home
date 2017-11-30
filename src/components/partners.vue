@@ -107,7 +107,7 @@ export default {
         position: relative
       header:before
         content: ''
-        background-color: #1565C0
+        background-color: #29B6F6
         opacity: 0.7
         height: 2px
         width: 70px

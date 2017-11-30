@@ -239,7 +239,7 @@ export default {
         position: relative
       header:before
         content: ''
-        background-color: #1565C0
+        background-color: #29B6F6
         opacity: 0.7
         height: 2px
         width: 70px
@@ -317,13 +317,15 @@ export default {
     height: 80px
     display: inline-block
 
-@media(max-width: 767px)
+@media(max-width: 900px)
   body
     .product__row
       &__image
         display: none
       &__content
         width: 100%
+    .team-member
+      padding: 0px
     .team-member__content
       p.summary
         font-size: 16px
