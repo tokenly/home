@@ -146,6 +146,6 @@ export default {
         font-size: 18px
         margin-bottom: 10px
       p
-        font-size: 14px
+        font-size: 16px
 
 </style>
