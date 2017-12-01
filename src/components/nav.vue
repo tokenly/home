@@ -145,8 +145,7 @@ export default {
       text-decoration: none
       cursor: pointer
       line-height: 40px
-      padding: 10px 20px
-      line-height: 20px
+      padding: 15px 20px
       transition: 0.5s
       text-transform: uppercase
       letter-spacing: 0.5px

@@ -64,9 +64,9 @@ export default {
       font-weight: 700
       font-size: 20px
       letter-spacing: 0.5px
-      margin-bottom: 30px
+      margin-bottom: 40px
       span
-        padding-bottom: 10px
+        padding-bottom: 15px
         border-bottom: 2px solid #29B6F6
     span.live
       font-weight: 700

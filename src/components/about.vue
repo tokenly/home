@@ -95,7 +95,7 @@ export default {
       max-width: 1000px
       margin: 0 auto
       header
-        font-size: 30px
+        font-size: 36px
         line-height: 60px
         font-weight: 400
         margin: 0px

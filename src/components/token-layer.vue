@@ -43,7 +43,7 @@ export default {
         {
           name: 'Low Cost',
           elID: 'low-cost',
-          headline: 'Cheap and predicatble transactions fees.',
+          headline: 'Cheap and predictable transactions fees.',
           summary: 'Token Layer is engineered to maintain low, predicatble blockchain transaction fees.  Low, predictable fees are essential to reducing customer purchase friction, transacting with low value tokens, and facilitate micropayments.',
           imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
         },

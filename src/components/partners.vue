@@ -100,7 +100,7 @@ export default {
         margin: 0px
         text-align: left
         margin-bottom: 50px
-        font-size: 30px
+        font-size: 36px
         line-height: 60px
         font-weight: 500
         color: #00254C
