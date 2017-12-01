@@ -80,14 +80,14 @@ export default {
 <style lang="sass?indentedSyntax=true" scoped>
 
 .product__row
-  display: flex
+  display: table
   border-radius: 5px
   &__image, &__content
-    padding: 10px
+    padding: 0px 50px
     vertical-align: middle
+    display: table-cell
   &__content
-    width: 70%
-    padding: 10px
+    width: 50%
     vertical-align: middle
     p
       line-height: 1.5
@@ -106,13 +106,12 @@ export default {
           vertical-align: middle
     p.header
       font-weight: 700
-      font-size: 20px
-      letter-spacing: 0.5px
-      color: #444
-      font-style: italic
+      font-size: 24px
+      line-height: 1.25
+      color: #00254C
     p.detail
       margin-bottom: 30px
-      color: #888
+      color: #666
     .live
       font-weight: 500
       background: #00D93A
@@ -125,7 +124,7 @@ export default {
       margin: 0px
 
   &__image
-    width: 30%
+    width: 50%
     img
       width: 100%
     div
@@ -135,15 +134,23 @@ export default {
       background-repeat: no-repeat
       background-position: 50% 50%
 
-@media(max-width: 900px)
+@media(max-width: 750px)
   .product__row
-    padding: 5px
+    padding: 0px
+    &__image, &__content
+      width: 100%
+      padding: 0px
+      display: block
     &__image
-      display: none
+      margin-bottom: 20px
+      text-align: center
+      img
+        width: 50%
     &__content
       width: 100%
+      margin-bottom: 30px
       p.header
-        font-size: 18px
+        font-size: 20px
         margin-bottom: 10px
       p
         font-size: 16px

@@ -11,25 +11,17 @@ section.products(
         )
         p
           span Our consumer-ready turnkey solutions for the entire token life cycle: from creation and sale to use and redemption.
-        ul.products__header__content__menu
-          li(v-for="(productEntry, index) in this.productData")
-            a.product-option(
-              @click="activateProduct"
-              v-bind:data-target-el="productEntry.elID"
-              v-bind:data-product-index="index"
-              :class="{ 'active': index === activeProductIndex }"
-            )
-              span {{productEntry.name}}
       div.products__header__content__right
-      div.products__content
-        Product(
-          :elID = "this.activeProduct.elID"
-          :headline = "this.activeProduct.headline"
-          :summary = "this.activeProduct.summary"
-          :linkURL = "this.activeProduct.linkURL"
-          :linkText = "this.activeProduct.linkText"
-          :imgURL = "this.activeProduct.imgURL"
-        )
+      div.products__entries
+        div.product-content(v-for="(productEntry, index) in this.productData")
+          Product(
+            :elID = "productEntry.elID"
+            :headline = "productEntry.headline"
+            :summary = "productEntry.summary"
+            :linkURL = "productEntry.linkURL"
+            :linkText = "productEntry.linkText"
+            :imgURL = "productEntry.imgURL"
+          )
   .products__bg
   .products__mask
 </template>
@@ -134,7 +126,7 @@ export default {
 <style lang="sass?indentedSyntax=true" scoped>
 
 .products
-  background: #fff
+  background: #F9F9FC
   color: #111
   position: relative
   z-index: 99
@@ -148,7 +140,6 @@ export default {
       &__left, &__right
         display: inline-block
         vertical-align: top
-        padding: 0px 20px
       &__left
         width: 100%
         img
@@ -177,6 +168,13 @@ export default {
     right: 0px
     z-index: -1
     background: rgba(255,255,255,1)
+  &__entries:before
+    content: ''
+    position: absolute
+    width: 1px
+    height: 100%
+    left: 50%
+    background-color: rgba(78, 56, 162, 0.1)
   &__content
     display: table
     &__increment
@@ -260,7 +258,9 @@ export default {
 @media(max-width: 900px)
   body
     .products
-      padding: 40px 10px
+      &__entries:before
+        display: none
+      padding: 40px 20px
       &__header
         &__content
           &__left, &__right
@@ -272,6 +272,7 @@ export default {
               max-width: 100%
             p
               font-size: 16px
+              padding: 0px
       &__container
         &__image, &__content
           width: 100%
