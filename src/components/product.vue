@@ -9,7 +9,7 @@ div.product__row(v-bind:id="this.elID")
       span {{ this.headline }}
     p.detail
       span {{ this.summary }}
-    p
+    p(v-if="this.status == 'Live'")
       span Status: &nbsp;
       a.live(
         v-if="this.linkURL.length > 0"
@@ -19,6 +19,9 @@ div.product__row(v-bind:id="this.elID")
       span.live(
         v-else
       ) Live
+    p(v-if="this.status == 'In Development'")
+      span Status: &nbsp;
+      span.development In Development
     p(v-if="this.linkURL.length > 0")
       a.link(
         v-bind:href="this.linkURL"
@@ -50,6 +53,9 @@ export default {
       'type': String
     },
     imgURL: {
+      'type': String
+    },
+    status: {
       'type': String
     }
   },
@@ -115,7 +121,17 @@ export default {
     .live
       font-weight: 500
       background: #00D93A
-      padding: 3px 40px
+      font-size: 14px
+      padding: 3px 20px
+      border: 1px solid rgba(0,0,0,0.1)
+      border-radius: 20px
+      color: #fff
+      text-decoration: none
+    .development
+      font-weight: 500
+      background: #00254C
+      font-size: 14px
+      padding: 3px 20px
       border: 1px solid rgba(0,0,0,0.1)
       border-radius: 20px
       color: #fff

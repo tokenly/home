@@ -10,7 +10,7 @@ section.products(
           src="../assets/images/token-suite.png"
         )
         p
-          span Our consumer-ready turnkey solutions for the entire token life cycle: from creation and sale to use and redemption.
+          span Our consumer-ready turnkey solutions for the entire blockchain token life cycle. Create, buy, sell, securely store blockchain tokens, and more.
       div.products__header__content__right
       div.products__entries
         div.product-content(v-for="(productEntry, index) in this.productData")
@@ -21,6 +21,7 @@ section.products(
             :linkURL = "productEntry.linkURL"
             :linkText = "productEntry.linkText"
             :imgURL = "productEntry.imgURL"
+            :status = "productEntry.status"
           )
   .products__bg
   .products__mask
@@ -39,10 +40,11 @@ export default {
           name: 'TokenMarkets',
           elID: 'tokenmarkets',
           headline: 'Shopify with Blockchain Tokens',
-          summary: 'TokenMarkets get setup in minutes to buy or sell physical goods, services, or token assets. Accept tokens, digital currency, or credit cards as payment.',
+          summary: 'Get setup in minutes to buy or sell physical goods, services, or token assets with Token Markets. Accept tokens, digital currency, or credit cards as payment.',
           linkText: 'TokenMarkets.com',
           linkURL: 'https://tokenmarkets.com',
-          imgURL: 'https://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
+          imgURL: 'https://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png',
+          status: 'Live'
         },
         {
           name: 'TokenPockets',
@@ -51,7 +53,8 @@ export default {
           summary: 'TokenPockets is a comprehensive token wallet. Signup and create shared, multi-signature wallets or issue your own blockchain token.',
           linkText: 'TokenPockets.com',
           linkURL: 'https://tokenpockets.com',
-          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/vault-wireframe_900-225x225.png'
+          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/vault-wireframe_900-225x225.png',
+          status: 'Live'
         },
         {
           name: 'Token Launch',
@@ -60,7 +63,8 @@ export default {
           summary: 'Token Launch is a turnkey solution for managing your own token crowdsale to fund your next project. Set volume limits and more.',
           linkText: '',
           linkURL: '',
-          imgURL: 'https://tekk.wpengine.com/wp-content/uploads/2017/06/launch-wireframe-recovered-900.png'
+          imgURL: 'https://tekk.wpengine.com/wp-content/uploads/2017/06/launch-wireframe-recovered-900.png',
+          status: 'Live'
         },
         {
           name: 'TokenFM',
@@ -69,7 +73,8 @@ export default {
           summary: 'TokenFM is a token launch pad and community streaming platform for creators, curators, and fans. Media player, artist engagement tools, media and merchandize market, and more.',
           linkText: 'Token.FM',
           linkURL: 'https://tokenfm.com',
-          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/microphone-wireframe-recovered-900-900x900.png'
+          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/microphone-wireframe-recovered-900-900x900.png',
+          status: 'Live'
         },
         {
           name: 'TokenPass',
@@ -78,16 +83,18 @@ export default {
           summary: 'Tokenpass is a digital access pass hub for universal, platform agnostic user management. API connectivity, token lending and rentals, token controlled chats, and more.',
           linkText: 'TokenPass.Tokenly.com',
           linkURL: 'https://tokenpass.tokenly.com/',
-          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/card-wireframe-900-900x900.png'
+          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/card-wireframe-900-900x900.png',
+          status: 'Live'
         },
         {
           name: 'In Development',
           elID: 'development',
           headline: 'Solutions Under Development',
-          summary: "We're developing solutions to extend ... including ..., ..., and ...",
+          summary: "We're developing the next generation of blockchain token solutions to extend the functionality of our existing Token Suite. Solutions under development include enchanced token analytics and verification, token-integrated chat rooms, and more.",
           linkText: '',
           linkURL: '',
-          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/card-wireframe-900-900x900.png'
+          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/card-wireframe-900-900x900.png',
+          status: 'In Development'
         }
       ]
     }
