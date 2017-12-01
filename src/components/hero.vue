@@ -110,7 +110,7 @@ $hero-btn-color: #4170a0
   position: relative
   font-size: 1em
   overflow: hidden
-  min-height: 400px
+  min-height: 500px
   height: 100vh
   z-index: 0
 

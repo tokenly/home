@@ -76,8 +76,9 @@ export default {
   .product__row
     padding: 5px
     .token-layer-feature
+      padding: 0px
       p.header
-        font-size: 18px
+        font-size: 16px
       p
         font-size: 16px
 
