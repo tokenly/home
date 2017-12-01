@@ -7,7 +7,7 @@ section.token-layer(id="token-layer")
           src="../assets/images/token-layer.png"
         )
         p
-          span Tokenly's scalable sidechain protocol built to support interoperability and low cost transactions.
+          span Tokenly's scalable sidechain protocol built to support interoperability and low cost transactions. Optimized for frequent and low value blockchain token transactions.
         ul.token-layer__container__content__menu
           li(v-for="(featureEntry, index) in this.featureData")
             a.product-option(
@@ -43,35 +43,35 @@ export default {
         {
           name: 'Low Cost',
           elID: 'low-cost',
-          headline: 'Stable, predicatable, low cost transactions.',
-          summary: 'TokenLayer ',
+          headline: 'Cheap and predicatble transactions fees.',
+          summary: 'Token Layer is engineered to maintain low, predicatble blockchain transaction fees.  Low, predictable fees are essential to reducing customer purchase friction, transacting with low value tokens, and facilitate micropayments.',
           imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
         },
         {
           name: 'Secure',
           elID: 'secure',
           headline: 'World-Class Security',
-          summary: '[Placeholder]',
+          summary: 'Tokenly is secured by a consortium of validating nodes.  This provides strong tamper evident and immutability guarantees from multiple independent entities.  The network will reject that do not follow the consensus rules.  The network security will grow as additional validating nodes are added.',
           imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
         },
         {
           name: 'Scalable',
           elID: 'scalable',
-          headline: 'Built for Worldwide ..',
-          summary: 'Token Layer is engineered to handle 1,000s transactions per second.',
+          headline: 'Built for Global Adoption',
+          summary: 'Token Layer handles throughputs of 1,000 transactions per second.  Future optimizations will significantly increase this throughput.',
           imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/vault-wireframe_900-225x225.png'
         },
         {
           name: 'Flexible',
           elID: 'flexible',
           headline: "Token Layer plays nice with most blockchains",
-          summary: 'Token Layer is built to be blockchain and platform agnostic so .... That means .... and blockchains still to come.',
+          summary: 'Token Layer is blockchain and platform agnostic. Token Layer is compatible with the most popular blockchain ecosystems today and will remain compatible with the most popular blockchains yet to be created.',
           imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
         },
         {
           name: 'Innovative',
           elID: 'innovative',
-          headline: 'Open and ready for anything',
+          headline: 'On the Bleeding Edge of Flexible Blockchain Ecosystems',
           summary: 'Token Layer is the the first middleware for Bitcoin Counterparty & ERC20 Tokens.',
           imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/microphone-wireframe-recovered-900-900x900.png'
         }
