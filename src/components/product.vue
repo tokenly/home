@@ -1,6 +1,6 @@
 <template lang="pug">
 div.product__row(v-bind:id="this.elID")
-  div.product__row__image
+  div.product__row__image(v-bind:class="{ active: imageLeft }")
     img(
       v-bind:src="imageBackgroundSrc"
     )
@@ -28,6 +28,10 @@ div.product__row(v-bind:id="this.elID")
         target="__blank"
       )
         span {{ this.linkText }}
+  div.product__row__image.hide-mobile(v-bind:class="{ active: !imageLeft }")
+    img(
+      v-bind:src="imageBackgroundSrc"
+    )
 </template>
 
 <script>
@@ -57,6 +61,9 @@ export default {
     },
     status: {
       'type': String
+    },
+    indexNum: {
+      'type': Number
     }
   },
   created () {
@@ -78,6 +85,15 @@ export default {
     imageBackgroundSrc () {
 
       return this.imgURL
+    },
+
+    imageLeft () {
+      let val = (this.indexNum % 2)
+      if (val == 0) {
+        return true
+      } else {
+        return false
+      }
     }
   }
 }
@@ -92,10 +108,10 @@ export default {
   &__image, &__content
     padding: 0px 50px
     vertical-align: middle
-    display: table-cell
   &__content
     width: 50%
     vertical-align: middle
+    display: table-cell
     p
       line-height: 1.5
       font-size: 18px
@@ -141,7 +157,10 @@ export default {
       margin: 0px
 
   &__image
-    width: 50%
+    display: none
+    &.active
+      display: table-cell
+      width: 50%
     img
       width: 100%
     div
@@ -163,6 +182,11 @@ export default {
       text-align: center
       img
         width: 50%
+      &.hide-mobile
+        display: none !important
+      &.active
+        display: block
+        width: 100%
     &__content
       width: 100%
       margin-bottom: 30px

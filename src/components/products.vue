@@ -22,6 +22,7 @@ section.products(
             :linkText = "productEntry.linkText"
             :imgURL = "productEntry.imgURL"
             :status = "productEntry.status"
+            :indexNum = "index"
           )
   .products__bg
   .products__mask
