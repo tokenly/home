@@ -184,7 +184,7 @@ $hero-btn-color: #4170a0
   font-size: 36px
   font-weight: 700
   transition: 0.5s
-  color: #444
+  color: #00254C
   .emphasized
     color: #E6FF0D
     -webkit-animation: fadein 2s

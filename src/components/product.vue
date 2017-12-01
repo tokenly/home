@@ -88,6 +88,7 @@ export default {
 .product__row
   display: table
   border-radius: 5px
+  margin-bottom: 20px
   &__image, &__content
     padding: 0px 50px
     vertical-align: middle

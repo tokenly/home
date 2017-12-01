@@ -48,6 +48,7 @@ export default {
         font-size: 40px
         font-weight: 700
         margin-bottom: 40px
+        color: #00254C
       p
         color: #666
         font-size: 20px

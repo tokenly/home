@@ -101,7 +101,7 @@ export default {
         margin: 0px
         margin-bottom: 50px
         position: relative
-        color: #444
+        color: #00254C
         span
           vertical-align: top
         span.name

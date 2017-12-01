@@ -103,7 +103,7 @@ export default {
         font-size: 30px
         line-height: 60px
         font-weight: 500
-        color: #444
+        color: #00254C
         position: relative
       header:before
         content: ''
