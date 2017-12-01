@@ -3,6 +3,7 @@ div.product__row(v-bind:id="this.elID")
   div.product__row__content.token-layer-feature
     p.header
       span {{ this.headline }}
+    div.divider
     p.detail
       span {{ this.summary }}
 
@@ -64,13 +65,16 @@ export default {
       font-weight: 700
       font-size: 20px
       letter-spacing: 0.5px
-      margin-bottom: 40px
-      span
-        padding-bottom: 15px
-        border-bottom: 2px solid #29B6F6
+      margin-bottom: 15px
     span.live
       font-weight: 700
       color: #E6FF0D
+    div.divider
+      padding: 1px
+      width: 25%
+      background: #29B6F6
+      display: inline-block
+      margin-bottom: 25px
 
 @media(max-width: 900px)
   .product__row
