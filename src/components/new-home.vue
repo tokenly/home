@@ -10,6 +10,8 @@ div.home
   div.brand-section-divider
   team
   div.brand-section-divider
+  advisors
+  div.brand-section-divider
   partners
   div.brand-section-divider
   more-details
@@ -23,11 +25,12 @@ import About from './about.vue'
 import Products from './products.vue'
 import TokenLayer from './token-layer.vue'
 import Team from './team.vue'
+import Advisors from './advisors.vue'
 import Partners from './partners.vue'
 import MoreDetails from './more-details.vue'
 
 export default {
-  components: {Hero, SubHero, About, Products, TokenLayer, Team, Partners, MoreDetails},
+  components: {Hero, SubHero, About, Products, TokenLayer, Team, Advisors, Partners, MoreDetails},
   data () {
     return {
     }

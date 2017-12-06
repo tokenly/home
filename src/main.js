@@ -11,6 +11,15 @@ Vue.use(VeeValidate)
 
 var VueScrollTo = require('vue-scrollto');
 
+window.onload = function() {
+  Particles.init({
+    selector: '.background',
+    maxParticles: 20,
+    color: '#29B6F6',
+    connectParticles: true
+  });
+};
+
 // You can also pass in the default options
 Vue.use(VueScrollTo, {
      container: "body",

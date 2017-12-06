@@ -15,6 +15,7 @@ section.hero
   .hero__bg(
     ref="bg"
   )
+  canvas.background
 </template>
 
 <script>
