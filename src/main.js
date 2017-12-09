@@ -9,16 +9,8 @@ import _ from 'lodash'
 Vue.use(VueRouter)
 Vue.use(VeeValidate)
 
-var VueScrollTo = require('vue-scrollto');
 
-window.onload = function() {
-  Particles.init({
-    selector: '.background',
-    maxParticles: 20,
-    color: '#29B6F6',
-    connectParticles: true
-  });
-};
+var VueScrollTo = require('vue-scrollto');
 
 // You can also pass in the default options
 Vue.use(VueScrollTo, {

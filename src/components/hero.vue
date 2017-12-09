@@ -19,6 +19,7 @@ section.hero
 </template>
 
 <script>
+
 export default {
   data () {
     return {
@@ -98,6 +99,15 @@ export default {
     }
   }
 }
+
+window.onload = function() {
+  Particles.init({
+    selector: '.background',
+    maxParticles: 20,
+    color: '#29B6F6',
+    connectParticles: true
+  });
+};
 
 </script>
 
