@@ -10,9 +10,13 @@ section.team
         div.team-member-content__entry
           div.team-member
             div.team-member__image
-              img(
+              img.portrait(
                 src = '../assets/team/adam.jpg'
               )
+              a(href="http://google.com")
+                img.linkedin(
+                  src = '../assets/images/linkedin.png'
+                )
             div.team-member__content
               p.name
                 span Adam Levine
@@ -24,9 +28,13 @@ section.team
         div.team-member-content__entry
           div.team-member
             div.team-member__image
-              img(
+              img.portrait(
                 src = '../assets/team/devon.jpg'
               )
+              a(href="http://google.com")
+                img.linkedin(
+                  src = '../assets/images/linkedin.png'
+                )
             div.team-member__content
               p.name
                 span Devon Weller
@@ -38,9 +46,13 @@ section.team
         div.team-member-content__entry
           div.team-member
             div.team-member__image
-              img(
+              img.portrait(
                 src = '../assets/team/martin.jpg'
               )
+              a(href="http://google.com")
+                img.linkedin(
+                  src = '../assets/images/linkedin.png'
+                )
             div.team-member__content
               p.name
                 span Martin Rerak
@@ -52,9 +64,13 @@ section.team
         div.team-member-content__entry
           div.team-member
             div.team-member__image
-              img(
+              img.portrait(
                 src = '../assets/team/steven.jpg'
               )
+              a(href="http://google.com")
+                img.linkedin(
+                  src = '../assets/images/linkedin.png'
+                )
             div.team-member__content
               p.name
                 span Steven Levine
@@ -66,9 +82,13 @@ section.team
         div.team-member-content__entry
           div.team-member
             div.team-member__image
-              img(
+              img.portrait(
                 src = '../assets/team/nick.jpg'
               )
+              a(href="http://google.com")
+                img.linkedin(
+                  src = '../assets/images/linkedin.png'
+                )
             div.team-member__content
               p.name
                 span Nick Rathman
@@ -80,9 +100,13 @@ section.team
         div.team-member-content__entry
           div.team-member
             div.team-member__image
-              img(
+              img.portrait(
                 src = '../assets/team/tatiana.jpg'
               )
+              a(href="http://google.com")
+                img.linkedin(
+                  src = '../assets/images/linkedin.png'
+                )
             div.team-member__content
               p.name
                 span Tatiana Moroz
@@ -94,9 +118,13 @@ section.team
         div.team-member-content__entry
           div.team-member
             div.team-member__image
-              img(
+              img.portrait(
                 src = '../assets/team/michael.jpg'
               )
+              a(href="http://google.com")
+                img.linkedin(
+                  src = '../assets/images/linkedin.png'
+                )
             div.team-member__content
               p.name
                 span Michael Jonsson
@@ -107,9 +135,13 @@ section.team
         div.team-member-content__entry
           div.team-member
             div.team-member__image
-              img(
+              img.portrait(
                 src = '../assets/team/shane.jpg'
               )
+              a(href="http://google.com")
+                img.linkedin(
+                  src = '../assets/images/linkedin.png'
+                )
             div.team-member__content
               p.name
                 span Shane Randolph
@@ -120,9 +152,13 @@ section.team
         div.team-member-content__entry
           div.team-member
             div.team-member__image
-              img(
+              img.portrait(
                 src = '../assets/team/ruben.jpg'
               )
+              a(href="http://google.com")
+                img.linkedin(
+                  src = '../assets/images/linkedin.png'
+                )
             div.team-member__content
               p.name
                 span Ruben Meseguer
@@ -306,7 +342,7 @@ export default {
       font-size: 16px
 
 .team-member__image
-  img
+  img.portrait
     border-radius: 50%
     max-width: 100%
     height: 100%
@@ -316,6 +352,12 @@ export default {
     width: 80px
     height: 80px
     display: inline-block
+  img.linkedin
+    width: 30px;
+    height: 30px;
+    margin-left: -20px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+    border-radius: 1px;
 
 @media(max-width: 900px)
   body

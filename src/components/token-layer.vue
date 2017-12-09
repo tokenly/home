@@ -7,7 +7,7 @@ section.token-layer(id="token-layer")
           src="../assets/images/token-layer.png"
         )
         p
-          span Tokenly's scalable sidechain protocol built to support interoperability and low cost transactions. Optimized for frequent and low value blockchain token transactions.
+          span Tokenly's scalable sidechain protocol built to support interoperability and low cost transactions. Optimized for frequent and low value blockchain token transactions. The first middleware for Bitcoin Counterparty & ERC20 Tokens.
         ul.token-layer__container__content__menu
           li(v-for="(featureEntry, index) in this.featureData")
             a.product-option(
@@ -44,7 +44,7 @@ export default {
           name: 'Low Cost',
           elID: 'low-cost',
           headline: 'Cheap and predictable transactions fees.',
-          summary: 'Token Layer is engineered to maintain low, predicatble blockchain transaction fees.  Low, predictable fees are essential to reducing customer purchase friction, transacting with low value tokens, and facilitate micropayments.',
+          summary: 'Token Layer is engineered to maintain low, predictable blockchain transaction fees.  Low, predictable fees are essential to reducing customer purchase friction, transacting with low value tokens, and facilitate micropayments.',
           imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
         },
         {
@@ -57,23 +57,9 @@ export default {
         {
           name: 'Scalable',
           elID: 'scalable',
-          headline: 'Built for Global Adoption',
-          summary: 'Token Layer handles throughputs of 1,000 transactions per second.  Future optimizations will significantly increase this throughput.',
+          headline: 'Blockchain Agnostic Platform Built for Global Adoption',
+          summary: 'Token Layer handles throughputs of 1,000 transactions per second.  Future optimizations will significantly increase this throughput. Token Layer is blockchain and platform agnostic. Token Layer is compatible with the most popular blockchain ecosystems today and will remain compatible with the most popular blockchains yet to be created.',
           imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/vault-wireframe_900-225x225.png'
-        },
-        {
-          name: 'Flexible',
-          elID: 'flexible',
-          headline: "Token Layer plays nice with most blockchains",
-          summary: 'Token Layer is blockchain and platform agnostic. Token Layer is compatible with the most popular blockchain ecosystems today and will remain compatible with the most popular blockchains yet to be created.',
-          imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
-        },
-        {
-          name: 'Innovative',
-          elID: 'innovative',
-          headline: 'On the Bleeding Edge of Flexible Blockchain Ecosystems',
-          summary: 'Token Layer is the the first middleware for Bitcoin Counterparty & ERC20 Tokens.',
-          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/microphone-wireframe-recovered-900-900x900.png'
         }
       ]
 
