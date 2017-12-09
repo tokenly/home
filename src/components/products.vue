@@ -55,7 +55,7 @@ export default {
           linkText: 'TokenPockets.com',
           linkURL: 'https://tokenpockets.com',
           imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/vault-wireframe_900-414x414.png',
-          status: 'Live'
+          status: 'Live Beta'
         },
         {
           name: 'Token Launch',
@@ -65,7 +65,7 @@ export default {
           linkText: '',
           linkURL: '',
           imgURL: 'https://tekk.wpengine.com/wp-content/uploads/2017/06/launch-wireframe-recovered-900.png',
-          status: 'Live'
+          status: 'Private Beta'
         },
         {
           name: 'TokenFM',
@@ -75,7 +75,7 @@ export default {
           linkText: 'Token.FM',
           linkURL: 'https://tokenfm.com',
           imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/microphone-wireframe-recovered-900-500x500.png',
-          status: 'Live'
+          status: 'Private Beta'
         },
         {
           name: 'TokenPass',
