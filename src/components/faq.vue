@@ -58,4 +58,14 @@ export default {
         position: absolute
         top: 70px
         left: 0
+
+@media(max-width: 900px)
+  body
+    .faq__container
+      padding: 40px 20px
+    .faq__container__content
+      header
+        font-size: 24px
+      p
+        font-size: 16px
 </style>
