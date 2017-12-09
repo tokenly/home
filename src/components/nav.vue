@@ -13,6 +13,8 @@
           span {{ item.name }}
       li.full: a(v-scroll-to="'#about'")
         span About
+      li.full: a(v-scroll-to="'#faq'")
+        span FAQ
       li.menu-button: a(@click="this.toggleMenu")
         span
   .nav__overlay-menu(
@@ -23,6 +25,8 @@
       ul
         li: a(v-scroll-to="'#about'")
           span About
+        li: a(v-scroll-to="'#faq'")
+          span FAQ
         li: a(v-scroll-to="'#products'")
           span Our Products
         li: a(v-scroll-to="'#token-layer'")
@@ -51,10 +55,6 @@ export default {
         },
         {
           name: 'Deck',
-          url: '#'
-        },
-        {
-          name: 'FAQ',
           url: '#'
         }
       ]
