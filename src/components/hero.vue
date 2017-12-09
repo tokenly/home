@@ -15,7 +15,7 @@ section.hero
   .hero__bg(
     ref="bg"
   )
-  canvas.background
+  <!-- canvas.background -->
 </template>
 
 <script>
@@ -100,14 +100,14 @@ export default {
   }
 }
 
-window.onload = function() {
-  Particles.init({
-    selector: '.background',
-    maxParticles: 20,
-    color: '#29B6F6',
-    connectParticles: true
-  });
-};
+//window.onload = function() {
+//  Particles.init({
+//    selector: '.background',
+//    maxParticles: 20,
+//    color: '#29B6F6',
+//    connectParticles: true
+//  });
+//};
 
 </script>
 

@@ -13,7 +13,10 @@ section.team
               img.portrait(
                 src = '../assets/team/adam.jpg'
               )
-              a(href="http://google.com")
+              a(
+                href="http://google.com"
+                target="__blank"
+              )
                 img.linkedin(
                   src = '../assets/images/linkedin.png'
                 )
@@ -31,7 +34,10 @@ section.team
               img.portrait(
                 src = '../assets/team/devon.jpg'
               )
-              a(href="http://google.com")
+              a(
+                href="http://google.com"
+                target="__blank"
+              )
                 img.linkedin(
                   src = '../assets/images/linkedin.png'
                 )
@@ -49,7 +55,10 @@ section.team
               img.portrait(
                 src = '../assets/team/martin.jpg'
               )
-              a(href="http://google.com")
+              a(
+                href="http://google.com"
+                target="__blank"
+              )
                 img.linkedin(
                   src = '../assets/images/linkedin.png'
                 )
@@ -85,7 +94,10 @@ section.team
               img.portrait(
                 src = '../assets/team/nick.jpg'
               )
-              a(href="http://google.com")
+              a(
+                href="http://google.com"
+                target="__blank"
+              )
                 img.linkedin(
                   src = '../assets/images/linkedin.png'
                 )
@@ -103,7 +115,10 @@ section.team
               img.portrait(
                 src = '../assets/team/tatiana.jpg'
               )
-              a(href="http://google.com")
+              a(
+                href="http://google.com"
+                target="__blank"
+              )
                 img.linkedin(
                   src = '../assets/images/linkedin.png'
                 )
@@ -121,7 +136,10 @@ section.team
               img.portrait(
                 src = '../assets/team/michael.jpg'
               )
-              a(href="http://google.com")
+              a(
+                href="http://google.com"
+                target="__blank"
+              )
                 img.linkedin(
                   src = '../assets/images/linkedin.png'
                 )
@@ -138,7 +156,10 @@ section.team
               img.portrait(
                 src = '../assets/team/shane.jpg'
               )
-              a(href="http://google.com")
+              a(
+                href="http://google.com"
+                target="__blank"
+              )
                 img.linkedin(
                   src = '../assets/images/linkedin.png'
                 )
@@ -155,7 +176,10 @@ section.team
               img.portrait(
                 src = '../assets/team/ruben.jpg'
               )
-              a(href="http://google.com")
+              a(
+                href="http://google.com"
+                target="__blank"
+              )
                 img.linkedin(
                   src = '../assets/images/linkedin.png'
                 )
@@ -254,7 +278,7 @@ export default {
 }
 </script>
 
-<style lang="sass?indentedSyntax=true" scoped>
+<style lang="sass?indentedSyntax=true">
 
 .team
   background: #fff
