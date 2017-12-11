@@ -4,16 +4,40 @@ section.faq#faq
     .faq__container__content
       header
         span Frequently Asked Questions
+      p
+        span Have you just found out about Tokenly and got a head full of question marks? That’s great. We’ll try to answer them one by one. If you don’t find your question or answer below, you can ask us on the
+        a Tokenly slack channel.
+      div
+        div.faq__container__content__entry(v-for="faqQuestion in this.questions")
+          FaqQuestion(
+            :question="faqQuestion.question",
+            :answer="faqQuestion.answer"
+          )
 
 </template>
 
 <script>
 
+import FaqQuestion from './faq-question.vue'
+
 export default {
-  components: {},
+  components: {FaqQuestion},
   data () {
     return {
-
+      questions: [
+        {
+          question: 'What is Tokenly?',
+          answer: 'Tokenly is lorem ipsum'
+        },
+        {
+          question: 'What is Tokenly?',
+          answer: 'Tokenly is lorem ipsum'
+        },
+        {
+          question: 'What is Tokenly?',
+          answer: 'Tokenly is lorem ipsum'
+        }
+      ]
     }
   },
   created () {
@@ -29,7 +53,7 @@ export default {
 }
 </script>
 
-<style lang="sass?indentedSyntax=true" scoped>
+<style lang="sass?indentedSyntax=true">
 
 .faq
   background: #fff
@@ -58,6 +82,46 @@ export default {
         position: absolute
         top: 70px
         left: 0
+      p
+        text-align: left
+        color: #666
+        font-size: 20px
+        margin-bottom: 30px
+      &__entry
+        vertical-align: top
+        padding: 10px
+        width: 50%
+        display: inline-block
+        &__content
+          box-shadow: 0 10px 20px 0 rgba(0,0,0,0.10)
+          border: 1px solid rgba(0,0,0,0.1)
+          &:hover
+            box-shadow: 0 10px 30px 0 rgba(0,0,0,0.10)
+          &__question
+            cursor: pointer
+            padding: 20px
+            font-weight: 600
+            span
+              line-height: 30px
+              display: inline-block
+            i
+              display: inline-block
+              height: 30px
+              width: 30px
+              vertical-align: middle
+              line-height: 30px
+              text-align: center
+              border-radius: 50%
+              background: #01579B
+              color: #fff
+              font-size: 24px
+              float: right
+              transition: 0.2s
+              &.active
+                transform: rotate(90deg)
+          &__answer
+            padding: 20px
+            color: #888
 
 @media(max-width: 900px)
   body
@@ -68,4 +132,6 @@ export default {
         font-size: 24px
       p
         font-size: 16px
+      &__column
+        width: 100%
 </style>
