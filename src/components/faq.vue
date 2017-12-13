@@ -5,8 +5,10 @@ section.faq#faq
       header
         span Frequently Asked Questions
       p
-        span Have you just found out about Tokenly and got a head full of question marks? That’s great. We’ll try to answer them one by one. If you don’t find your question or answer below, you can ask us on the
-        a Tokenly slack channel.
+        span Just found out about Tokenly and have questions? That’s great. We’ll try to answer them one by one. If you don’t find your question or answer below, you can ask us on the &nbsp; 
+        a(
+          href="https://tokenlypublic.herokuapp.com/"
+        ) Tokenly slack channel.
       div
         div.faq__container__content__entry(v-for="faqQuestion in this.questions")
           FaqQuestion(
@@ -84,19 +86,20 @@ export default {
         left: 0
       p
         text-align: left
-        color: #666
+        color: #888
         font-size: 20px
         margin-bottom: 30px
       &__entry
         vertical-align: top
-        padding: 10px
+        padding: 15px 10px
         width: 50%
         display: inline-block
         &__content
-          box-shadow: 0 10px 20px 0 rgba(0,0,0,0.10)
+          box-shadow: 0 5px 15px 0 rgba(0,0,0,0.10)
           border: 1px solid rgba(0,0,0,0.1)
+          transition: 0.2s
           &:hover
-            box-shadow: 0 10px 30px 0 rgba(0,0,0,0.10)
+            box-shadow: 0 5px 20px 0 rgba(0,0,0,0.10)
           &__question
             cursor: pointer
             padding: 20px

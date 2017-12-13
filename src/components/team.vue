@@ -309,7 +309,7 @@ export default {
         left: 0
       p
         text-align: left
-        color: #666
+        color: #888
         font-size: 20px
         margin-bottom: 30px
 

@@ -50,7 +50,7 @@ export default {
         margin-bottom: 40px
         color: #00254C
       p
-        color: #666
+        color: #888
         font-size: 20px
         margin-bottom: 40px
       a

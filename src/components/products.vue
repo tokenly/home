@@ -156,7 +156,7 @@ export default {
           margin-bottom: 20px
         p
           font-size: 20px
-          color: #666
+          color: #888
           padding: 5px 15px
       &__right
         width: 50%
