@@ -5,7 +5,7 @@ section.faq#faq
       header
         span Frequently Asked Questions
       p
-        span Just found out about Tokenly and have questions? That’s great. We’ll try to answer them one by one. If you don’t find your question or answer below, you can ask us on the &nbsp; 
+        span Just found out about Tokenly and have questions? That’s great. We’ll try to answer them one by one. If you don’t find your question or answer below, you can ask us on the &nbsp;
         a(
           href="https://tokenlypublic.herokuapp.com/"
         ) Tokenly slack channel.
@@ -27,6 +27,10 @@ export default {
   data () {
     return {
       questions: [
+        {
+          question: 'What is Tokenly?',
+          answer: 'Tokenly is lorem ipsum'
+        },
         {
           question: 'What is Tokenly?',
           answer: 'Tokenly is lorem ipsum'
