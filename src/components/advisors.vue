@@ -4,17 +4,15 @@ section.team
     div.team__container__content
       header
         span Our Advisors
-      p
-        span Tokenly is ... with some of the most .... in technology, finance, and ....
       div.team-member-content
         div.team-member-content__entry
           div.team-member
             div.team-member__image
               img.portrait(
-                src = '../assets/team/adam.jpg'
+                src = '../assets/team/george-howard.jpg'
               )
               a(
-                href="http://google.com"
+                href="https://www.linkedin.com/in/georgeahoward"
                 target="__blank"
               )
                 img.linkedin(
@@ -22,20 +20,20 @@ section.team
                 )
             div.team-member__content
               p.name
-                span Advisor 1
+                span George Howard
               p.title
-                span Title 1
+                span Advisor,  Media Guru
               p.summary
-                span Advisor short bio 1
+                span Associate Professor of Music Business/Management at Berklee College of Music and Brown University; co-founder of Music Audience Exchange. Via his strategic consulting and management firm, George has worked with companies and individuals such as CVS/pharmacy, Intel, National Public Radio (NPR), Brown University, Carly Simon, Mark Isham, and Ashley Longshore.
 
         div.team-member-content__entry
           div.team-member
             div.team-member__image
               img.portrait(
-                src = '../assets/team/adam.jpg'
+                src = '../assets/team/jonathon-mohan.jpg'
               )
               a(
-                href="http://google.com"
+                href="https://www.linkedin.com/in/jonathanmohan/"
                 target="__blank"
               )
                 img.linkedin(
@@ -43,19 +41,19 @@ section.team
                 )
             div.team-member__content
               p.name
-                span Advisor 2
+                span Jonathan Mohan
               p.title
-                span Title 2
+                span Advisor, Blockchain Expert
               p.summary
-                span Advisor short bio 2
+                span Founding contributor to the Ethereum protocol; pioneer in the applicability of blockchain technology for municipal uses; founder of BitcoinNYC, New York City's largest bitcoin professional network.
         div.team-member-content__entry
           div.team-member
             div.team-member__image
               img.portrait(
-                src = '../assets/team/adam.jpg'
+                src = '../assets/team/david-drake.jpg'
               )
               a(
-                href="http://google.com"
+                href="https://www.linkedin.com/in/ldjcapital/"
                 target="__blank"
               )
                 img.linkedin(
@@ -63,11 +61,11 @@ section.team
                 )
             div.team-member__content
               p.name
-                span Advisor 3
+                span David Drake
               p.title
-                span Title 3
+                span Advisor, Business Development
               p.summary
-                span Advisor short bio 3
+                span Early-stage equity expert and the founder and chairman of LDJ Capital, a New York City-based family office, and The Soho Loft Media Group.  Mr. Drake has been involved in technology, media and telecom (TMT) and impact investments for more than 20 years.
 
 </template>
 

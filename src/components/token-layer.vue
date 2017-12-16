@@ -25,9 +25,8 @@ section.token-layer(id="token-layer")
         )
       div.token-layer__header__content__right
         img.token-layer__image(
-          src="https://tekk.tokenly.com/wp-content/uploads/2017/07/asset-3-900x900.png"
+          src="../assets/images/token-layer-white.jpg"
         )
-  div.token-layer__bg
 </template>
 
 <script>
@@ -105,13 +104,14 @@ export default {
       max-width: 1000px
       padding: 80px 20px
       margin: 0 auto
+      display: table
       img
         max-width: 100%
       p
-        color: #fff
+        color: #334
       &__left, &__right
-        display: inline-block
-        vertical-align: top
+        display: table-cell
+        vertical-align: middle
         padding: 0px 20px
       &__left
         width: 60%
@@ -171,15 +171,6 @@ export default {
       width: 40%
       img
         width: 100%
-  &__bg
-    background: #222;
-    background-image: linear-gradient(to bottom, #111, #191919, #222);
-    position: absolute
-    left: 0px
-    right: 0px
-    top: 0px
-    bottom: 0px
-    z-index: -8
   header
     margin: 0px
     font-size: 40px

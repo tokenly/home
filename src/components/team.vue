@@ -14,7 +14,7 @@ section.team
                 src = '../assets/team/adam.jpg'
               )
               a(
-                href="http://google.com"
+                href="https://www.linkedin.com/in/alevine3/"
                 target="__blank"
               )
                 img.linkedin(
@@ -35,7 +35,7 @@ section.team
                 src = '../assets/team/devon.jpg'
               )
               a(
-                href="http://google.com"
+                href="https://www.linkedin.com/in/devonweller/"
                 target="__blank"
               )
                 img.linkedin(
@@ -56,7 +56,7 @@ section.team
                 src = '../assets/team/martin.jpg'
               )
               a(
-                href="http://google.com"
+                href="https://www.linkedin.com/in/martin-rerak-cma-cpa-6818761b/"
                 target="__blank"
               )
                 img.linkedin(
@@ -76,7 +76,10 @@ section.team
               img.portrait(
                 src = '../assets/team/steven.jpg'
               )
-              a(href="http://google.com")
+              a(
+                href="https://www.linkedin.com/in/steven-levine-a9826957/"
+                target="__blank"
+              )
                 img.linkedin(
                   src = '../assets/images/linkedin.png'
                 )
@@ -95,7 +98,7 @@ section.team
                 src = '../assets/team/nick.jpg'
               )
               a(
-                href="http://google.com"
+                href="https://www.linkedin.com/in/nick-rathman-38430662/"
                 target="__blank"
               )
                 img.linkedin(
@@ -116,7 +119,7 @@ section.team
                 src = '../assets/team/tatiana.jpg'
               )
               a(
-                href="http://google.com"
+                href="https://www.linkedin.com/in/tatiana-moroz-04a3b27/"
                 target="__blank"
               )
                 img.linkedin(
@@ -137,7 +140,7 @@ section.team
                 src = '../assets/team/michael.jpg'
               )
               a(
-                href="http://google.com"
+                href="https://www.linkedin.com/in/mjonsson3/"
                 target="__blank"
               )
                 img.linkedin(
@@ -157,7 +160,7 @@ section.team
                 src = '../assets/team/shane.jpg'
               )
               a(
-                href="http://google.com"
+                href="https://www.linkedin.com/in/shane-randolph-b9509838/"
                 target="__blank"
               )
                 img.linkedin(
@@ -177,7 +180,7 @@ section.team
                 src = '../assets/team/ruben.jpg'
               )
               a(
-                href="http://google.com"
+                href="https://www.linkedin.com/in/ruben-meseguer-776a7710b/"
                 target="__blank"
               )
                 img.linkedin(

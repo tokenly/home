@@ -59,9 +59,9 @@ export default {
     p
       line-height: 1.5
       font-size: 18px
-      color: #f9f9f9
+      color: #667
     p.header
-      color: #fff
+      color: #334
       font-weight: 700
       font-size: 20px
       letter-spacing: 0.5px
