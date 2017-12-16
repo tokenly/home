@@ -357,8 +357,8 @@ canvas
   filter: blur(1px)
   position: absolute
   background: url(../assets/images/fresco-wireframe-clearbg.png) no-repeat center center fixed
-  -webkit-filter: blur(1px) grayscale(100%); /* Safari 6.0 - 9.0 */
-  filter: blur(1px) grayscale(100%);
+  -webkit-filter: blur(1px) grayscale(75%); /* Safari 6.0 - 9.0 */
+  filter: blur(1px) grayscale(75%);
   top: 0px
   bottom: 0px
   left: 0px
