@@ -189,7 +189,7 @@ canvas
   margin: 0px 0px 30px 0px
   line-height: 1.5
   letter-spacing: 0.5px
-  font-size: 36px
+  font-size: 48px
   font-weight: 700
   transition: 0.5s
   color: #fff
@@ -201,7 +201,7 @@ canvas
   letter-spacing: 0
   color: inherit
   line-height: 1.5
-  font-size: 22px
+  font-size: 24px
   font-weight: 500
   margin-bottom: 50px
   color: #f9f9ff
@@ -376,9 +376,11 @@ canvas
   .hero__content
     text-align: center
   .hero__h1
-    font-size: 30px
+    font-size: 36px
   .hero__h2
-    font-size: 18px
+    font-size: 22px
+  canvas
+    opacity: 0.5
   .form-container
     &__text
       margin: 0px 0px 20px 0px
