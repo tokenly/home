@@ -26,16 +26,29 @@
     v-bind:class="{ active: this.activeMenu }"
   )
     ul
-      li: a(v-scroll-to="'#about'")
+      li: a(
+        @click="toggleMenu"
+        v-scroll-to="'#about'"
+      )
         span About
-      li: a(v-scroll-to="'#faq'")
+      li: a(
+        v-scroll-to="'#faq'"
+        @click="toggleMenu"
+      )
         span FAQ
-      li: a(v-scroll-to="'#products'")
+      li: a(
+        v-scroll-to="'#products'"
+        @click="toggleMenu"
+      )
         span Our Products
-      li: a(v-scroll-to="'#token-layer'")
+      li: a(
+        v-scroll-to="'#token-layer'"
+        @click="toggleMenu"
+      )
         span Our Protocol
-      li(v-for="item in menuItems")
-        a
+      li(
+        v-for="item in menuItems")
+        a(@click="toggleMenu")
           span {{ item.name }}
 </template>
 
@@ -105,13 +118,6 @@ export default {
     border-radius: 2px
     .title
       display: none
-    a
-      color: #666
-      border-radius: 0px
-      line-height: 40px
-      &:hover
-        color: #111
-        background: #f9f9f9
     .nav__logo.active
       display: inline-block
     .nav__logo.inactive
