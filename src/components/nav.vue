@@ -21,19 +21,22 @@
     v-bind:class="{ active: this.activeMenu }"
     @click="toggleMenu"
   )
-    .nav__overlay-menu__content(@click.stop="")
-      ul
-        li: a(v-scroll-to="'#about'")
-          span About
-        li: a(v-scroll-to="'#faq'")
-          span FAQ
-        li: a(v-scroll-to="'#products'")
-          span Our Products
-        li: a(v-scroll-to="'#token-layer'")
-          span Our Protocol
-        li(v-for="item in menuItems")
-          a
-            span {{ item.name }}
+  .nav__overlay-menu__content(
+    @click.stop=""
+    v-bind:class="{ active: this.activeMenu }"
+  )
+    ul
+      li: a(v-scroll-to="'#about'")
+        span About
+      li: a(v-scroll-to="'#faq'")
+        span FAQ
+      li: a(v-scroll-to="'#products'")
+        span Our Products
+      li: a(v-scroll-to="'#token-layer'")
+        span Our Protocol
+      li(v-for="item in menuItems")
+        a
+          span {{ item.name }}
 </template>
 
 <script>
@@ -178,38 +181,43 @@ export default {
 
 .nav__overlay-menu
   display: none
+  transition: 0.5s
+  position: fixed
+  top: 0px
+  left: 0px
+  right: -1px
+  bottom: 0px
+  background: rgba(0,0,0,0.3)
   &.active
-    position: fixed
     display: block
-    top: 0px
-    left: 0px
+.nav__overlay-menu__content
+  -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,.2)
+  box-shadow: 0 8px 17px 0 rgba(0,0,0,.2)
+  position: fixed
+  background: #00254C
+  right: -300px
+  width: 300px
+  max-width: 90%
+  top: 0px
+  bottom: 0px
+  border-left: 1px solid rgba(0,0,0,0.1)
+  transition: 0.5s
+  &.active
     right: -1px
-    bottom: 0px
-    background: rgba(0,0,0,0.3)
-    .nav__overlay-menu__content
-      -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,.2)
-      box-shadow: 0 8px 17px 0 rgba(0,0,0,.2)
-      position: absolute
-      background: #00254C
-      right: -1px
-      width: 300px
-      max-width: 90%
-      top: 0px
-      bottom: 0px
-      border-left: 1px solid rgba(0,0,0,0.1)
-      ul
-        list-style: none
-        li
-          margin: 0px
-          a
-            padding: 20px 40px
-            display: block
-            line-height: 20px
-            color: #fff
-            &:hover
-              cursor: pointer
-              background: rgba(250,250,250,0.1)
-              color: #eee
+  ul
+    list-style: none
+    li
+      margin: 0px
+      a
+        padding: 20px 40px
+        display: block
+        line-height: 20px
+        color: #fff
+        &:hover
+          cursor: pointer
+          background: rgba(250,250,250,0.1)
+          color: #eee
+
 
 
 @media(max-width: 900px)
