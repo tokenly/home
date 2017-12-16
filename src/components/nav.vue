@@ -91,7 +91,7 @@ export default {
   overflow: hidden
   transition: 1s
   border: 1px solid rgba(205,205,205,0.4)
-  background: rgba(255,255,255,0.8)
+  background: rgba(255,255,255,0.95)
   &.active
     background: #fff
     left: 0px

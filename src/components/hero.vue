@@ -8,14 +8,13 @@ section.hero
             span Turnkey Token eCommerce
           h2.hero__h2
             span Create, share, and use blockchain tokens without writing a single line of code.
-          a.hero__cta.animated(v-scroll-to="'#about'")
+          a.hero__cta(v-scroll-to="'#about'")
             span Learn More
-        .hero__content__inner__image
   .hero__bg__mask
   .hero__bg(
     ref="bg"
   )
-  <!-- canvas.background -->
+  canvas.background
 </template>
 
 <script>
@@ -100,14 +99,14 @@ export default {
   }
 }
 
-//window.onload = function() {
-//  Particles.init({
-//    selector: '.background',
-//    maxParticles: 20,
-//    color: '#29B6F6',
-//    connectParticles: true
-//  });
-//};
+window.onload = function() {
+  Particles.init({
+    selector: '.background',
+    maxParticles: 40,
+    color: '#29B6F6',
+    connectParticles: true
+  });
+};
 
 </script>
 
@@ -124,6 +123,8 @@ $hero-btn-color: #4170a0
   min-height: 500px
   height: 100vh
   z-index: 0
+  background: #000000;
+
 
 .hero__bg, .hero__bg__mask
   position: absolute
@@ -132,6 +133,8 @@ $hero-btn-color: #4170a0
   top: 0
   left: 0
 
+canvas
+  z-index: 2
 
 .hero__content__container
   position: absolute
@@ -147,7 +150,6 @@ $hero-btn-color: #4170a0
 
 .hero__content
   position: relative
-  text-align: center
   color: #333
   max-width: 800px
   margin: 0 auto
@@ -157,13 +159,8 @@ $hero-btn-color: #4170a0
   &__inner
     max-width: 1100px
     margin: 0 auto
-    &__text, &__image
-      width: 50%
-      display: inline-block
-      vertical-align: top
-      padding: 30px
     &__text
-      text-align: left
+      padding: 30px
 
 .hero__continue
   position: absolute
@@ -195,45 +192,8 @@ $hero-btn-color: #4170a0
   font-size: 36px
   font-weight: 700
   transition: 0.5s
-  color: #00254C
-  .emphasized
-    color: #E6FF0D
-    -webkit-animation: fadein 2s
-    -moz-animation: fadein 2s
-    -ms-animation: fadein 2s
-    -o-animation: fadein 2s
-    animation: fadein 2s
-
-@-webkit-keyframes fadein
-  from
-    opacity: 0
-    margin-left: 50px
-    display: none
-  to
-    opacity: 1
-    margin-left: 0px
-    display: inline-block
-
-@-moz-keyframes fadein
-  from
-    opacity: 0
-    margin-left: 50px
-    display: none
-  to
-    opacity: 1
-    margin-left: 0px
-    display: inline-block
-
-@keyframes fadein
-  from
-    opacity: 0
-    margin-left: 50px
-    display: none
-  to
-    opacity: 1
-    margin-left: 0px
-    display: inline-block
-
+  color: #fff
+  text-shadow: 0px 1px 3px rgba(0,0,0,0.5)
 
 .hero__h2
   overflow: hidden
@@ -244,7 +204,8 @@ $hero-btn-color: #4170a0
   font-size: 22px
   font-weight: 500
   margin-bottom: 50px
-  color: #888
+  color: #f9f9ff
+  text-shadow: 0px 1px 3px rgba(0,0,0,0.5)
 
 .hero__cta
   padding: 15px 50px
@@ -262,12 +223,6 @@ $hero-btn-color: #4170a0
   text-align: center
   width: 100%
   max-width: 300px
-  &.animated
-    -webkit-animation: pulsate 5s linear
-    -moz-animation: pulsate 5s linear
-    animation: pulsate 5s linear
-    -webkit-animation-delay: 3s
-    animation-delay: 3s
   &:hover
     color: #fff
     background-position: right center
@@ -386,22 +341,24 @@ $hero-btn-color: #4170a0
     background-color: lighten($hero-btn-color, 5%)
 
 .hero__bg__mask
-  opacity: 0.85
-  background: linear-gradient(to bottom, #002346 0%, #0063c6 100%)
-  opacity: 0.5
-  background: #fff
+  opacity: 0.6
+  background: #000
   z-index: 5
 
 .hero__bg
   z-index: 1
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
   background-size: cover
   background-position: center
   overflow: hidden
   -webkit-filter: blur(1px)
-  filter: blur(0px)
-  background-image: none
+  filter: blur(1px)
   position: absolute
-  background: url(https://tokenpockets.com/images/bg2.c37d81d0.png) top right no-repeat
+  background: url(../assets/images/fresco-wireframe-clearbg.png) no-repeat center center fixed
+  -webkit-filter: blur(1px) grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: blur(1px) grayscale(100%);
   top: 0px
   bottom: 0px
   left: 0px
