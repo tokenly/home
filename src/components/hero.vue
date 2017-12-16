@@ -5,7 +5,7 @@ section.hero
       .hero__content__inner
         .hero__content__inner__text
           h1.hero__h1
-            span Turnkey Token Solutions
+            span Turnkey Token eCommerce
           h2.hero__h2
             span Create, share, and use blockchain tokens without writing a single line of code.
           a.hero__cta.animated(v-scroll-to="'#about'")

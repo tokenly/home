@@ -29,19 +29,19 @@ export default {
       questions: [
         {
           question: 'What is Tokenly?',
-          answer: 'Tokenly is lorem ipsum'
+          answer: 'Tokenly is a leading innovator around non-financial applications of blockchain technology, like token controlled access and token ownership.'
         },
         {
-          question: 'What is Tokenly?',
-          answer: 'Tokenly is lorem ipsum'
+          question: 'What problems does Tokenly solve?',
+          answer: 'Interest in cryptocurrency and blockchain technology is at all-time highs, but still remains too complex for individuals and businesses to use for practical applications.  Tokenly enables indivuals and businesses to enjoy the benefits of using blockchain technology without hiring a blockchain engineer. Tokenly solves the problem of complexitity by "abstracting away" the technical operations required to use blockchain technology into the background while giving users full control with simple interfaces.'
         },
         {
-          question: 'What is Tokenly?',
-          answer: 'Tokenly is lorem ipsum'
+          question: 'What makes Tokenly unique?',
+          answer: 'We are truly unique by providing powerful blockchain tools that are user-friendly. More than just an idea, we have launched 5 applications to date, including blockchain and turnkey token solutions for eCommerce. We also intentionally built our applications to be blockchain agnostic, making Tokenly adaptable to any new developments in the rapidly changing blockchain and cryptocurrency space.'
         },
         {
-          question: 'What is Tokenly?',
-          answer: 'Tokenly is lorem ipsum'
+          question: 'How far along is Tokenly?',
+          answer: 'Tokenly has been developing blockchain solutions for two years.  To date, we have 5 live blockchain token solutions and thousands of users.'
         }
       ]
     }
@@ -129,6 +129,7 @@ export default {
           &__answer
             padding: 20px
             color: #888
+            line-height: 1.75
 
 @media(max-width: 900px)
   body
