@@ -124,6 +124,7 @@ $hero-btn-color: #4170a0
   height: 100vh
   z-index: 0
   background: #000000;
+  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/asfalt.png");
 
 
 .hero__bg, .hero__bg__mask
