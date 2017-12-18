@@ -26,6 +26,10 @@
     v-bind:class="{ active: this.activeMenu }"
   )
     ul
+      li: a.header(
+
+      )
+        span Tokenly
       li: a(
         @click="toggleMenu"
         v-scroll-to="'#about'"
@@ -223,6 +227,12 @@ export default {
           cursor: pointer
           background: rgba(250,250,250,0.1)
           color: #eee
+        &.header
+          background: rgba(0,0,0,0.5)
+          font-weight: 700
+          font-size: 24px
+          letter-spacing: 1px
+          box-shadow: 0px 1px 2px rgba(0,0,0,0.3)
 
 
 
