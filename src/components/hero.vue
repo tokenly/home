@@ -5,11 +5,24 @@ section.hero
       .hero__content__inner
         .hero__content__inner__text
           h1.hero__h1
-            span Turnkey Token eCommerce
-          h2.hero__h2
-            span Create, share, and use blockchain tokens without writing a single line of code.
+            span Turnkey token ecommerce.
+            span(style="color: #42A5F5;") &nbsp; Now.
+          div.hero__secondary
+            div.hero__secondary__entry
+              p For Sellers
+              span Build a customizable online store in minutes that accepts credit cards, bitcoin, and thousands of other cryptocurrencies.
+            div.hero__secondary__entry
+              p For Buyers
+              span Buy with certainty from verified merchants. Pay with cryptocurrency. Participate in auctions.
+            div.hero__secondary__entry
+              p For Affiliates
+              span Earn cryptocurrency by promoting products anywhere; from social media to your own website.
           a.hero__cta(v-scroll-to="'#about'")
             span Learn More
+        .hero__content__inner__image
+          img(
+            src = '../assets/images/token-markets-store.png'
+          )
   .hero__bg__mask
   .hero__bg(
     ref="bg"
@@ -123,8 +136,7 @@ $hero-btn-color: #4170a0
   min-height: 500px
   height: 100vh
   z-index: 0
-  background: #000000;
-  background-image: url("https://www.toptal.com/designers/subtlepatterns/patterns/asfalt.png");
+  background: #f9f9f9;
 
 
 .hero__bg, .hero__bg__mask
@@ -157,11 +169,22 @@ canvas
   display: table-cell
   vertical-align: middle
   padding: 20px
+  padding-top: 100px
   &__inner
-    max-width: 1100px
+    max-width: 1200px
     margin: 0 auto
     &__text
       padding: 30px
+      width: 55%
+      display: inline-block
+      vertical-align: top
+    &__image
+      width: 45%
+      display: inline-block
+      vertical-align: top
+      padding: 30px
+      img
+        width: 100%
 
 .hero__continue
   position: absolute
@@ -187,14 +210,33 @@ canvas
   overflow: hidden
   text-transform: none
   color: inherit
-  margin: 0px 0px 30px 0px
+  margin: 0px 0px 40px 0px
   line-height: 1.5
   letter-spacing: 0.5px
   font-size: 48px
-  font-weight: 700
-  transition: 0.5s
-  color: #fff
-  text-shadow: 0px 1px 3px rgba(0,0,0,0.5)
+  color: #113
+  font-weight: 900
+  text-shadow: 0px 1px 5px rgba(200,200,200,0.2);
+
+
+.hero__secondary
+  margin-bottom: 30px
+  &__entry
+    display: inline-block
+    width: 33.3%
+    vertical-align: top
+    padding: 5px
+    p
+      color: #01579b
+      text-transform: uppercase
+      font-size: 18px
+      font-weight: 600
+    span
+      font-size: 16px
+      color: #666
+      line-height: 1.25
+
+
 
 .hero__h2
   overflow: hidden
@@ -205,8 +247,7 @@ canvas
   font-size: 24px
   font-weight: 500
   margin-bottom: 50px
-  color: #f9f9ff
-  text-shadow: 0px 1px 3px rgba(0,0,0,0.5)
+  color: #000
 
 .hero__cta
   padding: 15px 50px
@@ -343,10 +384,11 @@ canvas
 
 .hero__bg__mask
   opacity: 0.6
-  background: #000
+  background: #fff
   z-index: 5
 
 .hero__bg
+  display: none;
   z-index: 1
   -webkit-background-size: cover
   -moz-background-size: cover

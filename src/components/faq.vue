@@ -140,6 +140,6 @@ export default {
         font-size: 24px
       p
         font-size: 16px
-      &__column
+      &__entry
         width: 100%
 </style>
