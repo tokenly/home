@@ -1,7 +1,7 @@
 <template lang="pug">
 div.home
   hero
-  sub-hero
+  open-for-business
   about
   div.brand-section-divider
   products
@@ -22,6 +22,7 @@ div.home
 <script>
 
 import Hero from './hero.vue'
+import OpenForBusiness from './open_for_business.vue'
 import SubHero from './sub_hero.vue'
 import About from './about.vue'
 import Products from './products.vue'
@@ -33,7 +34,7 @@ import Partners from './partners.vue'
 import MoreDetails from './more-details.vue'
 
 export default {
-  components: {Hero, SubHero, About, Products, TokenLayer, Faq, Team, Advisors, Partners, MoreDetails},
+  components: {Hero, OpenForBusiness, SubHero, About, Products, TokenLayer, Faq, Team, Advisors, Partners, MoreDetails},
   data () {
     return {
     }
@@ -58,5 +59,8 @@ export default {
   padding: 5px
   background: #039BE5;
   background: linear-gradient(to right, #29B6F6, #039BE5, #01579B);
+
+.sub-hero-divider
+  width: 100%
 
 </style>

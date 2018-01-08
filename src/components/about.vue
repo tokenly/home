@@ -72,7 +72,6 @@ export default {
 .about
   background: #fff
   color: #222
-  box-shadow: 0px -1px 3px rgba(100,100,100,0.2)
   display: table
   width: 100%
   z-index: 99

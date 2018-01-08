@@ -66,18 +66,6 @@ export default {
   border-top: 2px solid #00254C
   border-bottom: 2px solid #00254C
   position: relative
-  &:after
-    content: ""
-    position: absolute
-    display: inline-block
-    z-index: -1
-    width: 100%
-    height: 100px
-    top: -50px
-    transform: skewY(-2deg)
-    background: #fdfdfd
-    border-bottom: 2px solid #00254C;
-    z-index: 998
   &__bg
     position: absolute
     top: 0px

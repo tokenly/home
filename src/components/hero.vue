@@ -17,8 +17,13 @@ section.hero
             div.hero__secondary__entry
               p For Affiliates
               span Earn cryptocurrency by promoting products anywhere; from social media to your own website.
-          a.hero__cta(v-scroll-to="'#about'")
+          a.hero__cta(v-scroll-to="'#sub_hero'")
             span Learn More
+          a.hero__cta(
+            href="https://TokenMarkets.com"
+            target="__blank"
+          )
+            span Try our Live Product
         .hero__content__inner__image
           img(
             src = '../assets/images/token-markets-store.png'
@@ -133,8 +138,6 @@ $hero-btn-color: #4170a0
   position: relative
   font-size: 1em
   overflow: hidden
-  min-height: 500px
-  height: 100vh
   z-index: 0
   background: #f9f9f9;
 
@@ -150,7 +153,6 @@ canvas
   z-index: 2
 
 .hero__content__container
-  position: absolute
   z-index: 100
   top: 0px
   bottom: 0px
@@ -168,8 +170,7 @@ canvas
   margin: 0 auto
   display: table-cell
   vertical-align: middle
-  padding: 20px
-  padding-top: 100px
+  padding: 100px 20px
   &__inner
     max-width: 1200px
     margin: 0 auto
@@ -214,7 +215,7 @@ canvas
   line-height: 1.5
   letter-spacing: 0.5px
   font-size: 48px
-  color: #113
+  color: #00254C
   font-weight: 900
   text-shadow: 0px 1px 5px rgba(200,200,200,0.2);
 
@@ -263,8 +264,9 @@ canvas
   font-size: 20px
   border: 1px solid rgba(0,0,0,0.1)
   text-align: center
-  width: 100%
   max-width: 300px
+  margin-right: 10px
+  text-decoration: none
   &:hover
     color: #fff
     background-position: right center
@@ -432,5 +434,13 @@ canvas
       width: 100%
   .hero__continue
     position: absolute
+
+@media(max-width: 600px)
+  .hero__secondary
+    display: none
+    &__entry
+      display: block
+      width: 100%
+      margin-bottom: 20px
 
 </style>

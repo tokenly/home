@@ -111,6 +111,7 @@ export default {
             span
               line-height: 30px
               display: inline-block
+              color: #00254C;
             i
               display: inline-block
               height: 30px
