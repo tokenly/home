@@ -102,7 +102,7 @@ export default {
         margin-bottom: 50px
         font-size: 36px
         line-height: 60px
-        font-weight: 500
+        font-weight: 600
         color: #00254C
         position: relative
       header:before

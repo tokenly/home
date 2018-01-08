@@ -5,27 +5,46 @@ section.products(
 )
   div.products__header
     div.products__header__content
-      div.products__header__content__left
-        img(
-          src="../assets/images/token-suite.png"
-        )
-        p
-          span Our consumer-ready turnkey solutions for the entire blockchain token life cycle. Create, buy, sell, securely store blockchain tokens, and more.
-      div.products__header__content__right
-      div.products__entries
-        div.product-content(v-for="(productEntry, index) in this.productData")
-          Product(
-            :elID = "productEntry.elID"
-            :headline = "productEntry.headline"
-            :summary = "productEntry.summary"
-            :linkURL = "productEntry.linkURL"
-            :linkText = "productEntry.linkText"
-            :imgURL = "productEntry.imgURL"
-            :status = "productEntry.status"
-            :indexNum = "index"
-          )
-  .products__bg
-  .products__mask
+      div
+        div.products__header__content__entry
+          div
+            p.header
+              i.material-icons check_circle
+              span Get Setup in Minutes
+            p.details
+              span Signup with just your email and start selling physical products, services, and blockchain tokens.
+              span It’s never been easier to get started buying and selling using cryptocurrency. Tokenly handles everything from wallets and invoicing, to secure checkout and affiliate programs.
+          div
+            img(src="https://images.pexels.com/photos/280264/pexels-photo-280264.jpeg?w=940&h=650&auto=compress&cs=tinysrgb")
+        div.products__header__content__entry
+          div
+            img(src="https://images.pexels.com/photos/37539/colored-pencils-colour-pencils-mirroring-color-37539.jpeg?w=940&h=650&auto=compress&cs=tinysrgb")
+          div
+            p.header
+              i.material-icons check_circle
+              span Your Store, Your brand
+            p.details
+              span Add custom elements to your store, including logos, color schemes, and cover photos. Organize your products into catalogs. No design skills necessary.
+        div.products__header__content__entry
+          div
+            p.header
+              i.material-icons check_circle
+              span Stay in Control
+            p.details
+              span Monitor your inventory, customer orders, and much more, all from a single store dashboard. Whether you're at the office or on your mobile device, you're always in control of your store.
+          div
+            img(src="https://images.pexels.com/photos/261662/pexels-photo-261662.jpeg?w=940&h=650&auto=compress&cs=tinysrgb")
+        div.products__header__content__entry.centered
+          div.centered
+            p.header
+              i.material-icons check_circle
+              span We're Live, Now.
+            p.details
+              span Token Markets is more than a mere idea; it is a live application providing true cryptocurrency ecommerce to merchants all over the world.
+            br
+            br
+            a.cta(href="https://tokenmarkets.com")
+              span Signup Now for Token Markets
 </template>
 
 <script>
@@ -134,8 +153,7 @@ export default {
 <style lang="sass?indentedSyntax=true" scoped>
 
 .products
-  background: #F9F9FC
-  color: #111
+  background: #fdfdfd
   position: relative
   z-index: 99
   &__header
@@ -143,23 +161,66 @@ export default {
     &__content
       max-width: 1000px
       margin: 0 auto
-      img
-        max-width: 100%
       &__left, &__right
         display: inline-block
         vertical-align: top
-      &__left
-        width: 100%
-        img
-          max-width: 50%
-          height: 85px
-          margin-bottom: 20px
+        padding: 0px 20px
+      header
+        margin: 0px
+        margin-bottom: 50px
+        font-size: 36px
+        line-height: 60px
+        font-weight: 600
+        color: #00254C
+        position: relative
+      header:before
+        content: ''
+        background-color: #29B6F6
+        opacity: 0.7
+        height: 2px
+        width: 70px
+        border-radius: 1px
+        position: absolute
+        top: 70px
+        left: 0
         p
           font-size: 20px
           color: #888
-          padding: 5px 15px
-      &__right
-        width: 50%
+      &__entry
+        padding: 10px
+        div
+          display: inline-block
+          width: 50%
+          vertical-align: top
+          padding: 30px
+          p.header
+            margin: 0px
+            margin-bottom: 20px
+            font-size: 30px
+            line-height: 60px
+            font-weight: 600
+            color: #00254C
+            position: relative
+            span, i
+              vertical-align: middle
+            i
+              margin-right: 10px
+              color: #00C853
+          p.details
+            font-size: 18px
+            color: #888
+          a.cta
+            background: #E65100
+            color: #fff
+            padding: 15px 30px
+            border-radius: 30px
+            font-size: 18px
+            box-shadow: 0px 1px 5px rgba(0,0,0,0.2)
+            border: 1px solid rgba(0,0,0,0.1)
+            cursor: pointer
+            text-decoration: none
+          img
+            width: 100%
   &__mask
     background: url(https://tokenpockets.com/images/bg2.c37d81d0.png) top right no-repeat
     position: absolute
@@ -222,14 +283,6 @@ export default {
         width: 100%
   &__header
     &__content
-      header
-        font-size: 40px
-        font-weight: 700
-        letter-spacing: 2px
-        margin-bottom: 20px
-        img
-          width: auto
-          height: 60px
       p.sub-header
         font-size: 20px
         opacity: 0.7

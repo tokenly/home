@@ -9,12 +9,7 @@ section.about(ref="about" id="about")
         p
           span Tokenly is a leading innovator and developer of turnkey blockchain and token solutions.
         p
-          span To date, we have launched 5 blockchain applications, comprising our
-          span.bold(v-scroll-to="'#products'") Token Suite&trade;
-          span , which includes turnkey solutions for blockchain eCommerce, auctions, secure multisig wallets, token creation, token crowdsales, and more.
-        div
-          a.cta(v-scroll-to="'#products'")
-            span Read More About Token Suite&trade;
+          span To date, we have launched 5 blockchain applications which include turnkey solutions for blockchain eCommerce, auctions, secure multisig wallets, token creation, token crowdsales, and more.
       div.about__container__content__image
         img.token-layer__image(
           src="../assets/images/fresco-wireframe-connect.jpg"
@@ -29,12 +24,12 @@ section.about(ref="about" id="about")
         p
           span Our vision is to make blockchain technology easy enough for anyone to use.
         p
-          span We believe blockchain technology is revolutionary; but we also realize working with blockchain technology is still too complex for widespread adoption.  To that end, Tokenly is developing
-          span.bold(v-scroll-to="'#token-layer'") Token Layer&trade;
-          span , a scalable, flexible, sidechain protocol engineered to support scalable consumer products.
+          span We believe blockchain technology is revolutionary; but we also realize working with blockchain technology is still too complex for widespread adoption.
+        p
+          span To that end, Tokenly is developing an interoperable suite of applications that handle the complexities of blockchain technology in the background.
         div
-          a.cta(v-scroll-to="'#token-layer'")
-            span Read More About Token Layer&trade;
+          a.cta(v-scroll-to="'#team'")
+            span Meet Our Team
   div.about__mask
 
 </template>
@@ -70,8 +65,7 @@ export default {
 <style lang="sass?indentedSyntax=true" scoped>
 
 .about
-  background: #fff
-  color: #222
+  background: #00254C
   display: table
   width: 100%
   z-index: 99
@@ -87,20 +81,17 @@ export default {
     background-size: cover
   &__container
     padding: 80px 30px
-    display: table-cell
-    vertical-align: middle
-    background: rgba(255,255,255,0.85)
     &__content
       max-width: 1000px
       margin: 0 auto
       header
         font-size: 36px
         line-height: 60px
-        font-weight: 400
+        font-weight: 600
         margin: 0px
         margin-bottom: 50px
         position: relative
-        color: #00254C
+        color: #fff
         span
           vertical-align: top
         span.name
@@ -135,7 +126,8 @@ export default {
         vertical-align: top
         a
           text-align: center
-          padding: 10px 20px
+          padding: 15px 30px
+          font-size: 18px
           display: inline-block
           border: 2px solid #fff
           border-radius: 2px
@@ -144,7 +136,7 @@ export default {
           cursor: pointer
           transition: 0.5s
           font-weight: 600
-          border-radius: 5px
+          border-radius: 30px
           border: 1px solid rgba(0,0,0,0.1)
           box-shadow: 0px 1px 4px rgba(0,0,0,0.2)
 
@@ -183,10 +175,10 @@ export default {
       p
         font-size: 20px
         margin-bottom: 30px
-        color: #888
+        color: #fff
         .bold
           font-weight: 700
-          color: #333
+          color: #eee
           margin-left: 5px
           cursor: pointer
         &.about__container__content__sub-header

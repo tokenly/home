@@ -10,7 +10,7 @@ section.more-details(
         span Our whitepaper elaborates on Tokenly's roadmap for future development,technical details of Token Suite and Token Layer, and more.
       div
         a.more-details__container__content__button
-          span Read Our Whitepaper
+          span Coming Soon
 </template>
 
 <script>

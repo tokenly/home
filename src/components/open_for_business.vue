@@ -21,12 +21,16 @@ section.open_for_business#sub_hero
             p.open-for-business-container__content__text__header
               span Easy to Use.
             p.open-for-business-container__content__text__sub-header
-              span Tokenly's flagship application, Token Markets&trade;, enables anyone to setup an online store that accepts credit cards, bitcoin, and thousands of other cryptocurrencies, all without writing a single line of code. Imagine Shopify with cryptocurrencies.
+              span Tokenly's flagship application,
+              span(style="font-weight: 600; color: #fff;") &nbsp; Token Markets&trade;
+              span , &nbsp; enables anyone to setup an online store that accepts credit cards, bitcoin, and thousands of other cryptocurrencies, all without writing a single line of code. Imagine Shopify with cryptocurrencies.
           div.open-for-business-container__content__text__section
             p.open-for-business-container__content__text__header
               span Instant, Cheap Transactions.
             p.open-for-business-container__content__text__sub-header
-              span Tokenly's ecommerce solutions is supported by a scalable sidechain protocol, Token Layer&trade;, engineered to maintain lightning fast, low cost transactions.
+              span Tokenly's ecommerce solutions is supported by a scalable sidechain protocol,
+              span(style="font-weight: 600; color: #fff;") &nbsp; Token Layer&trade;
+              span , &nbsp; engineered to maintain lightning fast, low cost transactions.
           div.open-for-business-container__content__text__section
             p.open-for-business-container__content__text__header
               span Unlimited Uses.
@@ -65,7 +69,7 @@ export default {
 
 .blue-divider
     width: 100%
-    margin: -1px 0px;
+    margin: -2px 0px
     vertical-align: top
     &.upside
       transform: rotate(180deg)
@@ -75,6 +79,7 @@ export default {
       max-width: 1000px
       width: 100%
       padding: 20px
+      padding-bottom: 0px
       margin: 0 auto
       &__header
         max-width: 800px
@@ -103,6 +108,8 @@ export default {
       &__text
         &__section
           margin-bottom: 40px
+          &:last-child
+            margin-bottom: 0px
         &__header
           line-height: 20px
           font-size: 20px
@@ -112,6 +119,7 @@ export default {
           font-size: 16px
           color: rgba(255,255,255,0.7)
           line-height: 1.5
+          margin-bottom: 0px
 
 @media(max-width: 900px)
   .open_for_business

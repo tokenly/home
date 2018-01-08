@@ -2,11 +2,9 @@
 div.home
   hero
   open-for-business
-  about
-  div.brand-section-divider
   products
   div.brand-section-divider
-  token-layer
+  about
   div.brand-section-divider
   team
   div.brand-section-divider
@@ -25,8 +23,8 @@ import Hero from './hero.vue'
 import OpenForBusiness from './open_for_business.vue'
 import SubHero from './sub_hero.vue'
 import About from './about.vue'
+import TokenMarkets from './token-markets.vue'
 import Products from './products.vue'
-import TokenLayer from './token-layer.vue'
 import Faq from './faq.vue'
 import Team from './team.vue'
 import Advisors from './advisors.vue'
@@ -34,7 +32,7 @@ import Partners from './partners.vue'
 import MoreDetails from './more-details.vue'
 
 export default {
-  components: {Hero, OpenForBusiness, SubHero, About, Products, TokenLayer, Faq, Team, Advisors, Partners, MoreDetails},
+  components: {Hero, OpenForBusiness, SubHero, About, TokenMarkets, Products, Faq, Team, Advisors, Partners, MoreDetails},
   data () {
     return {
     }

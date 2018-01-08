@@ -66,17 +66,17 @@ export default {
       activeMenu: false,
       menuItems: [
         {
-          name: 'Register',
-          url: '#'
+          name: 'Try Our Live Product',
+          url: 'https://TokenMarkets.com'
         },
-        {
-          name: 'Whitepaper',
-          url: '#'
-        },
-        {
-          name: 'Deck',
-          url: '#'
-        }
+        //{
+        //  name: 'Register',
+        //  url: '#'
+        //},
+        //{
+        //  name: 'Whitepaper',
+        //  url: '#'
+        //}
       ]
     }
   },

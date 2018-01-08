@@ -10,7 +10,7 @@ section.hero
           div.hero__secondary
             div.hero__secondary__entry
               p For Sellers
-              span Build a customizable online store in minutes that accepts credit cards, bitcoin, and thousands of other cryptocurrencies.
+              span Build an online store in minutes that accepts credit cards, bitcoin, and thousands of other cryptocurrencies.
             div.hero__secondary__entry
               p For Buyers
               span Buy with certainty from verified merchants. Pay with cryptocurrency. Participate in auctions.
@@ -19,11 +19,6 @@ section.hero
               span Earn cryptocurrency by promoting products anywhere; from social media to your own website.
           a.hero__cta(v-scroll-to="'#sub_hero'")
             span Learn More
-          a.hero__cta(
-            href="https://TokenMarkets.com"
-            target="__blank"
-          )
-            span Try our Live Product
         .hero__content__inner__image
           img(
             src = '../assets/images/token-markets-store.png'
@@ -264,8 +259,8 @@ canvas
   font-size: 20px
   border: 1px solid rgba(0,0,0,0.1)
   text-align: center
+  width: 100%
   max-width: 300px
-  margin-right: 10px
   text-decoration: none
   &:hover
     color: #fff
@@ -420,6 +415,7 @@ canvas
     opacity: 0.6
   .hero__content
     text-align: center
+    padding-top: 150px
   .hero__h1
     font-size: 36px
   .hero__h2
