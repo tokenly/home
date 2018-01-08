@@ -28,14 +28,12 @@ section.open_for_business#sub_hero
             p.open-for-business-container__content__text__header
               span Instant, Cheap Transactions.
             p.open-for-business-container__content__text__sub-header
-              span Tokenly's ecommerce solutions is supported by a scalable sidechain protocol,
-              span(style="font-weight: 600; color: #fff;") &nbsp; Token Layer&trade;
-              span , &nbsp; engineered to maintain lightning fast, low cost transactions.
+              span Tokenly ecommerce solutions are engineered to optimize for lightning fast, low cost transactions; a key to customer use and adoption.
           div.open-for-business-container__content__text__section
             p.open-for-business-container__content__text__header
-              span Unlimited Uses.
+              span Flexible.
             p.open-for-business-container__content__text__sub-header
-              span Tokenly has developed an entire ecosystem of interoperable applications that support unlimited ecommerce applications, including rentals, lending and more. Tokenly's blockchain-agnostic infrasture is compatible with almost any cryptocurrency, even those not yet invented.
+              span Tokenly has developed an entire ecosystem of interoperable applications with the flexibility to support unlimited ecommerce use cases, including token-based sales, rentals, lending and more. Tokenly's blockchain- and payment-agnostic infrasture is compatible with almost all cryptocurrencies, even those not yet invented.
   div
     img.blue-divider.upside(
       src = '../assets/images/blue-divider.png'
@@ -125,6 +123,7 @@ export default {
   .open_for_business
     .open-for-business-container
       &__content
+        padding: 40px 10px
         &__header
           max-width: 800px
           margin: 0 auto

@@ -14,10 +14,10 @@ section.products(
             p.details
               span Signup with just your email and start selling physical products, services, and blockchain tokens.
               span It’s never been easier to get started buying and selling using cryptocurrency. Tokenly handles everything from wallets and invoicing, to secure checkout and affiliate programs.
-          div
+          div.image
             img(src="https://images.pexels.com/photos/280264/pexels-photo-280264.jpeg?w=940&h=650&auto=compress&cs=tinysrgb")
         div.products__header__content__entry
-          div
+          div.image
             img(src="https://images.pexels.com/photos/37539/colored-pencils-colour-pencils-mirroring-color-37539.jpeg?w=940&h=650&auto=compress&cs=tinysrgb")
           div
             p.header
@@ -32,7 +32,7 @@ section.products(
               span Stay in Control
             p.details
               span Monitor your inventory, customer orders, and much more, all from a single store dashboard. Whether you're at the office or on your mobile device, you're always in control of your store.
-          div
+          div.image
             img(src="https://images.pexels.com/photos/261662/pexels-photo-261662.jpeg?w=940&h=650&auto=compress&cs=tinysrgb")
         div.products__header__content__entry.centered
           div.centered
@@ -40,7 +40,7 @@ section.products(
               i.material-icons check_circle
               span We're Live, Now.
             p.details
-              span Token Markets is more than a mere idea; it is a live application providing true cryptocurrency ecommerce to merchants all over the world.
+              span Token Markets is more than just an idea; it is a live application providing true cryptocurrency ecommerce to merchants all over the world.
             br
             br
             a.cta(href="https://tokenmarkets.com")
@@ -54,69 +54,6 @@ export default {
   components: {Product},
   data () {
     return {
-      activeProductIndex: 0,
-      productData: [
-        {
-          name: 'TokenMarkets',
-          elID: 'tokenmarkets',
-          headline: 'Shopify with Blockchain Tokens',
-          summary: 'Get setup in minutes to buy or sell physical goods, services, or token assets with Token Markets. Accept tokens, digital currency, or credit cards as payment.',
-          linkText: 'TokenMarkets.com',
-          linkURL: 'https://tokenmarkets.com',
-          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900-500x500.png',
-          status: 'Live'
-        },
-        {
-          name: 'TokenPockets',
-          elID: 'tokenpockets',
-          headline: 'Create Your Own Token',
-          summary: 'TokenPockets is a comprehensive token wallet. Signup and create shared, multi-signature wallets or issue your own blockchain token.',
-          linkText: 'TokenPockets.com',
-          linkURL: 'https://tokenpockets.com',
-          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/vault-wireframe_900-414x414.png',
-          status: 'Live Beta'
-        },
-        {
-          name: 'Token Launch',
-          elID: 'token-launch',
-          headline: 'Launch Your Own Token Crowdsale',
-          summary: 'Token Launch is a turnkey solution for managing your own token crowdsale to fund your next project. Set volume limits and more.',
-          linkText: '',
-          linkURL: '',
-          imgURL: 'https://tekk.wpengine.com/wp-content/uploads/2017/06/launch-wireframe-recovered-900.png',
-          status: 'Private Beta'
-        },
-        {
-          name: 'TokenFM',
-          elID: 'tokenFM',
-          headline: 'Media Tokenized',
-          summary: 'TokenFM is a token launch pad and community streaming platform for creators, curators, and fans. Media player, artist engagement tools, media and merchandize market, and more.',
-          linkText: 'Token.FM',
-          linkURL: 'https://tokenfm.com',
-          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/microphone-wireframe-recovered-900-500x500.png',
-          status: 'Private Beta'
-        },
-        {
-          name: 'TokenPass',
-          elID: 'tokenpass',
-          headline: 'Token Controlled Access',
-          summary: 'Tokenpass is a digital access pass hub for universal, platform agnostic user management. API connectivity, token lending and rentals, token controlled chats, and more.',
-          linkText: 'TokenPass.Tokenly.com',
-          linkURL: 'https://tokenpass.tokenly.com/',
-          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/card-wireframe-900-550x550.png',
-          status: 'Live'
-        },
-        {
-          name: 'Coming Soon',
-          elID: 'development',
-          headline: 'Solutions Under Development',
-          summary: "We're developing the next generation of blockchain token solutions to extend the functionality of our existing Token Suite. Solutions under development include enchanced token analytics and verification, token-integrated chat rooms, and more.",
-          linkText: '',
-          linkURL: '',
-          imgURL: 'https://tekk.wpengine.com/wp-content/uploads/2017/06/lightning-wireframe_900-550x550.png',
-          status: 'In Development'
-        }
-      ]
     }
   },
   created () {
@@ -379,6 +316,12 @@ export default {
         line-height: 60px
         width: 30px
         height: 60px
+  div.products__header__content__entry
+    div
+      padding: 10px
+      width: 100%
+      &.image
+        display: none
 
 @media(max-width: 600px)
   body

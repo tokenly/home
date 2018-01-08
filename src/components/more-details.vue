@@ -7,7 +7,7 @@ section.more-details(
     .more-details__container__content
       header Want More Details?
       p.sub-header
-        span Our whitepaper elaborates on Tokenly's roadmap for future development,technical details of Token Suite and Token Layer, and more.
+        span Our whitepaper elaborates on Tokenly's roadmap for future development, technical details of our applications, and much more.
       div
         a.more-details__container__content__button
           span Coming Soon

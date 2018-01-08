@@ -37,7 +37,7 @@ export default {
       partnerData: [
         {
           name: 'Augmentors',
-          summary: 'Tokenly helped Augmentors succesfully create and sell $1MM+ token. Augmentors also uses integrations of Token Suite applications in its blockchain and token gaming platform.',
+          summary: 'Tokenly helped Augmentors succesfully create and sell $1MM+ of blockchain tokens. Augmentors also uses integrations of Tokenly applications in its blockchain and token gaming platform.',
           imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/08/augmentors-logo.png'
         },
         {
