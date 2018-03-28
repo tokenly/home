@@ -320,8 +320,11 @@ export default {
     div
       padding: 10px
       width: 100%
+      text-align: left
       &.image
         display: none
+  .products__header__content__entry div p.header
+    font-size: 24px
 
 @media(max-width: 600px)
   body

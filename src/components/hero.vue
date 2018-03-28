@@ -234,9 +234,7 @@ canvas
       font-size: 16px
       color: #666
       line-height: 1.25
-
-
-
+      
 .hero__h2
   overflow: hidden
   text-transform: none
