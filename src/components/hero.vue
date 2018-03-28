@@ -154,7 +154,6 @@ $hero-spacing-mobile: 100px
 $hero-btn-color: #4170a0
 
 .hero
-  display: flex
   position: relative
   font-size: 1em
   overflow: hidden
@@ -182,6 +181,13 @@ $hero-btn-color: #4170a0
   height: 100%
   min-height: 400px
 
+canvas
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  z-index: -2
+    
 .hero__content
   position: relative
   text-align: center
@@ -403,7 +409,7 @@ $hero-btn-color: #4170a0
 .hero__bg__mask
   opacity: 0.8
   background: linear-gradient(to bottom, #002346 0%, #0063c6 100%)
-  z-index: 5
+  z-index: -1
 
 .hero__bg
   z-index: 1
