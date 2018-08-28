@@ -8,8 +8,6 @@ div.home
   div.brand-section-divider
   team
   div.brand-section-divider
-  advisors
-  div.brand-section-divider
   partners
   div.brand-section-divider
   faq
