@@ -108,10 +108,50 @@ section.team#team
               p.name
                 span Nick Rathman
               p.title
-                span Founder, Senior Developer
+                span Founder, Chief Architect
               p.summary
-                span Experienced backend developer with expertise in blockchain and Counterparty protocol.
-
+                span Experienced back-end developer with expertise in blockchain and Counterparty protocol.
+                div.team-member-content__entry
+        div.team-member-content__entry
+          div.team-member
+            div.team-member__image
+              img.portrait(
+                src = '../assets/team/shane.jpg'
+              )
+              a(
+                href="https://www.linkedin.com/in/shane-randolph-b9509838/"
+                target="__blank"
+              )
+                img.linkedin(
+                  src = '../assets/images/linkedin.png'
+                )
+            div.team-member__content
+              p.name
+                span Shane Randolph
+              p.title
+                span Lead Front-end Developer
+              p.summary
+                span Front-end developer with 7 years of experience working with companies such as Ernst &    Young (EY).
+        div.team-member-content__entry
+          div.team-member
+            div.team-member__image
+              img.portrait(
+                src = '../assets/team/ruben.jpg'
+              )
+              a(
+                href="https://www.linkedin.com/in/ruben-meseguer-776a7710b/"
+                target="__blank"
+              )
+                img.linkedin(
+                  src = '../assets/images/linkedin.png'
+                )
+            div.team-member__content
+              p.name
+                span Ruben Meseguer
+              p.title
+                span Front- & Back-end Developer
+              p.summary
+                span Back-end developer and open source software contributor.
         div.team-member-content__entry
           div.team-member
             div.team-member__image
@@ -153,46 +193,6 @@ section.team#team
                 span Marketing, Design
               p.summary
                 span Experienced content marketer, graphic designer, photographer, and video producer.
-        div.team-member-content__entry
-          div.team-member
-            div.team-member__image
-              img.portrait(
-                src = '../assets/team/shane.jpg'
-              )
-              a(
-                href="https://www.linkedin.com/in/shane-randolph-b9509838/"
-                target="__blank"
-              )
-                img.linkedin(
-                  src = '../assets/images/linkedin.png'
-                )
-            div.team-member__content
-              p.name
-                span Shane Randolph
-              p.title
-                span Front-end Developer, UI
-              p.summary
-                span Experienced frontend developer and entrepreneur. Former economist.
-        div.team-member-content__entry
-          div.team-member
-            div.team-member__image
-              img.portrait(
-                src = '../assets/team/ruben.jpg'
-              )
-              a(
-                href="https://www.linkedin.com/in/ruben-meseguer-776a7710b/"
-                target="__blank"
-              )
-                img.linkedin(
-                  src = '../assets/images/linkedin.png'
-                )
-            div.team-member__content
-              p.name
-                span Ruben Meseguer
-              p.title
-                span Front- & Back-end Developer
-              p.summary
-                span Backend developer and open source software contributor.
 
 </template>
 

@@ -323,8 +323,12 @@ export default {
       text-align: left
       &.image
         display: none
+    img
+      border-radius: 3px
   .products__header__content__entry div p.header
     font-size: 24px
+.products__header img
+  border-radius: 3px
 
 @media(max-width: 600px)
   body

@@ -255,7 +255,9 @@ export default {
           font-size: 20px
           i
             vertical-align: middle
-
+.about__container__content
+  img
+    border-radius: 3px;
 .about__container__content__sub-header__divider
   border-bottom: 2px solid #bbb
   width: 50%
