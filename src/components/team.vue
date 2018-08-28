@@ -1,5 +1,5 @@
 <template lang="pug">
-section.team
+section.team#team
   div.team__container
     div.team__container__content
       header
@@ -10,9 +10,16 @@ section.team
         div.team-member-content__entry
           div.team-member
             div.team-member__image
-              img(
+              img.portrait(
                 src = '../assets/team/adam.jpg'
               )
+              a(
+                href="https://www.linkedin.com/in/alevine3/"
+                target="__blank"
+              )
+                img.linkedin(
+                  src = '../assets/images/linkedin.png'
+                )
             div.team-member__content
               p.name
                 span Adam Levine
@@ -24,9 +31,16 @@ section.team
         div.team-member-content__entry
           div.team-member
             div.team-member__image
-              img(
+              img.portrait(
                 src = '../assets/team/devon.jpg'
               )
+              a(
+                href="https://www.linkedin.com/in/devonweller/"
+                target="__blank"
+              )
+                img.linkedin(
+                  src = '../assets/images/linkedin.png'
+                )
             div.team-member__content
               p.name
                 span Devon Weller
@@ -38,9 +52,16 @@ section.team
         div.team-member-content__entry
           div.team-member
             div.team-member__image
-              img(
+              img.portrait(
                 src = '../assets/team/martin.jpg'
               )
+              a(
+                href="https://www.linkedin.com/in/martin-rerak-cma-cpa-6818761b/"
+                target="__blank"
+              )
+                img.linkedin(
+                  src = '../assets/images/linkedin.png'
+                )
             div.team-member__content
               p.name
                 span Martin Rerak
@@ -52,9 +73,16 @@ section.team
         div.team-member-content__entry
           div.team-member
             div.team-member__image
-              img(
+              img.portrait(
                 src = '../assets/team/steven.jpg'
               )
+              a(
+                href="https://www.linkedin.com/in/steven-levine-a9826957/"
+                target="__blank"
+              )
+                img.linkedin(
+                  src = '../assets/images/linkedin.png'
+                )
             div.team-member__content
               p.name
                 span Steven Levine
@@ -66,23 +94,77 @@ section.team
         div.team-member-content__entry
           div.team-member
             div.team-member__image
-              img(
+              img.portrait(
                 src = '../assets/team/nick.jpg'
               )
+              a(
+                href="https://www.linkedin.com/in/nick-rathman-38430662/"
+                target="__blank"
+              )
+                img.linkedin(
+                  src = '../assets/images/linkedin.png'
+                )
             div.team-member__content
               p.name
                 span Nick Rathman
               p.title
-                span Founder, Senior Developer
+                span Founder, Chief Architect
               p.summary
-                span Experienced backend developer with expertise in blockchain and Counterparty protocol.
-
+                span Experienced back-end developer with expertise in blockchain and Counterparty protocol.
+                div.team-member-content__entry
         div.team-member-content__entry
           div.team-member
             div.team-member__image
-              img(
+              img.portrait(
+                src = '../assets/team/shane.jpg'
+              )
+              a(
+                href="https://www.linkedin.com/in/shane-randolph-b9509838/"
+                target="__blank"
+              )
+                img.linkedin(
+                  src = '../assets/images/linkedin.png'
+                )
+            div.team-member__content
+              p.name
+                span Shane Randolph
+              p.title
+                span Lead Front-end Developer
+              p.summary
+                span Front-end developer with 7 years of experience working with companies such as Ernst &    Young (EY).
+        div.team-member-content__entry
+          div.team-member
+            div.team-member__image
+              img.portrait(
+                src = '../assets/team/ruben.jpg'
+              )
+              a(
+                href="https://www.linkedin.com/in/ruben-meseguer-776a7710b/"
+                target="__blank"
+              )
+                img.linkedin(
+                  src = '../assets/images/linkedin.png'
+                )
+            div.team-member__content
+              p.name
+                span Ruben Meseguer
+              p.title
+                span Front- & Back-end Developer
+              p.summary
+                span Back-end developer and open source software contributor.
+        div.team-member-content__entry
+          div.team-member
+            div.team-member__image
+              img.portrait(
                 src = '../assets/team/tatiana.jpg'
               )
+              a(
+                href="https://www.linkedin.com/in/tatiana-moroz-04a3b27/"
+                target="__blank"
+              )
+                img.linkedin(
+                  src = '../assets/images/linkedin.png'
+                )
             div.team-member__content
               p.name
                 span Tatiana Moroz
@@ -94,23 +176,16 @@ section.team
         div.team-member-content__entry
           div.team-member
             div.team-member__image
-              img(
-                src = '../assets/team/shane.png'
+              img.portrait(
+                src = '../assets/team/michael.jpg'
               )
-            div.team-member__content
-              p.name
-                span Shane Randolph
-              p.title
-                span Front-end Developer, UI
-              p.summary
-                span Experienced frontend developer and entrepreneur. Former economist.
-
-        div.team-member-content__entry
-          div.team-member
-            div.team-member__image
-              img(
-                src = '../assets/team/michael.png'
+              a(
+                href="https://www.linkedin.com/in/mjonsson3/"
+                target="__blank"
               )
+                img.linkedin(
+                  src = '../assets/images/linkedin.png'
+                )
             div.team-member__content
               p.name
                 span Michael Jonsson
@@ -118,20 +193,6 @@ section.team
                 span Marketing, Design
               p.summary
                 span Experienced content marketer, graphic designer, photographer, and video producer.
-
-        div.team-member-content__entry
-          div.team-member
-            div.team-member__image
-              img(
-                src = '../assets/team/ruben.png'
-              )
-            div.team-member__content
-              p.name
-                span Ruben Meseguer
-              p.title
-                span Front- & Back-end Developer
-              p.summary
-                span Backend developer and open source software contributor.
 
 </template>
 
@@ -220,7 +281,7 @@ export default {
 }
 </script>
 
-<style lang="sass?indentedSyntax=true" scoped>
+<style lang="sass?indentedSyntax=true">
 
 .team
   background: #fff
@@ -233,12 +294,25 @@ export default {
       header
         margin: 0px
         text-align: left
-        margin-bottom: 20px
-        font-size: 24px
-        font-weight: 400
+        margin-bottom: 50px
+        font-size: 36px
+        line-height: 60px
+        font-weight: 600
+        color: #00254C
+        position: relative
+      header:before
+        content: ''
+        background-color: #29B6F6
+        opacity: 0.7
+        height: 2px
+        width: 70px
+        border-radius: 1px
+        position: absolute
+        top: 70px
+        left: 0
       p
         text-align: left
-        color: #666
+        color: #888
         font-size: 20px
         margin-bottom: 30px
 
@@ -285,17 +359,17 @@ export default {
       font-weight: 600
       margin-bottom: 5px
     p.title
-      color: #888
+      color: #999
       margin-bottom: 25px
       font-size: 16px
     p.summary
-      color: #666
+      color: #888
       line-height: 1.5
       margin-bottom: 0px
       font-size: 16px
 
 .team-member__image
-  img
+  img.portrait
     border-radius: 50%
     max-width: 100%
     height: 100%
@@ -305,14 +379,22 @@ export default {
     width: 80px
     height: 80px
     display: inline-block
+  img.linkedin
+    width: 30px;
+    height: 30px;
+    margin-left: -20px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+    border-radius: 1px;
 
-@media(max-width: 767px)
+@media(max-width: 900px)
   body
     .product__row
       &__image
         display: none
       &__content
         width: 100%
+    .team-member
+      padding: 0px
     .team-member__content
       p.summary
         font-size: 16px

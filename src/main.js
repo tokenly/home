@@ -9,9 +9,8 @@ import _ from 'lodash'
 Vue.use(VueRouter)
 Vue.use(VeeValidate)
 
-var VueScrollTo = require('vue-scrollto');
 
-Vue.use(VueScrollTo)
+var VueScrollTo = require('vue-scrollto');
 
 // You can also pass in the default options
 Vue.use(VueScrollTo, {

@@ -1,44 +1,32 @@
 <template lang="pug">
 section.token-layer(id="token-layer")
-  div.token-layer__container
-    div.token-layer__container__content
-      header
+  div.token-layer__header
+    div.token-layer__header__content
+      div.token-layer__header__content__left
         img(
           src="../assets/images/token-layer.png"
         )
-      p.sub-header
-        span Tokenly's scalable sidechain protocol built to support interoperability and low cost transactions.
-    div
-      ul.token-layer__container__content__menu
-        li(v-for="(featureEntry, index) in this.featureData")
-          a.product-option(
-            @click="activateFeature"
-            v-bind:data-target-el="featureEntry.elID"
-            v-bind:data-feature-index="index"
-            :class="{ 'active': index === activeFeatureIndex }"
-          )
-            span {{ featureEntry.name }}
-      div.token-layer-feature
-        div.token-layer-feature__increment
-          span(@click="incrementFeature(-1)")
-            i.material-icons.backwards play_arrow
-        div.token-layer-feature__image
-          img(
-            src="../assets/images/token-layer-white.jpg"
-          )
-        div.token-layer-feature__content
-          TokenLayerFeature(
-            :elID = "this.activeFeature.elID"
-            :headline = "this.activeFeature.headline"
-            :summary = "this.activeFeature.summary"
-            :imgURL = "this.activeFeature.imgURL"
-          )
-        div.token-layer-feature__increment
-          span(@click="incrementFeature(1)")
-            i.material-icons play_arrow
-
-  div.token-layer__mask
-  div.token-layer__bg
+        p
+          span Tokenly's scalable sidechain protocol built to support interoperability and low cost transactions. Optimized for frequent and low value blockchain token transactions. The first middleware for Bitcoin Counterparty & ERC20 Tokens.
+        ul.token-layer__container__content__menu
+          li(v-for="(featureEntry, index) in this.featureData")
+            a.product-option(
+              @click="activateFeature"
+              v-bind:data-target-el="featureEntry.elID"
+              v-bind:data-feature-index="index"
+              :class="{ 'active': index === activeFeatureIndex }"
+            )
+              span {{ featureEntry.name }}
+        TokenLayerFeature(
+          :elID = "this.activeFeature.elID"
+          :headline = "this.activeFeature.headline"
+          :summary = "this.activeFeature.summary"
+          :imgURL = "this.activeFeature.imgURL"
+        )
+      div.token-layer__header__content__right
+        img.token-layer__image(
+          src="../assets/images/token-layer-white.jpg"
+        )
 </template>
 
 <script>
@@ -54,37 +42,23 @@ export default {
         {
           name: 'Low Cost',
           elID: 'low-cost',
-          headline: 'Stable, predicatable, low cost transactions.',
-          summary: 'TokenLayer ',
+          headline: 'Cheap and predictable transactions fees.',
+          summary: 'Token Layer is engineered to maintain low, predictable blockchain transaction fees.  Low, predictable fees are essential to reducing customer purchase friction, transacting with low value tokens, and facilitate micropayments.',
           imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
         },
         {
           name: 'Secure',
           elID: 'secure',
           headline: 'World-Class Security',
-          summary: '[Placeholder]',
+          summary: 'Tokenly is secured by a consortium of validating nodes.  This provides strong tamper evident and immutability guarantees from multiple independent entities.  The network will reject that do not follow the consensus rules.  The network security will grow as additional validating nodes are added.',
           imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
         },
         {
           name: 'Scalable',
           elID: 'scalable',
-          headline: 'Built for Worldwide ..',
-          summary: 'Token Layer is engineered to handle 1,000s transactions per second.',
+          headline: 'Blockchain Agnostic Platform Built for Global Adoption',
+          summary: 'Token Layer handles throughputs of 1,000 transactions per second.  Future optimizations will significantly increase this throughput. Token Layer is blockchain and platform agnostic. Token Layer is compatible with the most popular blockchain ecosystems today and will remain compatible with the most popular blockchains yet to be created.',
           imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/vault-wireframe_900-225x225.png'
-        },
-        {
-          name: 'Flexible',
-          elID: 'flexible',
-          headline: "Token Layer plays nice with most blockchains",
-          summary: 'Token Layer is built to be blockchain and platform agnostic so .... That means .... and blockchains still to come.',
-          imgURL: 'http://tekk.wpengine.com/wp-content/uploads/2017/06/shoppingcart-wireframe-900.png'
-        },
-        {
-          name: 'Innovative',
-          elID: 'innovative',
-          headline: 'Open and ready for anything',
-          summary: 'Token Layer is the the first middleware for Bitcoin Counterparty & ERC20 Tokens.',
-          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/06/microphone-wireframe-recovered-900-900x900.png'
         }
       ]
 
@@ -123,11 +97,35 @@ export default {
 
 .token-layer
   background: #fff
-  background-size: cover
-  background-position: center
   position: relative
-  padding: 80px 30px
-  border-top: none
+  z-index: 99
+  &__header
+    &__content
+      max-width: 1000px
+      padding: 80px 20px
+      margin: 0 auto
+      display: table
+      img
+        max-width: 100%
+      p
+        color: #334
+      &__left, &__right
+        display: table-cell
+        vertical-align: middle
+        padding: 0px 20px
+      &__left
+        width: 60%
+        img
+          margin-bottom: 20px
+          height: 85px
+        p
+          padding: 5px 15px
+          font-size: 20px
+          opacity: 0.9
+          margin-bottom: 20px
+      &__right
+        text-align: center
+        width: 40%
   &__container
     position: relative
     z-index: 8
@@ -143,22 +141,21 @@ export default {
       width: 100%
       text-align: center
       &__menu
-        padding: 0px
+        padding: 5px
         margin: 0px
-        margin-bottom: 40px
-        text-align: center
+        margin-bottom: 30px
         li
           display: inline-block
           margin: 0px
           a
             padding: 10px 20px
-            color: #333
+            color: #666
             font-weight: 500
             letter-spacing: 1px
             font-size: 16px
             display: inline-block
             cursor: pointer
-            background: #eee
+            background: #f9f9f9
             border-radius: 30px
             margin: 0px 10px 10px 0px
             text-transform: uppercase
@@ -174,19 +171,6 @@ export default {
       width: 40%
       img
         width: 100%
-  &__mask
-    position: absolute
-    left: 0px
-    right: 0px
-    top: 0px
-    bottom: 0px
-  &__bg
-    border-radius: 5px
-    position: absolute
-    left: 20px
-    right: 20px
-    top: 00px
-    bottom: 20px
   header
     margin: 0px
     font-size: 40px
@@ -200,7 +184,7 @@ export default {
   p.sub-header
     font-size: 20px
     opacity: 0.7
-    margin-bottom: 40px
+    margin-bottom: 20px
     color: #333
 
 .token-layer-feature__content, .token-layer-feature__image, .token-layer-feature__increment
@@ -212,12 +196,7 @@ export default {
   display: table
 
 .token-layer-feature__content
-  width: 70%
-
-.token-layer-feature__image
-  width: 30%
-  img
-    max-width: 100%
+  width: 100%
 
 .token-layer-feature__increment
   vertical-align: middle
@@ -225,27 +204,37 @@ export default {
     font-size: 40px
     text-align: center
     i
-      line-height: 60px
+      line-height: 90px
       display: inline-block
       width: 60px
-      height: 60px
-      background: #eee
-      border: 1px solid rgba(0,0,0,0.1)
-      box-shadow: 0px 1px 3px rgba(0,0,0,0.05)
-      border-radius: 50%
+      height: 90px
+      border: 1px solid #0064CC
+      color: #0064CC
+      border-radius: 5px
       cursor: pointer
       transition: 0.5s
       &:hover
-        background: #ddd
-        box-shadow: none
+        background: #fff
+        color: #0064CC
+        border: 2px solid #0064CC
         transform: scale(1.1)
-    i.backwards
-      transform: rotateZ(180deg)
 
-@media(max-width: 787px)
+@media(max-width: 900px)
   body
     .token-layer
-      padding: 60px 10px
+      &__header
+        padding: 40px 10px
+        &__content
+          padding: 0px
+          &__left
+            width: 100%
+            p
+              padding: 5px
+              font-size: 16px
+            img
+              height: 60px
+          &__right
+            display: none
       &__container
         &__content, &__image
           width: 100%
@@ -265,13 +254,14 @@ export default {
           p.header
             font-size: 18px !important
       ul.token-layer__container__content__menu
+        margin-bottom: 10px
         li
           a
             font-size: 14px
             border-radius: 30px
-            padding: 10px
+            padding: 8px 10px
             margin: 0px 10px 10px 0px
-            letter-spacing: 0px
+            text-transform: none
   .token-layer-feature__content
     width: 100%
   .token-layer-feature__image
@@ -281,8 +271,23 @@ export default {
     span
       font-size: 20px
       i
-        line-height: 30px
+        line-height: 60px
         width: 30px
-        height: 30px
+        height: 60px
+
+@media(max-width: 600px)
+  body
+    .token-layer
+      &__header
+        text-align: center
+        &__content
+          padding: 0px
+          &__left
+            width: 100%
+            padding: 0px
+            img
+              height: 40px
+          &__right
+            display: none
 
 </style>

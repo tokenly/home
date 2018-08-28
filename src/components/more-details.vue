@@ -7,10 +7,10 @@ section.more-details(
     .more-details__container__content
       header Want More Details?
       p.sub-header
-        span Our whitepaper elaborates on Tokenly's roadmap for future development,technical details of Token Suite and Token Layer, and more.
+        span Our whitepaper elaborates on Tokenly's roadmap for future development, technical details of our applications, and much more.
       div
         a.more-details__container__content__button
-          span Read Our Whitepaper
+          span Coming Soon
 </template>
 
 <script>
@@ -39,7 +39,7 @@ export default {
   background: #fff
   position: relative
   &__container
-    padding: 60px 20px
+    padding: 80px 20px
     &__content
       max-width: 800px
       margin: 0 auto
@@ -48,14 +48,16 @@ export default {
         font-size: 40px
         font-weight: 700
         margin-bottom: 40px
+        color: #00254C
       p
-        color: #666
+        color: #888
         font-size: 20px
         margin-bottom: 40px
       a
-        padding: 20px 50px
+        padding: 20px
         background: #D50000
         display: inline-block
+        font-size: 18px
         color: #fff
         width: 100%
         max-width: 300px

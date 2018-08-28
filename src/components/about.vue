@@ -2,12 +2,34 @@
 section.about(ref="about" id="about")
   div.about__container
     div.about__container__content
-      header
-        span About
-        span.name Tokenly
-      p Tokenly is a leading innovator and developer of turnkey blockchain and token solutions. Our vision is to make blockchain technology easy enough for anyone to use ... Provide a scalable infrastructure that supports ... from small pet projects to entreprise-level ...
-      p Token Suite
-      p Token Layer
+      div.about__container__content__text
+        header
+          span About
+          span.name Tokenly
+        p
+          span Tokenly is a leading innovator and developer of turnkey blockchain and token solutions.
+        p
+          span To date, we have launched 5 blockchain applications which include turnkey solutions for blockchain eCommerce, auctions, secure multisig wallets, token creation, token crowdsales, and more.
+      div.about__container__content__image
+        img.token-layer__image(
+          src="../assets/images/fresco-wireframe-connect.jpg"
+        )
+      div.about__container__content__image
+        img.token-layer__image(
+          src="../assets/images/token-layer-white.jpg"
+        )
+      div.about__container__content__text
+        header
+          span Our Vision
+        p
+          span Our vision is to make blockchain technology easy enough for anyone to use.
+        p
+          span We believe blockchain technology is revolutionary; but we also realize working with blockchain technology is still too complex for widespread adoption.
+        p
+          span To that end, Tokenly is developing an interoperable suite of applications that handle the complexities of blockchain technology in the background.
+        div
+          a.cta(v-scroll-to="'#team'")
+            span Meet Our Team
   div.about__mask
 
 </template>
@@ -43,9 +65,7 @@ export default {
 <style lang="sass?indentedSyntax=true" scoped>
 
 .about
-  background: #fff
-  color: #222
-  box-shadow: 0px -1px 3px rgba(100,100,100,0.2)
+  background: #00254C
   display: table
   width: 100%
   z-index: 99
@@ -61,20 +81,17 @@ export default {
     background-size: cover
   &__container
     padding: 80px 30px
-    display: table-cell
-    vertical-align: middle
-    background: rgba(255,255,255,0.85)
     &__content
       max-width: 1000px
       margin: 0 auto
       header
-        font-size: 40px
+        font-size: 36px
         line-height: 60px
-        font-weight: 700
+        font-weight: 600
         margin: 0px
         margin-bottom: 50px
         position: relative
-        color: #444
+        color: #fff
         span
           vertical-align: top
         span.name
@@ -84,13 +101,45 @@ export default {
           vertical-align: top
       header:before
         content: ''
-        background-color: #1565C0
+        background-color: #29B6F6
+        opacity: 0.7
         height: 2px
         width: 70px
         border-radius: 1px
         position: absolute
         top: 70px
         left: 0
+      &__image
+        width: 50%
+        display: inline-block
+        text-align: center
+        margin-bottom: 40px
+        vertical-align: top
+        padding: 0px 20px
+        img
+          width: 100%
+      &__text
+        width: 50%
+        margin-bottom: 40px
+        display: inline-block
+        padding: 0px 20px
+        vertical-align: top
+        a
+          text-align: center
+          padding: 15px 30px
+          font-size: 18px
+          display: inline-block
+          border: 2px solid #fff
+          border-radius: 2px
+          color: #fff
+          background: #0064CC
+          cursor: pointer
+          transition: 0.5s
+          font-weight: 600
+          border-radius: 30px
+          border: 1px solid rgba(0,0,0,0.1)
+          box-shadow: 0px 1px 4px rgba(0,0,0,0.2)
+
       &__sub
         text-align: center
         &__section
@@ -110,8 +159,8 @@ export default {
             color: #111
             font-weight: 600
           a
-            padding: 20px
-            width: 100%
+            padding: 10px 20px
+            max-width: 100%
             display: inline-block
             border: 2px solid #fff
             border-radius: 2px
@@ -125,8 +174,13 @@ export default {
             box-shadow: 0px 1px 4px rgba(0,0,0,0.2)
       p
         font-size: 20px
-        margin-bottom: 20px
-        color: #666
+        margin-bottom: 30px
+        color: #fff
+        .bold
+          font-weight: 700
+          color: #eee
+          margin-left: 5px
+          cursor: pointer
         &.about__container__content__sub-header
           font-size: 20px
           text-transform: uppercase
@@ -201,7 +255,9 @@ export default {
           font-size: 20px
           i
             vertical-align: middle
-
+.about__container__content
+  img
+    border-radius: 3px;
 .about__container__content__sub-header__divider
   border-bottom: 2px solid #bbb
   width: 50%
@@ -236,6 +292,11 @@ export default {
         font-size: 16px
         margin-bottom: 20px
         line-height: 1.5
+      &__text
+        width: 100%
+        padding: 0px
+      &__image
+        display: none
       div.about__container__content__sub__section
         width: 100%
     p.about__container__content__sub-text

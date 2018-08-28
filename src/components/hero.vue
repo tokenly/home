@@ -5,19 +5,33 @@ section.hero
       .hero__content__inner
         .hero__content__inner__text
           h1.hero__h1
-            span Turnkey Token Solutions
-          h2.hero__h2
-            span Create, share, and use blockchain tokens without writing a single line of code.
-          a.hero__cta.animated(v-scroll-to="'#about'")
+            span Turnkey token ecommerce.
+            span(style="color: #42A5F5;") &nbsp; Now.
+          div.hero__secondary
+            div.hero__secondary__entry
+              p For Sellers
+              span Build an online store in minutes that accepts credit cards, bitcoin, and thousands of other cryptocurrencies.
+            div.hero__secondary__entry
+              p For Buyers
+              span Buy with certainty from verified merchants. Pay with cryptocurrency. Participate in auctions.
+            div.hero__secondary__entry
+              p For Affiliates
+              span Earn cryptocurrency by promoting products anywhere; from social media to your own website.
+          a.hero__cta(v-scroll-to="'#sub_hero'")
             span Learn More
         .hero__content__inner__image
+          img(
+            src = '../assets/images/token-markets-store.png'
+          )
   .hero__bg__mask
   .hero__bg(
     ref="bg"
   )
+  canvas.background
 </template>
 
 <script>
+
 export default {
   data () {
     return {
@@ -98,6 +112,15 @@ export default {
   }
 }
 
+window.onload = function() {
+  Particles.init({
+    selector: '.background',
+    maxParticles: 40,
+    color: '#29B6F6',
+    connectParticles: true
+  });
+};
+
 </script>
 
 <style lang="sass?indentedSyntax=true" scoped>
@@ -106,13 +129,12 @@ $hero-spacing-mobile: 100px
 $hero-btn-color: #4170a0
 
 .hero
-  display: flex
   position: relative
   font-size: 1em
   overflow: hidden
-  min-height: 400px
-  height: 100vh
   z-index: 0
+  background: #f9f9f9;
+
 
 .hero__bg, .hero__bg__mask
   position: absolute
@@ -121,9 +143,7 @@ $hero-btn-color: #4170a0
   top: 0
   left: 0
 
-
 .hero__content__container
-  position: absolute
   z-index: 100
   top: 0px
   bottom: 0px
@@ -134,25 +154,36 @@ $hero-btn-color: #4170a0
   height: 100%
   min-height: 400px
 
+canvas
+  width: 100%
+  height: 100%
+  position: absolute
+  top: 0
+  z-index: -2
+    
 .hero__content
   position: relative
-  text-align: center
   color: #333
   max-width: 800px
   margin: 0 auto
   display: table-cell
   vertical-align: middle
-  padding: 20px
+  padding: 100px 20px
   &__inner
-    max-width: 1100px
+    max-width: 1200px
     margin: 0 auto
-    &__text, &__image
-      width: 50%
+    &__text
+      padding: 30px
+      width: 55%
+      display: inline-block
+      vertical-align: top
+    &__image
+      width: 45%
       display: inline-block
       vertical-align: top
       padding: 30px
-    &__text
-      text-align: left
+      img
+        width: 100%
 
 .hero__continue
   position: absolute
@@ -178,62 +209,42 @@ $hero-btn-color: #4170a0
   overflow: hidden
   text-transform: none
   color: inherit
-  margin: 0px 0px 30px 0px
+  margin: 0px 0px 40px 0px
   line-height: 1.5
   letter-spacing: 0.5px
-  font-size: 36px
-  font-weight: 700
-  transition: 0.5s
-  color: #444
-  .emphasized
-    color: #E6FF0D
-    -webkit-animation: fadein 2s
-    -moz-animation: fadein 2s
-    -ms-animation: fadein 2s
-    -o-animation: fadein 2s
-    animation: fadein 2s
+  font-size: 48px
+  color: #00254C
+  font-weight: 900
+  text-shadow: 0px 1px 5px rgba(200,200,200,0.2);
 
-@-webkit-keyframes fadein
-  from
-    opacity: 0
-    margin-left: 50px
-    display: none
-  to
-    opacity: 1
-    margin-left: 0px
+
+.hero__secondary
+  margin-bottom: 30px
+  &__entry
     display: inline-block
-
-@-moz-keyframes fadein
-  from
-    opacity: 0
-    margin-left: 50px
-    display: none
-  to
-    opacity: 1
-    margin-left: 0px
-    display: inline-block
-
-@keyframes fadein
-  from
-    opacity: 0
-    margin-left: 50px
-    display: none
-  to
-    opacity: 1
-    margin-left: 0px
-    display: inline-block
-
-
+    width: 33.3%
+    vertical-align: top
+    padding: 5px
+    p
+      color: #01579b
+      text-transform: uppercase
+      font-size: 18px
+      font-weight: 600
+    span
+      font-size: 16px
+      color: #666
+      line-height: 1.25
+      
 .hero__h2
   overflow: hidden
   text-transform: none
   letter-spacing: 0
   color: inherit
   line-height: 1.5
-  font-size: 22px
+  font-size: 24px
   font-weight: 500
   margin-bottom: 50px
-  color: #888
+  color: #000
 
 .hero__cta
   padding: 15px 50px
@@ -251,12 +262,7 @@ $hero-btn-color: #4170a0
   text-align: center
   width: 100%
   max-width: 300px
-  &.animated
-    -webkit-animation: pulsate 5s linear
-    -moz-animation: pulsate 5s linear
-    animation: pulsate 5s linear
-    -webkit-animation-delay: 3s
-    animation-delay: 3s
+  text-decoration: none
   &:hover
     color: #fff
     background-position: right center
@@ -375,22 +381,25 @@ $hero-btn-color: #4170a0
     background-color: lighten($hero-btn-color, 5%)
 
 .hero__bg__mask
-  opacity: 0.85
-  background: linear-gradient(to bottom, #002346 0%, #0063c6 100%)
-  opacity: 0.5
+  opacity: 0.6
   background: #fff
-  z-index: 5
+  z-index: -1
 
 .hero__bg
+  display: none;
   z-index: 1
+  -webkit-background-size: cover
+  -moz-background-size: cover
+  -o-background-size: cover
   background-size: cover
   background-position: center
   overflow: hidden
   -webkit-filter: blur(1px)
-  filter: blur(0px)
-  background-image: none
+  filter: blur(1px)
   position: absolute
-  background: url(https://tokenpockets.com/images/bg2.c37d81d0.png) top right no-repeat
+  background: url(../assets/images/fresco-wireframe-clearbg.png) no-repeat center center fixed
+  -webkit-filter: blur(1px) grayscale(75%); /* Safari 6.0 - 9.0 */
+  filter: blur(1px) grayscale(75%);
   top: 0px
   bottom: 0px
   left: 0px
@@ -407,10 +416,13 @@ $hero-btn-color: #4170a0
     opacity: 0.6
   .hero__content
     text-align: center
+    padding-top: 150px
   .hero__h1
-    font-size: 30px
+    font-size: 36px
   .hero__h2
-    font-size: 18px
+    font-size: 22px
+  canvas
+    opacity: 0.5
   .form-container
     &__text
       margin: 0px 0px 20px 0px
@@ -419,5 +431,13 @@ $hero-btn-color: #4170a0
       width: 100%
   .hero__continue
     position: absolute
+
+@media(max-width: 600px)
+  .hero__secondary
+    display: none
+    &__entry
+      display: block
+      width: 100%
+      margin-bottom: 20px
 
 </style>

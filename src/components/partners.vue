@@ -7,10 +7,14 @@ section.partners(
     div.partners__container__content
       header Community
       p.sub-header Our turnkey token solutions have already enabled us to partner with some of the most innovative projects in the blockchain space.
+      div.centered
+        img.partners__container__content__image(
+          src="../assets/images/token-partnerships.png"
+        )
       div.partners__container__content__partner
         div.partners__container__content__partner__increment
           span(@click="incrementPartner(-1)")
-            i.material-icons.backwards play_arrow
+            i.material-icons keyboard_arrow_left
         Partner(
           :name="this.activePartner.name"
           :summary="this.activePartner.summary"
@@ -19,7 +23,7 @@ section.partners(
         )
         div.partners__container__content__partner__increment
           span(@click="incrementPartner(1)")
-            i.material-icons play_arrow
+            i.material-icons keyboard_arrow_right
 </template>
 
 <script>
@@ -33,7 +37,7 @@ export default {
       partnerData: [
         {
           name: 'Augmentors',
-          summary: 'Tokenly helped Augmentors succesfully create and sell $1MM+ token. Augmentors also uses integrations of Token Suite applications in its blockchain and token gaming platform.',
+          summary: 'Tokenly helped Augmentors succesfully create and sell $1MM+ of blockchain tokens. Augmentors also uses integrations of Tokenly applications in its blockchain and token gaming platform.',
           imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/08/augmentors-logo.png'
         },
         {
@@ -82,20 +86,38 @@ export default {
 
 .partners
   position: relative
-  background: #f9f9f9
+  background: #fff
   &__container
     padding: 80px 20px
     &__content
       max-width: 1000px
       margin: 0 auto
+      img
+        max-width: 70%
+        display: inline-block
+        margin: 0 auto
       header
+        margin: 0px
         text-align: left
-        font-size: 40px
+        margin-bottom: 50px
+        font-size: 36px
+        line-height: 60px
         font-weight: 600
-        margin-bottom: 20px
+        color: #00254C
+        position: relative
+      header:before
+        content: ''
+        background-color: #29B6F6
+        opacity: 0.7
+        height: 2px
+        width: 70px
+        border-radius: 1px
+        position: absolute
+        top: 70px
+        left: 0
       p.sub-header
         font-size: 20px
-        color: #666
+        color: #888
         margin-bottom: 40px
 
 .partners__container__content__partner
@@ -111,43 +133,30 @@ export default {
       font-size: 40px
       text-align: center
       i
-        line-height: 60px
+        line-height: 90px
         display: inline-block
         width: 60px
-        height: 60px
-        background: #eee
-        border: 1px solid rgba(0,0,0,0.1)
-        box-shadow: 0px 1px 3px rgba(0,0,0,0.05)
-        border-radius: 50%
+        height: 90px
+        border: 1px solid #0064CC
+        color: #0064CC
+        border-radius: 5px
         cursor: pointer
         transition: 0.5s
         &:hover
-          background: #ddd
-          box-shadow: none
+          background: #fff
+          color: #0064CC
+          border: 2px solid #0064CC
           transform: scale(1.1)
-      i.backwards
-        transform: rotateZ(180deg)
   .product__row
     padding: 20px
     display: table-cell
     vertical-align: middle
     height: 400px
 
-.someEffect-transition
-  transition: all .3s ease
-  background-color: #eee
-  overflow: hidden
-
-/* .*-enter defines the starting state for entering */
-/* .*-leave defines the ending state for leaving */
-
-.someEffect-enter, .someEffect-leave
-  height: 0
-  padding: 0 10px
-  opacity: 0
-
 @media(max-width: 900px)
   body
+    .partners__container
+      padding: 40px 20px
     .partners__container__content
       header
         font-size: 24px
@@ -157,11 +166,20 @@ export default {
       width: 100%
       text-align: center
       margin-bottom: 20px
+      .product__row
+        padding: 5px
       &__increment
+        padding: 5px
         span
           font-size: 20px
           i
-            line-height: 30px
+            line-height: 60px
             width: 30px
-            height: 30px
+            height: 60px
+
+@media(max-width: 600px)
+  body
+    .partners__container__content
+      &__image
+        display: none
 </style>
