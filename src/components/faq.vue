@@ -41,7 +41,7 @@ export default {
         },
         {
           question: 'How far along is Tokenly?',
-          answer: 'Tokenly has been developing blockchain solutions for two years.  To date, we have 5 live blockchain token solutions and thousands of users.'
+          answer: 'Tokenly has been developing blockchain solutions since 2014.  To date, we have 5 live blockchain token solutions and thousands of users.'
         }
       ]
     }
