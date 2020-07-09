@@ -5,7 +5,7 @@ section.team#team
       header
         span Our Team
       p
-        span Our 9 person team includes blockchain and finance experts together with veteran software engineers.
+        span Our team includes blockchain and finance experts together with veteran software engineers.
       div.team-member-content
         div.team-member-content__entry
           div.team-member
@@ -32,10 +32,10 @@ section.team#team
           div.team-member
             div.team-member__image
               img.portrait(
-                src = '../assets/team/devon.jpg'
+                src = '../assets/team/nick.jpg'
               )
               a(
-                href="https://www.linkedin.com/in/devonweller/"
+                href="https://www.linkedin.com/in/nick-rathman-38430662/"
                 target="__blank"
               )
                 img.linkedin(
@@ -43,11 +43,11 @@ section.team#team
                 )
             div.team-member__content
               p.name
-                span Devon Weller
+                span Nick Rathman
               p.title
-                span Founder, CTO
+                span Founder, Chief Architect
               p.summary
-                span 18-year vetern internet software application developer for companies such as Price Waterhouse Coopers and Booz Allen Hamilton. Counterparty protocol developer.
+                span Experienced back-end developer with expertise in blockchain and Counterparty protocol.
 
         div.team-member-content__entry
           div.team-member
@@ -91,109 +91,6 @@ section.team#team
               p.summary
                 span Founder of the "Lets Talk Bitcoin" network (LTBN). Experienced innovator and entrepreneur. Grew prior startup to $12.9MM annual revenue.
 
-        div.team-member-content__entry
-          div.team-member
-            div.team-member__image
-              img.portrait(
-                src = '../assets/team/nick.jpg'
-              )
-              a(
-                href="https://www.linkedin.com/in/nick-rathman-38430662/"
-                target="__blank"
-              )
-                img.linkedin(
-                  src = '../assets/images/linkedin.png'
-                )
-            div.team-member__content
-              p.name
-                span Nick Rathman
-              p.title
-                span Founder, Chief Architect
-              p.summary
-                span Experienced back-end developer with expertise in blockchain and Counterparty protocol.
-                div.team-member-content__entry
-        div.team-member-content__entry
-          div.team-member
-            div.team-member__image
-              img.portrait(
-                src = '../assets/team/shane.jpg'
-              )
-              a(
-                href="https://www.linkedin.com/in/shane-randolph-b9509838/"
-                target="__blank"
-              )
-                img.linkedin(
-                  src = '../assets/images/linkedin.png'
-                )
-            div.team-member__content
-              p.name
-                span Shane Randolph
-              p.title
-                span Lead Front-end Developer
-              p.summary
-                span Front-end developer with 7 years of experience working with companies such as Ernst &    Young (EY).
-        div.team-member-content__entry
-          div.team-member
-            div.team-member__image
-              img.portrait(
-                src = '../assets/team/ruben.jpg'
-              )
-              a(
-                href="https://www.linkedin.com/in/ruben-meseguer-776a7710b/"
-                target="__blank"
-              )
-                img.linkedin(
-                  src = '../assets/images/linkedin.png'
-                )
-            div.team-member__content
-              p.name
-                span Ruben Meseguer
-              p.title
-                span Front- & Back-end Developer
-              p.summary
-                span Back-end developer and open source software contributor.
-        div.team-member-content__entry
-          div.team-member
-            div.team-member__image
-              img.portrait(
-                src = '../assets/team/tatiana.jpg'
-              )
-              a(
-                href="https://www.linkedin.com/in/tatiana-moroz-04a3b27/"
-                target="__blank"
-              )
-                img.linkedin(
-                  src = '../assets/images/linkedin.png'
-                )
-            div.team-member__content
-              p.name
-                span Tatiana Moroz
-              p.title
-                span Ambassador
-              p.summary
-                span Singer, Songwriter. Pioneer and advocate for the transformative power of blockchain technology for the music industy. The first musical artist ever to issue a blockchain token, TATIANACOIN.
-
-        div.team-member-content__entry
-          div.team-member
-            div.team-member__image
-              img.portrait(
-                src = '../assets/team/michael.jpg'
-              )
-              a(
-                href="https://www.linkedin.com/in/mjonsson3/"
-                target="__blank"
-              )
-                img.linkedin(
-                  src = '../assets/images/linkedin.png'
-                )
-            div.team-member__content
-              p.name
-                span Michael Jonsson
-              p.title
-                span Marketing, Design
-              p.summary
-                span Experienced content marketer, graphic designer, photographer, and video producer.
-
 </template>
 
 <script>
@@ -208,13 +105,6 @@ export default {
           elID: 'adam-levine',
           title: 'Founder, CEO',
           summary: 'Founder of the "Lets Talk Bitcoin" network (LTBN), veteran project advisor in blockchain and token technology.'
-        },
-        {
-          name: 'Devon Weller',
-          elID: 'devon-weller',
-          title: 'Founder, CTO',
-          summary: '18-year vetern internet software application developer for companies such as Price Waterhouse Coopers and Booz Allen Hamilton. Counterparty protocol developer.',
-          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/02/devon-2013-nov-600-500x500.jpg'
         },
         {
           name: 'Martin Rerak',
@@ -235,34 +125,6 @@ export default {
           elID: 'nick-rathman',
           title: 'Founder, Senior Developer',
           summary: 'Experienced backend developer with expertise in blockchain and Counterparty protocol.',
-          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/02/2-e1493910666963-500x500.jpg'
-        },
-        {
-          name: 'Tatiana Moroz',
-          elID: 'tatiana-moroz',
-          title: 'Ambassador',
-          summary: '',
-          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/02/2-e1493910666963-500x500.jpg'
-        },
-        {
-          name: 'Shane Randolph',
-          elID: 'shane-randolph',
-          title: 'Front-end Developer, UI',
-          summary: '',
-          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/02/2-e1493910666963-500x500.jpg'
-        },
-        {
-          name: 'Michael Jonsson',
-          elID: 'michael-jonsson',
-          title: 'Marketing & Design',
-          summary: '',
-          imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/02/2-e1493910666963-500x500.jpg'
-        },
-        {
-          name: 'Ruben Meseguer',
-          elID: 'ruben-meseguer',
-          title: 'Front/Back-end Developer',
-          summary: '.',
           imgURL: 'https://tekk.tokenly.com/wp-content/uploads/2017/02/2-e1493910666963-500x500.jpg'
         }
       ]
